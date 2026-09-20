@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ページが見つかりません | ウェブツールボックス</title>
+<meta name="robots" content="noindex, follow" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ja/">
+      <span class="nav-brand-mark">W</span>
+      ウェブツールボックス
+    </a>
+  </div>
+</header>
+<main>
+  <div class="container hero">
+    <span class="eyebrow">404</span>
+    <h1>ページが見つかりません</h1>
+    <p>お探しのページは削除されたか、URLが変更された可能性があります。</p>
+    <p style="margin-top: 24px;"><a class="btn btn-primary" href="/ja/">ホームに戻る</a></p>
+  </div>
+</main>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+</body>
+</html>

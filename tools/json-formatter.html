@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>JSON 포매터 / 뷰어 - 온라인 JSON 검증 및 정리 | 웹툴박스</title>
-<meta name="description" content="온라인 JSON 포매터. 입력한 문자열이 올바른 JSON인지 검증하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 키·값 검색을 지원하며 데이터는 브라우저 안에서만 처리됩니다." />
-<meta name="keywords" content="JSON 포매터, JSON 뷰어, JSON validator, JSON beautify, JSON pretty print, 온라인 JSON 도구" />
+<title>JSON Formatter / Viewer - Validate and Beautify JSON Online | WebToolBox</title>
+<meta name="description" content="Online JSON formatter. Checks whether your input is valid JSON and displays it as a readable, syntax-highlighted tree. Supports collapsing/expanding and key/value search; your data is processed only in your browser." />
+<meta name="keywords" content="JSON formatter, JSON viewer, JSON validator, JSON beautify, JSON pretty print, online JSON tool" />
 <link rel="canonical" href="https://example.com/tools/json-formatter.html" />
 <meta name="robots" content="index, follow" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="웹툴박스" />
-<meta property="og:title" content="JSON 포매터 / 뷰어 | 웹툴박스" />
-<meta property="og:description" content="JSON 문자열 유효성 검사와 가독성 좋은 트리 뷰, 검색, 접기/펼치기를 지원하는 무료 온라인 JSON 포매터." />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="JSON Formatter / Viewer | WebToolBox" />
+<meta property="og:description" content="A free online JSON formatter with validation, a readable tree view, search, and collapse/expand." />
 <meta property="og:url" content="https://example.com/tools/json-formatter.html" />
 <meta name="twitter:card" content="summary" />
 
+<link rel="alternate" hreflang="en" href="https://example.com/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/tools/json-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/tools/json-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/tools/json-formatter.html" />
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
-<link rel="stylesheet" href="../assets/css/style.css" />
-<link rel="stylesheet" href="json-formatter.css" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/json-formatter.css" />
 <script>
   (function () {
     try {
@@ -28,97 +34,128 @@
     } catch (e) {}
   })();
 </script>
-
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "JSON 포매터 / 뷰어",
+  "name": "JSON Formatter / Viewer",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Any (Web Browser)",
   "url": "https://example.com/tools/json-formatter.html",
-  "description": "JSON 문자열의 유효성을 검사하고 보기 좋은 트리 형태로 정리해주는 무료 온라인 도구. 검색과 접기/펼치기 기능을 제공합니다.",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+  "description": "A free online tool that validates JSON strings and displays them as a readable tree. Includes search and collapse/expand.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
   <div class="container nav">
-    <a class="nav-brand" href="../index.html">
+    <a class="nav-brand" href="/">
       <span class="nav-brand-mark">W</span>
-      웹툴박스
+      WebToolBox
     </a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
-      <li><a href="../index.html">홈</a></li>
-      <li><a href="json-formatter.html">JSON 포매터</a></li>
-      <li><a href="../about.html">사이트 소개</a></li>
-      <li><a href="../privacy.html">개인정보처리방침</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html" aria-current="page">JSON Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
     </ul>
     <div class="nav-right">
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="다크 모드로 전환">🌙</button>
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/json-formatter.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/json-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/json-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/json-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
     </div>
   </div>
 </header>
 
 <main id="main-content">
   <div class="page-header container">
-    <h1>JSON 포매터 / 뷰어</h1>
-    <p>
-      JSON 문자열을 입력하면 유효성을 검사하고, 들여쓰기와 문법 강조가 적용된 트리로 정리해 보여줍니다.
-      입력값은 서버로 전송되지 않고 브라우저 안에서만 처리됩니다.
-    </p>
+    <h1>JSON Formatter / Viewer</h1>
+    <p>Enter a JSON string to validate it and see it laid out as an indented, syntax-highlighted tree. Your input is never sent to a server — everything happens in your browser.</p>
   </div>
 
   <div class="container section-tight">
     <div class="jf-toolbar">
-      <button class="btn btn-primary" id="btn-format" type="button">정렬(Format)</button>
-      <button class="btn" id="btn-sample" type="button">예시 불러오기</button>
-      <button class="btn" id="btn-clear" type="button">지우기</button>
+      <button class="btn btn-primary" id="btn-format" type="button">Format</button>
+      <button class="btn" id="btn-sample" type="button">Load sample</button>
+      <button class="btn" id="btn-clear" type="button">Clear</button>
       <span class="spacer"></span>
-      <label for="indent-select" class="visually-hidden">들여쓰기 크기</label>
+      <label for="indent-select" class="visually-hidden">Indent size</label>
       <select class="jf-select" id="indent-select">
-        <option value="2" selected>들여쓰기 2칸</option>
-        <option value="4">들여쓰기 4칸</option>
-        <option value="tab">들여쓰기 Tab</option>
+        <option value="2" selected>2-space indent</option>
+        <option value="4">4-space indent</option>
+        <option value="tab">Tab indent</option>
       </select>
-      <button class="btn btn-sm" id="btn-copy" type="button">복사</button>
-      <button class="btn btn-sm" id="btn-copy-minify" type="button">압축 복사</button>
-      <button class="btn btn-sm" id="btn-download" type="button">.json 다운로드</button>
+      <button class="btn btn-sm" id="btn-copy" type="button">Copy</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Copy minified</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Download .json</button>
     </div>
 
-    <div class="jf-tabs" role="tablist" aria-label="입력/결과 전환">
+    <div class="jf-tabs" role="tablist" aria-label="Switch between input and output">
       <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
-        입력
+        Input
       </button>
       <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
-        결과
+        Output
         <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
       </button>
     </div>
 
     <div class="jf-tabpanels">
-      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="JSON 입력">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Input">
         <div class="jf-panel-head jf-panel-head-status">
-          <span id="json-status-top" class="status-pill is-idle">JSON을 입력해주세요</span>
+          <span id="json-status-top" class="status-pill is-idle">Enter some JSON</span>
           <span id="json-error-detail-top" class="jf-error-detail"></span>
         </div>
         <div class="jf-search">
-          <label for="json-input-search-mode" class="visually-hidden">검색 방식</label>
+          <label for="json-input-search-mode" class="visually-hidden">Search mode</label>
           <select class="jf-select jf-search-mode" id="json-input-search-mode">
-            <option value="contains" selected>포함</option>
-            <option value="exact">일치(줄)</option>
-            <option value="regex">정규식</option>
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact (line)</option>
+            <option value="regex">Regex</option>
           </select>
-          <label for="json-input-search" class="visually-hidden">입력 텍스트 검색</label>
-          <input type="text" id="json-input-search" placeholder="입력한 텍스트에서 검색…" />
+          <label for="json-input-search" class="visually-hidden">Search mode</label>
+          <input type="text" id="json-input-search" placeholder="Search the input text…" />
           <span class="jf-search-count" id="json-input-search-count">0 / 0</span>
-          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="이전 일치 항목" disabled>↑</button>
-          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="다음 일치 항목" disabled>↓</button>
-          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="검색어 지우기" disabled>✕</button>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Clear search" disabled>✕</button>
         </div>
         <div class="jf-editor">
           <div class="jf-gutter" id="json-gutter" aria-hidden="true">
@@ -132,37 +169,37 @@
               autocapitalize="off"
               autocorrect="off"
               wrap="off"
-              placeholder="여기에 JSON 문자열을 붙여넣으세요. 키나 값의 따옴표가 빠져 있어도 최대한 인식합니다."
+              placeholder="Paste your JSON string here. Missing quotes around keys or values will still be recognized where possible."
             ></textarea>
           </div>
         </div>
         <div class="jf-status-bar">
-          <span id="json-status" class="status-pill is-idle">JSON을 입력해주세요</span>
+          <span id="json-status" class="status-pill is-idle">Enter some JSON</span>
           <span id="json-error-detail" class="jf-error-detail"></span>
         </div>
       </section>
 
-      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="JSON 결과" hidden>
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Output" hidden>
         <div class="jf-panel-head">
-          <span>결과</span>
+          <span>Output</span>
           <div class="jf-output-tools">
-            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ 모두 펼치기</button>
-            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ 모두 접기</button>
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Expand all</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Collapse all</button>
           </div>
         </div>
         <div class="jf-search">
-          <label for="json-search-mode" class="visually-hidden">검색 방식</label>
+          <label for="json-search-mode" class="visually-hidden">Search mode</label>
           <select class="jf-select jf-search-mode" id="json-search-mode" disabled>
-            <option value="contains" selected>포함</option>
-            <option value="exact">일치</option>
-            <option value="regex">정규식</option>
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact</option>
+            <option value="regex">Regex</option>
           </select>
-          <label for="json-search" class="visually-hidden">키/값 검색</label>
-          <input type="text" id="json-search" placeholder="키 또는 값 검색…" disabled />
+          <label for="json-search" class="visually-hidden">Search keys or values…</label>
+          <input type="text" id="json-search" placeholder="Search keys or values…" disabled />
           <span class="jf-search-count" id="jf-search-count">0 / 0</span>
-          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="이전 일치 항목" disabled>↑</button>
-          <button class="jf-icon-btn" id="btn-search-next" type="button" title="다음 일치 항목" disabled>↓</button>
-          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="검색어 지우기" disabled>✕</button>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Clear search" disabled>✕</button>
         </div>
         <div class="jf-output-body">
           <div class="jf-gutter jf-gutter-with-toggle" id="json-output-gutter" aria-hidden="true">
@@ -173,47 +210,39 @@
       </section>
     </div>
 
-    <p class="jf-hint">
-      Tip. 입력을 멈추면 유효성을 검사해 정상이면 자동으로 "결과" 탭으로 전환합니다. 결과 탭의 점은 현재
-      유효성 상태를 보여줍니다. 객체/배열을 접거나 펼치는 ▾/▸ 버튼은 줄 번호 옆(왼쪽 여백)에 있어 클릭하기
-      편합니다.
-      검색창은 결과 탭이 열리면 자동으로 포커스되며, 검색 방식(포함/일치/정규식)을 선택해 원하는 방식으로
-      키와 값을 찾을 수 있습니다. 결과 화면 왼쪽의 줄 번호는 접기/펼치기 상태에 맞춰 보이는 줄만 다시 매겨져,
-      구조가 접혀 있어도 위치를 가늠하기 쉽습니다. 입력창에도 동일한 방식의 검색(포함/일치/정규식)이 있어
-      원본 텍스트에서 바로 위치를 찾고 강조 표시로 확인할 수 있습니다. Enter(다음) / Shift+Enter(이전)로 일치 항목을 이동할 수 있습니다. 키나
-      문자열 값의 큰따옴표(")가 일부 빠져 있어도 가능한 한 JSON으로 인식해서 보여줍니다.
-    </p>
+    <p class="jf-hint">Tip. When you stop typing, the input is validated and, if valid, the view switches automatically to the "Output" tab. The dot on the Output tab shows the current validity status. The ▾/▸ buttons for collapsing/expanding objects and arrays sit next to the line numbers (left margin) for easy clicking. The search box is focused automatically when the Output tab opens, and you can choose a search mode (Contains/Exact/Regex) to find keys and values the way you want. Line numbers on the output are renumbered to match only the visible lines, so you can still tell where you are even when parts of the structure are collapsed. The input panel has the same kind of search (Contains/Exact/Regex) so you can locate and highlight text directly in the original input. Press Enter (next) / Shift+Enter (previous) to move between matches. Even if some quotes (") are missing around keys or string values, we do our best to recognize the text as JSON anyway.</p>
   </div>
 
   <div class="container prose section-tight" style="max-width: 760px;">
-    <h2>이 도구는 이렇게 사용하세요</h2>
+    <h2>How to use this tool</h2>
     <ul>
-      <li>왼쪽 입력창에 JSON 문자열을 붙여넣으면 자동으로 유효성을 검사하고 결과를 그려줍니다.</li>
-      <li>유효하지 않은 JSON이면 오류가 발생한 대략적인 줄/열 위치를 함께 알려줍니다.</li>
-      <li>"정렬(Format)" 버튼을 누르면 입력창의 내용도 선택한 들여쓰기 기준으로 정리됩니다.</li>
-      <li>결과가 길 때는 "모두 접기"로 전체 구조를 먼저 훑어본 뒤, 줄 번호 옆의 ▾/▸ 버튼으로 필요한 노드만 펼쳐볼 수 있습니다.</li>
-      <li>모든 처리는 브라우저 안에서만 이뤄지며, 입력한 데이터는 서버로 전송되지 않습니다.</li>
-      <li>키나 문자열 값의 큰따옴표가 일부 누락된 경우에도 최대한 자동으로 보정해서 인식합니다. 이 경우 상태 배지에 "보정됨"으로 표시되고, 입력창 왼쪽 줄 번호 중 보정이 일어난 줄이 강조 표시됩니다.</li>
-      <li>입력을 마치고 결과가 정상(유효 또는 보정됨)으로 확인되면 자동으로 "결과" 탭으로 전환되고, 검색창에 바로 입력할 수 있도록 포커스가 이동합니다.</li>
-      <li>검색 방식을 "포함"(부분 일치), "일치"(정확히 같은 값), "정규식"(정규 표현식) 중에서 선택할 수 있습니다.</li>
-      <li>입력창 상단에도 같은 검색 기능(포함/일치/정규식, 이전·다음 이동, 강조 표시)이 있어 원본 텍스트에서 바로 찾을 수 있습니다.</li>
+      <li>Paste a JSON string into the input box on the left and it's validated automatically, with the result rendered right away.</li>
+      <li>If the JSON isn't valid, you'll get an approximate line/column for where the problem is.</li>
+      <li>Clicking "Format" also reformats the input box's content using the selected indent size.</li>
+      <li>When the output is long, use "Collapse all" to get an overview of the structure first, then expand only the nodes you need with the ▾/▸ buttons next to the line numbers.</li>
+      <li>Everything happens in your browser — the data you enter is never sent to a server.</li>
+      <li>Even if quotes are missing around some keys or string values, we do our best to auto-correct and recognize them. In that case the status badge shows "Fixed", and the corrected lines are highlighted in the input panel's line numbers.</li>
+      <li>Once your input is confirmed valid (or fixed), the view switches automatically to the "Output" tab and focus moves to the search box so you can start typing right away.</li>
+      <li>Choose a search mode: "Contains" (partial match), "Exact" (exact match), or "Regex" (regular expression).</li>
+      <li>The input panel has the same search feature (Contains/Exact/Regex, previous/next navigation, highlighting) so you can search directly in the original text.</li>
     </ul>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
     <nav class="footer-links">
-      <a href="../about.html">사이트 소개</a>
-      <a href="../privacy.html">개인정보처리방침</a>
-      <a href="json-formatter.html">JSON 포매터</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
     </nav>
   </div>
 </footer>
 
-<script src="../assets/js/main.js"></script>
-<script src="json-formatter.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/tools/json-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

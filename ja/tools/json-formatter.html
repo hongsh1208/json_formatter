@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JSONフォーマッター / ビューア - オンラインJSON検証・整形 | ウェブツールボックス</title>
+<meta name="description" content="オンラインJSONフォーマッター。入力した文字列が正しいJSONかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。折りたたみ/展開とキー・値検索に対応し、データはブラウザ内でのみ処理されます。" />
+<meta name="keywords" content="JSONフォーマッター, JSONビューア, JSON validator, JSON beautify, JSON pretty print, オンラインJSONツール" />
+<link rel="canonical" href="https://example.com/ja/tools/json-formatter.html" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ウェブツールボックス" />
+<meta property="og:title" content="JSONフォーマッター / ビューア | ウェブツールボックス" />
+<meta property="og:description" content="JSON文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインJSONフォーマッター。" />
+<meta property="og:url" content="https://example.com/ja/tools/json-formatter.html" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/tools/json-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/tools/json-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/tools/json-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/json-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "JSONフォーマッター / ビューア",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://example.com/ja/tools/json-formatter.html",
+  "description": "JSON文字列の妥当性を検証し、読みやすいツリー形式に整理する無料オンラインツール。検索と折りたたみ/展開機能を提供します。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ja/">
+      <span class="nav-brand-mark">W</span>
+      ウェブツールボックス
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ja/">ホーム</a></li>
+      <li><a href="/ja/tools/json-formatter.html" aria-current="page">JSONフォーマッター</a></li>
+      <li><a href="/ja/about.html">サイト紹介</a></li>
+      <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="言語選択">🇯🇵</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/json-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/json-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/json-formatter.html" data-lang-option="ja" aria-current="true">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/json-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>JSONフォーマッター / ビューア</h1>
+    <p>JSON文字列を入力すると妥当性を検証し、インデントとシンタックスハイライトを適用したツリーで表示します。入力値はサーバーに送信されずブラウザ内でのみ処理されます。</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">整列(Format)</button>
+      <button class="btn" id="btn-sample" type="button">サンプルを読み込む</button>
+      <button class="btn" id="btn-clear" type="button">クリア</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">インデントサイズ</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>インデント2桁</option>
+        <option value="4">インデント4桁</option>
+        <option value="tab">インデントTab</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">コピー</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">圧縮コピー</button>
+      <button class="btn btn-sm" id="btn-download" type="button">.jsonをダウンロード</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="入力/出力の切り替え">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        入力
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        出力
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="入力">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="json-status-top" class="status-pill is-idle">JSONを入力してください</span>
+          <span id="json-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="json-input-search-mode" class="visually-hidden">検索方式</label>
+          <select class="jf-select jf-search-mode" id="json-input-search-mode">
+            <option value="contains" selected>部分一致</option>
+            <option value="exact">完全一致(行)</option>
+            <option value="regex">正規表現</option>
+          </select>
+          <label for="json-input-search" class="visually-hidden">検索方式</label>
+          <input type="text" id="json-input-search" placeholder="入力テキストを検索…" />
+          <span class="jf-search-count" id="json-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="前の一致項目" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="次の一致項目" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="検索語をクリア" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="json-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="json-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="json-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="json-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="ここにJSON文字列を貼り付けてください。キーや値の引用符が一部欠けていてもできるだけ認識します。"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="json-status" class="status-pill is-idle">JSONを入力してください</span>
+          <span id="json-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="出力" hidden>
+        <div class="jf-panel-head">
+          <span>出力</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ すべて展開</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ すべて折りたたむ</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="json-search-mode" class="visually-hidden">検索方式</label>
+          <select class="jf-select jf-search-mode" id="json-search-mode" disabled>
+            <option value="contains" selected>部分一致</option>
+            <option value="exact">完全一致</option>
+            <option value="regex">正規表現</option>
+          </select>
+          <label for="json-search" class="visually-hidden">キーまたは値を検索…</label>
+          <input type="text" id="json-search" placeholder="キーまたは値を検索…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="前の一致項目" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="次の一致項目" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="検索語をクリア" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="json-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="json-output-gutter-inner"></div>
+          </div>
+          <div id="json-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. 入力を止めると検証が行われ、正常なら自動的に「出力」タブに切り替わります。出力タブのドットは現在の妥当性ステータスを示します。オブジェクト/配列を折りたたむ/展開する▾/▸ボタンは行番号の隣(左余白)にあり、クリックしやすくなっています。検索ボックスは出力タブが開くと自動的にフォーカスされ、検索方式(部分一致/完全一致/正規表現)を選べば希望の方法でキーと値を探せます。出力画面左側の行番号は折りたたみ状態に合わせて表示中の行だけに振り直されるため、構造が折りたたまれていても位置を把握しやすくなっています。入力ボックスにも同じ方式の検索(部分一致/完全一致/正規表現)があり、元のテキストで直接位置を探してハイライトで確認できます。Enter(次へ) / Shift+Enter(前へ)で一致項目を移動できます。キーや文字列値の引用符(")が一部欠けていても、できるだけJSONとして認識して表示します。</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>このツールの使い方</h2>
+    <ul>
+      <li>左側の入力ボックスにJSON文字列を貼り付けると、自動的に妥当性を検証し結果を描画します。</li>
+      <li>無効なJSONの場合は、エラーが発生したおおまかな行/列位置も合わせてお知らせします。</li>
+      <li>「整列(Format)」ボタンを押すと、入力ボックスの内容も選択したインデント基準で整形されます。</li>
+      <li>結果が長い場合は「すべて折りたたむ」で全体の構造を先に把握し、行番号隣の▾/▸ボタンで必要なノードだけ展開できます。</li>
+      <li>すべての処理はブラウザ内でのみ行われ、入力したデータがサーバーに送信されることはありません。</li>
+      <li>キーや文字列値の引用符が一部欠けている場合でも、できるだけ自動で修正して認識します。この場合、ステータスバッジに「修正済み」と表示され、入力ボックス左側の行番号のうち修正が行われた行が強調表示されます。</li>
+      <li>入力を終えて結果が正常(有効または修正済み)と確認されると自動的に「出力」タブに切り替わり、検索ボックスにすぐ入力できるようフォーカスが移動します。</li>
+      <li>検索方式を「部分一致」(部分一致)、「完全一致」(完全一致)、「正規表現」(正規表現)から選べます。</li>
+      <li>入力ボックス上部にも同じ検索機能(部分一致/完全一致/正規表現、前・次移動、ハイライト表示)があり、元のテキストで直接検索できます。</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/json-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

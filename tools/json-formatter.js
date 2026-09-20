@@ -10,6 +10,100 @@
 (function () {
   "use strict";
 
+  // -----------------------------------------------------------------
+  // 다국어 메시지 테이블. 현재 페이지의 <html lang="..">에 맞춰 en/ko/ja/zh 중
+  // 하나를 고른다 (정적 HTML 라벨은 scripts/build_site.py가 언어별로 만들어 두고,
+  // 여기서는 이 파일이 런타임에 스스로 생성하는 문구만 다국어로 처리한다).
+  // -----------------------------------------------------------------
+  var LANG = (function () {
+    var l = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
+    return { en: 1, ko: 1, ja: 1, zh: 1 }[l] ? l : "en";
+  })();
+
+  var MESSAGES = {
+    en: {
+      statusIdleText: "Enter some JSON", statusIdleTop: "Idle",
+      statusInvalidText: "Invalid JSON", statusInvalidTop: "Invalid",
+      statusFixedText: "Fixed (auto-detected quotes)", statusFixedTop: "Fixed",
+      statusFixedDetail: "Some keys/values were missing quotes, so they were automatically corrected and recognized. (See the highlighted line numbers in the input panel.)",
+      statusValidText: "Valid JSON", statusValidTop: "Valid",
+      detailInvalid: function (line, col) { return "Check around line " + line + ", column " + col + "."; },
+      detailInvalidGeneric: "Please check the syntax.",
+      errEmptyValue: "The value is empty.", errKeyColon: "A ':' is required after the key.",
+      errEmptyKey: "The key is empty.", errValueRequired: "A value is required.",
+      errAfterKeyColon: "A ':' is required after the key.",
+      errCommaOrBrace: "A ',' or '}' is required.", errCommaOrBracket: "A ',' or ']' is required.",
+      errTrailingChars: "There are unexpected characters at the end of the input.",
+      toggleAria: "Collapse/expand node",
+      outputPlaceholder: "Enter a JSON string on the left to see the result here.",
+      errorBoxTitle: "The JSON format is invalid.",
+      errorLocation: function (line, col) { return "Error location: around line " + line + ", character " + col; },
+      unknownError: "Unknown error", regexError: "Regex error", copied: "Copied ✓",
+      previewSuffix: function (n, isArray) { return n + (isArray ? " items" : " keys"); },
+    },
+    ko: {
+      statusIdleText: "JSON을 입력해주세요", statusIdleTop: "대기 중",
+      statusInvalidText: "유효하지 않은 JSON", statusInvalidTop: "무효",
+      statusFixedText: "보정됨 (따옴표 자동 인식)", statusFixedTop: "보정됨",
+      statusFixedDetail: "일부 키/값에 따옴표가 없어 자동으로 보정해서 인식했습니다. (입력창 줄 번호의 강조 표시 참고)",
+      statusValidText: "유효한 JSON입니다", statusValidTop: "유효함",
+      detailInvalid: function (line, col) { return line + "행 " + col + "열 부근을 확인해주세요."; },
+      detailInvalidGeneric: "구문을 확인해주세요.",
+      errEmptyValue: "값이 비어 있습니다.", errKeyColon: "키 뒤에 ':'가 필요합니다.",
+      errEmptyKey: "키가 비어 있습니다.", errValueRequired: "값이 필요합니다.",
+      errAfterKeyColon: "키 다음에 ':'가 필요합니다.",
+      errCommaOrBrace: "',' 또는 '}' 가 필요합니다.", errCommaOrBracket: "',' 또는 ']' 가 필요합니다.",
+      errTrailingChars: "입력 끝부분에 처리할 수 없는 문자가 있습니다.",
+      toggleAria: "노드 접기/펼치기",
+      outputPlaceholder: "왼쪽에 JSON 문자열을 입력하면 결과가 여기에 표시됩니다.",
+      errorBoxTitle: "JSON 형식이 올바르지 않습니다.",
+      errorLocation: function (line, col) { return "오류 위치: " + line + "번째 줄, " + col + "번째 문자 부근"; },
+      unknownError: "알 수 없는 오류", regexError: "정규식 오류", copied: "복사됨 ✓",
+      previewSuffix: function (n, isArray) { return n + (isArray ? "개 항목" : "개 키"); },
+    },
+    ja: {
+      statusIdleText: "JSONを入力してください", statusIdleTop: "待機中",
+      statusInvalidText: "無効なJSON", statusInvalidTop: "無効",
+      statusFixedText: "修正済み(引用符を自動認識)", statusFixedTop: "修正済み",
+      statusFixedDetail: "一部のキー・値に引用符がなかったため、自動的に修正して認識しました。(入力欄の行番号の強調表示を参照)",
+      statusValidText: "有効なJSONです", statusValidTop: "有効",
+      detailInvalid: function (line, col) { return line + "行目" + col + "列目付近をご確認ください。"; },
+      detailInvalidGeneric: "構文をご確認ください。",
+      errEmptyValue: "値が空です。", errKeyColon: "キーの後に':'が必要です。",
+      errEmptyKey: "キーが空です。", errValueRequired: "値が必要です。",
+      errAfterKeyColon: "キーの次に':'が必要です。",
+      errCommaOrBrace: "','または'}'が必要です。", errCommaOrBracket: "','または']'が必要です。",
+      errTrailingChars: "入力の末尾に処理できない文字があります。",
+      toggleAria: "ノードの折りたたみ/展開",
+      outputPlaceholder: "左側にJSON文字列を入力すると、ここに結果が表示されます。",
+      errorBoxTitle: "JSON形式が正しくありません。",
+      errorLocation: function (line, col) { return "エラー位置: " + line + "行目、" + col + "文字目付近"; },
+      unknownError: "不明なエラー", regexError: "正規表現エラー", copied: "コピーしました ✓",
+      previewSuffix: function (n, isArray) { return n + (isArray ? "個の項目" : "個のキー"); },
+    },
+    zh: {
+      statusIdleText: "请输入 JSON", statusIdleTop: "待处理",
+      statusInvalidText: "无效的 JSON", statusInvalidTop: "无效",
+      statusFixedText: "已修正(自动识别引号)", statusFixedTop: "已修正",
+      statusFixedDetail: "部分键/值缺少引号，已自动修正并识别。(请参见输入框行号的高亮显示)",
+      statusValidText: "有效的 JSON", statusValidTop: "有效",
+      detailInvalid: function (line, col) { return "请检查第 " + line + " 行第 " + col + " 列附近。"; },
+      detailInvalidGeneric: "请检查语法。",
+      errEmptyValue: "值为空。", errKeyColon: "键后面需要 ':'。",
+      errEmptyKey: "键为空。", errValueRequired: "需要一个值。",
+      errAfterKeyColon: "键后需要 ':'。",
+      errCommaOrBrace: "需要 ',' 或 '}'。", errCommaOrBracket: "需要 ',' 或 ']'。",
+      errTrailingChars: "输入末尾存在无法处理的字符。",
+      toggleAria: "折叠/展开节点",
+      outputPlaceholder: "在左侧输入 JSON 字符串，结果将显示在这里。",
+      errorBoxTitle: "JSON 格式无效。",
+      errorLocation: function (line, col) { return "错误位置：第 " + line + " 行，第 " + col + " 个字符附近"; },
+      unknownError: "未知错误", regexError: "正则表达式错误", copied: "已复制 ✓",
+      previewSuffix: function (n, isArray) { return n + (isArray ? " 个项目" : " 个键"); },
+    },
+  };
+  var T = MESSAGES[LANG];
+
   var els = {
     input: document.getElementById("json-input"),
     status: document.getElementById("json-status"),
@@ -188,7 +282,7 @@
       var end = i;
       var rawFull = text.slice(start, end);
       var raw = rawFull.trim();
-      if (raw === "") fail("값이 비어 있습니다.");
+      if (raw === "") fail(T.errEmptyValue);
       var value = interpretBareToken(raw);
       if (typeof value === "string") {
         // true/false/null/숫자가 아닌 순수 문자열 값만 "따옴표 보정"으로 간주한다.
@@ -201,11 +295,11 @@
     function parseBareKey() {
       var start = i;
       while (i < len && text[i] !== ":") i++;
-      if (i >= len) fail("키 뒤에 ':'가 필요합니다.");
+      if (i >= len) fail(T.errKeyColon);
       var end = i;
       var rawFull = text.slice(start, end);
       var raw = rawFull.trim();
-      if (raw === "") fail("키가 비어 있습니다.");
+      if (raw === "") fail(T.errEmptyKey);
       var range = trimmedRange(start, end, rawFull);
       markCorrected(range.start, range.end);
       return raw;
@@ -220,7 +314,7 @@
 
     function parseValue() {
       skipWs();
-      if (i >= len) fail("값이 필요합니다.");
+      if (i >= len) fail(T.errValueRequired);
       var c = text[i];
       if (c === "{") return parseObject();
       if (c === "[") return parseArray();
@@ -240,7 +334,7 @@
         skipWs();
         var key = parseKey();
         skipWs();
-        if (text[i] !== ":") fail("키 다음에 ':'가 필요합니다.");
+        if (text[i] !== ":") fail(T.errAfterKeyColon);
         i++;
         skipWs();
         obj[key] = parseValue();
@@ -258,7 +352,7 @@
           i++;
           break;
         }
-        fail("',' 또는 '}' 가 필요합니다.");
+        fail(T.errCommaOrBrace);
       }
       return obj;
     }
@@ -288,7 +382,7 @@
           i++;
           break;
         }
-        fail("',' 또는 ']' 가 필요합니다.");
+        fail(T.errCommaOrBracket);
       }
       return arr;
     }
@@ -296,7 +390,7 @@
     skipWs();
     var result = parseValue();
     skipWs();
-    if (i < len) fail("입력 끝부분에 처리할 수 없는 문자가 있습니다.");
+    if (i < len) fail(T.errTrailingChars);
     return { value: result, correctedLines: correctedLines };
   }
 
@@ -334,7 +428,7 @@
     toggle.type = "button";
     toggle.className = "json-toggle";
     toggle.textContent = "▾";
-    toggle.setAttribute("aria-label", "노드 접기/펼치기");
+    toggle.setAttribute("aria-label", T.toggleAria);
     toggle.setAttribute("aria-expanded", "true");
     toggle.addEventListener("click", function () {
       var collapsed = node.classList.toggle("is-collapsed");
@@ -401,7 +495,7 @@
       var previewSpan = document.createElement("span");
       previewSpan.className = "json-preview";
       previewSpan.textContent =
-        " … " + entries.length + (isArray ? "개 항목" : "개 키") + " " + closeChar + (isLast ? "" : ",");
+        " … " + T.previewSuffix(entries.length, isArray) + " " + closeChar + (isLast ? "" : ",");
       row.appendChild(previewSpan);
 
       var childrenWrap = document.createElement("div");
@@ -472,17 +566,17 @@
   }
 
   function renderPlaceholder() {
-    els.output.innerHTML = '<p class="jf-placeholder">왼쪽에 JSON 문자열을 입력하면 결과가 여기에 표시됩니다.</p>';
+    els.output.innerHTML = '<p class="jf-placeholder">' + escapeHtml(T.outputPlaceholder) + "</p>";
     renderOutputGutter();
   }
 
   function renderErrorBox(parsed, rawText) {
     var lines = [];
-    lines.push("<p><strong>JSON 형식이 올바르지 않습니다.</strong></p>");
+    lines.push("<p><strong>" + escapeHtml(T.errorBoxTitle) + "</strong></p>");
     if (parsed.loc) {
-      lines.push("<p>오류 위치: " + parsed.loc.line + "번째 줄, " + parsed.loc.column + "번째 문자 부근</p>");
+      lines.push("<p>" + escapeHtml(T.errorLocation(parsed.loc.line, parsed.loc.column)) + "</p>");
     }
-    lines.push("<p><code>" + escapeHtml(parsed.message || "알 수 없는 오류") + "</code></p>");
+    lines.push("<p><code>" + escapeHtml(parsed.message || T.unknownError) + "</code></p>");
     els.output.innerHTML = '<div class="jf-error-box">' + lines.join("") + "</div>";
     renderOutputGutter();
   }
@@ -754,7 +848,7 @@
     }
 
     renderInputHighlight();
-    updateInputSearchCount(regexError ? "정규식 오류" : null);
+    updateInputSearchCount(regexError ? T.regexError : null);
     updateInputSearchButtons();
   }
 
@@ -885,7 +979,7 @@
       state.isValid = false;
       state.parsedValue = undefined;
       state.lastCorrectedLines = new Set();
-      setStatus("idle", "JSON을 입력해주세요", "대기 중");
+      setStatus("idle", T.statusIdleText, T.statusIdleTop);
       renderPlaceholder();
       renderGutter(text, state.lastCorrectedLines);
       setToolbarEnabled(false);
@@ -897,9 +991,9 @@
       state.parsedValue = undefined;
       state.lastCorrectedLines = new Set();
       var detail = parsed.loc
-        ? parsed.loc.line + "행 " + parsed.loc.column + "열 부근을 확인해주세요."
-        : "구문을 확인해주세요.";
-      setStatus("invalid", "유효하지 않은 JSON", "무효", detail);
+        ? T.detailInvalid(parsed.loc.line, parsed.loc.column)
+        : T.detailInvalidGeneric;
+      setStatus("invalid", T.statusInvalidText, T.statusInvalidTop, detail);
       renderErrorBox(parsed, text);
       renderGutter(text, state.lastCorrectedLines);
       setToolbarEnabled(false);
@@ -910,15 +1004,10 @@
     state.parsedValue = parsed.value;
     if (parsed.mode === "lenient") {
       state.lastCorrectedLines = parsed.correctedLines || new Set();
-      setStatus(
-        "fixed",
-        "보정됨 (따옴표 자동 인식)",
-        "보정됨",
-        "일부 키/값에 따옴표가 없어 자동으로 보정해서 인식했습니다. (입력창 줄 번호의 강조 표시 참고)"
-      );
+      setStatus("fixed", T.statusFixedText, T.statusFixedTop, T.statusFixedDetail);
     } else {
       state.lastCorrectedLines = new Set();
-      setStatus("valid", "유효한 JSON입니다", "유효함");
+      setStatus("valid", T.statusValidText, T.statusValidTop);
     }
     renderGutter(text, state.lastCorrectedLines);
     renderTree(parsed.value);
@@ -1000,13 +1089,13 @@
   els.btnCopy.addEventListener("click", function () {
     if (!state.isValid) return;
     copyToClipboard(JSON.stringify(state.parsedValue, null, getIndent()));
-    flashButton(els.btnCopy, "복사됨 ✓");
+    flashButton(els.btnCopy, T.copied);
   });
 
   els.btnCopyMinify.addEventListener("click", function () {
     if (!state.isValid) return;
     copyToClipboard(JSON.stringify(state.parsedValue));
-    flashButton(els.btnCopyMinify, "복사됨 ✓");
+    flashButton(els.btnCopyMinify, T.copied);
   });
 
   els.btnDownload.addEventListener("click", function () {
@@ -1178,7 +1267,7 @@
     state.matches = Array.prototype.slice.call(els.output.querySelectorAll(".json-search-match"));
     state.activeMatchIndex = state.matches.length > 0 ? 0 : -1;
     focusActiveMatch(true);
-    updateSearchCount(regexError ? "정규식 오류" : null);
+    updateSearchCount(regexError ? T.regexError : null);
   }
 
   function expandAncestors(el) {

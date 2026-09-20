@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>网页工具箱 | 无需安装即可使用的免费在线开发者工具</title>
+<meta name="description" content="无需注册，直接在浏览器中使用的免费在线工具集。使用 JSON 格式化工具验证 JSON 字符串并以易读的方式展示。数据不会发送到服务器，仅在您的浏览器中处理。" />
+<meta name="keywords" content="在线工具, JSON 格式化, JSON 查看器, JSON validator, 网页工具, 免费开发者工具" />
+<link rel="canonical" href="https://example.com/zh/" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="网页工具箱" />
+<meta property="og:title" content="网页工具箱 | 免费在线开发者工具" />
+<meta property="og:description" content="提供 JSON 格式化等可在浏览器中直接使用的免费在线工具，数据不会保存在服务器上。" />
+<meta property="og:url" content="https://example.com/zh/" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "zh"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "网页工具箱",
+  "url": "https://example.com/zh/",
+  "description": "网页工具箱是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳转到正文</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/zh/">
+      <span class="nav-brand-mark">W</span>
+      网页工具箱
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="打开菜单">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/zh/" aria-current="page">首页</a></li>
+      <li><a href="/zh/tools/json-formatter.html">JSON 格式化</a></li>
+      <li><a href="/zh/about.html">关于本站</a></li>
+      <li><a href="/zh/privacy.html">隐私政策</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="选择语言">🇨🇳</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/" data-lang-option="zh" aria-current="true">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="切换到深色模式">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="hero container">
+    <span class="eyebrow">FREE ONLINE TOOLS</span>
+    <h1>无需安装、无需注册的<br />浏览器端在线工具集</h1>
+    <p>网页工具箱是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。</p>
+  </section>
+
+  <section class="section container">
+    <h2 style="margin-bottom: 4px;">提供的功能</h2>
+    <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">立即体验下面的功能，我们会持续添加新的工具。</p>
+    <div class="card-grid" style="margin-top: 20px;">
+      <article class="tool-card">
+        <div class="tool-card-icon">🧩</div>
+        <h3><a href="/zh/tools/json-formatter.html">JSON 格式化 / 查看器</a></h3>
+        <p>检查输入的字符串是否为有效的 JSON，并以带缩进和语法高亮的树形结构清晰展示。支持节点折叠/展开以及键值搜索功能。</p>
+        <span class="tag">JSON · Formatter · Validator</span>
+      </article>
+
+      <article class="tool-card is-soon" aria-disabled="true">
+        <div class="tool-card-icon">🛠️</div>
+        <h3>更多工具即将上线</h3>
+        <p>文本/编码转换、大小写转换等新工具将陆续添加。</p>
+        <span class="tag">Coming soon</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-tight container prose">
+    <h2>为什么选择网页工具箱?</h2>
+    <ul>
+      <li><strong>无需安装、无需注册</strong> — 打开链接即可立即使用。</li>
+      <li><strong>浏览器端处理</strong> — 输入的数据完全在客户端处理，不会发送到服务器。</li>
+      <li><strong>支持深色模式</strong> — 随时通过右上角的按钮切换浅色/深色主题。</li>
+      <li><strong>持续更新功能</strong> — 我们会持续添加在开发和工作中常用的实用工具。</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> 网页工具箱. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/zh/about.html">关于本站</a>
+      <a href="/zh/privacy.html">隐私政策</a>
+      <a href="/zh/tools/json-formatter.html">JSON 格式化</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

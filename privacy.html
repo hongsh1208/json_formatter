@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>개인정보처리방침 | 웹툴박스</title>
-<meta name="description" content="웹툴박스의 개인정보처리방침입니다. 수집하는 정보, 쿠키·로컬스토리지 사용, 광고(Google AdSense) 관련 데이터 처리 방식을 안내합니다." />
+<title>Privacy Policy | WebToolBox</title>
+<meta name="description" content="WebToolBox's privacy policy. Explains what information we collect, our use of cookies/local storage, and how data is handled in relation to advertising (Google AdSense)." />
 <link rel="canonical" href="https://example.com/privacy.html" />
 <meta name="robots" content="index, follow" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="웹툴박스" />
-<meta property="og:title" content="개인정보처리방침 | 웹툴박스" />
-<meta property="og:description" content="웹툴박스의 개인정보 수집·이용 및 쿠키 사용에 대한 안내입니다." />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="Privacy Policy | WebToolBox" />
+<meta property="og:description" content="Information on WebToolBox's collection and use of personal data and our use of cookies." />
 <meta property="og:url" content="https://example.com/privacy.html" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/privacy.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/privacy.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/privacy.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/privacy.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/privacy.html" />
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
@@ -25,137 +32,132 @@
     } catch (e) {}
   })();
 </script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+
 </head>
 <body>
-<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
   <div class="container nav">
-    <a class="nav-brand" href="index.html">
+    <a class="nav-brand" href="/">
       <span class="nav-brand-mark">W</span>
-      웹툴박스
+      WebToolBox
     </a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
-      <li><a href="index.html">홈</a></li>
-      <li><a href="tools/json-formatter.html">JSON 포매터</a></li>
-      <li><a href="about.html">사이트 소개</a></li>
-      <li><a href="privacy.html">개인정보처리방침</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html" aria-current="page">Privacy Policy</a></li>
     </ul>
     <div class="nav-right">
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="다크 모드로 전환">🌙</button>
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/privacy.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/privacy.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/privacy.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/privacy.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
     </div>
   </div>
 </header>
 
 <main id="main-content">
   <div class="page-header container">
-    <h1>개인정보처리방침</h1>
-    <p>시행일자: 2026년 9월 20일</p>
+    <h1>Privacy Policy</h1>
+    <p>Effective date: September 20, 2026</p>
   </div>
 
   <div class="container prose section-tight" style="max-width: 760px;">
-    <p>
-      웹툴박스(이하 "사이트")는 이용자의 개인정보를 소중히 여기며,
-      「개인정보 보호법」 등 관련 법령을 준수하기 위해 노력합니다. 본 방침은 사이트가
-      어떤 정보를 어떻게 수집·이용하는지 설명합니다.
-    </p>
+    <p>WebToolBox (the "Site") values its users' privacy and strives to comply with applicable data protection laws. This policy explains what information the Site collects and how it is used.</p>
 
     <section>
-      <h2>1. 처리하는 정보 및 처리 방식</h2>
-      <p>
-        사이트에서 제공하는 JSON 포매터 등 도구는 입력하신 텍스트를 <strong>서버로 전송하지 않고
-        이용자의 브라우저(자바스크립트) 내에서만 처리</strong>합니다. 즉, 입력한 JSON 데이터나
-        텍스트는 사이트 운영자에게 전달되거나 저장되지 않습니다.
-      </p>
-      <p>
-        다만 화면 테마 설정(라이트/다크 모드)과 같은 단순 환경설정 값은 이용자의 브라우저
-        로컬 스토리지(localStorage)에만 저장되며, 이 정보는 외부로 전송되지 않습니다.
-      </p>
+      <h2>1. Information processed and how</h2>
+      <p>Tools provided on the Site, such as the JSON Formatter, process the text you enter entirely within your browser (JavaScript) and never send it to a server. In other words, the JSON data or text you input is never transmitted to or stored by the Site operator.</p>
+      <p>Simple preference settings, such as your theme choice (light/dark mode), are stored only in your browser's local storage (localStorage) and are never transmitted externally.</p>
     </section>
 
     <section>
-      <h2>2. 쿠키(Cookie) 및 유사 기술의 사용</h2>
-      <p>
-        사이트는 서비스 이용 분석 및 광고 제공을 위해 쿠키를 사용할 수 있습니다. 쿠키는
-        웹사이트가 이용자의 브라우저에 저장하는 소량의 정보로, 이용자는 브라우저 설정을 통해
-        쿠키 저장을 거부하거나 삭제할 수 있습니다. 다만 쿠키 저장을 거부할 경우 일부 기능
-        이용에 어려움이 있을 수 있습니다.
-      </p>
+      <h2>2. Use of cookies and similar technologies</h2>
+      <p>The Site may use cookies for service analytics and advertising purposes. A cookie is a small piece of information a website stores in your browser; you can refuse or delete cookies through your browser settings. Note that refusing cookies may limit some features.</p>
     </section>
 
     <section>
-      <h2>3. 광고 서비스(Google AdSense) 이용에 관한 사항</h2>
-      <p>
-        사이트는 서비스 운영 및 유지를 위해 Google을 포함한 제3자 광고 사업자의 광고를
-        게재할 수 있습니다.
-      </p>
+      <h2>3. Use of advertising services (Google AdSense)</h2>
+      <p>To help operate and maintain the Site, we may display advertisements from third-party providers, including Google.</p>
       <ul>
-        <li>
-          Google과 같은 제3자 공급업체는 쿠키를 사용하여 이용자의 이전 사이트 방문 기록을
-          기반으로 광고를 게재할 수 있습니다.
-        </li>
-        <li>
-          Google의 광고 쿠키 사용을 통해 Google과 파트너사는 이용자가 본 사이트 및/또는
-          인터넷상의 다른 사이트를 방문한 기록을 바탕으로 광고를 게재할 수 있습니다.
-        </li>
-        <li>
-          이용자는 <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google 광고 설정 페이지</a>를 방문하여
-          맞춤 광고를 비활성화할 수 있습니다. (또는
-          <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>에서
-          맞춤형 광고에 사용되는 제3자 공급업체의 쿠키를 비활성화할 수 있습니다.)
-        </li>
+        <li>Third-party vendors, including Google, may use cookies to serve ads based on a user's prior visits to this or other websites.</li>
+        <li>Google's use of advertising cookies enables Google and its partners to serve ads based on a user's visits to this Site and/or other sites on the Internet.</li>
+        <li>Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, or opt out of third-party vendor cookies used for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.</li>
       </ul>
-      <p>
-        광고 서비스가 실제로 적용되는 시점과 범위는 사이트 운영 상황에 따라 달라질 수 있으며,
-        변경 시 본 방침을 통해 안내합니다.
-      </p>
+      <p>The timing and extent to which advertising is actually implemented may vary depending on how the Site is operated, and any changes will be announced through this policy.</p>
     </section>
 
     <section>
-      <h2>4. 개인정보의 제3자 제공</h2>
-      <p>
-        사이트는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만 법령에 근거가
-        있거나 수사기관이 적법한 절차에 따라 요구하는 경우는 예외로 합니다.
-      </p>
+      <h2>4. Disclosure of personal information to third parties</h2>
+      <p>The Site does not, in principle, share users' personal information with outside parties, except where required by law or requested by an investigative authority through lawful procedure.</p>
     </section>
 
     <section>
-      <h2>5. 이용자의 권리</h2>
-      <p>
-        이용자는 언제든지 브라우저 설정을 통해 쿠키 및 로컬 스토리지 데이터를 삭제할 수 있으며,
-        개인정보 처리와 관련한 문의 사항은 아래 연락처로 문의할 수 있습니다.
-      </p>
+      <h2>5. User rights</h2>
+      <p>Users may delete cookies and local storage data at any time through their browser settings, and may direct any questions about data handling to the contact below.</p>
     </section>
 
     <section>
-      <h2>6. 문의처</h2>
-      <p>개인정보 처리에 관한 문의는 아래 이메일로 연락해 주시기 바랍니다.</p>
+      <h2>6. Contact</h2>
+      <p>For questions about how personal data is handled, please contact us at the email address below.</p>
       <p><a href="mailto:hongsh119@gmail.com">hongsh119@gmail.com</a></p>
     </section>
 
     <section>
-      <h2>7. 방침의 변경</h2>
-      <p>
-        본 개인정보처리방침은 법령, 정책 또는 서비스 변경에 따라 개정될 수 있으며,
-        변경 시 사이트를 통해 공지합니다.
-      </p>
+      <h2>7. Changes to this policy</h2>
+      <p>This Privacy Policy may be revised in response to changes in law, policy, or the Site's services, and any changes will be announced through the Site.</p>
     </section>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
     <nav class="footer-links">
-      <a href="about.html">사이트 소개</a>
-      <a href="privacy.html">개인정보처리방침</a>
-      <a href="tools/json-formatter.html">JSON 포매터</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
     </nav>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

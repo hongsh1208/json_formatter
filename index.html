@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>웹툴박스 | 브라우저에서 바로 쓰는 무료 온라인 개발자 도구 모음</title>
-<meta name="description" content="회원가입 없이 브라우저에서 바로 사용하는 무료 온라인 도구 모음. JSON 포매터로 JSON 문자열을 검증하고 보기 좋게 정리하세요. 데이터는 서버로 전송되지 않고 내 브라우저 안에서만 처리됩니다." />
-<meta name="keywords" content="온라인 도구, JSON 포매터, JSON 뷰어, JSON validator, 웹 유틸리티, 무료 개발자 도구" />
+<title>WebToolBox | Free Online Developer Tools You Can Use Instantly</title>
+<meta name="description" content="Free online tools you can use right in your browser — no sign-up required. Validate and beautify JSON with the JSON Formatter. Your data is processed locally and never sent to a server." />
+<meta name="keywords" content="online tools, JSON formatter, JSON viewer, JSON validator, web utilities, free developer tools" />
 <link rel="canonical" href="https://example.com/" />
 <meta name="robots" content="index, follow" />
 
-<!-- Open Graph / SNS 공유 -->
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="웹툴박스" />
-<meta property="og:title" content="웹툴박스 | 무료 온라인 개발자 도구 모음" />
-<meta property="og:description" content="JSON 포매터를 비롯해 브라우저에서 바로 쓰는 무료 온라인 도구를 제공합니다. 데이터는 서버에 저장되지 않습니다." />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="WebToolBox | Free Online Developer Tools" />
+<meta property="og:description" content="Free online tools including a JSON Formatter, usable right in your browser. Your data is never stored on our servers." />
 <meta property="og:url" content="https://example.com/" />
 <meta name="twitter:card" content="summary" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="alternate" hreflang="en" href="https://example.com/" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/" />
 
-<!-- FOUC 방지: CSS 로드 전에 저장된 테마를 먼저 적용 -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
@@ -30,35 +33,69 @@
     } catch (e) {}
   })();
 </script>
-
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "웹툴박스",
+  "name": "WebToolBox",
   "url": "https://example.com/",
-  "description": "브라우저에서 바로 사용하는 무료 온라인 개발자 도구 모음"
+  "description": "WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and wo"
 }
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
   <div class="container nav">
-    <a class="nav-brand" href="index.html">
+    <a class="nav-brand" href="/">
       <span class="nav-brand-mark">W</span>
-      웹툴박스
+      WebToolBox
     </a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
-      <li><a href="index.html">홈</a></li>
-      <li><a href="tools/json-formatter.html">JSON 포매터</a></li>
-      <li><a href="about.html">사이트 소개</a></li>
-      <li><a href="privacy.html">개인정보처리방침</a></li>
+      <li><a href="/" aria-current="page">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
     </ul>
     <div class="nav-right">
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="다크 모드로 전환">🌙</button>
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
     </div>
   </div>
 </header>
@@ -66,62 +103,54 @@
 <main id="main-content">
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
-    <h1>설치도, 가입도 필요 없는<br />브라우저 기반 온라인 도구 모음</h1>
-    <p>
-      웹툴박스는 개발과 업무 중 자주 필요한 자잘한 작업들을 브라우저에서 바로 끝낼 수 있게 만든
-      무료 온라인 유틸리티 모음입니다. 입력한 데이터는 서버로 전송되지 않고
-      내 컴퓨터(브라우저) 안에서만 처리되어 안전하게 사용할 수 있습니다.
-    </p>
+    <h1>Browser-based online tools.<br />No install, no sign-up.</h1>
+    <p>WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and work. Everything you enter is processed only on your own computer (in your browser) and is never sent to a server.</p>
   </section>
 
   <section class="section container">
-    <h2 style="margin-bottom: 4px;">제공 기능</h2>
-    <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">
-      아래 기능을 바로 사용해보세요. 새로운 도구는 계속 추가될 예정입니다.
-    </p>
+    <h2 style="margin-bottom: 4px;">Available tools</h2>
+    <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">Try the tool below right away — more tools are on the way.</p>
     <div class="card-grid" style="margin-top: 20px;">
       <article class="tool-card">
         <div class="tool-card-icon">🧩</div>
-        <h3><a href="tools/json-formatter.html">JSON 포매터 / 뷰어</a></h3>
-        <p>
-          입력한 문자열이 올바른 JSON인지 검사하고, 들여쓰기와 문법 강조를 적용해
-          가독성 좋게 보여줍니다. 트리 접기/펼치기와 키·값 검색 기능을 제공합니다.
-        </p>
+        <h3><a href="/tools/json-formatter.html">JSON Formatter / Viewer</a></h3>
+        <p>Checks whether your input is valid JSON and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and key/value search.</p>
         <span class="tag">JSON · Formatter · Validator</span>
       </article>
 
       <article class="tool-card is-soon" aria-disabled="true">
         <div class="tool-card-icon">🛠️</div>
-        <h3>다음 도구 준비 중</h3>
-        <p>텍스트/인코딩 변환, 대소문자 변환 등 새로운 도구를 순차적으로 추가할 예정입니다.</p>
+        <h3>More tools coming soon</h3>
+        <p>Text/encoding conversion, case conversion, and more tools will be added over time.</p>
         <span class="tag">Coming soon</span>
       </article>
     </div>
   </section>
 
   <section class="section-tight container prose">
-    <h2>왜 웹툴박스인가요?</h2>
+    <h2>Why WebToolBox?</h2>
     <ul>
-      <li><strong>설치·가입 불필요</strong> — 링크만 열면 바로 사용할 수 있습니다.</li>
-      <li><strong>브라우저 내 처리</strong> — 입력한 데이터를 서버로 전송하지 않고 클라이언트에서만 처리합니다.</li>
-      <li><strong>다크 모드 지원</strong> — 화면 우측 상단 토글로 언제든 라이트/다크 테마를 전환할 수 있습니다.</li>
-      <li><strong>지속적인 기능 추가</strong> — 자주 쓰는 개발/업무 도구를 계속 확장해 나갈 예정입니다.</li>
+      <li><strong>No install or sign-up</strong> — Just open the link and start using it right away.</li>
+      <li><strong>Processed in your browser</strong> — Your input is handled entirely on the client side and is never sent to a server.</li>
+      <li><strong>Dark mode support</strong> — Switch between light and dark themes anytime using the toggle in the top right.</li>
+      <li><strong>Continuously expanding</strong> — We plan to keep adding tools that are useful for everyday development and work.</li>
     </ul>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
     <nav class="footer-links">
-      <a href="about.html">사이트 소개</a>
-      <a href="privacy.html">개인정보처리방침</a>
-      <a href="tools/json-formatter.html">JSON 포매터</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
     </nav>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

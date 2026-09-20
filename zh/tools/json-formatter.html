@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JSON 格式化 / 查看器 - 在线 JSON 验证与整理 | 网页工具箱</title>
+<meta name="description" content="在线 JSON 格式化工具。检查输入的字符串是否为有效 JSON，并带缩进和语法高亮清晰展示。支持折叠/展开以及键值搜索，数据仅在浏览器中处理。" />
+<meta name="keywords" content="JSON 格式化, JSON 查看器, JSON validator, JSON beautify, JSON pretty print, 在线 JSON 工具" />
+<link rel="canonical" href="https://example.com/zh/tools/json-formatter.html" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="网页工具箱" />
+<meta property="og:title" content="JSON 格式化 / 查看器 | 网页工具箱" />
+<meta property="og:description" content="支持验证、易读树形视图、搜索及折叠/展开的免费在线 JSON 格式化工具。" />
+<meta property="og:url" content="https://example.com/zh/tools/json-formatter.html" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/tools/json-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/tools/json-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/tools/json-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/json-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "zh"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "JSON 格式化 / 查看器",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://example.com/zh/tools/json-formatter.html",
+  "description": "验证 JSON 字符串并以易读树形结构整理展示的免费在线工具。提供搜索与折叠/展开功能。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳转到正文</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/zh/">
+      <span class="nav-brand-mark">W</span>
+      网页工具箱
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="打开菜单">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/zh/">首页</a></li>
+      <li><a href="/zh/tools/json-formatter.html" aria-current="page">JSON 格式化</a></li>
+      <li><a href="/zh/about.html">关于本站</a></li>
+      <li><a href="/zh/privacy.html">隐私政策</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="选择语言">🇨🇳</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/json-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/json-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/json-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/json-formatter.html" data-lang-option="zh" aria-current="true">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="切换到深色模式">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>JSON 格式化 / 查看器</h1>
+    <p>输入 JSON 字符串即可验证其有效性，并以带缩进和语法高亮的树形结构展示。输入内容不会发送到服务器，仅在浏览器中处理。</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">格式化(Format)</button>
+      <button class="btn" id="btn-sample" type="button">加载示例</button>
+      <button class="btn" id="btn-clear" type="button">清除</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">缩进大小</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>2 空格缩进</option>
+        <option value="4">4 空格缩进</option>
+        <option value="tab">Tab 缩进</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">复制</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">复制压缩版</button>
+      <button class="btn btn-sm" id="btn-download" type="button">下载 .json</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="切换输入/输出">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        输入
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        输出
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="输入">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="json-status-top" class="status-pill is-idle">请输入 JSON</span>
+          <span id="json-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="json-input-search-mode" class="visually-hidden">搜索方式</label>
+          <select class="jf-select jf-search-mode" id="json-input-search-mode">
+            <option value="contains" selected>包含</option>
+            <option value="exact">精确(整行)</option>
+            <option value="regex">正则表达式</option>
+          </select>
+          <label for="json-input-search" class="visually-hidden">搜索方式</label>
+          <input type="text" id="json-input-search" placeholder="在输入文本中搜索…" />
+          <span class="jf-search-count" id="json-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="上一个匹配项" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="下一个匹配项" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="清除搜索词" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="json-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="json-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="json-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="json-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="在此粘贴 JSON 字符串。即使键或值的引号缺失，也会尽可能识别。"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="json-status" class="status-pill is-idle">请输入 JSON</span>
+          <span id="json-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="输出" hidden>
+        <div class="jf-panel-head">
+          <span>输出</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ 全部展开</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ 全部折叠</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="json-search-mode" class="visually-hidden">搜索方式</label>
+          <select class="jf-select jf-search-mode" id="json-search-mode" disabled>
+            <option value="contains" selected>包含</option>
+            <option value="exact">精确</option>
+            <option value="regex">正则表达式</option>
+          </select>
+          <label for="json-search" class="visually-hidden">搜索键或值…</label>
+          <input type="text" id="json-search" placeholder="搜索键或值…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="上一个匹配项" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="下一个匹配项" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="清除搜索词" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="json-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="json-output-gutter-inner"></div>
+          </div>
+          <div id="json-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">提示：停止输入后会自动验证，若有效则自动切换到"输出"标签页。输出标签上的圆点表示当前的有效性状态。用于折叠/展开对象/数组的 ▾/▸ 按钮位于行号旁边(左侧留白)，方便点击。打开输出标签页时搜索框会自动获得焦点，可选择搜索模式(包含/精确/正则)按需要查找键和值。输出区域左侧的行号会根据折叠状态重新编号，只显示当前可见的行，即使结构被折叠也能轻松定位。输入面板也有相同方式的搜索(包含/精确/正则)，可直接在原始文本中定位并高亮显示。按 Enter(下一个) / Shift+Enter(上一个) 可在匹配项之间移动。即使键或字符串值的引号(")有部分缺失，也会尽可能识别为 JSON 并展示。</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>使用方法</h2>
+    <ul>
+      <li>在左侧输入框中粘贴 JSON 字符串，将自动验证并绘制结果。</li>
+      <li>如果 JSON 无效，会告知您大致的错误行/列位置。</li>
+      <li>点击"格式化(Format)"按钮后，输入框中的内容也会按所选缩进量重新整理。</li>
+      <li>当结果较长时，可先用"全部折叠"浏览整体结构，再通过行号旁的 ▾/▸ 按钮展开需要的节点。</li>
+      <li>所有处理都在浏览器中进行，输入的数据不会发送到服务器。</li>
+      <li>即使键或字符串值的引号有部分缺失，也会尽可能自动修正并识别。此时状态彽形会显示为“已修正”，并在输入框左侧的行号中高亮显示发生修正的行。</li>
+      <li>输入完成且结果确认正常(有效或已修正)后，会自动切换到"输出"标签页，并将焦点移至搜索框以便直接输入。</li>
+      <li>可在"包含"(部分匹配)、"精确"(完全匹配)、"正则"(正则表达式)中选择搜索模式。</li>
+      <li>输入框上方也有相同的搜索功能(包含/精确/正则、上一个·下一个导航、高亮显示)，可直接在原始文本中搜索。</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> 网页工具箱. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/zh/about.html">关于本站</a>
+      <a href="/zh/privacy.html">隐私政策</a>
+      <a href="/zh/tools/json-formatter.html">JSON 格式化</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/json-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

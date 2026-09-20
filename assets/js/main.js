@@ -8,6 +8,18 @@
 
   var THEME_KEY = "wtb-theme";
 
+  var THEME_LABELS = {
+    en: { dark: "Switch to dark mode", light: "Switch to light mode" },
+    ko: { dark: "다크 모드로 전환", light: "라이트 모드로 전환" },
+    ja: { dark: "ダークモードに切り替え", light: "ライトモードに切り替え" },
+    zh: { dark: "切换到深色模式", light: "切换到浅色模式" },
+  };
+
+  function currentLangCode() {
+    var l = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
+    return THEME_LABELS[l] ? l : "en";
+  }
+
   function getStoredTheme() {
     try {
       return localStorage.getItem(THEME_KEY);
@@ -33,8 +45,9 @@
     var toggle = document.querySelector("[data-theme-toggle]");
     if (toggle) {
       var isDark = theme === "dark";
+      var labels = THEME_LABELS[currentLangCode()];
       toggle.setAttribute("aria-pressed", String(isDark));
-      toggle.setAttribute("aria-label", isDark ? "라이트 모드로 전환" : "다크 모드로 전환");
+      toggle.setAttribute("aria-label", isDark ? labels.light : labels.dark);
       toggle.textContent = isDark ? "☀️" : "🌙";
     }
   }

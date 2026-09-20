@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>サイト紹介 | ウェブツールボックス</title>
+<meta name="description" content="ウェブツールボックスは会員登録不要でブラウザ上ですぐ使える無料のオンライン開発者ツール集です。サービス紹介、運営方針、提供機能をご案内します。" />
+<link rel="canonical" href="https://example.com/ja/about.html" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ウェブツールボックス" />
+<meta property="og:title" content="サイト紹介 | ウェブツールボックス" />
+<meta property="og:description" content="ウェブツールボックスのサービス紹介と運営方針をご案内します。" />
+<meta property="og:url" content="https://example.com/ja/about.html" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/about.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/about.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/about.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/about.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/about.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ja/">
+      <span class="nav-brand-mark">W</span>
+      ウェブツールボックス
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ja/">ホーム</a></li>
+      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/about.html" aria-current="page">サイト紹介</a></li>
+      <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="言語選択">🇯🇵</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/about.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/about.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/about.html" data-lang-option="ja" aria-current="true">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/about.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>サイト紹介</h1>
+    <p>ウェブツールボックスがどのようなサービスか、どのような方針で運営されているかをご紹介します。</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <section>
+      <h2>ウェブツールボックスとは?</h2>
+      <p>ウェブツールボックス(WebToolBox)は、開発や業務でよく発生する細かくて面倒な作業を、別途プログラムのインストールや会員登録なしに、ウェブブラウザ上ですぐに処理できるようにした無料のオンラインユーティリティ集です。最初に提供する機能は<a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>で、今後も実務に役立つツールを継続的に追加していく予定です。</p>
+    </section>
+
+    <section>
+      <h2>運営方針</h2>
+      <ul>
+        <li><strong>登録不要ですぐ使える</strong> — アカウントやログインなしで誰でもすぐに利用できます。</li>
+        <li><strong>クライアントサイド処理</strong> — ほとんどのツールは入力値をサーバーに送信せず、ブラウザ(JavaScript)内でのみ処理します。詳しくは<a href="/ja/privacy.html">プライバシーポリシー</a>をご覚ください。</li>
+        <li><strong>軸くて速い画面</strong> — 不要な要素を減らし、必要な機能に集中したシンプルな画面を目指しています。</li>
+        <li><strong>ダークモード標準対応</strong> — システム設定または手動切り替えでライト/ダークテーマを選択できます。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>提供中の機能</h2>
+      <ul>
+        <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター / ビューア</a> — JSON文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、キー・値の検索に対応しています。</li>
+      </ul>
+      <p>新機能のご提案や改善のご意見はいつでも歓迎します。</p>
+    </section>
+
+    <section>
+      <h2>広告およびサービス運営について</h2>
+      <p>ウェブツールボックスはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="/ja/privacy.html">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。</p>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>不具合報告、機能提案、その他のお問い合わせは下記メールアドレスまでご連絡ください。</p>
+      <p><a href="mailto:hongsh119@gmail.com">hongsh119@gmail.com</a></p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

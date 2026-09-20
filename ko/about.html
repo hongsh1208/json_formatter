@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>사이트 소개 | 웹툴박스</title>
+<meta name="description" content="웹툴박스는 회원가입 없이 브라우저에서 바로 쓰는 무료 온라인 개발자 도구 모음입니다. 서비스 소개와 운영 철학, 제공 중인 기능을 안내합니다." />
+<link rel="canonical" href="https://example.com/ko/about.html" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="웹툴박스" />
+<meta property="og:title" content="사이트 소개 | 웹툴박스" />
+<meta property="og:description" content="웹툴박스 서비스 소개와 운영 철학을 안내합니다." />
+<meta property="og:url" content="https://example.com/ko/about.html" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/about.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/about.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/about.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/about.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/about.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "ko"); } catch (e) {}
+</script>
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ko/">
+      <span class="nav-brand-mark">W</span>
+      웹툴박스
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ko/">홈</a></li>
+      <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
+      <li><a href="/ko/about.html" aria-current="page">사이트 소개</a></li>
+      <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="언어 선택">🇰🇷</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/about.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/about.html" data-lang-option="ko" aria-current="true">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/about.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/about.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="다크 모드로 전환">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>사이트 소개</h1>
+    <p>웹툴박스가 어떤 서비스인지, 어떤 원칙으로 운영되는지 소개합니다.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <section>
+      <h2>웹툴박스란?</h2>
+      <p>웹툴박스(WebToolBox)는 개발이나 업무 중 자주 마주하지만 번거로운 작업을 별도 프로그램 설치나 회원가입 없이, 웹 브라우저에서 바로 처리할 수 있도록 만든 무료 온라인 유틸리티 모음입니다. 첫 번째로 제공하는 기능은 <a href="/ko/tools/json-formatter.html">JSON 포매터</a>이며, 앞으로도 실무에 도움이 되는 도구를 지속적으로 추가할 예정입니다.</p>
+    </section>
+
+    <section>
+      <h2>운영 원칙</h2>
+      <ul>
+        <li><strong>가입 없이 바로 사용</strong> — 별도의 계정이나 로그인 없이 누구나 즉시 이용할 수 있습니다.</li>
+        <li><strong>클라이언트 사이드 처리</strong> — 대부분의 도구는 입력값을 서버로 전송하지 않고 브라우저(자바스크립트) 안에서만 처리합니다. 자세한 내용은 <a href="/ko/privacy.html">개인정보처리방침</a>을 참고해주세요.</li>
+        <li><strong>가벼고 빠른 화면</strong> — 불필요한 요소를 줄이고 필요한 기능에 집중한 단순한 화면을 지향합니다.</li>
+        <li><strong>다크 모드 기본 지원</strong> — 시스템 설정 또는 수동 전환으로 라이트/다크 테마를 선택할 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>제공 중인 기능</h2>
+      <ul>
+        <li><a href="/ko/tools/json-formatter.html">JSON 포매터 / 뷰어</a> — JSON 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 키·값 검색을 지원합니다.</li>
+      </ul>
+      <p>새로운 기능 제안이나 개선 의견은 언제든 환영합니다.</p>
+    </section>
+
+    <section>
+      <h2>광고 및 서비스 운영에 대해</h2>
+      <p>웹툴박스는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="/ko/privacy.html">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.</p>
+    </section>
+
+    <section>
+      <h2>문의</h2>
+      <p>버그 제보, 기능 제안, 기타 문의는 아래 이메일로 연락해 주세요.</p>
+      <p><a href="mailto:hongsh119@gmail.com">hongsh119@gmail.com</a></p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ko/about.html">사이트 소개</a>
+      <a href="/ko/privacy.html">개인정보처리방침</a>
+      <a href="/ko/tools/json-formatter.html">JSON 포매터</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
