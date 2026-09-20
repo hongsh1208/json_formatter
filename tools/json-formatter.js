@@ -168,7 +168,7 @@
       isActive: true,
       rating: 4.8,
       tags: ["json", "formatter", "viewer"],
-      owner: { email: "hongsh119@gmail.com", verified: true },
+      owner: { verified: true },
       children: [],
       note: null,
     },
