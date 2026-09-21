@@ -9,7 +9,7 @@
 (function () {
   "use strict";
 
-  var LANG_KEY = "wtb-lang";
+  var LANG_KEY = "formix-lang";
 
   function initLangSwitch() {
     var root = document.querySelector("[data-lang-switch]");

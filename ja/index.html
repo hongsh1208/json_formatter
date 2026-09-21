@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ウェブツールボックス | インストール不要の無料オンライン開発者ツール集</title>
-<meta name="description" content="会員登録不要でブラウザ上ですぐ使える無料のオンラインツール集。JSONフォーマッターでJSON文字列を検証し、読みやすく整形して表示します。データはサーバーに送信されず、ブラウザ内でのみ処理されます。" />
-<meta name="keywords" content="オンラインツール, JSONフォーマッター, JSONビューア, JSON validator, ウェブユーティリティ, 無料開発者ツール" />
-<link rel="canonical" href="https://example.com/ja/" />
+<title>JSON・XML 整形（フォーマッター）無料オンラインツール - Formix</title>
+<meta name="description" content="会員登録不要でブラウザ上ですぐ使える無料の JSON・XML フォーマッター。JSON/XML 文字列を検証し、読みやすく整形して表示します。データはサーバーに送信されず、ブラウザ内でのみ処理されます。" />
+<meta name="keywords" content="JSON 整形, JSONフォーマッター, JSONビューア, JSON 検証, XML 整形, オンライン JSON ツール, 無料 開発者ツール" />
+<link rel="canonical" href="https://formix.site/ja/" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="ウェブツールボックス" />
-<meta property="og:title" content="ウェブツールボックス | 無料オンライン開発者ツール集" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="JSON・XML 整形（フォーマッター）無料オンラインツール - Formix" />
 <meta property="og:description" content="JSONフォーマッターをはじめ、ブラウザですぐ使える無料オンラインツールを提供します。データはサーバーに保存されません。" />
-<meta property="og:url" content="https://example.com/ja/" />
-<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:url" content="https://formix.site/ja/" />
+<meta property="og:image" content="https://formix.site/assets/img/og-ja.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="ja_JP" />
@@ -24,37 +24,37 @@
 <meta property="og:locale:alternate" content="ko_KR" />
 <meta property="og:locale:alternate" content="zh_CN" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="ウェブツールボックス | 無料オンライン開発者ツール集" />
+<meta name="twitter:title" content="JSON・XML 整形（フォーマッター）無料オンラインツール - Formix" />
 <meta name="twitter:description" content="JSONフォーマッターをはじめ、ブラウザですぐ使える無料オンラインツールを提供します。データはサーバーに保存されません。" />
-<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-ja.png" />
 
-<link rel="alternate" hreflang="en" href="https://example.com/" />
-<link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
-<link rel="alternate" hreflang="ja" href="https://example.com/ja/" />
-<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/" />
-<link rel="alternate" hreflang="x-default" href="https://example.com/" />
+<link rel="alternate" hreflang="en" href="https://formix.site/" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
-      var t = localStorage.getItem("wtb-theme");
+      var t = localStorage.getItem("formix-theme");
       if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   })();
 </script>
 <script>
-  try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
+  try { localStorage.setItem("formix-lang", "ja"); } catch (e) {}
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "ウェブツールボックス",
-  "url": "https://example.com/ja/",
-  "description": "ウェブツールボックスは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安",
+  "name": "Formix",
+  "url": "https://formix.site/ja/",
+  "description": "Formixは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安心してご",
   "inLanguage": "ja"
 }
 </script>
@@ -65,8 +65,8 @@
 <header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="/ja/">
-      <span class="nav-brand-mark">W</span>
-      ウェブツールボックス
+      <span class="nav-brand-mark">F</span>
+      Formix
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
@@ -95,7 +95,7 @@
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
     <h1>インストールも登録も不要な<br />ブラウザ完結型オンラインツール集</h1>
-    <p>ウェブツールボックスは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安心してご利用いただけます。</p>
+    <p>Formixは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安心してご利用いただけます。</p>
   </section>
 
   <section class="section container">
@@ -126,7 +126,7 @@
   </section>
 
   <section class="section-tight container prose">
-    <h2>なぜウェブツールボックスなのか?</h2>
+    <h2>なぜFormixなのか?</h2>
     <ul>
       <li><strong>インストール・登録不要</strong> — リンクを開くだけですぐに利用できます。</li>
       <li><strong>ブラウザ内処理</strong> — 入力したデータをサーバーに送信せず、クライアント側だけで処理します。</li>
@@ -138,7 +138,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ja/about.html">サイト紹介</a>
       <a href="/ja/faq.html">よくある質問</a>

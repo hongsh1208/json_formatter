@@ -21,7 +21,7 @@ FONT_CJK_BOLD = "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
 FONT_LATIN_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_LATIN = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
-SITE_NAME = {"en": "WebToolBox", "ko": "웹툴박스", "ja": "ウェブツールボックス", "zh": "网页工具箱"}
+SITE_NAME = {"en": "Formix", "ko": "Formix", "ja": "Formix", "zh": "Formix"}
 TAGLINE = {
     "en": "Free Online Developer Tools",
     "ko": "브라우저에서 바로 쓰는 무료 개발자 도구",
@@ -66,14 +66,14 @@ def build(lang):
     img = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
     draw = ImageDraw.Draw(img)
 
-    # logo mark (rounded square with "W")
+    # logo mark (rounded square with "F")
     mark_size = 132
     mark_x, mark_y = 100, 165
     rounded_rect(draw, [mark_x, mark_y, mark_x + mark_size, mark_y + mark_size], 30, (255, 255, 255))
     wf = font_for("en", 84, bold=True)
-    bbox = draw.textbbox((0, 0), "W", font=wf)
+    bbox = draw.textbbox((0, 0), "F", font=wf)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-    draw.text((mark_x + (mark_size - tw) / 2 - bbox[0], mark_y + (mark_size - th) / 2 - bbox[1]), "W",
+    draw.text((mark_x + (mark_size - tw) / 2 - bbox[0], mark_y + (mark_size - th) / 2 - bbox[1]), "F",
                font=wf, fill=COLOR_TOP)
 
     # site name

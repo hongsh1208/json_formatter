@@ -1,4 +1,4 @@
-# 웹툴박스 (WebToolBox)
+# Formix
 
 Cloudflare Pages에 배포하는 정적 사이트입니다. 빌드 과정이 없는 순수 HTML/CSS/JS로 구성되어 있어,
 저장소를 그대로 Cloudflare Pages에 연결하면 별도 빌드 설정 없이 배포할 수 있습니다.
@@ -41,8 +41,9 @@ Cloudflare Pages에 배포하는 정적 사이트입니다. 빌드 과정이 없
 
 ## 배포 전에 확인할 것
 
-- 모든 HTML의 `canonical`, `og:url`, `sitemap.xml`, `robots.txt`에 있는
-  `https://example.com`을 실제 배포 도메인으로 일괄 치환하세요.
+- 배포 도메인은 `scripts/build_site.py`의 `SITE_DOMAIN`(현재 `https://formix.site`)
+  값 하나로 관리됩니다. 도메인이 바뀌면 이 값만 수정하고 다시 빌드하면
+  `canonical`, `og:url`, `sitemap.xml`, `robots.txt`가 전부 자동으로 갱신됩니다.
 - Google AdSense를 실제로 적용하면 `privacy.html`의 3번 항목(광고 서비스 이용에 관한 사항)
   내용이 실제 운영 방식과 일치하는지 다시 확인하세요.
 - 연락처 이메일은 `hongsh119@gmail.com`으로 되어 있습니다. 다른 주소를 쓰려면

@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy | WebToolBox</title>
-<meta name="description" content="WebToolBox's privacy policy. Explains what information we collect, our use of cookies/local storage, and how data is handled in relation to advertising (Google AdSense)." />
-<link rel="canonical" href="https://example.com/privacy.html" />
+<title>Privacy Policy | Formix</title>
+<meta name="description" content="Formix's privacy policy. Explains what information we collect, our use of cookies/local storage, and how data is handled in relation to advertising (Google AdSense)." />
+<link rel="canonical" href="https://formix.site/privacy.html" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="WebToolBox" />
-<meta property="og:title" content="Privacy Policy | WebToolBox" />
-<meta property="og:description" content="Information on WebToolBox's collection and use of personal data and our use of cookies." />
-<meta property="og:url" content="https://example.com/privacy.html" />
-<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Privacy Policy | Formix" />
+<meta property="og:description" content="Information on Formix's collection and use of personal data and our use of cookies." />
+<meta property="og:url" content="https://formix.site/privacy.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
@@ -23,22 +23,22 @@
 <meta property="og:locale:alternate" content="ja_JP" />
 <meta property="og:locale:alternate" content="zh_CN" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Privacy Policy | WebToolBox" />
-<meta name="twitter:description" content="Information on WebToolBox's collection and use of personal data and our use of cookies." />
-<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+<meta name="twitter:title" content="Privacy Policy | Formix" />
+<meta name="twitter:description" content="Information on Formix's collection and use of personal data and our use of cookies." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
 
-<link rel="alternate" hreflang="en" href="https://example.com/privacy.html" />
-<link rel="alternate" hreflang="ko" href="https://example.com/ko/privacy.html" />
-<link rel="alternate" hreflang="ja" href="https://example.com/ja/privacy.html" />
-<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/privacy.html" />
-<link rel="alternate" hreflang="x-default" href="https://example.com/privacy.html" />
+<link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
-      var t = localStorage.getItem("wtb-theme");
+      var t = localStorage.getItem("formix-theme");
       if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
@@ -48,7 +48,7 @@
   (function () {
     try {
       var SUPPORTED = ['ko', 'ja', 'zh'].slice();
-      var stored = localStorage.getItem("wtb-lang");
+      var stored = localStorage.getItem("formix-lang");
       if (stored) {
         if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
           location.replace("/" + stored + location.pathname + location.search);
@@ -62,10 +62,10 @@
         if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
       }
       if (match) {
-        localStorage.setItem("wtb-lang", match);
+        localStorage.setItem("formix-lang", match);
         location.replace("/" + match + location.pathname + location.search);
       } else {
-        localStorage.setItem("wtb-lang", "en");
+        localStorage.setItem("formix-lang", "en");
       }
     } catch (e) {}
   })();
@@ -78,14 +78,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "WebToolBox",
-      "item": "https://example.com/"
+      "name": "Formix",
+      "item": "https://formix.site/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Privacy Policy",
-      "item": "https://example.com/privacy.html"
+      "item": "https://formix.site/privacy.html"
     }
   ]
 }
@@ -97,8 +97,8 @@
 <header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="/">
-      <span class="nav-brand-mark">W</span>
-      WebToolBox
+      <span class="nav-brand-mark">F</span>
+      Formix
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
@@ -130,7 +130,7 @@
   </div>
 
   <div class="container prose section-tight" style="max-width: 760px;">
-    <p>WebToolBox (the "Site") values its users' privacy and strives to comply with applicable data protection laws. This policy explains what information the Site collects and how it is used.</p>
+    <p>Formix (the "Site") values its users' privacy and strives to comply with applicable data protection laws. This policy explains what information the Site collects and how it is used.</p>
 
     <section>
       <h2>1. Information processed and how</h2>
@@ -180,7 +180,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/about.html">About</a>
       <a href="/faq.html">FAQ</a>

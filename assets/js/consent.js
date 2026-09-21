@@ -5,14 +5,14 @@
  * - 선택 결과는 localStorage에 저장되고, 저장된 값이 없을 때만 배너를 띄운다.
  * - 지금은 사이트에 광고 스크립트가 없으므로 이 배너는 "동의를 수집해 저장하는
  *   틀"의 역할만 한다. 추후 Google AdSense(Funding Choices 등 공식 CMP)를
- *   붙일 때 window.wtbConsent.get() 값을 읽어 광고 스크립트 로드 여부를
+ *   붙일 때 window.formixConsent.get() 값을 읽어 광고 스크립트 로드 여부를
  *   결정하면 된다.
  * - 푸터의 "쿠키 설정" 버튼으로 언제든 다시 열어 선택을 바꿀 수 있다.
  */
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "wtb-consent"; // "accepted" | "rejected"
+  var STORAGE_KEY = "formix-consent"; // "accepted" | "rejected"
 
   var LANG = (function () {
     var l = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
@@ -30,7 +30,7 @@
       close: "Close",
     },
     ko: {
-      text: '웹툴박스는 필수 사이트 기능과, 추후 도입 시 광고·분석을 위해 쿠키를 사용할 수 있습니다. EEA·영국·스위스에서 접속하셨다면 아래에서 선택해주세요. 자세한 내용은 <a href="/privacy.html">개인정보처리방침</a>을 참고해주세요.',
+      text: 'Formix는 필수 사이트 기능과, 추후 도입 시 광고·분석을 위해 쿠키를 사용할 수 있습니다. EEA·영국·스위스에서 접속하셨다면 아래에서 선택해주세요. 자세한 내용은 <a href="/privacy.html">개인정보처리방침</a>을 참고해주세요.',
       acceptAll: "모두 동의",
       rejectNonEssential: "필수 외 거부",
       settingsLabel: "쿠키 설정",
@@ -39,7 +39,7 @@
       close: "닫기",
     },
     ja: {
-      text: 'ウェブツールボックスは必須のサイト機能、また今後導入する場合は広告・分析のためにCookieを使用することがあります。EEA・英国・スイスからアクセスされている場合は、以下からご選択ください。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。',
+      text: 'Formixは必須のサイト機能、また今後導入する場合は広告・分析のためにCookieを使用することがあります。EEA・英国・スイスからアクセスされている場合は、以下からご選択ください。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。',
       acceptAll: "すべて同意",
       rejectNonEssential: "必須以外を拒否",
       settingsLabel: "Cookie設定",
@@ -48,7 +48,7 @@
       close: "閉じる",
     },
     zh: {
-      text: '网页工具箱会使用 Cookie 以实现必要的网站功能，如后续引入广告或分析功能也会用到。如果您从 EEA、英国或瑞士访问，请在下方进行选择。详情请参阅<a href="/privacy.html">隐私政策</a>。',
+      text: 'Formix会使用 Cookie 以实现必要的网站功能，如后续引入广告或分析功能也会用到。如果您从 EEA、英国或瑞士访问，请在下方进行选择。详情请参阅<a href="/privacy.html">隐私政策</a>。',
       acceptAll: "全部同意",
       rejectNonEssential: "拒绝非必要",
       settingsLabel: "Cookie 设置",
@@ -145,7 +145,7 @@
   }
 
   // 공개 API — 추후 광고 스크립트를 붙일 때 동의 여부를 읽는 용도
-  window.wtbConsent = {
+  window.formixConsent = {
     get: getStoredConsent,
     open: showBanner,
   };

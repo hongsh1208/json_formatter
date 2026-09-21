@@ -164,13 +164,14 @@
   var SAMPLE_JSON = JSON.stringify(
     {
       id: 1024,
-      name: "웹툴박스",
-      isActive: true,
+      name: "JSON Formatter",
+      maker: "Formix",
+      isFree: true,
       rating: 4.8,
       tags: ["json", "formatter", "viewer"],
-      owner: { verified: true },
-      children: [],
-      note: null,
+      pricing: { amount: 0, currency: "USD" },
+      screenshots: [],
+      deprecatedSince: null,
     },
     null,
     2

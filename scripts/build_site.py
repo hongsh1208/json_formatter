@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-웹툴박스 다국어 정적 사이트 생성기.
+Formix 다국어 정적 사이트 생성기.
 
 - 이 스크립트는 "빌드 타임" 도구입니다. 실행 결과로 나온 완전한 정적 HTML 파일들이
   실제로 Cloudflare Pages에 배포되는 산출물이며, 배포 자체에는 Node/Python 등
@@ -23,7 +23,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # json_formatter/
-SITE_DOMAIN = "https://example.com"  # 실제 배포 도메인이 정해지면 이 값만 바꾸면 됩니다.
+SITE_DOMAIN = "https://formix.site"
 
 LANGS = ["en", "ko", "ja", "zh"]
 DEFAULT_LANG = "en"
@@ -35,7 +35,7 @@ LANG_META = {
     "zh": {"label": "中文", "flag": "\U0001F1E8\U0001F1F3", "html_lang": "zh-CN"},
 }
 
-SITE_NAME = {"en": "WebToolBox", "ko": "웹툴박스", "ja": "ウェブツールボックス", "zh": "网页工具箱"}
+SITE_NAME = {"en": "Formix", "ko": "Formix", "ja": "Formix", "zh": "Formix"}
 
 CONTACT_EMAIL = "hongsh119@gmail.com"
 
@@ -43,7 +43,7 @@ ICON_DATA_URI = (
     'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>'
     '<rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/>'
     '<text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 '
-    'text-anchor=%22middle%22 fill=%22white%22>W</text></svg>'
+    'text-anchor=%22middle%22 fill=%22white%22>F</text></svg>'
 )
 
 
@@ -106,14 +106,14 @@ CONTENT = {}
 
 CONTENT["index"] = {
     "en": dict(
-        title="WebToolBox | Free Online Developer Tools You Can Use Instantly",
-        description="Free online tools you can use right in your browser — no sign-up required. Validate and beautify JSON with the JSON Formatter. Your data is processed locally and never sent to a server.",
-        keywords="online tools, JSON formatter, JSON viewer, JSON validator, web utilities, free developer tools",
-        og_title="WebToolBox | Free Online Developer Tools",
+        title="Formix – Free Online JSON & XML Formatter, Validator & Developer Tools",
+        description="Free online JSON formatter and XML formatter you can use right in your browser — no sign-up required. Validate, beautify, and view JSON/XML instantly. Your data is processed locally and never sent to a server.",
+        keywords="json formatter, json validator, json viewer online, format json online, beautify json, xml formatter online, xml validator, free online developer tools",
+        og_title="Formix – Free Online JSON & XML Formatter",
         og_description="Free online tools including a JSON Formatter, usable right in your browser. Your data is never stored on our servers.",
         eyebrow="FREE ONLINE TOOLS",
         h1="Browser-based online tools.<br />No install, no sign-up.",
-        hero_p="WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and work. Everything you enter is processed only on your own computer (in your browser) and is never sent to a server.",
+        hero_p="Formix is a free collection of online utilities for the small, everyday tasks that come up during development and work. Everything you enter is processed only on your own computer (in your browser) and is never sent to a server.",
         features_h2="Available tools",
         features_p="Try the tool below right away — more tools are on the way.",
         card1_title="JSON Formatter / Viewer",
@@ -125,7 +125,7 @@ CONTENT["index"] = {
         card3_title="More tools coming soon",
         card3_desc="Text/encoding conversion, case conversion, and more tools will be added over time.",
         card3_tag="Coming soon",
-        why_h2="Why WebToolBox?",
+        why_h2="Why Formix?",
         why_items=[
             ("No install or sign-up", "Just open the link and start using it right away."),
             ("Processed in your browser", "Your input is handled entirely on the client side and is never sent to a server."),
@@ -134,14 +134,14 @@ CONTENT["index"] = {
         ],
     ),
     "ko": dict(
-        title="웹툴박스 | 브라우저에서 바로 쓰는 무료 온라인 개발자 도구 모음",
-        description="회원가입 없이 브라우저에서 바로 사용하는 무료 온라인 도구 모음. JSON 포매터로 JSON 문자열을 검증하고 보기 좋게 정리하세요. 데이터는 서버로 전송되지 않고 내 브라우저 안에서만 처리됩니다.",
-        keywords="온라인 도구, JSON 포매터, JSON 뷰어, JSON validator, 웹 유틸리티, 무료 개발자 도구",
-        og_title="웹툴박스 | 무료 온라인 개발자 도구 모음",
+        title="JSON·XML 포맷터 무료 온라인 도구 - Formix",
+        description="회원가입 없이 브라우저에서 바로 사용하는 무료 JSON·XML 포맷터. JSON/XML 문자열을 검증하고 보기 좋게 정리하세요. 데이터는 서버로 전송되지 않고 내 브라우저 안에서만 처리됩니다.",
+        keywords="JSON 포맷터, JSON 뷰어, JSON 정리, JSON 검증, 온라인 JSON 도구, XML 포맷터, 무료 개발자 도구, JSON 예쁘게 만들기",
+        og_title="JSON·XML 포맷터 무료 온라인 도구 - Formix",
         og_description="JSON 포매터를 비롯해 브라우저에서 바로 쓰는 무료 온라인 도구를 제공합니다. 데이터는 서버에 저장되지 않습니다.",
         eyebrow="FREE ONLINE TOOLS",
         h1="설치도, 가입도 필요 없는<br />브라우저 기반 온라인 도구 모음",
-        hero_p="웹툴박스는 개발과 업무 중 자주 필요한 자잔한 작업들을 브라우저에서 바로 끝낼 수 있게 만든 무료 온라인 유틸리티 모음입니다. 입력한 데이터는 서버로 전송되지 않고 내 컴퓨터(브라우저) 안에서만 처리되어 안전하게 사용할 수 있습니다.",
+        hero_p="Formix는 개발과 업무 중 자주 필요한 자잔한 작업들을 브라우저에서 바로 끝낼 수 있게 만든 무료 온라인 유틸리티 모음입니다. 입력한 데이터는 서버로 전송되지 않고 내 컴퓨터(브라우저) 안에서만 처리되어 안전하게 사용할 수 있습니다.",
         features_h2="제공 기능",
         features_p="아래 기능을 바로 사용해보세요. 새로운 도구는 계속 추가될 예정입니다.",
         card1_title="JSON 포매터 / 뷰어",
@@ -153,7 +153,7 @@ CONTENT["index"] = {
         card3_title="다음 도구 준비 중",
         card3_desc="텍스트/인코딩 변환, 대소문자 변환 등 새로운 도구를 순차적으로 추가할 예정입니다.",
         card3_tag="Coming soon",
-        why_h2="왜 웹툴박스인가요?",
+        why_h2="왜 Formix인가요?",
         why_items=[
             ("설치·가입 불필요", "링크만 열면 바로 사용할 수 있습니다."),
             ("브라우저 내 처리", "입력한 데이터를 서버로 전송하지 않고 클라이언트에서만 처리합니다."),
@@ -162,14 +162,14 @@ CONTENT["index"] = {
         ],
     ),
     "ja": dict(
-        title="ウェブツールボックス | インストール不要の無料オンライン開発者ツール集",
-        description="会員登録不要でブラウザ上ですぐ使える無料のオンラインツール集。JSONフォーマッターでJSON文字列を検証し、読みやすく整形して表示します。データはサーバーに送信されず、ブラウザ内でのみ処理されます。",
-        keywords="オンラインツール, JSONフォーマッター, JSONビューア, JSON validator, ウェブユーティリティ, 無料開発者ツール",
-        og_title="ウェブツールボックス | 無料オンライン開発者ツール集",
+        title="JSON・XML 整形（フォーマッター）無料オンラインツール - Formix",
+        description="会員登録不要でブラウザ上ですぐ使える無料の JSON・XML フォーマッター。JSON/XML 文字列を検証し、読みやすく整形して表示します。データはサーバーに送信されず、ブラウザ内でのみ処理されます。",
+        keywords="JSON 整形, JSONフォーマッター, JSONビューア, JSON 検証, XML 整形, オンライン JSON ツール, 無料 開発者ツール",
+        og_title="JSON・XML 整形（フォーマッター）無料オンラインツール - Formix",
         og_description="JSONフォーマッターをはじめ、ブラウザですぐ使える無料オンラインツールを提供します。データはサーバーに保存されません。",
         eyebrow="FREE ONLINE TOOLS",
         h1="インストールも登録も不要な<br />ブラウザ完結型オンラインツール集",
-        hero_p="ウェブツールボックスは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安心してご利用いただけます。",
+        hero_p="Formixは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安心してご利用いただけます。",
         features_h2="提供機能",
         features_p="下記の機能をすぐにお試しください。新しいツールも順次追加していく予定です。",
         card1_title="JSONフォーマッター / ビューア",
@@ -181,7 +181,7 @@ CONTENT["index"] = {
         card3_title="次のツールを準備中",
         card3_desc="テキスト/エンコード変換、大文字小文字変換など、新しいツールを順次追加していく予定です。",
         card3_tag="Coming soon",
-        why_h2="なぜウェブツールボックスなのか?",
+        why_h2="なぜFormixなのか?",
         why_items=[
             ("インストール・登録不要", "リンクを開くだけですぐに利用できます。"),
             ("ブラウザ内処理", "入力したデータをサーバーに送信せず、クライアント側だけで処理します。"),
@@ -190,14 +190,14 @@ CONTENT["index"] = {
         ],
     ),
     "zh": dict(
-        title="网页工具箱 | 无需安装即可使用的免费在线开发者工具",
-        description="无需注册，直接在浏览器中使用的免费在线工具集。使用 JSON 格式化工具验证 JSON 字符串并以易读的方式展示。数据不会发送到服务器，仅在您的浏览器中处理。",
-        keywords="在线工具, JSON 格式化, JSON 查看器, JSON validator, 网页工具, 免费开发者工具",
-        og_title="网页工具箱 | 免费在线开发者工具",
+        title="JSON/XML 在线格式化工具（免费） - Formix",
+        description="无需注册，直接在浏览器中使用的免费 JSON/XML 格式化工具。验证并以易读方式展示 JSON/XML 字符串。数据不会发送到服务器，仅在您的浏览器中处理。",
+        keywords="JSON 格式化, JSON 在线格式化, JSON 校验, JSON 查看器, XML 格式化, 在线开发者工具, 免费在线工具",
+        og_title="JSON/XML 在线格式化工具（免费） - Formix",
         og_description="提供 JSON 格式化等可在浏览器中直接使用的免费在线工具，数据不会保存在服务器上。",
         eyebrow="FREE ONLINE TOOLS",
         h1="无需安装、无需注册的<br />浏览器端在线工具集",
-        hero_p="网页工具箱是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。",
+        hero_p="Formix是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。",
         features_h2="提供的功能",
         features_p="立即体验下面的功能，我们会持续添加新的工具。",
         card1_title="JSON 格式化 / 查看器",
@@ -209,7 +209,7 @@ CONTENT["index"] = {
         card3_title="更多工具即将上线",
         card3_desc="文本/编码转换、大小写转换等新工具将陆续添加。",
         card3_tag="Coming soon",
-        why_h2="为什么选择网页工具箱?",
+        why_h2="为什么选择Formix?",
         why_items=[
             ("无需安装、无需注册", "打开链接即可立即使用。"),
             ("浏览器端处理", "输入的数据完全在客户端处理，不会发送到服务器。"),
@@ -221,13 +221,13 @@ CONTENT["index"] = {
 
 CONTENT["about"] = {
     "en": dict(
-        title="About | WebToolBox",
-        description="WebToolBox is a free collection of online developer tools you can use right in your browser, no sign-up required. Learn about the service, its principles, and available features.",
-        og_title="About | WebToolBox",
-        og_description="An introduction to WebToolBox and the principles behind it.",
-        h1="About", lead="An introduction to what WebToolBox is and the principles it's run by.",
-        s1_h2="What is WebToolBox?",
-        s1_p='WebToolBox is a free collection of online utilities that lets you handle small but tedious tasks you often run into during development or work, directly in your web browser — no separate program to install, no sign-up required. The first tool we offer is the <a href="{tool}">JSON Formatter</a>, and we plan to keep adding tools that are genuinely useful in everyday work.',
+        title="About | Formix",
+        description="Formix is a free collection of online developer tools you can use right in your browser, no sign-up required. Learn about the service, its principles, and available features.",
+        og_title="About | Formix",
+        og_description="An introduction to Formix and the principles behind it.",
+        h1="About", lead="An introduction to what Formix is and the principles it's run by.",
+        s1_h2="What is Formix?",
+        s1_p='Formix is a free collection of online utilities that lets you handle small but tedious tasks you often run into during development or work, directly in your web browser — no separate program to install, no sign-up required. The first tool we offer is the <a href="{tool}">JSON Formatter</a>, and we plan to keep adding tools that are genuinely useful in everyday work.',
         s2_h2="Our principles",
         s2_items=[
             ("Use it instantly, no sign-up", "Anyone can start using it immediately — no account or login required."),
@@ -240,18 +240,18 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XML Formatter / Viewer</a> — Validates XML strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching tags, attributes, and text.',
         s3_p="Suggestions for new features or improvements are always welcome.",
         s4_h2="About advertising and running this service",
-        s4_p='WebToolBox may introduce advertising services such as Google AdSense in the future to help support running the site. If we do, how related data is handled will be explained transparently on the <a href="{privacy}">Privacy Policy</a> page, and the core functionality of our tools (e.g. JSON processing) will remain free regardless of whether ads are shown.',
+        s4_p='Formix may introduce advertising services such as Google AdSense in the future to help support running the site. If we do, how related data is handled will be explained transparently on the <a href="{privacy}">Privacy Policy</a> page, and the core functionality of our tools (e.g. JSON processing) will remain free regardless of whether ads are shown.',
         s5_h2="Contact",
         s5_p="For bug reports, feature requests, or any other inquiries, please reach out at the email below.",
     ),
     "ko": dict(
-        title="사이트 소개 | 웹툴박스",
-        description="웹툴박스는 회원가입 없이 브라우저에서 바로 쓰는 무료 온라인 개발자 도구 모음입니다. 서비스 소개와 운영 철학, 제공 중인 기능을 안내합니다.",
-        og_title="사이트 소개 | 웹툴박스",
-        og_description="웹툴박스 서비스 소개와 운영 철학을 안내합니다.",
-        h1="사이트 소개", lead="웹툴박스가 어떤 서비스인지, 어떤 원칙으로 운영되는지 소개합니다.",
-        s1_h2="웹툴박스란?",
-        s1_p='웹툴박스(WebToolBox)는 개발이나 업무 중 자주 마주하지만 번거로운 작업을 별도 프로그램 설치나 회원가입 없이, 웹 브라우저에서 바로 처리할 수 있도록 만든 무료 온라인 유틸리티 모음입니다. 첫 번째로 제공하는 기능은 <a href="{tool}">JSON 포매터</a>이며, 앞으로도 실무에 도움이 되는 도구를 지속적으로 추가할 예정입니다.',
+        title="사이트 소개 | Formix",
+        description="Formix는 회원가입 없이 브라우저에서 바로 쓰는 무료 온라인 개발자 도구 모음입니다. 서비스 소개와 운영 철학, 제공 중인 기능을 안내합니다.",
+        og_title="사이트 소개 | Formix",
+        og_description="Formix 서비스 소개와 운영 철학을 안내합니다.",
+        h1="사이트 소개", lead="Formix가 어떤 서비스인지, 어떤 원칙으로 운영되는지 소개합니다.",
+        s1_h2="Formix란?",
+        s1_p='Formix는 개발이나 업무 중 자주 마주하지만 번거로운 작업을 별도 프로그램 설치나 회원가입 없이, 웹 브라우저에서 바로 처리할 수 있도록 만든 무료 온라인 유틸리티 모음입니다. 첫 번째로 제공하는 기능은 <a href="{tool}">JSON 포매터</a>이며, 앞으로도 실무에 도움이 되는 도구를 지속적으로 추가할 예정입니다.',
         s2_h2="운영 원칙",
         s2_items=[
             ("가입 없이 바로 사용", "별도의 계정이나 로그인 없이 누구나 즉시 이용할 수 있습니다."),
@@ -264,17 +264,17 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XML 포매터 / 뷰어</a> — XML 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 태그·속성·텍스트 검색을 지원합니다.',
         s3_p="새로운 기능 제안이나 개선 의견은 언제든 환영합니다.",
         s4_h2="광고 및 서비스 운영에 대해",
-        s4_p='웹툴박스는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="{privacy}">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.',
+        s4_p='Formix는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="{privacy}">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.',
         s5_h2="문의", s5_p="버그 제보, 기능 제안, 기타 문의는 아래 이메일로 연락해 주세요.",
     ),
     "ja": dict(
-        title="サイト紹介 | ウェブツールボックス",
-        description="ウェブツールボックスは会員登録不要でブラウザ上ですぐ使える無料のオンライン開発者ツール集です。サービス紹介、運営方針、提供機能をご案内します。",
-        og_title="サイト紹介 | ウェブツールボックス",
-        og_description="ウェブツールボックスのサービス紹介と運営方針をご案内します。",
-        h1="サイト紹介", lead="ウェブツールボックスがどのようなサービスか、どのような方針で運営されているかをご紹介します。",
-        s1_h2="ウェブツールボックスとは?",
-        s1_p='ウェブツールボックス(WebToolBox)は、開発や業務でよく発生する細かくて面倒な作業を、別途プログラムのインストールや会員登録なしに、ウェブブラウザ上ですぐに処理できるようにした無料のオンラインユーティリティ集です。最初に提供する機能は<a href="{tool}">JSONフォーマッター</a>で、今後も実務に役立つツールを継続的に追加していく予定です。',
+        title="サイト紹介 | Formix",
+        description="Formixは会員登録不要でブラウザ上ですぐ使える無料のオンライン開発者ツール集です。サービス紹介、運営方針、提供機能をご案内します。",
+        og_title="サイト紹介 | Formix",
+        og_description="Formixのサービス紹介と運営方針をご案内します。",
+        h1="サイト紹介", lead="Formixがどのようなサービスか、どのような方針で運営されているかをご紹介します。",
+        s1_h2="Formixとは?",
+        s1_p='Formixは、開発や業務でよく発生する細かくて面倒な作業を、別途プログラムのインストールや会員登録なしに、ウェブブラウザ上ですぐに処理できるようにした無料のオンラインユーティリティ集です。最初に提供する機能は<a href="{tool}">JSONフォーマッター</a>で、今後も実務に役立つツールを継続的に追加していく予定です。',
         s2_h2="運営方針",
         s2_items=[
             ("登録不要ですぐ使える", "アカウントやログインなしで誰でもすぐに利用できます。"),
@@ -287,17 +287,17 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XMLフォーマッター / ビューア</a> — XML文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、タグ・属性・テキストの検索に対応しています。',
         s3_p="新機能のご提案や改善のご意見はいつでも歓迎します。",
         s4_h2="広告およびサービス運営について",
-        s4_p='ウェブツールボックスはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="{privacy}">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。',
+        s4_p='Formixはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="{privacy}">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。',
         s5_h2="お問い合わせ", s5_p="不具合報告、機能提案、その他のお問い合わせは下記メールアドレスまでご連絡ください。",
     ),
     "zh": dict(
-        title="关于本站 | 网页工具箱",
-        description="网页工具箱是无需注册即可在浏览器中直接使用的免费在线开发者工具集。介绍服务内容、运营理念和已提供的功能。",
-        og_title="关于本站 | 网页工具箱",
-        og_description="介绍网页工具箱的服务内容与运营理念。",
-        h1="关于本站", lead="介绍网页工具箱是一项怎样的服务，以及它的运营理念。",
-        s1_h2="什么是网页工具箱?",
-        s1_p='网页工具箱(WebToolBox)是一套免费的在线实用工具集，让你无需安装额外程序、无需注册账号，就能在网页浏览器中直接处理开发或工作中常见的琐碎任务。首个提供的功能是<a href="{tool}">JSON 格式化工具</a>，未来还会持续添加对实际工作有帮助的工具。',
+        title="关于本站 | Formix",
+        description="Formix是无需注册即可在浏览器中直接使用的免费在线开发者工具集。介绍服务内容、运营理念和已提供的功能。",
+        og_title="关于本站 | Formix",
+        og_description="介绍Formix的服务内容与运营理念。",
+        h1="关于本站", lead="介绍Formix是一项怎样的服务，以及它的运营理念。",
+        s1_h2="什么是Formix?",
+        s1_p='Formix是一套免费的在线实用工具集，让你无需安装额外程序、无需注册账号，就能在网页浏览器中直接处理开发或工作中常见的琐碎任务。首个提供的功能是<a href="{tool}">JSON 格式化工具</a>，未来还会持续添加对实际工作有帮助的工具。',
         s2_h2="运营理念",
         s2_items=[
             ("无需注册，立即使用", "任何人无需账号或登录即可立即使用。"),
@@ -310,19 +310,19 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XML 格式化 / 查看器</a> — 验证 XML 字符串的有效性，并以带缩进和语法高亮的树形结构展示。支持节点折叠/展开以及标签·属性·文本搜索。',
         s3_p="欢迎随时提出新功能建议或改进意见。",
         s4_h2="关于广告与服务运营",
-        s4_p='为了维持服务运营，网页工具箱未来可能会引入 Google AdSense 等广告服务。如果引入广告，相关数据的处理方式将在<a href="{privacy}">隐私政策</a>页面中透明说明，工具的核心功能(如 JSON 处理)将始终免费提供，不受广告影响。',
+        s4_p='为了维持服务运营，Formix未来可能会引入 Google AdSense 等广告服务。如果引入广告，相关数据的处理方式将在<a href="{privacy}">隐私政策</a>页面中透明说明，工具的核心功能(如 JSON 处理)将始终免费提供，不受广告影响。',
         s5_h2="联系方式", s5_p="如有错误反馈、功能建议或其他咨询，请通过以下邮箱联系我们。",
     ),
 }
 
 CONTENT["privacy"] = {
     "en": dict(
-        title="Privacy Policy | WebToolBox",
-        description="WebToolBox's privacy policy. Explains what information we collect, our use of cookies/local storage, and how data is handled in relation to advertising (Google AdSense).",
-        og_title="Privacy Policy | WebToolBox",
-        og_description="Information on WebToolBox's collection and use of personal data and our use of cookies.",
+        title="Privacy Policy | Formix",
+        description="Formix's privacy policy. Explains what information we collect, our use of cookies/local storage, and how data is handled in relation to advertising (Google AdSense).",
+        og_title="Privacy Policy | Formix",
+        og_description="Information on Formix's collection and use of personal data and our use of cookies.",
         h1="Privacy Policy", effective="Effective date: September 20, 2026",
-        intro='WebToolBox (the "Site") values its users\' privacy and strives to comply with applicable data protection laws. This policy explains what information the Site collects and how it is used.',
+        intro='Formix (the "Site") values its users\' privacy and strives to comply with applicable data protection laws. This policy explains what information the Site collects and how it is used.',
         s1_h2="1. Information processed and how",
         s1_p1="Tools provided on the Site, such as the JSON Formatter, process the text you enter entirely within your browser (JavaScript) and never send it to a server. In other words, the JSON data or text you input is never transmitted to or stored by the Site operator.",
         s1_p2="Simple preference settings, such as your theme choice (light/dark mode), are stored only in your browser's local storage (localStorage) and are never transmitted externally.",
@@ -344,12 +344,12 @@ CONTENT["privacy"] = {
         s7_p1="This Privacy Policy may be revised in response to changes in law, policy, or the Site's services, and any changes will be announced through the Site.",
     ),
     "ko": dict(
-        title="개인정보처리방침 | 웹툴박스",
-        description="웹툴박스의 개인정보처리방침입니다. 수집하는 정보, 쿠키·로컬스토리지 사용, 광고(Google AdSense) 관련 데이터 처리 방식을 안내합니다.",
-        og_title="개인정보처리방침 | 웹툴박스",
-        og_description="웹툴박스의 개인정보 수집·이용 및 쿠키 사용에 대한 안내입니다.",
+        title="개인정보처리방침 | Formix",
+        description="Formix의 개인정보처리방침입니다. 수집하는 정보, 쿠키·로컬스토리지 사용, 광고(Google AdSense) 관련 데이터 처리 방식을 안내합니다.",
+        og_title="개인정보처리방침 | Formix",
+        og_description="Formix의 개인정보 수집·이용 및 쿠키 사용에 대한 안내입니다.",
         h1="개인정보처리방침", effective="시행일자: 2026년 9월 20일",
-        intro='웹툴박스(이하 "사이트")는 이용자의 개인정보를 소중히 여기며, 개인정보 보호법 등 관련 법령을 준수하기 위해 노력합니다. 본 방침은 사이트가 어떤 정보를 어떻게 수집·이용하는지 설명합니다.',
+        intro='Formix(이하 "사이트")는 이용자의 개인정보를 소중히 여기며, 개인정보 보호법 등 관련 법령을 준수하기 위해 노력합니다. 본 방침은 사이트가 어떤 정보를 어떻게 수집·이용하는지 설명합니다.',
         s1_h2="1. 처리하는 정보 및 처리 방식",
         s1_p1="사이트에서 제공하는 JSON 포매터 등 도구는 입력하신 텍스트를 서버로 전송하지 않고 이용자의 브라우저(자바스크립트) 내에서만 처리합니다. 즉, 입력한 JSON 데이터나 텍스트는 사이트 운영자에게 전달되거나 저장되지 않습니다.",
         s1_p2="다만 화면 테마 설정(라이트/다크 모드)과 같은 단순 환경설정 값은 이용자의 브라우저 로컬 스토리지(localStorage)에만 저장되며, 이 정보는 외부로 전송되지 않습니다.",
@@ -371,12 +371,12 @@ CONTENT["privacy"] = {
         s7_p1="본 개인정보처리방침은 법령, 정책 또는 서비스 변경에 따라 개정될 수 있으며, 변경 시 사이트를 통해 공지합니다.",
     ),
     "ja": dict(
-        title="プライバシーポリシー | ウェブツールボックス",
-        description="ウェブツールボックスのプライバシーポリシーです。収集する情報、Cookie・ローカルストレージの利用、広告(Google AdSense)に関するデータの取り扱いについてご案内します。",
-        og_title="プライバシーポリシー | ウェブツールボックス",
-        og_description="ウェブツールボックスの個人情報の収集・利用およびCookieの使用に関するご案内です。",
+        title="プライバシーポリシー | Formix",
+        description="Formixのプライバシーポリシーです。収集する情報、Cookie・ローカルストレージの利用、広告(Google AdSense)に関するデータの取り扱いについてご案内します。",
+        og_title="プライバシーポリシー | Formix",
+        og_description="Formixの個人情報の収集・利用およびCookieの使用に関するご案内です。",
         h1="プライバシーポリシー", effective="施行日: 2026年9月20日",
-        intro='ウェブツールボックス(以下「本サイト」)は、利用者のプライバシーを重視し、関連法令の遵守に努めます。本ポリシーでは、本サイトがどのような情報をどのように収集・利用するかを説明します。',
+        intro='Formix(以下「本サイト」)は、利用者のプライバシーを重視し、関連法令の遵守に努めます。本ポリシーでは、本サイトがどのような情報をどのように収集・利用するかを説明します。',
         s1_h2="1. 処理する情報と処理方法",
         s1_p1="本サイトが提供するJSONフォーマッターなどのツールは、入力されたテキストをサーバーに送信せず、利用者のブラウザ(JavaScript)内でのみ処理します。つまり、入力されたJSONデータやテキストがサイト運営者に送信・保存されることはありません。",
         s1_p2="画面テーマ設定(ライト/ダークモード)などの単純な環境設定値のみ、利用者のブラウザのローカルストレージ(localStorage)に保存され、この情報が外部に送信されることはありません。",
@@ -398,12 +398,12 @@ CONTENT["privacy"] = {
         s7_p1="本プライバシーポリシーは、法令、方針またはサービスの変更に伴い改定されることがあり、変更時は本サイトを通じて告知します。",
     ),
     "zh": dict(
-        title="隐私政策 | 网页工具箱",
-        description="网页工具箱的隐私政策，说明我们收集的信息、Cookie 与本地存储的使用方式，以及与广告服务(Google AdSense)相关的数据处理方式。",
-        og_title="隐私政策 | 网页工具箱",
-        og_description="关于网页工具箱收集与使用个人信息及使用 Cookie 的说明。",
+        title="隐私政策 | Formix",
+        description="Formix的隐私政策，说明我们收集的信息、Cookie 与本地存储的使用方式，以及与广告服务(Google AdSense)相关的数据处理方式。",
+        og_title="隐私政策 | Formix",
+        og_description="关于Formix收集与使用个人信息及使用 Cookie 的说明。",
         h1="隐私政策", effective="生效日期：2026年9月20日",
-        intro='网页工具箱(以下简称"本网站")重视用户隐私，并致力于遵守相关法律法规。本政策说明本网站收集哪些信息以及如何使用这些信息。',
+        intro='Formix(以下简称"本网站")重视用户隐私，并致力于遵守相关法律法规。本政策说明本网站收集哪些信息以及如何使用这些信息。',
         s1_h2="1. 处理的信息及处理方式",
         s1_p1="本网站提供的 JSON 格式化等工具，会将您输入的文本完全在您的浏览器(JavaScript)中处理，不会发送到服务器。也就是说，您输入的 JSON 数据或文本不会被传送给网站运营者或被保存。",
         s1_p2="仅主题设置(浅色/深色模式)等简单的偏好设置值会保存在您浏览器的本地存储(localStorage)中，该信息不会对外传输。",
@@ -428,74 +428,74 @@ CONTENT["privacy"] = {
 
 CONTENT["faq"] = {
     "en": dict(
-        title="FAQ | WebToolBox",
-        description="Frequently asked questions about WebToolBox — pricing, data handling, browser support, and how the JSON/XML Formatter tools work.",
-        og_title="FAQ | WebToolBox",
-        og_description="Answers to common questions about WebToolBox and its tools.",
+        title="FAQ | Formix",
+        description="Frequently asked questions about Formix — pricing, data handling, browser support, and how the JSON/XML Formatter tools work.",
+        og_title="FAQ | Formix",
+        og_description="Answers to common questions about Formix and its tools.",
         h1="Frequently Asked Questions",
-        lead="Common questions about WebToolBox, how it handles your data, and how the tools work.",
+        lead="Common questions about Formix, how it handles your data, and how the tools work.",
         items=[
-            ("Is WebToolBox free to use?", "Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free."),
+            ("Is Formix free to use?", "Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free."),
             ("Is my data sent to a server?", 'No. Tools like the JSON Formatter and XML Formatter process everything locally in your browser using JavaScript. The text you paste in is never transmitted to or stored on our servers. See our <a href="{privacy}">Privacy Policy</a> for details.'),
             ("Do I need to create an account?", "No account or login is required for any tool. Just open the page and start using it."),
             ("Which browsers are supported?", "Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse."),
             ("Can I use these tools on my phone?", "Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents."),
             ("What happens if my JSON or XML is invalid?", "The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes."),
-            ("Will more tools be added?", 'Yes. WebToolBox started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
+            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
             ("How do I report a bug or suggest a feature?", 'Please reach out through our <a href="{contact}">Contact page</a>. We read every message.'),
         ],
     ),
     "ko": dict(
-        title="자주 묻는 질문 | 웹툴박스",
-        description="웹툴박스 이용 요금, 데이터 처리 방식, 브라우저 지원, JSON/XML 포매터 사용법 등 자주 묻는 질문에 대한 답변입니다.",
-        og_title="자주 묻는 질문 | 웹툴박스",
-        og_description="웹툴박스와 제공 도구에 대한 자주 묻는 질문과 답변입니다.",
+        title="자주 묻는 질문 | Formix",
+        description="Formix 이용 요금, 데이터 처리 방식, 브라우저 지원, JSON/XML 포매터 사용법 등 자주 묻는 질문에 대한 답변입니다.",
+        og_title="자주 묻는 질문 | Formix",
+        og_description="Formix와 제공 도구에 대한 자주 묻는 질문과 답변입니다.",
         h1="자주 묻는 질문",
-        lead="웹툴박스 이용, 데이터 처리 방식, 도구 사용법에 대해 자주 묻는 질문들을 모았습니다.",
+        lead="Formix 이용, 데이터 처리 방식, 도구 사용법에 대해 자주 묻는 질문들을 모았습니다.",
         items=[
-            ("웹툴박스는 무료인가요?", "네, 모든 도구는 완전히 무료이며 회원가입이나 계정 생성이 필요하지 않습니다. 운영비 충당을 위해 향후 광고를 게재할 수 있지만, 도구 자체는 계속 무료로 제공됩니다."),
+            ("Formix는 무료인가요?", "네, 모든 도구는 완전히 무료이며 회원가입이나 계정 생성이 필요하지 않습니다. 운영비 충당을 위해 향후 광고를 게재할 수 있지만, 도구 자체는 계속 무료로 제공됩니다."),
             ("입력한 데이터가 서버로 전송되나요?", '아니요. JSON 포매터, XML 포매터 등의 도구는 모든 처리를 브라우저 안에서(자바스크립트로) 수행합니다. 입력한 텍스트는 서버로 전송되거나 저장되지 않습니다. 자세한 내용은 <a href="{privacy}">개인정보처리방침</a>을 참고해주세요.'),
             ("회원가입이 필요한가요?", "필요하지 않습니다. 어떤 도구든 계정이나 로그인 없이 바로 사용할 수 있습니다."),
             ("어떤 브라우저를 지원하나요?", "PC와 모바일의 최신 브라우저(Chrome, Edge, Firefox, Safari)에서 모두 사용할 수 있습니다. DOMParser, JSON.parse 등 널리 지원되는 표준 자바스크립트 API를 사용합니다."),
             ("모바일에서도 사용할 수 있나요?", "네, 모바일 브라우저에서도 반응형으로 정상 동작합니다. 다만 긴 JSON·XML 문서를 다룰 때는 화면이 큰 기기가 더 편리합니다."),
             ("JSON이나 XML이 유효하지 않으면 어떻게 되나요?", "상태 배지와 함께 문제가 발생한 대략적인 줄/열 위치를 알려줘 빠르게 확인하고 수정할 수 있습니다. JSON 포매터는 따옴표 누락 같은 흔한 실수를 자동으로 보정하기도 합니다."),
-            ("앞으로 도구가 더 추가되나요?", '네. 웹툴박스는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
+            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
             ("버그 제보나 기능 제안은 어떻게 하나요?", '<a href="{contact}">문의하기</a> 페이지를 통해 연락해주세요. 보내주시는 의견은 모두 확인하고 있습니다.'),
         ],
     ),
     "ja": dict(
-        title="よくある質問 | ウェブツールボックス",
-        description="ウェブツールボックスの料金、データの取り扱い、ブラウザ対応、JSON/XMLフォーマッターの使い方など、よくある質問への回答です。",
-        og_title="よくある質問 | ウェブツールボックス",
-        og_description="ウェブツールボックスと提供ツールに関するよくある質問への回答です。",
+        title="よくある質問 | Formix",
+        description="Formixの料金、データの取り扱い、ブラウザ対応、JSON/XMLフォーマッターの使い方など、よくある質問への回答です。",
+        og_title="よくある質問 | Formix",
+        og_description="Formixと提供ツールに関するよくある質問への回答です。",
         h1="よくある質問",
-        lead="ウェブツールボックスの利用方法、データの取り扱い、ツールの使い方に関するよくある質問をまとめました。",
+        lead="Formixの利用方法、データの取り扱い、ツールの使い方に関するよくある質問をまとめました。",
         items=[
-            ("ウェブツールボックスは無料ですか?", "はい、すべてのツールは完全に無料で、会員登録やアカウント作成は不要です。運営費を賄うため今後広告を掲載する場合がありますが、ツール自体は引き続き無料で提供します。"),
+            ("Formixは無料ですか?", "はい、すべてのツールは完全に無料で、会員登録やアカウント作成は不要です。運営費を賄うため今後広告を掲載する場合がありますが、ツール自体は引き続き無料で提供します。"),
             ("入力したデータはサーバーに送信されますか?", 'いいえ。JSONフォーマッターやXMLフォーマッターなどのツールは、すべての処理をブラウザ内(JavaScript)で行います。入力したテキストがサーバーに送信・保存されることはありません。詳しくは<a href="{privacy}">プライバシーポリシー</a>をご覧ください。'),
             ("会員登録は必要ですか?", "不要です。どのツールもアカウントやログインなしですぐに利用できます。"),
             ("対応ブラウザは?", "パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。"),
             ("スマートフォンでも使えますか?", "はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。"),
             ("JSONやXMLが無効な場合はどうなりますか?", "ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。"),
-            ("今後もツールは追加されますか?", 'はい。ウェブツールボックスはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
+            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
             ("不具合報告や機能提案はどうすればいいですか?", '<a href="{contact}">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。'),
         ],
     ),
     "zh": dict(
-        title="常见问题 | 网页工具箱",
-        description="关于网页工具箱的费用、数据处理方式、浏览器支持，以及 JSON/XML 格式化工具使用方法等常见问题解答。",
-        og_title="常见问题 | 网页工具箱",
-        og_description="关于网页工具箱及其提供工具的常见问题解答。",
+        title="常见问题 | Formix",
+        description="关于Formix的费用、数据处理方式、浏览器支持，以及 JSON/XML 格式化工具使用方法等常见问题解答。",
+        og_title="常见问题 | Formix",
+        og_description="关于Formix及其提供工具的常见问题解答。",
         h1="常见问题",
-        lead="汇总了关于网页工具箱的使用、数据处理方式以及工具用法的常见问题。",
+        lead="汇总了关于Formix的使用、数据处理方式以及工具用法的常见问题。",
         items=[
-            ("网页工具箱是免费的吗?", "是的，所有工具完全免费，无需注册或创建账号。为了补贴运营成本，未来可能会展示广告，但工具本身将始终保持免费。"),
+            ("Formix是免费的吗?", "是的，所有工具完全免费，无需注册或创建账号。为了补贴运营成本，未来可能会展示广告，但工具本身将始终保持免费。"),
             ("我输入的数据会发送到服务器吗?", '不会。JSON 格式化、XML 格式化等工具的所有处理都在您的浏览器中(通过 JavaScript)完成。您输入的文本不会被发送到服务器或被保存。详情请参阅<a href="{privacy}">隐私政策</a>。'),
             ("需要注册账号吗?", "不需要。任何工具都无需账号或登录即可直接使用。"),
             ("支持哪些浏览器?", "电脑和手机上的主流最新浏览器(Chrome、Edge、Firefox、Safari)均可正常使用。工具使用的是 DOMParser、JSON.parse 等广泛支持的标准 JavaScript API。"),
             ("可以在手机上使用吗?", "可以，本站在移动浏览器上也能自适应正常显示。不过在处理较长的 JSON/XML 文档时，使用大屏幕设备会更方便。"),
             ("如果我的 JSON 或 XML 无效会怎样?", "工具会显示状态标记，并告知大致的错误行/列位置，方便您快速定位并修正问题。JSON 格式化工具还能自动修正部分常见错误，例如缺失的引号。"),
-            ("以后会添加更多工具吗?", '会的。网页工具箱从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
+            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
             ("如何反馈错误或提出功能建议?", '请通过<a href="{contact}">联系我们</a>页面与我们联系，我们会查看每一条反馈。'),
         ],
     ),
@@ -503,10 +503,10 @@ CONTENT["faq"] = {
 
 CONTENT["contact"] = {
     "en": dict(
-        title="Contact | WebToolBox",
-        description="Contact WebToolBox for bug reports, feature requests, or any other inquiries about the site or its tools.",
-        og_title="Contact | WebToolBox",
-        og_description="How to get in touch with WebToolBox.",
+        title="Contact | Formix",
+        description="Contact Formix for bug reports, feature requests, or any other inquiries about the site or its tools.",
+        og_title="Contact | Formix",
+        og_description="How to get in touch with Formix.",
         h1="Contact",
         lead="Have a bug report, feature request, or question? We'd like to hear from it.",
         s1_h2="Email",
@@ -521,10 +521,10 @@ CONTENT["contact"] = {
         s3_p='For questions about data handling, see our <a href="{privacy}">Privacy Policy</a>. For general questions about the site, check the <a href="{faq}">FAQ</a> first — your question may already be answered there.',
     ),
     "ko": dict(
-        title="문의하기 | 웹툴박스",
-        description="버그 제보, 기능 제안, 기타 문의 사항은 웹툴박스로 연락해주세요.",
-        og_title="문의하기 | 웹툴박스",
-        og_description="웹툴박스에 문의하는 방법을 안내합니다.",
+        title="문의하기 | Formix",
+        description="버그 제보, 기능 제안, 기타 문의 사항은 Formix로 연락해주세요.",
+        og_title="문의하기 | Formix",
+        og_description="Formix에 문의하는 방법을 안내합니다.",
         h1="문의하기",
         lead="버그를 발견하셨거나 새로운 기능을 제안하고 싶으신가요? 언제든 편하게 연락해주세요.",
         s1_h2="이메일",
@@ -539,10 +539,10 @@ CONTENT["contact"] = {
         s3_p='데이터 처리 방식이 궁금하시다면 <a href="{privacy}">개인정보처리방침</a>을 참고해주세요. 사이트 이용에 대한 일반적인 궁금증은 <a href="{faq}">자주 묻는 질문</a>에서 먼저 확인해보시면 빠르게 답을 찾으실 수 있습니다.',
     ),
     "ja": dict(
-        title="お問い合わせ | ウェブツールボックス",
-        description="不具合報告、機能提案、その他のお問い合わせはウェブツールボックスまでご連絡ください。",
-        og_title="お問い合わせ | ウェブツールボックス",
-        og_description="ウェブツールボックスへのお問い合わせ方法をご案内します。",
+        title="お問い合わせ | Formix",
+        description="不具合報告、機能提案、その他のお問い合わせはFormixまでご連絡ください。",
+        og_title="お問い合わせ | Formix",
+        og_description="Formixへのお問い合わせ方法をご案内します。",
         h1="お問い合わせ",
         lead="不具合を見つけた、新機能を提案したいなど、お気軽にご連絡ください。",
         s1_h2="メール",
@@ -557,10 +557,10 @@ CONTENT["contact"] = {
         s3_p='データの取り扱いについては<a href="{privacy}">プライバシーポリシー</a>をご覧ください。サイトの利用に関する一般的なご質問は、まず<a href="{faq}">よくある質問</a>をご確認いただくと早く解決する場合があります。',
     ),
     "zh": dict(
-        title="联系我们 | 网页工具箱",
-        description="如有错误反馈、功能建议或其他咨询，请通过以下方式联系网页工具箱。",
-        og_title="联系我们 | 网页工具箱",
-        og_description="介绍如何联系网页工具箱。",
+        title="联系我们 | Formix",
+        description="如有错误反馈、功能建议或其他咨询，请通过以下方式联系Formix。",
+        og_title="联系我们 | Formix",
+        og_description="介绍如何联系Formix。",
         h1="联系我们",
         lead="发现了错误，或想提出新功能建议？欢迎随时与我们联系。",
         s1_h2="电子邮箱",
@@ -578,16 +578,16 @@ CONTENT["contact"] = {
 
 CONTENT["terms"] = {
     "en": dict(
-        title="Terms of Service | WebToolBox",
-        description="Terms of Service for WebToolBox — acceptance of terms, service description, user responsibilities, disclaimer of warranty, and limitation of liability.",
-        og_title="Terms of Service | WebToolBox",
-        og_description="The terms that apply to using WebToolBox and its tools.",
+        title="Terms of Service | Formix",
+        description="Terms of Service for Formix — acceptance of terms, service description, user responsibilities, disclaimer of warranty, and limitation of liability.",
+        og_title="Terms of Service | Formix",
+        og_description="The terms that apply to using Formix and its tools.",
         h1="Terms of Service", effective="Effective date: September 21, 2026",
-        intro='These Terms of Service ("Terms") govern your use of WebToolBox (the "Site") and the tools it provides. By using the Site, you agree to these Terms.',
+        intro='These Terms of Service ("Terms") govern your use of Formix (the "Site") and the tools it provides. By using the Site, you agree to these Terms.',
         s1_h2="1. Acceptance of terms",
         s1_p1="By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.",
         s2_h2="2. Description of the service",
-        s2_p1='WebToolBox provides free, browser-based utilities (such as the <a href="{tool}">JSON Formatter</a> and <a href="{tool_xml}">XML Formatter</a>) that run entirely on the client side. No account is required, and no fee is currently charged for using the tools.',
+        s2_p1='Formix provides free, browser-based utilities (such as the <a href="{tool}">JSON Formatter</a> and <a href="{tool_xml}">XML Formatter</a>) that run entirely on the client side. No account is required, and no fee is currently charged for using the tools.',
         s3_h2="3. User responsibilities",
         s3_p1="You agree not to:",
         s3_li1="Use the Site for any unlawful purpose, or to process content that is illegal, infringing, or harmful to others.",
@@ -607,16 +607,16 @@ CONTENT["terms"] = {
         s9_p1='Questions about these Terms can be directed to us via our <a href="{contact}">Contact page</a> or the email address below.',
     ),
     "ko": dict(
-        title="이용약관 | 웹툴박스",
-        description="웹툴박스 이용약관 — 약관 동의, 서비스 설명, 이용자의 의무, 면책조항, 책임 제한에 관한 안내입니다.",
-        og_title="이용약관 | 웹툴박스",
-        og_description="웹툴박스와 제공 도구 이용에 적용되는 약관입니다.",
+        title="이용약관 | Formix",
+        description="Formix 이용약관 — 약관 동의, 서비스 설명, 이용자의 의무, 면책조항, 책임 제한에 관한 안내입니다.",
+        og_title="이용약관 | Formix",
+        og_description="Formix와 제공 도구 이용에 적용되는 약관입니다.",
         h1="이용약관", effective="시행일자: 2026년 9월 21일",
-        intro='본 이용약관(이하 "약관")은 웹툴박스(이하 "사이트")와 사이트가 제공하는 도구의 이용 조건을 규정합니다. 사이트를 이용함으로써 이용자는 본 약관에 동의하는 것으로 간주됩니다.',
+        intro='본 이용약관(이하 "약관")은 Formix(이하 "사이트")와 사이트가 제공하는 도구의 이용 조건을 규정합니다. 사이트를 이용함으로써 이용자는 본 약관에 동의하는 것으로 간주됩니다.',
         s1_h2="1. 약관의 동의",
         s1_p1="사이트에 접속하거나 이를 이용함으로써 이용자는 본 약관에 구속되는 것에 동의합니다. 약관에 동의하지 않으시는 경우 사이트를 이용하실 수 없습니다.",
         s2_h2="2. 서비스 설명",
-        s2_p1='웹툴박스는 <a href="{tool}">JSON 포매터</a>, <a href="{tool_xml}">XML 포매터</a> 등 브라우저에서 완전히 동작하는 무료 유틸리티를 제공합니다. 별도의 회원가입이 필요하지 않으며, 현재 도구 이용에 따른 요금은 부과되지 않습니다.',
+        s2_p1='Formix는 <a href="{tool}">JSON 포매터</a>, <a href="{tool_xml}">XML 포매터</a> 등 브라우저에서 완전히 동작하는 무료 유틸리티를 제공합니다. 별도의 회원가입이 필요하지 않으며, 현재 도구 이용에 따른 요금은 부과되지 않습니다.',
         s3_h2="3. 이용자의 의무",
         s3_p1="이용자는 다음 행위를 해서는 안 됩니다.",
         s3_li1="불법적인 목적으로 사이트를 이용하거나, 위법·침해적이거나 타인에게 피해를 주는 콘텐츠를 처리하는 행위",
@@ -636,16 +636,16 @@ CONTENT["terms"] = {
         s9_p1='본 약관에 대한 문의는 <a href="{contact}">문의하기</a> 페이지 또는 아래 이메일로 연락해 주시기 바랍니다.',
     ),
     "ja": dict(
-        title="利用規約 | ウェブツールボックス",
-        description="ウェブツールボックスの利用規約です。規約への同意、サービス内容、利用者の義務、免責事項、責任の制限についてご案内します。",
-        og_title="利用規約 | ウェブツールボックス",
-        og_description="ウェブツールボックスおよび提供ツールの利用に適用される規約です。",
+        title="利用規約 | Formix",
+        description="Formixの利用規約です。規約への同意、サービス内容、利用者の義務、免責事項、責任の制限についてご案内します。",
+        og_title="利用規約 | Formix",
+        og_description="Formixおよび提供ツールの利用に適用される規約です。",
         h1="利用規約", effective="施行日: 2026年9月21日",
-        intro='本利用規約(以下「本規約」)は、ウェブツールボックス(以下「本サイト」)および本サイトが提供するツールの利用条件を定めるものです。本サイトを利用することにより、利用者は本規約に同意したものとみなされます。',
+        intro='本利用規約(以下「本規約」)は、Formix(以下「本サイト」)および本サイトが提供するツールの利用条件を定めるものです。本サイトを利用することにより、利用者は本規約に同意したものとみなされます。',
         s1_h2="1. 規約への同意",
         s1_p1="本サイトにアクセスまたは利用することにより、利用者は本規約に拘束されることに同意するものとします。本規約に同意されない場合、本サイトをご利用いただけません。",
         s2_h2="2. サービスの内容",
-        s2_p1='ウェブツールボックスは、<a href="{tool}">JSONフォーマッター</a>、<a href="{tool_xml}">XMLフォーマッター</a>など、ブラウザ上で完結する無料のユーティリティを提供しています。会員登録は不要で、現時点ではツールの利用に料金は発生しません。',
+        s2_p1='Formixは、<a href="{tool}">JSONフォーマッター</a>、<a href="{tool_xml}">XMLフォーマッター</a>など、ブラウザ上で完結する無料のユーティリティを提供しています。会員登録は不要で、現時点ではツールの利用に料金は発生しません。',
         s3_h2="3. 利用者の義務",
         s3_p1="利用者は、以下の行為を行ってはなりません。",
         s3_li1="違法な目的で本サイトを利用すること、または違法・侵害的、もしくは第三者に損害を与えるコンテンツを処理すること",
@@ -665,16 +665,16 @@ CONTENT["terms"] = {
         s9_p1='本規約に関するお問い合わせは、<a href="{contact}">お問い合わせ</a>ページまたは下記のメールアドレスまでご連絡ください。',
     ),
     "zh": dict(
-        title="使用条款 | 网页工具箱",
-        description="网页工具箱使用条款 — 条款接受、服务说明、用户责任、免责声明及责任限制说明。",
-        og_title="使用条款 | 网页工具箱",
-        og_description="使用网页工具箱及其提供工具所适用的条款。",
+        title="使用条款 | Formix",
+        description="Formix使用条款 — 条款接受、服务说明、用户责任、免责声明及责任限制说明。",
+        og_title="使用条款 | Formix",
+        og_description="使用Formix及其提供工具所适用的条款。",
         h1="使用条款", effective="生效日期：2026年9月21日",
-        intro='本使用条款(以下简称"本条款")规范您对网页工具箱(以下简称"本网站")及其提供工具的使用。使用本网站即表示您同意本条款。',
+        intro='本使用条款(以下简称"本条款")规范您对Formix(以下简称"本网站")及其提供工具的使用。使用本网站即表示您同意本条款。',
         s1_h2="1. 条款的接受",
         s1_p1="访问或使用本网站，即表示您同意受本条款约束。如果您不同意本条款，请不要使用本网站。",
         s2_h2="2. 服务说明",
-        s2_p1='网页工具箱提供完全在浏览器端运行的免费工具，如 <a href="{tool}">JSON 格式化工具</a>、<a href="{tool_xml}">XML 格式化工具</a>等。无需注册账号，目前使用这些工具不收取任何费用。',
+        s2_p1='Formix提供完全在浏览器端运行的免费工具，如 <a href="{tool}">JSON 格式化工具</a>、<a href="{tool_xml}">XML 格式化工具</a>等。无需注册账号，目前使用这些工具不收取任何费用。',
         s3_h2="3. 用户责任",
         s3_p1="您同意不进行以下行为：",
         s3_li1="将本网站用于任何非法目的，或处理非法、侵权或可能对他人造成损害的内容",
@@ -697,12 +697,12 @@ CONTENT["terms"] = {
 
 CONTENT["updates"] = {
     "en": dict(
-        title="What's New | WebToolBox",
-        description="A changelog of what's new on WebToolBox — new tools, language support, and site improvements.",
-        og_title="What's New | WebToolBox",
-        og_description="See what's recently been added or improved on WebToolBox.",
+        title="What's New | Formix",
+        description="A changelog of what's new on Formix — new tools, language support, and site improvements.",
+        og_title="What's New | Formix",
+        og_description="See what's recently been added or improved on Formix.",
         h1="What's New",
-        lead="A running log of new tools and improvements on WebToolBox.",
+        lead="A running log of new tools and improvements on Formix.",
         outro='Have an idea for a tool or feature you\'d like to see? Let us know on the <a href="{contact}">Contact page</a> — see our <a href="{about}">About</a> page for the principles guiding what we build next.',
         entries=[
             ("September 21, 2026", "XML Formatter, FAQ, and Contact page added",
@@ -710,20 +710,20 @@ CONTENT["updates"] = {
               "Added an FAQ page answering common questions about pricing, data handling, and browser support.",
               "Added a dedicated Contact page for bug reports and feature requests.",
               "Added a cookie/ad consent banner for visitors from the EEA, UK, and Switzerland."]),
-            ("September 20, 2026", "WebToolBox launches with the JSON Formatter",
-             ["Launched WebToolBox with our first tool: the JSON Formatter / Viewer, with validation, an indented syntax-highlighted tree, collapsing/expanding nodes, and key/value search.",
+            ("September 20, 2026", "Formix launches with the JSON Formatter",
+             ["Launched Formix with our first tool: the JSON Formatter / Viewer, with validation, an indented syntax-highlighted tree, collapsing/expanding nodes, and key/value search.",
               "Added light and dark theme support with automatic detection.",
               "Published our Privacy Policy and About page.",
               "Added English, Korean, Japanese, and Chinese language support with automatic browser-language detection."]),
         ],
     ),
     "ko": dict(
-        title="업데이트 소식 | 웹툴박스",
-        description="웹툴박스의 업데이트 소식 — 새로운 도구, 언어 지원, 사이트 개선 사항을 기록합니다.",
-        og_title="업데이트 소식 | 웹툴박스",
-        og_description="웹툴박스에 최근 추가되거나 개선된 내용을 확인하세요.",
+        title="업데이트 소식 | Formix",
+        description="Formix의 업데이트 소식 — 새로운 도구, 언어 지원, 사이트 개선 사항을 기록합니다.",
+        og_title="업데이트 소식 | Formix",
+        og_description="Formix에 최근 추가되거나 개선된 내용을 확인하세요.",
         h1="업데이트 소식",
-        lead="웹툴박스에 추가된 새로운 도구와 개선 사항을 시간순으로 기록합니다.",
+        lead="Formix에 추가된 새로운 도구와 개선 사항을 시간순으로 기록합니다.",
         outro='추가되었으면 하는 도구나 기능이 있으신가요? <a href="{contact}">문의하기</a> 페이지로 알려주세요. 앞으로의 방향은 <a href="{about}">사이트 소개</a> 페이지에서 확인하실 수 있습니다.',
         entries=[
             ("2026년 9월 21일", "XML 포매터, FAQ, 문의하기 페이지 추가",
@@ -731,20 +731,20 @@ CONTENT["updates"] = {
               "요금, 데이터 처리 방식, 브라우저 지원 등 자주 묻는 질문에 답하는 FAQ 페이지를 추가했습니다.",
               "버그 제보와 기능 제안을 위한 문의하기 페이지를 별도로 만들었습니다.",
               "EEA·영국·스위스 방문자를 위한 쿠키·광고 동의 배너를 추가했습니다."]),
-            ("2026년 9월 20일", "JSON 포매터와 함께 웹툴박스 오픈",
-             ["첫 번째 도구인 JSON 포매터 / 뷰어로 웹툴박스를 시작했습니다. 유효성 검사, 들여쓰기·문법 강조 트리, 노드 접기/펼치기, 키·값 검색을 제공합니다.",
+            ("2026년 9월 20일", "JSON 포매터와 함께 Formix 오픈",
+             ["첫 번째 도구인 JSON 포매터 / 뷰어로 Formix를 시작했습니다. 유효성 검사, 들여쓰기·문법 강조 트리, 노드 접기/펼치기, 키·값 검색을 제공합니다.",
               "시스템 설정에 따라 자동으로 전환되는 라이트/다크 테마를 지원합니다.",
               "개인정보처리방침과 사이트 소개 페이지를 공개했습니다.",
               "영어를 기본으로 한국어·일본어·중국어를 지원하며, 브라우저 언어를 자동으로 감지합니다."]),
         ],
     ),
     "ja": dict(
-        title="更新情報 | ウェブツールボックス",
-        description="ウェブツールボックスの更新情報 — 新しいツール、言語対応、サイトの改善内容を記録します。",
-        og_title="更新情報 | ウェブツールボックス",
-        og_description="ウェブツールボックスに最近追加・改善された内容をご確認ください。",
+        title="更新情報 | Formix",
+        description="Formixの更新情報 — 新しいツール、言語対応、サイトの改善内容を記録します。",
+        og_title="更新情報 | Formix",
+        og_description="Formixに最近追加・改善された内容をご確認ください。",
         h1="更新情報",
-        lead="ウェブツールボックスに追加された新しいツールや改善内容を時系列でまとめています。",
+        lead="Formixに追加された新しいツールや改善内容を時系列でまとめています。",
         outro='追加してほしいツールや機能がありましたら、<a href="{contact}">お問い合わせ</a>ページからお知らせください。今後の方針は<a href="{about}">サイト紹介</a>ページをご覧ください。',
         entries=[
             ("2026年9月21日", "XMLフォーマッター、よくある質問、お問い合わせページを追加",
@@ -752,20 +752,20 @@ CONTENT["updates"] = {
               "料金、データの取り扱い、対応ブラウザなど、よくある質問に答えるFAQページを追加しました。",
               "不具合報告や機能提案のための専用お問い合わせページを新設しました。",
               "EEA・英国・スイスからの訪問者向けにCookie・広告の同意バナーを追加しました。"]),
-            ("2026年9月20日", "JSONフォーマッターとともにウェブツールボックスがオープン",
-             ["最初のツールであるJSONフォーマッター / ビューアでウェブツールボックスを開始しました。検証、インデント付きシンタックスハイライトツリー、ノードの折りたたみ/展開、キー・値の検索に対応しています。",
+            ("2026年9月20日", "JSONフォーマッターとともにFormixがオープン",
+             ["最初のツールであるJSONフォーマッター / ビューアでFormixを開始しました。検証、インデント付きシンタックスハイライトツリー、ノードの折りたたみ/展開、キー・値の検索に対応しています。",
               "システム設定に応じて自動切り替えされるライト/ダークテーマに対応しました。",
               "プライバシーポリシーとサイト紹介ページを公開しました。",
               "英語を基本に、韓国語・日本語・中国語に対応し、ブラウザの言語を自動検出します。"]),
         ],
     ),
     "zh": dict(
-        title="更新日志 | 网页工具箱",
-        description="网页工具箱更新日志 — 记录新增工具、语言支持及网站改进内容。",
-        og_title="更新日志 | 网页工具箱",
-        og_description="查看网页工具箱近期新增或改进的内容。",
+        title="更新日志 | Formix",
+        description="Formix更新日志 — 记录新增工具、语言支持及网站改进内容。",
+        og_title="更新日志 | Formix",
+        og_description="查看Formix近期新增或改进的内容。",
         h1="更新日志",
-        lead="按时间顺序记录网页工具箱新增的工具和改进内容。",
+        lead="按时间顺序记录Formix新增的工具和改进内容。",
         outro='有想让我们添加的工具或功能吗？欢迎通过<a href="{contact}">联系我们</a>页面告诉我们。未来的方向请参阅<a href="{about}">关于本站</a>页面。',
         entries=[
             ("2026年9月21日", "新增 XML 格式化工具、常见问题及联系我们页面",
@@ -773,7 +773,7 @@ CONTENT["updates"] = {
               "新增常见问题页面，解答关于费用、数据处理方式和浏览器支持等问题。",
               "新增独立的联系我们页面，用于错误反馈和功能建议。",
               "为来自 EEA、英国和瑞士的访客新增了 Cookie/广告同意横幅。"]),
-            ("2026年9月20日", "网页工具箱正式上线，推出 JSON 格式化工具",
+            ("2026年9月20日", "Formix正式上线，推出 JSON 格式化工具",
              ["首个工具 JSON 格式化 / 查看器上线，支持验证、带缩进的语法高亮树形视图、节点折叠/展开以及键值搜索。",
               "支持根据系统设置自动切换的浅色/深色主题。",
               "发布了隐私政策和关于本站页面。",
@@ -783,22 +783,22 @@ CONTENT["updates"] = {
 }
 
 CONTENT["notfound"] = {
-    "en": dict(title="Page Not Found | WebToolBox", eyebrow="404", h1="Page Not Found",
+    "en": dict(title="Page Not Found | Formix", eyebrow="404", h1="Page Not Found",
                 p="The page you requested may have been removed or its address may have changed.", back="Back to Home"),
-    "ko": dict(title="페이지를 찾을 수 없습니다 | 웹툴박스", eyebrow="404", h1="페이지를 찾을 수 없습니다",
+    "ko": dict(title="페이지를 찾을 수 없습니다 | Formix", eyebrow="404", h1="페이지를 찾을 수 없습니다",
                 p="요청하신 페이지가 삭제되었거나 주소가 변경되었을 수 있습니다.", back="홈으로 돌아가기"),
-    "ja": dict(title="ページが見つかりません | ウェブツールボックス", eyebrow="404", h1="ページが見つかりません",
+    "ja": dict(title="ページが見つかりません | Formix", eyebrow="404", h1="ページが見つかりません",
                 p="お探しのページは削除されたか、URLが変更された可能性があります。", back="ホームに戻る"),
-    "zh": dict(title="页面未找到 | 网页工具箱", eyebrow="404", h1="页面未找到",
+    "zh": dict(title="页面未找到 | Formix", eyebrow="404", h1="页面未找到",
                 p="您访问的页面可能已被删除或地址已更改。", back="返回首页"),
 }
 
 CONTENT["tool"] = {
     "en": dict(
-        title="JSON Formatter / Viewer - Validate and Beautify JSON Online | WebToolBox",
+        title="JSON Formatter / Viewer - Validate and Beautify JSON Online | Formix",
         description="Online JSON formatter. Checks whether your input is valid JSON and displays it as a readable, syntax-highlighted tree. Supports collapsing/expanding and key/value search; your data is processed only in your browser.",
         keywords="JSON formatter, JSON viewer, JSON validator, JSON beautify, JSON pretty print, online JSON tool",
-        og_title="JSON Formatter / Viewer | WebToolBox",
+        og_title="JSON Formatter / Viewer | Formix",
         og_description="A free online JSON formatter with validation, a readable tree view, search, and collapse/expand.",
         jsonld_name="JSON Formatter / Viewer",
         jsonld_description="A free online tool that validates JSON strings and displays them as a readable tree. Includes search and collapse/expand.",
@@ -836,10 +836,10 @@ CONTENT["tool"] = {
         ],
     ),
     "ko": dict(
-        title="JSON 포매터 / 뷰어 - 온라인 JSON 검증 및 정리 | 웹툴박스",
+        title="JSON 포매터 / 뷰어 - 온라인 JSON 검증 및 정리 | Formix",
         description="온라인 JSON 포매터. 입력한 문자열이 올바른 JSON인지 검증하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 키·값 검색을 지원하며 데이터는 브라우저 안에서만 처리됩니다.",
         keywords="JSON 포매터, JSON 뷰어, JSON validator, JSON beautify, JSON pretty print, 온라인 JSON 도구",
-        og_title="JSON 포매터 / 뷰어 | 웹툴박스",
+        og_title="JSON 포매터 / 뷰어 | Formix",
         og_description="JSON 문자열 유효성 검사와 가독성 좋은 트리 뷰, 검색, 접기/펼치기를 지원하는 무료 온라인 JSON 포매터.",
         jsonld_name="JSON 포매터 / 뷰어",
         jsonld_description="JSON 문자열의 유효성을 검사하고 보기 좋은 트리 형태로 정리해주는 무료 온라인 도구. 검색과 접기/펼치기 기능을 제공합니다.",
@@ -877,10 +877,10 @@ CONTENT["tool"] = {
         ],
     ),
     "ja": dict(
-        title="JSONフォーマッター / ビューア - オンラインJSON検証・整形 | ウェブツールボックス",
+        title="JSONフォーマッター / ビューア - オンラインJSON検証・整形 | Formix",
         description="オンラインJSONフォーマッター。入力した文字列が正しいJSONかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。折りたたみ/展開とキー・値検索に対応し、データはブラウザ内でのみ処理されます。",
         keywords="JSONフォーマッター, JSONビューア, JSON validator, JSON beautify, JSON pretty print, オンラインJSONツール",
-        og_title="JSONフォーマッター / ビューア | ウェブツールボックス",
+        og_title="JSONフォーマッター / ビューア | Formix",
         og_description="JSON文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインJSONフォーマッター。",
         jsonld_name="JSONフォーマッター / ビューア",
         jsonld_description="JSON文字列の妥当性を検証し、読みやすいツリー形式に整理する無料オンラインツール。検索と折りたたみ/展開機能を提供します。",
@@ -918,10 +918,10 @@ CONTENT["tool"] = {
         ],
     ),
     "zh": dict(
-        title="JSON 格式化 / 查看器 - 在线 JSON 验证与整理 | 网页工具箱",
+        title="JSON 格式化 / 查看器 - 在线 JSON 验证与整理 | Formix",
         description="在线 JSON 格式化工具。检查输入的字符串是否为有效 JSON，并带缩进和语法高亮清晰展示。支持折叠/展开以及键值搜索，数据仅在浏览器中处理。",
         keywords="JSON 格式化, JSON 查看器, JSON validator, JSON beautify, JSON pretty print, 在线 JSON 工具",
-        og_title="JSON 格式化 / 查看器 | 网页工具箱",
+        og_title="JSON 格式化 / 查看器 | Formix",
         og_description="支持验证、易读树形视图、搜索及折叠/展开的免费在线 JSON 格式化工具。",
         jsonld_name="JSON 格式化 / 查看器",
         jsonld_description="验证 JSON 字符串并以易读树形结构整理展示的免费在线工具。提供搜索与折叠/展开功能。",
@@ -962,10 +962,10 @@ CONTENT["tool"] = {
 
 CONTENT["tool_xml"] = {
     "en": dict(
-        title="XML Formatter / Viewer - Validate and Beautify XML Online | WebToolBox",
+        title="XML Formatter / Viewer - Validate and Beautify XML Online | Formix",
         description="Online XML formatter. Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Supports collapsing/expanding and tag/attribute/text search; your data is processed only in your browser.",
         keywords="XML formatter, XML viewer, XML validator, XML beautify, XML pretty print, online XML tool",
-        og_title="XML Formatter / Viewer | WebToolBox",
+        og_title="XML Formatter / Viewer | Formix",
         og_description="A free online XML formatter with validation, a readable tree view, search, and collapse/expand.",
         jsonld_name="XML Formatter / Viewer",
         jsonld_description="A free online tool that validates XML strings and displays them as a readable tree. Includes search and collapse/expand.",
@@ -1003,10 +1003,10 @@ CONTENT["tool_xml"] = {
         ],
     ),
     "ko": dict(
-        title="XML 포매터 / 뷰어 - 온라인 XML 검증 및 정리 | 웹툴박스",
+        title="XML 포매터 / 뷰어 - 온라인 XML 검증 및 정리 | Formix",
         description="온라인 XML 포매터. 입력한 문자열이 올바른 XML인지 검증하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 태그·속성·텍스트 검색을 지원하며 데이터는 브라우저 안에서만 처리됩니다.",
         keywords="XML 포매터, XML 뷰어, XML validator, XML beautify, XML pretty print, 온라인 XML 도구",
-        og_title="XML 포매터 / 뷰어 | 웹툴박스",
+        og_title="XML 포매터 / 뷰어 | Formix",
         og_description="XML 문자열 유효성 검사와 가독성 좋은 트리 뷰, 검색, 접기/펼치기를 지원하는 무료 온라인 XML 포매터.",
         jsonld_name="XML 포매터 / 뷰어",
         jsonld_description="XML 문자열의 유효성을 검사하고 보기 좋은 트리 형태로 정리해주는 무료 온라인 도구. 검색과 접기/펼치기 기능을 제공합니다.",
@@ -1044,10 +1044,10 @@ CONTENT["tool_xml"] = {
         ],
     ),
     "ja": dict(
-        title="XMLフォーマッター / ビューア - オンラインXML検証・整形 | ウェブツールボックス",
+        title="XMLフォーマッター / ビューア - オンラインXML検証・整形 | Formix",
         description="オンラインXMLフォーマッター。入力した文字列が正しいXMLかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。折りたたみ/展開とタグ・属性・テキスト検索に対応し、データはブラウザ内でのみ処理されます。",
         keywords="XMLフォーマッター, XMLビューア, XML validator, XML beautify, XML pretty print, オンラインXMLツール",
-        og_title="XMLフォーマッター / ビューア | ウェブツールボックス",
+        og_title="XMLフォーマッター / ビューア | Formix",
         og_description="XML文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインXMLフォーマッター。",
         jsonld_name="XMLフォーマッター / ビューア",
         jsonld_description="XML文字列の妥当性を検証し、読みやすいツリー形式に整理する無料オンラインツール。検索と折りたたみ/展開機能を提供します。",
@@ -1085,10 +1085,10 @@ CONTENT["tool_xml"] = {
         ],
     ),
     "zh": dict(
-        title="XML 格式化 / 查看器 - 在线 XML 验证与整理 | 网页工具箱",
+        title="XML 格式化 / 查看器 - 在线 XML 验证与整理 | Formix",
         description="在线 XML 格式化工具。检查输入的字符串是否为有效 XML，并带缩进和语法高亮清晰展示。支持折叠/展开以及标签/属性/文本搜索，数据仅在浏览器中处理。",
         keywords="XML 格式化, XML 查看器, XML validator, XML beautify, XML pretty print, 在线 XML 工具",
-        og_title="XML 格式化 / 查看器 | 网页工具箱",
+        og_title="XML 格式化 / 查看器 | Formix",
         og_description="支持验证、易读树形视图、搜索及折叠/展开的免费在线 XML 格式化工具。",
         jsonld_name="XML 格式化 / 查看器",
         jsonld_description="验证 XML 字符串并以易读树形结构整理展示的免费在线工具。提供搜索与折叠/展开功能。",
@@ -1151,7 +1151,7 @@ def theme_fouc_script():
     return '''<script>
   (function () {
     try {
-      var t = localStorage.getItem("wtb-theme");
+      var t = localStorage.getItem("formix-theme");
       if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
@@ -1167,7 +1167,7 @@ def lang_detect_script(lang):
   (function () {
     try {
       var SUPPORTED = ''' + repr([l for l in LANGS if l != DEFAULT_LANG]) + '''.slice();
-      var stored = localStorage.getItem("wtb-lang");
+      var stored = localStorage.getItem("formix-lang");
       if (stored) {
         if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
           location.replace("/" + stored + location.pathname + location.search);
@@ -1181,17 +1181,17 @@ def lang_detect_script(lang):
         if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
       }
       if (match) {
-        localStorage.setItem("wtb-lang", match);
+        localStorage.setItem("formix-lang", match);
         location.replace("/" + match + location.pathname + location.search);
       } else {
-        localStorage.setItem("wtb-lang", "en");
+        localStorage.setItem("formix-lang", "en");
       }
     } catch (e) {}
   })();
 </script>'''
     else:
         return '''<script>
-  try { localStorage.setItem("wtb-lang", "''' + lang + '''"); } catch (e) {}
+  try { localStorage.setItem("formix-lang", "''' + lang + '''"); } catch (e) {}
 </script>'''
 
 
@@ -1301,7 +1301,7 @@ def header_nav(lang, active_key, asset_home="/"):
 <header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="%s">
-      <span class="nav-brand-mark">W</span>
+      <span class="nav-brand-mark">F</span>
       %s
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="%s">☰</button>
@@ -1787,7 +1787,7 @@ def render_notfound(lang):
     body = '''<header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="%s">
-      <span class="nav-brand-mark">W</span>
+      <span class="nav-brand-mark">F</span>
       %s
     </a>
   </div>

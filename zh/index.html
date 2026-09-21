@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>网页工具箱 | 无需安装即可使用的免费在线开发者工具</title>
-<meta name="description" content="无需注册，直接在浏览器中使用的免费在线工具集。使用 JSON 格式化工具验证 JSON 字符串并以易读的方式展示。数据不会发送到服务器，仅在您的浏览器中处理。" />
-<meta name="keywords" content="在线工具, JSON 格式化, JSON 查看器, JSON validator, 网页工具, 免费开发者工具" />
-<link rel="canonical" href="https://example.com/zh/" />
+<title>JSON/XML 在线格式化工具（免费） - Formix</title>
+<meta name="description" content="无需注册，直接在浏览器中使用的免费 JSON/XML 格式化工具。验证并以易读方式展示 JSON/XML 字符串。数据不会发送到服务器，仅在您的浏览器中处理。" />
+<meta name="keywords" content="JSON 格式化, JSON 在线格式化, JSON 校验, JSON 查看器, XML 格式化, 在线开发者工具, 免费在线工具" />
+<link rel="canonical" href="https://formix.site/zh/" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="网页工具箱" />
-<meta property="og:title" content="网页工具箱 | 免费在线开发者工具" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="JSON/XML 在线格式化工具（免费） - Formix" />
 <meta property="og:description" content="提供 JSON 格式化等可在浏览器中直接使用的免费在线工具，数据不会保存在服务器上。" />
-<meta property="og:url" content="https://example.com/zh/" />
-<meta property="og:image" content="https://example.com/assets/img/og-zh.png" />
+<meta property="og:url" content="https://formix.site/zh/" />
+<meta property="og:image" content="https://formix.site/assets/img/og-zh.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="zh_CN" />
@@ -24,37 +24,37 @@
 <meta property="og:locale:alternate" content="ko_KR" />
 <meta property="og:locale:alternate" content="ja_JP" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="网页工具箱 | 免费在线开发者工具" />
+<meta name="twitter:title" content="JSON/XML 在线格式化工具（免费） - Formix" />
 <meta name="twitter:description" content="提供 JSON 格式化等可在浏览器中直接使用的免费在线工具，数据不会保存在服务器上。" />
-<meta name="twitter:image" content="https://example.com/assets/img/og-zh.png" />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-zh.png" />
 
-<link rel="alternate" hreflang="en" href="https://example.com/" />
-<link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
-<link rel="alternate" hreflang="ja" href="https://example.com/ja/" />
-<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/" />
-<link rel="alternate" hreflang="x-default" href="https://example.com/" />
+<link rel="alternate" hreflang="en" href="https://formix.site/" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
-      var t = localStorage.getItem("wtb-theme");
+      var t = localStorage.getItem("formix-theme");
       if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   })();
 </script>
 <script>
-  try { localStorage.setItem("wtb-lang", "zh"); } catch (e) {}
+  try { localStorage.setItem("formix-lang", "zh"); } catch (e) {}
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "网页工具箱",
-  "url": "https://example.com/zh/",
-  "description": "网页工具箱是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。",
+  "name": "Formix",
+  "url": "https://formix.site/zh/",
+  "description": "Formix是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。",
   "inLanguage": "zh-CN"
 }
 </script>
@@ -65,8 +65,8 @@
 <header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="/zh/">
-      <span class="nav-brand-mark">W</span>
-      网页工具箱
+      <span class="nav-brand-mark">F</span>
+      Formix
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="打开菜单">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
@@ -95,7 +95,7 @@
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
     <h1>无需安装、无需注册的<br />浏览器端在线工具集</h1>
-    <p>网页工具箱是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。</p>
+    <p>Formix是一套免费的在线实用工具集合，帮助你在开发和工作中快速完成各种琐碎任务。你输入的数据不会发送到服务器，只会在你自己的电脑（浏览器）中处理，可以放心使用。</p>
   </section>
 
   <section class="section container">
@@ -126,7 +126,7 @@
   </section>
 
   <section class="section-tight container prose">
-    <h2>为什么选择网页工具箱?</h2>
+    <h2>为什么选择Formix?</h2>
     <ul>
       <li><strong>无需安装、无需注册</strong> — 打开链接即可立即使用。</li>
       <li><strong>浏览器端处理</strong> — 输入的数据完全在客户端处理，不会发送到服务器。</li>
@@ -138,7 +138,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> 网页工具箱. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/zh/about.html">关于本站</a>
       <a href="/zh/faq.html">常见问题</a>

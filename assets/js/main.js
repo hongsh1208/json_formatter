@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var THEME_KEY = "wtb-theme";
+  var THEME_KEY = "formix-theme";
 
   var THEME_LABELS = {
     en: { dark: "Switch to dark mode", light: "Switch to light mode" },

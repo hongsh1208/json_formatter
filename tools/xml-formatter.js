@@ -132,22 +132,22 @@
 
   var SAMPLE_XML =
     '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    "<catalog>\n" +
-    '  <book id="bk101" available="true">\n' +
-    "    <title>WebToolBox Guide</title>\n" +
-    "    <author>WebToolBox Team</author>\n" +
-    "    <genre>Reference</genre>\n" +
+    "<toolbox>\n" +
+    '  <tool id="json-formatter" available="true">\n' +
+    "    <name>JSON Formatter</name>\n" +
+    "    <maker>Formix</maker>\n" +
+    "    <category>Developer Tools</category>\n" +
     "    <price>0.00</price>\n" +
-    "    <description><![CDATA[A short guide to browser-based developer tools.]]></description>\n" +
-    "  </book>\n" +
-    '  <book id="bk102" available="false">\n' +
-    "    <title>Understanding XML</title>\n" +
-    "    <author>Jane Doe</author>\n" +
-    "    <genre>Technology</genre>\n" +
-    "    <price>19.99</price>\n" +
-    "    <!-- Out of stock -->\n" +
-    "  </book>\n" +
-    "</catalog>";
+    "    <description><![CDATA[Validate and beautify JSON right in your browser.]]></description>\n" +
+    "  </tool>\n" +
+    '  <tool id="csv-converter" available="false">\n' +
+    "    <name>CSV Converter</name>\n" +
+    "    <maker>Formix</maker>\n" +
+    "    <category>Developer Tools</category>\n" +
+    "    <price>0.00</price>\n" +
+    "    <!-- Coming soon -->\n" +
+    "  </tool>\n" +
+    "</toolbox>";
 
   // ---------------------------------------------------------------
   // 1. 파싱 / 유효성 검사 (DOMParser 기반)

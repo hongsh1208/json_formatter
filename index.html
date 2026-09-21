@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>WebToolBox | Free Online Developer Tools You Can Use Instantly</title>
-<meta name="description" content="Free online tools you can use right in your browser — no sign-up required. Validate and beautify JSON with the JSON Formatter. Your data is processed locally and never sent to a server." />
-<meta name="keywords" content="online tools, JSON formatter, JSON viewer, JSON validator, web utilities, free developer tools" />
-<link rel="canonical" href="https://example.com/" />
+<title>Formix – Free Online JSON & XML Formatter, Validator & Developer Tools</title>
+<meta name="description" content="Free online JSON formatter and XML formatter you can use right in your browser — no sign-up required. Validate, beautify, and view JSON/XML instantly. Your data is processed locally and never sent to a server." />
+<meta name="keywords" content="json formatter, json validator, json viewer online, format json online, beautify json, xml formatter online, xml validator, free online developer tools" />
+<link rel="canonical" href="https://formix.site/" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="WebToolBox" />
-<meta property="og:title" content="WebToolBox | Free Online Developer Tools" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Formix – Free Online JSON & XML Formatter" />
 <meta property="og:description" content="Free online tools including a JSON Formatter, usable right in your browser. Your data is never stored on our servers." />
-<meta property="og:url" content="https://example.com/" />
-<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:url" content="https://formix.site/" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
@@ -24,22 +24,22 @@
 <meta property="og:locale:alternate" content="ja_JP" />
 <meta property="og:locale:alternate" content="zh_CN" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="WebToolBox | Free Online Developer Tools" />
+<meta name="twitter:title" content="Formix – Free Online JSON & XML Formatter" />
 <meta name="twitter:description" content="Free online tools including a JSON Formatter, usable right in your browser. Your data is never stored on our servers." />
-<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
 
-<link rel="alternate" hreflang="en" href="https://example.com/" />
-<link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
-<link rel="alternate" hreflang="ja" href="https://example.com/ja/" />
-<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/" />
-<link rel="alternate" hreflang="x-default" href="https://example.com/" />
+<link rel="alternate" hreflang="en" href="https://formix.site/" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
-      var t = localStorage.getItem("wtb-theme");
+      var t = localStorage.getItem("formix-theme");
       if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
@@ -49,7 +49,7 @@
   (function () {
     try {
       var SUPPORTED = ['ko', 'ja', 'zh'].slice();
-      var stored = localStorage.getItem("wtb-lang");
+      var stored = localStorage.getItem("formix-lang");
       if (stored) {
         if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
           location.replace("/" + stored + location.pathname + location.search);
@@ -63,10 +63,10 @@
         if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
       }
       if (match) {
-        localStorage.setItem("wtb-lang", match);
+        localStorage.setItem("formix-lang", match);
         location.replace("/" + match + location.pathname + location.search);
       } else {
-        localStorage.setItem("wtb-lang", "en");
+        localStorage.setItem("formix-lang", "en");
       }
     } catch (e) {}
   })();
@@ -75,9 +75,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "WebToolBox",
-  "url": "https://example.com/",
-  "description": "WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and wo",
+  "name": "Formix",
+  "url": "https://formix.site/",
+  "description": "Formix is a free collection of online utilities for the small, everyday tasks that come up during development and work. ",
   "inLanguage": "en"
 }
 </script>
@@ -88,8 +88,8 @@
 <header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="/">
-      <span class="nav-brand-mark">W</span>
-      WebToolBox
+      <span class="nav-brand-mark">F</span>
+      Formix
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
@@ -118,7 +118,7 @@
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
     <h1>Browser-based online tools.<br />No install, no sign-up.</h1>
-    <p>WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and work. Everything you enter is processed only on your own computer (in your browser) and is never sent to a server.</p>
+    <p>Formix is a free collection of online utilities for the small, everyday tasks that come up during development and work. Everything you enter is processed only on your own computer (in your browser) and is never sent to a server.</p>
   </section>
 
   <section class="section container">
@@ -149,7 +149,7 @@
   </section>
 
   <section class="section-tight container prose">
-    <h2>Why WebToolBox?</h2>
+    <h2>Why Formix?</h2>
     <ul>
       <li><strong>No install or sign-up</strong> — Just open the link and start using it right away.</li>
       <li><strong>Processed in your browser</strong> — Your input is handled entirely on the client side and is never sent to a server.</li>
@@ -161,7 +161,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/about.html">About</a>
       <a href="/faq.html">FAQ</a>

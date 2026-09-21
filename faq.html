@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FAQ | WebToolBox</title>
-<meta name="description" content="Frequently asked questions about WebToolBox — pricing, data handling, browser support, and how the JSON/XML Formatter tools work." />
-<link rel="canonical" href="https://example.com/faq.html" />
+<title>FAQ | Formix</title>
+<meta name="description" content="Frequently asked questions about Formix — pricing, data handling, browser support, and how the JSON/XML Formatter tools work." />
+<link rel="canonical" href="https://formix.site/faq.html" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="WebToolBox" />
-<meta property="og:title" content="FAQ | WebToolBox" />
-<meta property="og:description" content="Answers to common questions about WebToolBox and its tools." />
-<meta property="og:url" content="https://example.com/faq.html" />
-<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="FAQ | Formix" />
+<meta property="og:description" content="Answers to common questions about Formix and its tools." />
+<meta property="og:url" content="https://formix.site/faq.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
@@ -23,22 +23,22 @@
 <meta property="og:locale:alternate" content="ja_JP" />
 <meta property="og:locale:alternate" content="zh_CN" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="FAQ | WebToolBox" />
-<meta name="twitter:description" content="Answers to common questions about WebToolBox and its tools." />
-<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+<meta name="twitter:title" content="FAQ | Formix" />
+<meta name="twitter:description" content="Answers to common questions about Formix and its tools." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
 
-<link rel="alternate" hreflang="en" href="https://example.com/faq.html" />
-<link rel="alternate" hreflang="ko" href="https://example.com/ko/faq.html" />
-<link rel="alternate" hreflang="ja" href="https://example.com/ja/faq.html" />
-<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/faq.html" />
-<link rel="alternate" hreflang="x-default" href="https://example.com/faq.html" />
+<link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 <script>
   (function () {
     try {
-      var t = localStorage.getItem("wtb-theme");
+      var t = localStorage.getItem("formix-theme");
       if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
@@ -48,7 +48,7 @@
   (function () {
     try {
       var SUPPORTED = ['ko', 'ja', 'zh'].slice();
-      var stored = localStorage.getItem("wtb-lang");
+      var stored = localStorage.getItem("formix-lang");
       if (stored) {
         if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
           location.replace("/" + stored + location.pathname + location.search);
@@ -62,10 +62,10 @@
         if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
       }
       if (match) {
-        localStorage.setItem("wtb-lang", match);
+        localStorage.setItem("formix-lang", match);
         location.replace("/" + match + location.pathname + location.search);
       } else {
-        localStorage.setItem("wtb-lang", "en");
+        localStorage.setItem("formix-lang", "en");
       }
     } catch (e) {}
   })();
@@ -77,7 +77,7 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is WebToolBox free to use?",
+      "name": "Is Formix free to use?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free."
@@ -128,7 +128,7 @@
       "name": "Will more tools be added?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. WebToolBox started with a JSON Formatter and now also offers an XML Formatter. We plan to keep adding small, genuinely useful browser-based tools over time — see our About page for our guiding principles."
+        "text": "Yes. Formix started with a JSON Formatter and now also offers an XML Formatter. We plan to keep adding small, genuinely useful browser-based tools over time — see our About page for our guiding principles."
       }
     },
     {
@@ -150,14 +150,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "WebToolBox",
-      "item": "https://example.com/"
+      "name": "Formix",
+      "item": "https://formix.site/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Frequently Asked Questions",
-      "item": "https://example.com/faq.html"
+      "item": "https://formix.site/faq.html"
     }
   ]
 }
@@ -169,8 +169,8 @@
 <header class="site-header">
   <div class="container nav">
     <a class="nav-brand" href="/">
-      <span class="nav-brand-mark">W</span>
-      WebToolBox
+      <span class="nav-brand-mark">F</span>
+      Formix
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
@@ -198,18 +198,18 @@
 <main id="main-content">
   <div class="page-header container">
     <h1>Frequently Asked Questions</h1>
-    <p>Common questions about WebToolBox, how it handles your data, and how the tools work.</p>
+    <p>Common questions about Formix, how it handles your data, and how the tools work.</p>
   </div>
 
   <div class="container prose section-tight" style="max-width: 760px;">
     <div class="faq-list">
-      <details class="faq-item"><summary>Is WebToolBox free to use?</summary><div class="faq-answer"><p>Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free.</p></div></details>
+      <details class="faq-item"><summary>Is Formix free to use?</summary><div class="faq-answer"><p>Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free.</p></div></details>
       <details class="faq-item"><summary>Is my data sent to a server?</summary><div class="faq-answer"><p>No. Tools like the JSON Formatter and XML Formatter process everything locally in your browser using JavaScript. The text you paste in is never transmitted to or stored on our servers. See our <a href="/privacy.html">Privacy Policy</a> for details.</p></div></details>
       <details class="faq-item"><summary>Do I need to create an account?</summary><div class="faq-answer"><p>No account or login is required for any tool. Just open the page and start using it.</p></div></details>
       <details class="faq-item"><summary>Which browsers are supported?</summary><div class="faq-answer"><p>Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse.</p></div></details>
       <details class="faq-item"><summary>Can I use these tools on my phone?</summary><div class="faq-answer"><p>Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents.</p></div></details>
       <details class="faq-item"><summary>What happens if my JSON or XML is invalid?</summary><div class="faq-answer"><p>The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes.</p></div></details>
-      <details class="faq-item"><summary>Will more tools be added?</summary><div class="faq-answer"><p>Yes. WebToolBox started with a JSON Formatter and now also offers an <a href="/tools/xml-formatter.html">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="/about.html">About</a> page for our guiding principles.</p></div></details>
+      <details class="faq-item"><summary>Will more tools be added?</summary><div class="faq-answer"><p>Yes. Formix started with a JSON Formatter and now also offers an <a href="/tools/xml-formatter.html">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="/about.html">About</a> page for our guiding principles.</p></div></details>
       <details class="faq-item"><summary>How do I report a bug or suggest a feature?</summary><div class="faq-answer"><p>Please reach out through our <a href="/contact.html">Contact page</a>. We read every message.</p></div></details>
     </div>
   </div>
@@ -217,7 +217,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/about.html">About</a>
       <a href="/faq.html">FAQ</a>
