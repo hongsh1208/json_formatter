@@ -2037,6 +2037,9 @@ Sitemap: %s/sitemap.xml
 ''' % SITE_DOMAIN
     written.append(write_file("robots.txt", robots))
 
+    ads_txt = "google.com, pub-4388558717852090, DIRECT, f08c47fec0942fa0\n"
+    written.append(write_file("ads.txt", ads_txt))
+
     print("Wrote %d files" % len(written))
     for w in written:
         print(" -", os.path.relpath(w, ROOT))
