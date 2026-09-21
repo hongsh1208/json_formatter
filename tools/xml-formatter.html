@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XML Formatter / Viewer - Validate and Beautify XML Online | WebToolBox</title>
+<meta name="description" content="Online XML formatter. Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Supports collapsing/expanding and tag/attribute/text search; your data is processed only in your browser." />
+<meta name="keywords" content="XML formatter, XML viewer, XML validator, XML beautify, XML pretty print, online XML tool" />
+<link rel="canonical" href="https://example.com/tools/xml-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="XML Formatter / Viewer | WebToolBox" />
+<meta property="og:description" content="A free online XML formatter with validation, a readable tree view, search, and collapse/expand." />
+<meta property="og:url" content="https://example.com/tools/xml-formatter.html" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="XML Formatter / Viewer | WebToolBox" />
+<meta name="twitter:description" content="A free online XML formatter with validation, a readable tree view, search, and collapse/expand." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/tools/xml-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/xml-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "XML Formatter / Viewer",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://example.com/tools/xml-formatter.html",
+  "description": "A free online tool that validates XML strings and displays them as a readable tree. Includes search and collapse/expand.",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WebToolBox",
+      "item": "https://example.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "XML Formatter / Viewer",
+      "item": "https://example.com/tools/xml-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">W</span>
+      WebToolBox
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html" aria-current="page">XML Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/xml-formatter.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/xml-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/xml-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/xml-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>XML Formatter / Viewer</h1>
+    <p>Enter an XML string to validate it and see it laid out as an indented, syntax-highlighted tree. Your input is never sent to a server — everything happens in your browser.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Format</button>
+      <button class="btn" id="btn-sample" type="button">Load sample</button>
+      <button class="btn" id="btn-clear" type="button">Clear</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Indent size</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>2-space indent</option>
+        <option value="4">4-space indent</option>
+        <option value="tab">Tab indent</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">Copy</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Copy minified</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Download .xml</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Switch between input and output">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Input
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Output
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Input">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="xml-status-top" class="status-pill is-idle">Enter some XML</span>
+          <span id="xml-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="xml-input-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="xml-input-search-mode">
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact (line)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="xml-input-search" class="visually-hidden">Search mode</label>
+          <input type="text" id="xml-input-search" placeholder="Search the input text…" />
+          <span class="jf-search-count" id="xml-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="xml-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="xml-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="xml-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="xml-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Paste your XML string here."
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="xml-status" class="status-pill is-idle">Enter some XML</span>
+          <span id="xml-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Output" hidden>
+        <div class="jf-panel-head">
+          <span>Output</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Expand all</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Collapse all</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="xml-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="xml-search-mode" disabled>
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="xml-search" class="visually-hidden">Search tags, attributes, or text…</label>
+          <input type="text" id="xml-search" placeholder="Search tags, attributes, or text…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="xml-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="xml-output-gutter-inner"></div>
+          </div>
+          <div id="xml-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. When you stop typing, the input is validated and, if valid, the view switches automatically to the "Output" tab. The dot on the Output tab shows the current validity status. The ▾/▸ buttons for collapsing/expanding elements sit next to the line numbers (left margin) for easy clicking. The search box is focused automatically when the Output tab opens, and you can choose a search mode (Contains/Exact/Regex) to find tag names, attribute names/values, and text content the way you want. Line numbers on the output are renumbered to match only the visible lines, so you can still tell where you are even when parts of the tree are collapsed. The input panel has the same kind of search (Contains/Exact/Regex) so you can locate and highlight text directly in the original input. Press Enter (next) / Shift+Enter (previous) to move between matches.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>How to use this tool</h2>
+    <ul>
+      <li>Paste an XML string into the input box on the left and it's validated automatically, with the result rendered right away.</li>
+      <li>If the XML isn't valid, you'll get an approximate line/column for where the problem is.</li>
+      <li>Clicking "Format" also reformats the input box's content using the selected indent size.</li>
+      <li>When the output is long, use "Collapse all" to get an overview of the structure first, then expand only the elements you need with the ▾/▸ buttons next to the line numbers.</li>
+      <li>Everything happens in your browser — the data you enter is never sent to a server.</li>
+      <li>Once your input is confirmed valid, the view switches automatically to the "Output" tab and focus moves to the search box so you can start typing right away.</li>
+      <li>Choose a search mode: "Contains" (partial match), "Exact" (exact match), or "Regex" (regular expression).</li>
+      <li>The input panel has the same search feature (Contains/Exact/Regex, previous/next navigation, highlighting) so you can search directly in the original text.</li>
+      <li>Elements, attributes, text nodes, comments, and CDATA sections are all recognized and color-coded in the tree view.</li>
+    </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>Use Collapse all to get a bird's-eye view of a deeply nested document (like an RSS feed or a SOAP response) before drilling into a specific branch.</li>
+      <li>The Regex search mode can match attribute values across many elements at once — handy for auditing IDs, dates, or namespaces in a large document.</li>
+      <li>If your XML starts with an <?xml ...?> declaration, it's kept automatically whenever you use Format, Copy, or Download.</li>
+      <li>CDATA sections are useful for embedding markup or special characters inside text without escaping them — the formatter preserves them as-is.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/xml-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

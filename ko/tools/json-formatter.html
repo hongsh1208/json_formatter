@@ -8,13 +8,25 @@
 <meta name="keywords" content="JSON 포매터, JSON 뷰어, JSON validator, JSON beautify, JSON pretty print, 온라인 JSON 도구" />
 <link rel="canonical" href="https://example.com/ko/tools/json-formatter.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="웹툴박스" />
 <meta property="og:title" content="JSON 포매터 / 뷰어 | 웹툴박스" />
 <meta property="og:description" content="JSON 문자열 유효성 검사와 가독성 좋은 트리 뷰, 검색, 접기/펼치기를 지원하는 무료 온라인 JSON 포매터." />
 <meta property="og:url" content="https://example.com/ko/tools/json-formatter.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ko.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="JSON 포매터 / 뷰어 | 웹툴박스" />
+<meta name="twitter:description" content="JSON 문자열 유효성 검사와 가독성 좋은 트리 뷰, 검색, 접기/펼치기를 지원하는 무료 온라인 JSON 포매터." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ko.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/tools/json-formatter.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/json-formatter.html" />
@@ -46,7 +58,28 @@
   "operatingSystem": "Any (Web Browser)",
   "url": "https://example.com/ko/tools/json-formatter.html",
   "description": "JSON 문자열의 유효성을 검사하고 보기 좋은 트리 형태로 정리해주는 무료 온라인 도구. 검색과 접기/펼치기 기능을 제공합니다.",
+  "inLanguage": "ko",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "웹툴박스",
+      "item": "https://example.com/ko/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON 포매터 / 뷰어",
+      "item": "https://example.com/ko/tools/json-formatter.html"
+    }
+  ]
 }
 </script>
 </head>
@@ -63,6 +96,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/">홈</a></li>
       <li><a href="/ko/tools/json-formatter.html" aria-current="page">JSON 포매터</a></li>
+      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
       <li><a href="/ko/about.html">사이트 소개</a></li>
       <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
     </ul>
@@ -203,6 +237,20 @@
       <li>검색 방식을 "포함"(부분 일치), "일치"(정확히 같은 값), "정규식"(정규 표현식) 중에서 선택할 수 있습니다.</li>
       <li>입력창 상단에도 같은 검색 기능(포함/일치/정규식, 이전·다음 이동, 강조 표시)이 있어 원본 텍스트에서 바로 찾을 수 있습니다.</li>
     </ul>
+
+    <h2>관련 팁</h2>
+    <ul>
+      <li>API 요청 바디나 설정 값처럼 공백 없는 압축된 형태가 필요할 때는 '복사' 대신 '압축 복사'를 사용해보세요.</li>
+      <li>프로젝트 스타일 가이드가 탭을 요구한다면 들여쓰기 크기를 'Tab'으로 바꿔보세요.</li>
+      <li>정규식 검색 모드는 문서 전체에서 특정 패턴의 키나 값을 한 번에 찾을 때 유용합니다. (예: 아이디, 날짜, 이메일 형식 점검)</li>
+      <li>깊게 중첩된 JSON은 먼저 '모두 접기'로 전체 구조를 파악한 뒤, 실제로 살펴봐야 할 부분만 펼쳐보면 훨씬 편합니다.</li>
+    </ul>
+
+    <h2>관련 링크</h2>
+    <ul>
+      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+      <li><a href="/ko/faq.html">자주 묻는 질문</a></li>
+    </ul>
   </div>
 </main>
 
@@ -211,8 +259,14 @@
     <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ko/about.html">사이트 소개</a>
+      <a href="/ko/faq.html">자주 묻는 질문</a>
+      <a href="/ko/updates.html">업데이트 소식</a>
+      <a href="/ko/contact.html">문의하기</a>
+      <a href="/ko/terms.html">이용약관</a>
       <a href="/ko/privacy.html">개인정보처리방침</a>
       <a href="/ko/tools/json-formatter.html">JSON 포매터</a>
+      <a href="/ko/tools/xml-formatter.html">XML 포매터</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>
 </footer>
@@ -220,6 +274,7 @@
 <script src="/assets/js/main.js"></script>
 <script src="/tools/json-formatter.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

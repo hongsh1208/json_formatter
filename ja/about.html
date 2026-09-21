@@ -7,13 +7,25 @@
 <meta name="description" content="ウェブツールボックスは会員登録不要でブラウザ上ですぐ使える無料のオンライン開発者ツール集です。サービス紹介、運営方針、提供機能をご案内します。" />
 <link rel="canonical" href="https://example.com/ja/about.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ウェブツールボックス" />
 <meta property="og:title" content="サイト紹介 | ウェブツールボックス" />
 <meta property="og:description" content="ウェブツールボックスのサービス紹介と運営方針をご案内します。" />
 <meta property="og:url" content="https://example.com/ja/about.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="サイト紹介 | ウェブツールボックス" />
+<meta name="twitter:description" content="ウェブツールボックスのサービス紹介と運営方針をご案内します。" />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/about.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/about.html" />
@@ -35,7 +47,26 @@
 <script>
   try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
 </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ウェブツールボックス",
+      "item": "https://example.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "サイト紹介",
+      "item": "https://example.com/ja/about.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">本文へスキップ</a>
@@ -50,6 +81,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/">ホーム</a></li>
       <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
       <li><a href="/ja/about.html" aria-current="page">サイト紹介</a></li>
       <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
     </ul>
@@ -94,6 +126,7 @@
       <h2>提供中の機能</h2>
       <ul>
         <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター / ビューア</a> — JSON文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、キー・値の検索に対応しています。</li>
+        <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター / ビューア</a> — XML文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、タグ・属性・テキストの検索に対応しています。</li>
       </ul>
       <p>新機能のご提案や改善のご意見はいつでも歓迎します。</p>
     </section>
@@ -116,14 +149,21 @@
     <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
       <a href="/ja/privacy.html">プライバシーポリシー</a>
       <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -7,13 +7,25 @@
 <meta name="description" content="웹툴박스는 회원가입 없이 브라우저에서 바로 쓰는 무료 온라인 개발자 도구 모음입니다. 서비스 소개와 운영 철학, 제공 중인 기능을 안내합니다." />
 <link rel="canonical" href="https://example.com/ko/about.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="웹툴박스" />
 <meta property="og:title" content="사이트 소개 | 웹툴박스" />
 <meta property="og:description" content="웹툴박스 서비스 소개와 운영 철학을 안내합니다." />
 <meta property="og:url" content="https://example.com/ko/about.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ko.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="사이트 소개 | 웹툴박스" />
+<meta name="twitter:description" content="웹툴박스 서비스 소개와 운영 철학을 안내합니다." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ko.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/about.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/about.html" />
@@ -35,7 +47,26 @@
 <script>
   try { localStorage.setItem("wtb-lang", "ko"); } catch (e) {}
 </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "웹툴박스",
+      "item": "https://example.com/ko/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "사이트 소개",
+      "item": "https://example.com/ko/about.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
@@ -50,6 +81,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/">홈</a></li>
       <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
+      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
       <li><a href="/ko/about.html" aria-current="page">사이트 소개</a></li>
       <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
     </ul>
@@ -94,6 +126,7 @@
       <h2>제공 중인 기능</h2>
       <ul>
         <li><a href="/ko/tools/json-formatter.html">JSON 포매터 / 뷰어</a> — JSON 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 키·값 검색을 지원합니다.</li>
+        <li><a href="/ko/tools/xml-formatter.html">XML 포매터 / 뷰어</a> — XML 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 태그·속성·텍스트 검색을 지원합니다.</li>
       </ul>
       <p>새로운 기능 제안이나 개선 의견은 언제든 환영합니다.</p>
     </section>
@@ -116,14 +149,21 @@
     <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ko/about.html">사이트 소개</a>
+      <a href="/ko/faq.html">자주 묻는 질문</a>
+      <a href="/ko/updates.html">업데이트 소식</a>
+      <a href="/ko/contact.html">문의하기</a>
+      <a href="/ko/terms.html">이용약관</a>
       <a href="/ko/privacy.html">개인정보처리방침</a>
       <a href="/ko/tools/json-formatter.html">JSON 포매터</a>
+      <a href="/ko/tools/xml-formatter.html">XML 포매터</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

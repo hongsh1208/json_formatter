@@ -57,22 +57,44 @@ def urls_for(lang):
         "home": p + "/",
         "about": p + "/about.html",
         "privacy": p + "/privacy.html",
+        "faq": p + "/faq.html",
+        "contact": p + "/contact.html",
+        "terms": p + "/terms.html",
+        "updates": p + "/updates.html",
         "tool": p + "/tools/json-formatter.html",
+        "tool_xml": p + "/tools/xml-formatter.html",
         "notfound": p + "/404.html",
     }
 
 
+# 헤더 내비게이션에 노출할 도구 목록. 새 도구를 추가할 때 이 리스트에 (urls_for 키, NAV 라벨 키)만
+# 추가하면 헤더/푸터/언어 스위처가 모두 자동으로 반영된다.
+TOOL_NAV_ITEMS = [("tool", "tool"), ("tool_xml", "tool_xml")]
+
+# 푸터에 노출할 일반 페이지(도구가 아닌 페이지) 목록. 새 페이지를 추가할 때 이 리스트에
+# (urls_for 키, NAV 라벨 키)만 추가하면 푸터/사이트맵이 자동으로 반영된다.
+FOOTER_NAV_ITEMS = [("about", "about"), ("faq", "faq"), ("updates", "updates"), ("contact", "contact"),
+                     ("terms", "terms"), ("privacy", "privacy")]
+
 NAV = {
-    "en": {"home": "Home", "tool": "JSON Formatter", "about": "About", "privacy": "Privacy Policy",
+    "en": {"home": "Home", "tool": "JSON Formatter", "tool_xml": "XML Formatter", "about": "About",
+           "privacy": "Privacy Policy", "faq": "FAQ", "contact": "Contact", "related_h2": "Related",
+           "cookie_settings": "Cookie preferences", "terms": "Terms of Service", "updates": "What's New",
            "menu": "Open menu", "dark": "Switch to dark mode", "light": "Switch to light mode",
            "lang": "Select language", "skip": "Skip to content"},
-    "ko": {"home": "홈", "tool": "JSON 포매터", "about": "사이트 소개", "privacy": "개인정보처리방침",
+    "ko": {"home": "홈", "tool": "JSON 포매터", "tool_xml": "XML 포매터", "about": "사이트 소개",
+           "privacy": "개인정보처리방침", "faq": "자주 묻는 질문", "contact": "문의하기", "related_h2": "관련 링크",
+           "cookie_settings": "쿠키 설정", "terms": "이용약관", "updates": "업데이트 소식",
            "menu": "메뉴 열기", "dark": "다크 모드로 전환", "light": "라이트 모드로 전환",
            "lang": "언어 선택", "skip": "본문으로 건너뛰기"},
-    "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "about": "サイト紹介", "privacy": "プライバシーポリシー",
+    "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "tool_xml": "XMLフォーマッター", "about": "サイト紹介",
+           "privacy": "プライバシーポリシー", "faq": "よくある質問", "contact": "お問い合わせ", "related_h2": "関連リンク",
+           "cookie_settings": "Cookie設定", "terms": "利用規約", "updates": "更新情報",
            "menu": "メニューを開く", "dark": "ダークモードに切り替え", "light": "ライトモードに切り替え",
            "lang": "言語選択", "skip": "本文へスキップ"},
-    "zh": {"home": "首页", "tool": "JSON 格式化", "about": "关于本站", "privacy": "隐私政策",
+    "zh": {"home": "首页", "tool": "JSON 格式化", "tool_xml": "XML 格式化", "about": "关于本站",
+           "privacy": "隐私政策", "faq": "常见问题", "contact": "联系我们", "related_h2": "相关链接",
+           "cookie_settings": "Cookie 设置", "terms": "使用条款", "updates": "更新日志",
            "menu": "打开菜单", "dark": "切换到深色模式", "light": "切换到浅色模式",
            "lang": "选择语言", "skip": "跳转到正文"},
 }
@@ -97,9 +119,12 @@ CONTENT["index"] = {
         card1_title="JSON Formatter / Viewer",
         card1_desc="Checks whether your input is valid JSON and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and key/value search.",
         card1_tag="JSON · Formatter · Validator",
-        card2_title="More tools coming soon",
-        card2_desc="Text/encoding conversion, case conversion, and more tools will be added over time.",
-        card2_tag="Coming soon",
+        card2_title="XML Formatter / Viewer",
+        card2_desc="Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and tag/attribute/text search.",
+        card2_tag="XML · Formatter · Validator",
+        card3_title="More tools coming soon",
+        card3_desc="Text/encoding conversion, case conversion, and more tools will be added over time.",
+        card3_tag="Coming soon",
         why_h2="Why WebToolBox?",
         why_items=[
             ("No install or sign-up", "Just open the link and start using it right away."),
@@ -122,9 +147,12 @@ CONTENT["index"] = {
         card1_title="JSON 포매터 / 뷰어",
         card1_desc="입력한 문자열이 올바른 JSON인지 검사하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 키·값 검색 기능을 제공합니다.",
         card1_tag="JSON · Formatter · Validator",
-        card2_title="다음 도구 준비 중",
-        card2_desc="텍스트/인코딩 변환, 대소문자 변환 등 새로운 도구를 순차적으로 추가할 예정입니다.",
-        card2_tag="Coming soon",
+        card2_title="XML 포매터 / 뷰어",
+        card2_desc="입력한 문자열이 올바른 XML인지 검사하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 태그·속성·텍스트 검색 기능을 제공합니다.",
+        card2_tag="XML · Formatter · Validator",
+        card3_title="다음 도구 준비 중",
+        card3_desc="텍스트/인코딩 변환, 대소문자 변환 등 새로운 도구를 순차적으로 추가할 예정입니다.",
+        card3_tag="Coming soon",
         why_h2="왜 웹툴박스인가요?",
         why_items=[
             ("설치·가입 불필요", "링크만 열면 바로 사용할 수 있습니다."),
@@ -147,9 +175,12 @@ CONTENT["index"] = {
         card1_title="JSONフォーマッター / ビューア",
         card1_desc="入力した文字列が正しいJSONかどうかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。ツリーの折りたたみ/展開とキー・値の検索機能を提供します。",
         card1_tag="JSON · Formatter · Validator",
-        card2_title="次のツールを準備中",
-        card2_desc="テキスト/エンコード変換、大文字小文字変換など、新しいツールを順次追加していく予定です。",
-        card2_tag="Coming soon",
+        card2_title="XMLフォーマッター / ビューア",
+        card2_desc="入力した文字列が正しいXMLかどうかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。ツリーの折りたたみ/展開とタグ・属性・テキストの検索機能を提供します。",
+        card2_tag="XML · Formatter · Validator",
+        card3_title="次のツールを準備中",
+        card3_desc="テキスト/エンコード変換、大文字小文字変換など、新しいツールを順次追加していく予定です。",
+        card3_tag="Coming soon",
         why_h2="なぜウェブツールボックスなのか?",
         why_items=[
             ("インストール・登録不要", "リンクを開くだけですぐに利用できます。"),
@@ -172,9 +203,12 @@ CONTENT["index"] = {
         card1_title="JSON 格式化 / 查看器",
         card1_desc="检查输入的字符串是否为有效的 JSON，并以带缩进和语法高亮的树形结构清晰展示。支持节点折叠/展开以及键值搜索功能。",
         card1_tag="JSON · Formatter · Validator",
-        card2_title="更多工具即将上线",
-        card2_desc="文本/编码转换、大小写转换等新工具将陆续添加。",
-        card2_tag="Coming soon",
+        card2_title="XML 格式化 / 查看器",
+        card2_desc="检查输入的字符串是否为有效的 XML，并以带缩进和语法高亮的树形结构清晰展示。支持节点折叠/展开以及标签·属性·文本搜索功能。",
+        card2_tag="XML · Formatter · Validator",
+        card3_title="更多工具即将上线",
+        card3_desc="文本/编码转换、大小写转换等新工具将陆续添加。",
+        card3_tag="Coming soon",
         why_h2="为什么选择网页工具箱?",
         why_items=[
             ("无需安装、无需注册", "打开链接即可立即使用。"),
@@ -203,6 +237,7 @@ CONTENT["about"] = {
         ],
         s3_h2="Available features",
         s3_item='<a href="{tool}">JSON Formatter / Viewer</a> — Validates JSON strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching keys and values.',
+        s3_item2='<a href="{tool_xml}">XML Formatter / Viewer</a> — Validates XML strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching tags, attributes, and text.',
         s3_p="Suggestions for new features or improvements are always welcome.",
         s4_h2="About advertising and running this service",
         s4_p='WebToolBox may introduce advertising services such as Google AdSense in the future to help support running the site. If we do, how related data is handled will be explained transparently on the <a href="{privacy}">Privacy Policy</a> page, and the core functionality of our tools (e.g. JSON processing) will remain free regardless of whether ads are shown.',
@@ -226,6 +261,7 @@ CONTENT["about"] = {
         ],
         s3_h2="제공 중인 기능",
         s3_item='<a href="{tool}">JSON 포매터 / 뷰어</a> — JSON 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 키·값 검색을 지원합니다.',
+        s3_item2='<a href="{tool_xml}">XML 포매터 / 뷰어</a> — XML 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 태그·속성·텍스트 검색을 지원합니다.',
         s3_p="새로운 기능 제안이나 개선 의견은 언제든 환영합니다.",
         s4_h2="광고 및 서비스 운영에 대해",
         s4_p='웹툴박스는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="{privacy}">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.',
@@ -248,6 +284,7 @@ CONTENT["about"] = {
         ],
         s3_h2="提供中の機能",
         s3_item='<a href="{tool}">JSONフォーマッター / ビューア</a> — JSON文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、キー・値の検索に対応しています。',
+        s3_item2='<a href="{tool_xml}">XMLフォーマッター / ビューア</a> — XML文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、タグ・属性・テキストの検索に対応しています。',
         s3_p="新機能のご提案や改善のご意見はいつでも歓迎します。",
         s4_h2="広告およびサービス運営について",
         s4_p='ウェブツールボックスはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="{privacy}">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。',
@@ -270,6 +307,7 @@ CONTENT["about"] = {
         ],
         s3_h2="已提供的功能",
         s3_item='<a href="{tool}">JSON 格式化 / 查看器</a> — 验证 JSON 字符串的有效性，并以带缩进和语法高亮的树形结构展示。支持节点折叠/展开以及键值搜索。',
+        s3_item2='<a href="{tool_xml}">XML 格式化 / 查看器</a> — 验证 XML 字符串的有效性，并以带缩进和语法高亮的树形结构展示。支持节点折叠/展开以及标签·属性·文本搜索。',
         s3_p="欢迎随时提出新功能建议或改进意见。",
         s4_h2="关于广告与服务运营",
         s4_p='为了维持服务运营，网页工具箱未来可能会引入 Google AdSense 等广告服务。如果引入广告，相关数据的处理方式将在<a href="{privacy}">隐私政策</a>页面中透明说明，工具的核心功能(如 JSON 处理)将始终免费提供，不受广告影响。',
@@ -290,6 +328,7 @@ CONTENT["privacy"] = {
         s1_p2="Simple preference settings, such as your theme choice (light/dark mode), are stored only in your browser's local storage (localStorage) and are never transmitted externally.",
         s2_h2="2. Use of cookies and similar technologies",
         s2_p1="The Site may use cookies for service analytics and advertising purposes. A cookie is a small piece of information a website stores in your browser; you can refuse or delete cookies through your browser settings. Note that refusing cookies may limit some features.",
+        s2_p2='If you appear to be visiting from the EEA, UK, or Switzerland, a consent banner is shown on your first visit so you can accept or reject non-essential (advertising/analytics) cookies. Your choice is stored in your browser and you can change it anytime using the "Cookie preferences" link in the footer.',
         s3_h2="3. Use of advertising services (Google AdSense)",
         s3_p1="To help operate and maintain the Site, we may display advertisements from third-party providers, including Google.",
         s3_li1="Third-party vendors, including Google, may use cookies to serve ads based on a user's prior visits to this or other websites.",
@@ -316,6 +355,7 @@ CONTENT["privacy"] = {
         s1_p2="다만 화면 테마 설정(라이트/다크 모드)과 같은 단순 환경설정 값은 이용자의 브라우저 로컬 스토리지(localStorage)에만 저장되며, 이 정보는 외부로 전송되지 않습니다.",
         s2_h2="2. 쿠키(Cookie) 및 유사 기술의 사용",
         s2_p1="사이트는 서비스 이용 분석 및 광고 제공을 위해 쿠키를 사용할 수 있습니다. 쿠키는 웹사이트가 이용자의 브라우저에 저장하는 소량의 정보로, 이용자는 브라우저 설정을 통해 쿠키 저장을 거부하거나 삭제할 수 있습니다. 다만 쿠키 저장을 거부할 경우 일부 기능 이용에 어려움이 있을 수 있습니다.",
+        s2_p2="EEA(유럽경제지역)·영국·스위스에서 접속하신 것으로 추정되는 경우, 최초 방문 시 동의 배너가 표시되어 필수 외(광고·분석) 쿠키에 대한 동의 여부를 선택하실 수 있습니다. 선택하신 내용은 브라우저에 저장되며, 화면 하단 \"쿠키 설정\" 링크를 통해 언제든 다시 변경할 수 있습니다.",
         s3_h2="3. 광고 서비스(Google AdSense) 이용에 관한 사항",
         s3_p1="사이트는 서비스 운영 및 유지를 위해 Google을 포함한 제3자 광고 사업자의 광고를 게재할 수 있습니다.",
         s3_li1="Google과 같은 제3자 공급업체는 쿠키를 사용하여 이용자의 이전 사이트 방문 기록을 기반으로 광고를 게재할 수 있습니다.",
@@ -342,6 +382,7 @@ CONTENT["privacy"] = {
         s1_p2="画面テーマ設定(ライト/ダークモード)などの単純な環境設定値のみ、利用者のブラウザのローカルストレージ(localStorage)に保存され、この情報が外部に送信されることはありません。",
         s2_h2="2. Cookie(クッキー)および類似技術の使用",
         s2_p1="本サイトはサービス利用分析および広告配信のためにCookieを使用する場合があります。Cookieとはウェブサイトが利用者のブラウザに保存する少量の情報で、利用者はブラウザの設定でCookieの保存を拒否または削除できます。ただし、Cookieの保存を拒否した場合、一部機能のご利用に支障が生じる可能性があります。",
+        s2_p2="EEA(欧州経済領域)・英国・スイスからアクセスされたと推定される場合、初回訪問時に同意バナーが表示され、必須以外(広告・分析)のCookieについて同意するかどうかを選択できます。選択内容はブラウザに保存され、画面下部の「Cookie設定」リンクからいつでも変更できます。",
         s3_h2="3. 広告サービス(Google AdSense)の利用について",
         s3_p1="本サイトはサービスの運営・維持のため、Googleを含む第三者広告事業者の広告を掲載する場合があります。",
         s3_li1="Googleなどの第三者ベンダーはCookieを使用し、利用者の本サイトまたは他のサイトへの過去のアクセス情報に基づいて広告を配信することがあります。",
@@ -368,6 +409,7 @@ CONTENT["privacy"] = {
         s1_p2="仅主题设置(浅色/深色模式)等简单的偏好设置值会保存在您浏览器的本地存储(localStorage)中，该信息不会对外传输。",
         s2_h2="2. Cookie 及类似技术的使用",
         s2_p1="本网站可能会为服务分析和广告投放使用 Cookie。Cookie 是网站保存在您浏览器中的少量信息，您可以通过浏览器设置拒绝或删除 Cookie。但拒绝 Cookie 可能会影响部分功能的使用。",
+        s2_p2="如果系统判断您是从 EEA(欧洲经济区)、英国或瑞士访问本站，首次访问时会显示同意横幅，供您选择是否同意使用非必要(广告/分析)Cookie。您的选择会保存在浏览器中，您可以随时通过页面底部的“Cookie 设置”链接重新更改。",
         s3_h2="3. 关于广告服务(Google AdSense)使用的说明",
         s3_p1="为维持网站运营，本网站可能会展示包括 Google 在内的第三方广告商投放的广告。",
         s3_li1="包括 Google 在内的第三方供应商可能会使用 Cookie，根据用户过去访问本网站或其他网站的记录投放广告。",
@@ -381,6 +423,362 @@ CONTENT["privacy"] = {
         s6_h2="6. 联系方式", s6_p1="如对个人信息处理有任何疑问，请通过以下邮箱联系我们。",
         s7_h2="7. 政策的变更",
         s7_p1="本隐私政策可能会因法律、政策或服务变更而修订，变更时将通过本网站公告。",
+    ),
+}
+
+CONTENT["faq"] = {
+    "en": dict(
+        title="FAQ | WebToolBox",
+        description="Frequently asked questions about WebToolBox — pricing, data handling, browser support, and how the JSON/XML Formatter tools work.",
+        og_title="FAQ | WebToolBox",
+        og_description="Answers to common questions about WebToolBox and its tools.",
+        h1="Frequently Asked Questions",
+        lead="Common questions about WebToolBox, how it handles your data, and how the tools work.",
+        items=[
+            ("Is WebToolBox free to use?", "Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free."),
+            ("Is my data sent to a server?", 'No. Tools like the JSON Formatter and XML Formatter process everything locally in your browser using JavaScript. The text you paste in is never transmitted to or stored on our servers. See our <a href="{privacy}">Privacy Policy</a> for details.'),
+            ("Do I need to create an account?", "No account or login is required for any tool. Just open the page and start using it."),
+            ("Which browsers are supported?", "Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse."),
+            ("Can I use these tools on my phone?", "Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents."),
+            ("What happens if my JSON or XML is invalid?", "The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes."),
+            ("Will more tools be added?", 'Yes. WebToolBox started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
+            ("How do I report a bug or suggest a feature?", 'Please reach out through our <a href="{contact}">Contact page</a>. We read every message.'),
+        ],
+    ),
+    "ko": dict(
+        title="자주 묻는 질문 | 웹툴박스",
+        description="웹툴박스 이용 요금, 데이터 처리 방식, 브라우저 지원, JSON/XML 포매터 사용법 등 자주 묻는 질문에 대한 답변입니다.",
+        og_title="자주 묻는 질문 | 웹툴박스",
+        og_description="웹툴박스와 제공 도구에 대한 자주 묻는 질문과 답변입니다.",
+        h1="자주 묻는 질문",
+        lead="웹툴박스 이용, 데이터 처리 방식, 도구 사용법에 대해 자주 묻는 질문들을 모았습니다.",
+        items=[
+            ("웹툴박스는 무료인가요?", "네, 모든 도구는 완전히 무료이며 회원가입이나 계정 생성이 필요하지 않습니다. 운영비 충당을 위해 향후 광고를 게재할 수 있지만, 도구 자체는 계속 무료로 제공됩니다."),
+            ("입력한 데이터가 서버로 전송되나요?", '아니요. JSON 포매터, XML 포매터 등의 도구는 모든 처리를 브라우저 안에서(자바스크립트로) 수행합니다. 입력한 텍스트는 서버로 전송되거나 저장되지 않습니다. 자세한 내용은 <a href="{privacy}">개인정보처리방침</a>을 참고해주세요.'),
+            ("회원가입이 필요한가요?", "필요하지 않습니다. 어떤 도구든 계정이나 로그인 없이 바로 사용할 수 있습니다."),
+            ("어떤 브라우저를 지원하나요?", "PC와 모바일의 최신 브라우저(Chrome, Edge, Firefox, Safari)에서 모두 사용할 수 있습니다. DOMParser, JSON.parse 등 널리 지원되는 표준 자바스크립트 API를 사용합니다."),
+            ("모바일에서도 사용할 수 있나요?", "네, 모바일 브라우저에서도 반응형으로 정상 동작합니다. 다만 긴 JSON·XML 문서를 다룰 때는 화면이 큰 기기가 더 편리합니다."),
+            ("JSON이나 XML이 유효하지 않으면 어떻게 되나요?", "상태 배지와 함께 문제가 발생한 대략적인 줄/열 위치를 알려줘 빠르게 확인하고 수정할 수 있습니다. JSON 포매터는 따옴표 누락 같은 흔한 실수를 자동으로 보정하기도 합니다."),
+            ("앞으로 도구가 더 추가되나요?", '네. 웹툴박스는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
+            ("버그 제보나 기능 제안은 어떻게 하나요?", '<a href="{contact}">문의하기</a> 페이지를 통해 연락해주세요. 보내주시는 의견은 모두 확인하고 있습니다.'),
+        ],
+    ),
+    "ja": dict(
+        title="よくある質問 | ウェブツールボックス",
+        description="ウェブツールボックスの料金、データの取り扱い、ブラウザ対応、JSON/XMLフォーマッターの使い方など、よくある質問への回答です。",
+        og_title="よくある質問 | ウェブツールボックス",
+        og_description="ウェブツールボックスと提供ツールに関するよくある質問への回答です。",
+        h1="よくある質問",
+        lead="ウェブツールボックスの利用方法、データの取り扱い、ツールの使い方に関するよくある質問をまとめました。",
+        items=[
+            ("ウェブツールボックスは無料ですか?", "はい、すべてのツールは完全に無料で、会員登録やアカウント作成は不要です。運営費を賄うため今後広告を掲載する場合がありますが、ツール自体は引き続き無料で提供します。"),
+            ("入力したデータはサーバーに送信されますか?", 'いいえ。JSONフォーマッターやXMLフォーマッターなどのツールは、すべての処理をブラウザ内(JavaScript)で行います。入力したテキストがサーバーに送信・保存されることはありません。詳しくは<a href="{privacy}">プライバシーポリシー</a>をご覧ください。'),
+            ("会員登録は必要ですか?", "不要です。どのツールもアカウントやログインなしですぐに利用できます。"),
+            ("対応ブラウザは?", "パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。"),
+            ("スマートフォンでも使えますか?", "はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。"),
+            ("JSONやXMLが無効な場合はどうなりますか?", "ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。"),
+            ("今後もツールは追加されますか?", 'はい。ウェブツールボックスはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
+            ("不具合報告や機能提案はどうすればいいですか?", '<a href="{contact}">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。'),
+        ],
+    ),
+    "zh": dict(
+        title="常见问题 | 网页工具箱",
+        description="关于网页工具箱的费用、数据处理方式、浏览器支持，以及 JSON/XML 格式化工具使用方法等常见问题解答。",
+        og_title="常见问题 | 网页工具箱",
+        og_description="关于网页工具箱及其提供工具的常见问题解答。",
+        h1="常见问题",
+        lead="汇总了关于网页工具箱的使用、数据处理方式以及工具用法的常见问题。",
+        items=[
+            ("网页工具箱是免费的吗?", "是的，所有工具完全免费，无需注册或创建账号。为了补贴运营成本，未来可能会展示广告，但工具本身将始终保持免费。"),
+            ("我输入的数据会发送到服务器吗?", '不会。JSON 格式化、XML 格式化等工具的所有处理都在您的浏览器中(通过 JavaScript)完成。您输入的文本不会被发送到服务器或被保存。详情请参阅<a href="{privacy}">隐私政策</a>。'),
+            ("需要注册账号吗?", "不需要。任何工具都无需账号或登录即可直接使用。"),
+            ("支持哪些浏览器?", "电脑和手机上的主流最新浏览器(Chrome、Edge、Firefox、Safari)均可正常使用。工具使用的是 DOMParser、JSON.parse 等广泛支持的标准 JavaScript API。"),
+            ("可以在手机上使用吗?", "可以，本站在移动浏览器上也能自适应正常显示。不过在处理较长的 JSON/XML 文档时，使用大屏幕设备会更方便。"),
+            ("如果我的 JSON 或 XML 无效会怎样?", "工具会显示状态标记，并告知大致的错误行/列位置，方便您快速定位并修正问题。JSON 格式化工具还能自动修正部分常见错误，例如缺失的引号。"),
+            ("以后会添加更多工具吗?", '会的。网页工具箱从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
+            ("如何反馈错误或提出功能建议?", '请通过<a href="{contact}">联系我们</a>页面与我们联系，我们会查看每一条反馈。'),
+        ],
+    ),
+}
+
+CONTENT["contact"] = {
+    "en": dict(
+        title="Contact | WebToolBox",
+        description="Contact WebToolBox for bug reports, feature requests, or any other inquiries about the site or its tools.",
+        og_title="Contact | WebToolBox",
+        og_description="How to get in touch with WebToolBox.",
+        h1="Contact",
+        lead="Have a bug report, feature request, or question? We'd like to hear from it.",
+        s1_h2="Email",
+        s1_p="The fastest way to reach us is by email. We read every message, though replies may take a few days depending on volume.",
+        s2_h2="What to include",
+        s2_items=[
+            "A short description of the issue or suggestion",
+            "Which tool and language/page you were using (e.g. JSON Formatter, English)",
+            "Steps to reproduce, if you're reporting a bug, along with the input that caused it (please remove any sensitive data first)",
+        ],
+        s3_h2="Other questions",
+        s3_p='For questions about data handling, see our <a href="{privacy}">Privacy Policy</a>. For general questions about the site, check the <a href="{faq}">FAQ</a> first — your question may already be answered there.',
+    ),
+    "ko": dict(
+        title="문의하기 | 웹툴박스",
+        description="버그 제보, 기능 제안, 기타 문의 사항은 웹툴박스로 연락해주세요.",
+        og_title="문의하기 | 웹툴박스",
+        og_description="웹툴박스에 문의하는 방법을 안내합니다.",
+        h1="문의하기",
+        lead="버그를 발견하셨거나 새로운 기능을 제안하고 싶으신가요? 언제든 편하게 연락해주세요.",
+        s1_h2="이메일",
+        s1_p="가장 빠르게 연락하는 방법은 이메일입니다. 보내주시는 모든 메시지를 확인하고 있으며, 문의량에 따라 답변까지 며칠 걸릴 수 있습니다.",
+        s2_h2="이런 내용을 포함해주시면 좋습니다",
+        s2_items=[
+            "문제 상황이나 제안 내용에 대한 간단한 설명",
+            "사용 중이던 도구와 언어/페이지 (예: JSON 포매터, 한국어)",
+            "버그 제보라면 재현 방법과 원인이 된 입력값 (민감한 정보는 미리 제거해주세요)",
+        ],
+        s3_h2="그 밖의 문의",
+        s3_p='데이터 처리 방식이 궁금하시다면 <a href="{privacy}">개인정보처리방침</a>을 참고해주세요. 사이트 이용에 대한 일반적인 궁금증은 <a href="{faq}">자주 묻는 질문</a>에서 먼저 확인해보시면 빠르게 답을 찾으실 수 있습니다.',
+    ),
+    "ja": dict(
+        title="お問い合わせ | ウェブツールボックス",
+        description="不具合報告、機能提案、その他のお問い合わせはウェブツールボックスまでご連絡ください。",
+        og_title="お問い合わせ | ウェブツールボックス",
+        og_description="ウェブツールボックスへのお問い合わせ方法をご案内します。",
+        h1="お問い合わせ",
+        lead="不具合を見つけた、新機能を提案したいなど、お気軽にご連絡ください。",
+        s1_h2="メール",
+        s1_p="最も早くご連絡いただける方法はメールです。いただいたメッセージはすべて確認しておりますが、状況によりご返信までに数日かかる場合があります。",
+        s2_h2="含めていただきたい内容",
+        s2_items=[
+            "問題や提案内容の簡単な説明",
+            "ご利用中のツールと言語/ページ(例: JSONフォーマッター、日本語)",
+            "不具合報告の場合は再現手順と原因となった入力内容(機密情報は事前に削除してください)",
+        ],
+        s3_h2="その他のご質問",
+        s3_p='データの取り扱いについては<a href="{privacy}">プライバシーポリシー</a>をご覧ください。サイトの利用に関する一般的なご質問は、まず<a href="{faq}">よくある質問</a>をご確認いただくと早く解決する場合があります。',
+    ),
+    "zh": dict(
+        title="联系我们 | 网页工具箱",
+        description="如有错误反馈、功能建议或其他咨询，请通过以下方式联系网页工具箱。",
+        og_title="联系我们 | 网页工具箱",
+        og_description="介绍如何联系网页工具箱。",
+        h1="联系我们",
+        lead="发现了错误，或想提出新功能建议？欢迎随时与我们联系。",
+        s1_h2="电子邮箱",
+        s1_p="通过邮件联系我们是最快的方式。我们会查看每一条消息，但根据咨询量的不同，回复可能需要几天时间。",
+        s2_h2="建议包含以下内容",
+        s2_items=[
+            "问题或建议的简要说明",
+            "使用的工具及语言/页面(例如：JSON 格式化，中文)",
+            "如果是错误反馈，请附上复现步骤及导致问题的输入内容(请提前移除任何敏感信息)",
+        ],
+        s3_h2="其他问题",
+        s3_p='关于数据处理方式，请参阅<a href="{privacy}">隐私政策</a>。关于网站使用的常见问题，建议先查看<a href="{faq}">常见问题</a>页面，您的问题可能已有答案。',
+    ),
+}
+
+CONTENT["terms"] = {
+    "en": dict(
+        title="Terms of Service | WebToolBox",
+        description="Terms of Service for WebToolBox — acceptance of terms, service description, user responsibilities, disclaimer of warranty, and limitation of liability.",
+        og_title="Terms of Service | WebToolBox",
+        og_description="The terms that apply to using WebToolBox and its tools.",
+        h1="Terms of Service", effective="Effective date: September 21, 2026",
+        intro='These Terms of Service ("Terms") govern your use of WebToolBox (the "Site") and the tools it provides. By using the Site, you agree to these Terms.',
+        s1_h2="1. Acceptance of terms",
+        s1_p1="By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.",
+        s2_h2="2. Description of the service",
+        s2_p1='WebToolBox provides free, browser-based utilities (such as the <a href="{tool}">JSON Formatter</a> and <a href="{tool_xml}">XML Formatter</a>) that run entirely on the client side. No account is required, and no fee is currently charged for using the tools.',
+        s3_h2="3. User responsibilities",
+        s3_p1="You agree not to:",
+        s3_li1="Use the Site for any unlawful purpose, or to process content that is illegal, infringing, or harmful to others.",
+        s3_li2="Attempt to disrupt the Site's operation, including through excessive automated requests, scraping at a scale that degrades service for others, or attempts to bypass security measures.",
+        s3_li3="Reverse-engineer, decompile, or attempt to extract the source code of the Site except as permitted by applicable law.",
+        s4_h2="4. Intellectual property",
+        s4_p1="The Site's design, code, layout, and branding are the property of the Site operator unless otherwise noted. Since the tools process your input entirely in your browser and never transmit it to our servers, you retain all rights to the data you enter — we make no claim to it.",
+        s5_h2="5. Disclaimer of warranty",
+        s5_p1='The Site and its tools are provided "as is" and "as available," without warranties of any kind, express or implied, including but not limited to accuracy, reliability, or fitness for a particular purpose. While we aim for correctness, you are responsible for verifying any output (such as formatted JSON or XML) before relying on it for important or production use.',
+        s6_h2="6. Limitation of liability",
+        s6_p1="To the fullest extent permitted by law, the Site operator shall not be liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, the Site or its tools.",
+        s7_h2="7. Changes to the service",
+        s7_p1="We may add, modify, or discontinue any tool or feature of the Site at any time, with or without notice.",
+        s8_h2="8. Changes to these terms",
+        s8_p1="We may revise these Terms from time to time. Continued use of the Site after changes take effect constitutes acceptance of the revised Terms. Significant changes will be noted on our <a href=\"{updates}\">What's New</a> page.",
+        s9_h2="9. Contact",
+        s9_p1='Questions about these Terms can be directed to us via our <a href="{contact}">Contact page</a> or the email address below.',
+    ),
+    "ko": dict(
+        title="이용약관 | 웹툴박스",
+        description="웹툴박스 이용약관 — 약관 동의, 서비스 설명, 이용자의 의무, 면책조항, 책임 제한에 관한 안내입니다.",
+        og_title="이용약관 | 웹툴박스",
+        og_description="웹툴박스와 제공 도구 이용에 적용되는 약관입니다.",
+        h1="이용약관", effective="시행일자: 2026년 9월 21일",
+        intro='본 이용약관(이하 "약관")은 웹툴박스(이하 "사이트")와 사이트가 제공하는 도구의 이용 조건을 규정합니다. 사이트를 이용함으로써 이용자는 본 약관에 동의하는 것으로 간주됩니다.',
+        s1_h2="1. 약관의 동의",
+        s1_p1="사이트에 접속하거나 이를 이용함으로써 이용자는 본 약관에 구속되는 것에 동의합니다. 약관에 동의하지 않으시는 경우 사이트를 이용하실 수 없습니다.",
+        s2_h2="2. 서비스 설명",
+        s2_p1='웹툴박스는 <a href="{tool}">JSON 포매터</a>, <a href="{tool_xml}">XML 포매터</a> 등 브라우저에서 완전히 동작하는 무료 유틸리티를 제공합니다. 별도의 회원가입이 필요하지 않으며, 현재 도구 이용에 따른 요금은 부과되지 않습니다.',
+        s3_h2="3. 이용자의 의무",
+        s3_p1="이용자는 다음 행위를 해서는 안 됩니다.",
+        s3_li1="불법적인 목적으로 사이트를 이용하거나, 위법·침해적이거나 타인에게 피해를 주는 콘텐츠를 처리하는 행위",
+        s3_li2="과도한 자동화 요청, 다른 이용자의 서비스 이용을 저해할 정도의 대규모 스크래핑, 보안 조치를 우회하려는 시도 등 사이트 운영을 방해하는 행위",
+        s3_li3="관련 법령이 허용하는 경우를 제외하고 사이트를 역설계, 디컴파일하거나 소스 코드를 추출하려는 행위",
+        s4_h2="4. 지적재산권",
+        s4_p1="별도로 명시하지 않는 한 사이트의 디자인, 코드, 레이아웃, 브랜딩에 대한 권리는 사이트 운영자에게 있습니다. 도구는 입력값을 브라우저 안에서만 처리하고 서버로 전송하지 않으므로, 이용자가 입력한 데이터에 대한 권리는 전적으로 이용자에게 있으며 사이트 운영자는 이에 대해 어떠한 권리도 주장하지 않습니다.",
+        s5_h2="5. 면책조항",
+        s5_p1='사이트와 도구는 "있는 그대로(as is)", "제공 가능한 상태로(as available)" 제공되며, 정확성·신뢰성·특정 목적 적합성 등에 대한 명시적·묵시적 보증을 하지 않습니다. 정확성을 위해 최선을 다하고 있으나, 중요한 업무나 프로덕션 환경에 결과물(정리된 JSON·XML 등)을 사용하시기 전에는 이용자가 직접 검증해야 합니다.',
+        s6_h2="6. 책임의 제한",
+        s6_p1="관련 법령이 허용하는 최대한의 범위 내에서, 사이트 운영자는 사이트 또는 도구의 이용(또는 이용 불가)으로 인해 발생하는 간접적, 부수적, 결과적 손해에 대해 책임을 지지 않습니다.",
+        s7_h2="7. 서비스의 변경",
+        s7_p1="사이트 운영자는 사전 고지 여부와 관계없이 언제든지 사이트의 도구나 기능을 추가, 변경 또는 중단할 수 있습니다.",
+        s8_h2="8. 약관의 변경",
+        s8_p1='본 약관은 필요에 따라 개정될 수 있으며, 변경된 약관이 적용된 이후에도 사이트를 계속 이용하는 경우 변경된 약관에 동의한 것으로 간주됩니다. 중요한 변경 사항은 <a href="{updates}">업데이트 소식</a> 페이지를 통해 안내합니다.',
+        s9_h2="9. 문의",
+        s9_p1='본 약관에 대한 문의는 <a href="{contact}">문의하기</a> 페이지 또는 아래 이메일로 연락해 주시기 바랍니다.',
+    ),
+    "ja": dict(
+        title="利用規約 | ウェブツールボックス",
+        description="ウェブツールボックスの利用規約です。規約への同意、サービス内容、利用者の義務、免責事項、責任の制限についてご案内します。",
+        og_title="利用規約 | ウェブツールボックス",
+        og_description="ウェブツールボックスおよび提供ツールの利用に適用される規約です。",
+        h1="利用規約", effective="施行日: 2026年9月21日",
+        intro='本利用規約(以下「本規約」)は、ウェブツールボックス(以下「本サイト」)および本サイトが提供するツールの利用条件を定めるものです。本サイトを利用することにより、利用者は本規約に同意したものとみなされます。',
+        s1_h2="1. 規約への同意",
+        s1_p1="本サイトにアクセスまたは利用することにより、利用者は本規約に拘束されることに同意するものとします。本規約に同意されない場合、本サイトをご利用いただけません。",
+        s2_h2="2. サービスの内容",
+        s2_p1='ウェブツールボックスは、<a href="{tool}">JSONフォーマッター</a>、<a href="{tool_xml}">XMLフォーマッター</a>など、ブラウザ上で完結する無料のユーティリティを提供しています。会員登録は不要で、現時点ではツールの利用に料金は発生しません。',
+        s3_h2="3. 利用者の義務",
+        s3_p1="利用者は、以下の行為を行ってはなりません。",
+        s3_li1="違法な目的で本サイトを利用すること、または違法・侵害的、もしくは第三者に損害を与えるコンテンツを処理すること",
+        s3_li2="過度な自動リクエスト、他の利用者のサービス利用を妨げる規模のスクレイピング、セキュリティ対策を回避しようとする行為など、本サイトの運営を妨害すること",
+        s3_li3="関連法令で許容される場合を除き、本サイトをリバースエンジニアリング、逆コンパイルし、またはソースコードを抽出しようとすること",
+        s4_h2="4. 知的財産権",
+        s4_p1="特に明記されていない限り、本サイトのデザイン、コード、レイアウト、ブランディングに関する権利はサイト運営者に帰属します。ツールは入力内容をブラウザ内でのみ処理しサーバーに送信しないため、利用者が入力したデータに関する権利は利用者に帰属し、サイト運営者はこれに対していかなる権利も主張しません。",
+        s5_h2="5. 免責事項",
+        s5_p1='本サイトおよびツールは「現状有姿(as is)」「提供可能な状態(as available)」で提供され、正確性、信頼性、特定目的への適合性等について明示的にも黙示的にも保証しません。正確性の確保に努めていますが、重要な業務や本番環境で結果(整形されたJSON・XMLなど)を利用される前に、利用者ご自身で検証してください。',
+        s6_h2="6. 責任の制限",
+        s6_p1="関連法令で許容される最大限の範囲において、サイト運営者は本サイトまたはツールの利用(または利用不能)から生じる間接的、付随的、結果的損害について責任を負いません。",
+        s7_h2="7. サービスの変更",
+        s7_p1="サイト運営者は、事前の通知の有無にかかわらず、いつでも本サイトのツールや機能を追加、変更、または中止することができます。",
+        s8_h2="8. 規約の変更",
+        s8_p1='本規約は必要に応じて改定される場合があり、変更後も本サイトの利用を継続した場合、変更後の規約に同意したものとみなされます。重要な変更は<a href="{updates}">更新情報</a>ページでご案内します。',
+        s9_h2="9. お問い合わせ",
+        s9_p1='本規約に関するお問い合わせは、<a href="{contact}">お問い合わせ</a>ページまたは下記のメールアドレスまでご連絡ください。',
+    ),
+    "zh": dict(
+        title="使用条款 | 网页工具箱",
+        description="网页工具箱使用条款 — 条款接受、服务说明、用户责任、免责声明及责任限制说明。",
+        og_title="使用条款 | 网页工具箱",
+        og_description="使用网页工具箱及其提供工具所适用的条款。",
+        h1="使用条款", effective="生效日期：2026年9月21日",
+        intro='本使用条款(以下简称"本条款")规范您对网页工具箱(以下简称"本网站")及其提供工具的使用。使用本网站即表示您同意本条款。',
+        s1_h2="1. 条款的接受",
+        s1_p1="访问或使用本网站，即表示您同意受本条款约束。如果您不同意本条款，请不要使用本网站。",
+        s2_h2="2. 服务说明",
+        s2_p1='网页工具箱提供完全在浏览器端运行的免费工具，如 <a href="{tool}">JSON 格式化工具</a>、<a href="{tool_xml}">XML 格式化工具</a>等。无需注册账号，目前使用这些工具不收取任何费用。',
+        s3_h2="3. 用户责任",
+        s3_p1="您同意不进行以下行为：",
+        s3_li1="将本网站用于任何非法目的，或处理非法、侵权或可能对他人造成损害的内容",
+        s3_li2="通过过度的自动化请求、可能影响其他用户使用体验的大规模抓取，或试图绕过安全措施等方式干扰本网站的正常运行",
+        s3_li3="在适用法律允许的范围之外，对本网站进行逆向工程、反编译或试图提取源代码",
+        s4_h2="4. 知识产权",
+        s4_p1="除另有说明外，本网站的设计、代码、布局及品牌相关权利归网站运营者所有。由于工具仅在您的浏览器中处理输入内容，不会发送到服务器，您输入的数据的所有权利完全归您所有，网站运营者不对此主张任何权利。",
+        s5_h2="5. 免责声明",
+        s5_p1='本网站及其工具按"现状"和"可用性"提供，不对准确性、可靠性或特定用途的适用性作出任何明示或暗示的保证。我们努力确保准确性，但在将结果(如格式化后的 JSON、XML)用于重要业务或生产环境之前，请您自行核实。',
+        s6_h2="6. 责任限制",
+        s6_p1="在法律允许的最大范围内，网站运营者对因使用或无法使用本网站或其工具而产生的任何间接、附带或后果性损害不承担责任。",
+        s7_h2="7. 服务的变更",
+        s7_p1="网站运营者可能随时新增、修改或终止本网站的任何工具或功能，恕不另行通知。",
+        s8_h2="8. 条款的变更",
+        s8_p1='本条款可能会不定期修订，变更生效后继续使用本网站即视为您同意修订后的条款。重大变更将在<a href="{updates}">更新日志</a>页面公布。',
+        s9_h2="9. 联系方式",
+        s9_p1='如对本条款有任何疑问，请通过<a href="{contact}">联系我们</a>页面或以下邮箱与我们联系。',
+    ),
+}
+
+CONTENT["updates"] = {
+    "en": dict(
+        title="What's New | WebToolBox",
+        description="A changelog of what's new on WebToolBox — new tools, language support, and site improvements.",
+        og_title="What's New | WebToolBox",
+        og_description="See what's recently been added or improved on WebToolBox.",
+        h1="What's New",
+        lead="A running log of new tools and improvements on WebToolBox.",
+        outro='Have an idea for a tool or feature you\'d like to see? Let us know on the <a href="{contact}">Contact page</a> — see our <a href="{about}">About</a> page for the principles guiding what we build next.',
+        entries=[
+            ("September 21, 2026", "XML Formatter, FAQ, and Contact page added",
+             ["Added a new XML Formatter / Viewer tool alongside the JSON Formatter, with the same validation, tree view, and search experience.",
+              "Added an FAQ page answering common questions about pricing, data handling, and browser support.",
+              "Added a dedicated Contact page for bug reports and feature requests.",
+              "Added a cookie/ad consent banner for visitors from the EEA, UK, and Switzerland."]),
+            ("September 20, 2026", "WebToolBox launches with the JSON Formatter",
+             ["Launched WebToolBox with our first tool: the JSON Formatter / Viewer, with validation, an indented syntax-highlighted tree, collapsing/expanding nodes, and key/value search.",
+              "Added light and dark theme support with automatic detection.",
+              "Published our Privacy Policy and About page.",
+              "Added English, Korean, Japanese, and Chinese language support with automatic browser-language detection."]),
+        ],
+    ),
+    "ko": dict(
+        title="업데이트 소식 | 웹툴박스",
+        description="웹툴박스의 업데이트 소식 — 새로운 도구, 언어 지원, 사이트 개선 사항을 기록합니다.",
+        og_title="업데이트 소식 | 웹툴박스",
+        og_description="웹툴박스에 최근 추가되거나 개선된 내용을 확인하세요.",
+        h1="업데이트 소식",
+        lead="웹툴박스에 추가된 새로운 도구와 개선 사항을 시간순으로 기록합니다.",
+        outro='추가되었으면 하는 도구나 기능이 있으신가요? <a href="{contact}">문의하기</a> 페이지로 알려주세요. 앞으로의 방향은 <a href="{about}">사이트 소개</a> 페이지에서 확인하실 수 있습니다.',
+        entries=[
+            ("2026년 9월 21일", "XML 포매터, FAQ, 문의하기 페이지 추가",
+             ["JSON 포매터와 동일한 검증·트리 뷰·검색 경험을 제공하는 XML 포매터 / 뷰어를 새로 추가했습니다.",
+              "요금, 데이터 처리 방식, 브라우저 지원 등 자주 묻는 질문에 답하는 FAQ 페이지를 추가했습니다.",
+              "버그 제보와 기능 제안을 위한 문의하기 페이지를 별도로 만들었습니다.",
+              "EEA·영국·스위스 방문자를 위한 쿠키·광고 동의 배너를 추가했습니다."]),
+            ("2026년 9월 20일", "JSON 포매터와 함께 웹툴박스 오픈",
+             ["첫 번째 도구인 JSON 포매터 / 뷰어로 웹툴박스를 시작했습니다. 유효성 검사, 들여쓰기·문법 강조 트리, 노드 접기/펼치기, 키·값 검색을 제공합니다.",
+              "시스템 설정에 따라 자동으로 전환되는 라이트/다크 테마를 지원합니다.",
+              "개인정보처리방침과 사이트 소개 페이지를 공개했습니다.",
+              "영어를 기본으로 한국어·일본어·중국어를 지원하며, 브라우저 언어를 자동으로 감지합니다."]),
+        ],
+    ),
+    "ja": dict(
+        title="更新情報 | ウェブツールボックス",
+        description="ウェブツールボックスの更新情報 — 新しいツール、言語対応、サイトの改善内容を記録します。",
+        og_title="更新情報 | ウェブツールボックス",
+        og_description="ウェブツールボックスに最近追加・改善された内容をご確認ください。",
+        h1="更新情報",
+        lead="ウェブツールボックスに追加された新しいツールや改善内容を時系列でまとめています。",
+        outro='追加してほしいツールや機能がありましたら、<a href="{contact}">お問い合わせ</a>ページからお知らせください。今後の方針は<a href="{about}">サイト紹介</a>ページをご覧ください。',
+        entries=[
+            ("2026年9月21日", "XMLフォーマッター、よくある質問、お問い合わせページを追加",
+             ["JSONフォーマッターと同じ検証・ツリービュー・検索機能を備えたXMLフォーマッター / ビューアを新たに追加しました。",
+              "料金、データの取り扱い、対応ブラウザなど、よくある質問に答えるFAQページを追加しました。",
+              "不具合報告や機能提案のための専用お問い合わせページを新設しました。",
+              "EEA・英国・スイスからの訪問者向けにCookie・広告の同意バナーを追加しました。"]),
+            ("2026年9月20日", "JSONフォーマッターとともにウェブツールボックスがオープン",
+             ["最初のツールであるJSONフォーマッター / ビューアでウェブツールボックスを開始しました。検証、インデント付きシンタックスハイライトツリー、ノードの折りたたみ/展開、キー・値の検索に対応しています。",
+              "システム設定に応じて自動切り替えされるライト/ダークテーマに対応しました。",
+              "プライバシーポリシーとサイト紹介ページを公開しました。",
+              "英語を基本に、韓国語・日本語・中国語に対応し、ブラウザの言語を自動検出します。"]),
+        ],
+    ),
+    "zh": dict(
+        title="更新日志 | 网页工具箱",
+        description="网页工具箱更新日志 — 记录新增工具、语言支持及网站改进内容。",
+        og_title="更新日志 | 网页工具箱",
+        og_description="查看网页工具箱近期新增或改进的内容。",
+        h1="更新日志",
+        lead="按时间顺序记录网页工具箱新增的工具和改进内容。",
+        outro='有想让我们添加的工具或功能吗？欢迎通过<a href="{contact}">联系我们</a>页面告诉我们。未来的方向请参阅<a href="{about}">关于本站</a>页面。',
+        entries=[
+            ("2026年9月21日", "新增 XML 格式化工具、常见问题及联系我们页面",
+             ["新增 XML 格式化 / 查看器工具，提供与 JSON 格式化工具相同的验证、树形视图和搜索体验。",
+              "新增常见问题页面，解答关于费用、数据处理方式和浏览器支持等问题。",
+              "新增独立的联系我们页面，用于错误反馈和功能建议。",
+              "为来自 EEA、英国和瑞士的访客新增了 Cookie/广告同意横幅。"]),
+            ("2026年9月20日", "网页工具箱正式上线，推出 JSON 格式化工具",
+             ["首个工具 JSON 格式化 / 查看器上线，支持验证、带缩进的语法高亮树形视图、节点折叠/展开以及键值搜索。",
+              "支持根据系统设置自动切换的浅色/深色主题。",
+              "发布了隐私政策和关于本站页面。",
+              "默认提供英文，同时支持韩语、日语、中文，并可自动检测浏览器语言。"]),
+        ],
     ),
 }
 
@@ -429,6 +827,13 @@ CONTENT["tool"] = {
             'Choose a search mode: "Contains" (partial match), "Exact" (exact match), or "Regex" (regular expression).',
             "The input panel has the same search feature (Contains/Exact/Regex, previous/next navigation, highlighting) so you can search directly in the original text.",
         ],
+        tips_h2="Related tips",
+        tips_items=[
+            'Use "Copy minified" instead of "Copy" when you need a compact payload for an API request or a config value — no extra whitespace or line breaks.',
+            "Switch the indent size to Tab if your project's style guide calls for tabs instead of spaces.",
+            "The Regex search mode can match a pattern across every key or value at once — handy for auditing IDs, dates, or emails in a large document.",
+            "For deeply nested JSON, click \"Collapse all\" first to see the overall shape, then expand only the branch you actually need to inspect.",
+        ],
     ),
     "ko": dict(
         title="JSON 포매터 / 뷰어 - 온라인 JSON 검증 및 정리 | 웹툴박스",
@@ -462,6 +867,13 @@ CONTENT["tool"] = {
             '입력을 마치고 결과가 정상(유효 또는 보정됨)으로 확인되면 자동으로 "결과" 탭으로 전환되고, 검색창에 바로 입력할 수 있도록 포커스가 이동합니다.',
             '검색 방식을 "포함"(부분 일치), "일치"(정확히 같은 값), "정규식"(정규 표현식) 중에서 선택할 수 있습니다.',
             "입력창 상단에도 같은 검색 기능(포함/일치/정규식, 이전·다음 이동, 강조 표시)이 있어 원본 텍스트에서 바로 찾을 수 있습니다.",
+        ],
+        tips_h2="관련 팁",
+        tips_items=[
+            "API 요청 바디나 설정 값처럼 공백 없는 압축된 형태가 필요할 때는 '복사' 대신 '압축 복사'를 사용해보세요.",
+            "프로젝트 스타일 가이드가 탭을 요구한다면 들여쓰기 크기를 'Tab'으로 바꿔보세요.",
+            "정규식 검색 모드는 문서 전체에서 특정 패턴의 키나 값을 한 번에 찾을 때 유용합니다. (예: 아이디, 날짜, 이메일 형식 점검)",
+            "깊게 중첩된 JSON은 먼저 '모두 접기'로 전체 구조를 파악한 뒤, 실제로 살펴봐야 할 부분만 펼쳐보면 훨씬 편합니다.",
         ],
     ),
     "ja": dict(
@@ -497,6 +909,13 @@ CONTENT["tool"] = {
             "検索方式を「部分一致」(部分一致)、「完全一致」(完全一致)、「正規表現」(正規表現)から選べます。",
             "入力ボックス上部にも同じ検索機能(部分一致/完全一致/正規表現、前・次移動、ハイライト表示)があり、元のテキストで直接検索できます。",
         ],
+        tips_h2="関連のヒント",
+        tips_items=[
+            "APIリクエストの本文や設定値など、余白のないコンパクトな形式が必要なときは「コピー」の代わりに「圧縮コピー」を使いましょう。",
+            "プロジェクトのスタイルガイドでタブが指定されている場合は、インデントサイズを「Tab」に切り替えてください。",
+            "正規表現の検索モードは、文書全体から特定パターンのキーや値をまとめて探したいとき(IDや日付、メール形式のチェックなど)に便利です。",
+            "深くネストされたJSONは、まず「すべて折りたたむ」で全体の構造を把握してから、実際に確認したい部分だけ展開すると効率的です。",
+        ],
     ),
     "zh": dict(
         title="JSON 格式化 / 查看器 - 在线 JSON 验证与整理 | 网页工具箱",
@@ -531,6 +950,180 @@ CONTENT["tool"] = {
             '可在"包含"(部分匹配)、"精确"(完全匹配)、"正则"(正则表达式)中选择搜索模式。',
             "输入框上方也有相同的搜索功能(包含/精确/正则、上一个·下一个导航、高亮显示)，可直接在原始文本中搜索。",
         ],
+        tips_h2="相关小技巧",
+        tips_items=[
+            "需要用于 API 请求体或配置项等不含多余空白的紧凑格式时，使用“复制压缩版”而不是“复制”。",
+            "如果项目的代码风格要求使用 Tab，可将缩进大小切换为 Tab。",
+            "正则表达式搜索模式可以一次性匹配整个文档中符合特定模式的键或值，适合用于检查 ID、日期或邮箱格式。",
+            "面对层级很深的 JSON，建议先点击“全部折叠”了解整体结构，再展开真正需要查看的部分。",
+        ],
+    ),
+}
+
+CONTENT["tool_xml"] = {
+    "en": dict(
+        title="XML Formatter / Viewer - Validate and Beautify XML Online | WebToolBox",
+        description="Online XML formatter. Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Supports collapsing/expanding and tag/attribute/text search; your data is processed only in your browser.",
+        keywords="XML formatter, XML viewer, XML validator, XML beautify, XML pretty print, online XML tool",
+        og_title="XML Formatter / Viewer | WebToolBox",
+        og_description="A free online XML formatter with validation, a readable tree view, search, and collapse/expand.",
+        jsonld_name="XML Formatter / Viewer",
+        jsonld_description="A free online tool that validates XML strings and displays them as a readable tree. Includes search and collapse/expand.",
+        h1="XML Formatter / Viewer",
+        lead="Enter an XML string to validate it and see it laid out as an indented, syntax-highlighted tree. Your input is never sent to a server — everything happens in your browser.",
+        btn_format="Format", btn_sample="Load sample", btn_clear="Clear",
+        indent_label="Indent size", indent2="2-space indent", indent4="4-space indent", indenttab="Tab indent",
+        btn_copy="Copy", btn_copy_minify="Copy minified", btn_download="Download .xml",
+        tabs_aria="Switch between input and output", tab_input="Input", tab_output="Output",
+        status_idle="Enter some XML",
+        input_search_mode_label="Search mode", opt_contains="Contains", opt_exact_line="Exact (line)", opt_regex="Regex",
+        input_search_placeholder="Search the input text…", prev_title="Previous match", next_title="Next match", clear_title="Clear search",
+        input_placeholder="Paste your XML string here.",
+        output_label="Output", expand_all="▾ Expand all", collapse_all="▸ Collapse all",
+        opt_exact="Exact", output_search_placeholder="Search tags, attributes, or text…",
+        hint='Tip. When you stop typing, the input is validated and, if valid, the view switches automatically to the "Output" tab. The dot on the Output tab shows the current validity status. The ▾/▸ buttons for collapsing/expanding elements sit next to the line numbers (left margin) for easy clicking. The search box is focused automatically when the Output tab opens, and you can choose a search mode (Contains/Exact/Regex) to find tag names, attribute names/values, and text content the way you want. Line numbers on the output are renumbered to match only the visible lines, so you can still tell where you are even when parts of the tree are collapsed. The input panel has the same kind of search (Contains/Exact/Regex) so you can locate and highlight text directly in the original input. Press Enter (next) / Shift+Enter (previous) to move between matches.',
+        usage_h2="How to use this tool",
+        usage_items=[
+            "Paste an XML string into the input box on the left and it's validated automatically, with the result rendered right away.",
+            "If the XML isn't valid, you'll get an approximate line/column for where the problem is.",
+            'Clicking "Format" also reformats the input box\'s content using the selected indent size.',
+            'When the output is long, use "Collapse all" to get an overview of the structure first, then expand only the elements you need with the ▾/▸ buttons next to the line numbers.',
+            "Everything happens in your browser — the data you enter is never sent to a server.",
+            'Once your input is confirmed valid, the view switches automatically to the "Output" tab and focus moves to the search box so you can start typing right away.',
+            'Choose a search mode: "Contains" (partial match), "Exact" (exact match), or "Regex" (regular expression).',
+            "The input panel has the same search feature (Contains/Exact/Regex, previous/next navigation, highlighting) so you can search directly in the original text.",
+            "Elements, attributes, text nodes, comments, and CDATA sections are all recognized and color-coded in the tree view.",
+        ],
+        tips_h2="Related tips",
+        tips_items=[
+            "Use Collapse all to get a bird's-eye view of a deeply nested document (like an RSS feed or a SOAP response) before drilling into a specific branch.",
+            "The Regex search mode can match attribute values across many elements at once — handy for auditing IDs, dates, or namespaces in a large document.",
+            "If your XML starts with an <?xml ...?> declaration, it's kept automatically whenever you use Format, Copy, or Download.",
+            'CDATA sections are useful for embedding markup or special characters inside text without escaping them — the formatter preserves them as-is.',
+        ],
+    ),
+    "ko": dict(
+        title="XML 포매터 / 뷰어 - 온라인 XML 검증 및 정리 | 웹툴박스",
+        description="온라인 XML 포매터. 입력한 문자열이 올바른 XML인지 검증하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 태그·속성·텍스트 검색을 지원하며 데이터는 브라우저 안에서만 처리됩니다.",
+        keywords="XML 포매터, XML 뷰어, XML validator, XML beautify, XML pretty print, 온라인 XML 도구",
+        og_title="XML 포매터 / 뷰어 | 웹툴박스",
+        og_description="XML 문자열 유효성 검사와 가독성 좋은 트리 뷰, 검색, 접기/펼치기를 지원하는 무료 온라인 XML 포매터.",
+        jsonld_name="XML 포매터 / 뷰어",
+        jsonld_description="XML 문자열의 유효성을 검사하고 보기 좋은 트리 형태로 정리해주는 무료 온라인 도구. 검색과 접기/펼치기 기능을 제공합니다.",
+        h1="XML 포매터 / 뷰어",
+        lead="XML 문자열을 입력하면 유효성을 검사하고, 들여쓰기와 문법 강조가 적용된 트리로 정리해 보여줍니다. 입력값은 서버로 전송되지 않고 브라우저 안에서만 처리됩니다.",
+        btn_format="정렬(Format)", btn_sample="예시 불러오기", btn_clear="지우기",
+        indent_label="들여쓰기 크기", indent2="들여쓰기 2칸", indent4="들여쓰기 4칸", indenttab="들여쓰기 Tab",
+        btn_copy="복사", btn_copy_minify="압축 복사", btn_download=".xml 다운로드",
+        tabs_aria="입력/결과 전환", tab_input="입력", tab_output="결과",
+        status_idle="XML을 입력해주세요",
+        input_search_mode_label="검색 방식", opt_contains="포함", opt_exact_line="일치(줄)", opt_regex="정규식",
+        input_search_placeholder="입력한 텍스트에서 검색…", prev_title="이전 일치 항목", next_title="다음 일치 항목", clear_title="검색어 지우기",
+        input_placeholder="여기에 XML 문자열을 붙여넣으세요.",
+        output_label="결과", expand_all="▾ 모두 펼치기", collapse_all="▸ 모두 접기",
+        opt_exact="일치", output_search_placeholder="태그·속성·텍스트 검색…",
+        hint='Tip. 입력을 멈추면 유효성을 검사해 정상이면 자동으로 "결과" 탭으로 전환합니다. 결과 탭의 점은 현재 유효성 상태를 보여줍니다. 엘리먼트를 접거나 펼치는 ▾/▸ 버튼은 줄 번호 옆(왼쪽 여백)에 있어 클릭하기 편합니다. 검색창은 결과 탭이 열리면 자동으로 포커스되며, 검색 방식(포함/일치/정규식)을 선택해 태그명·속성명/값·텍스트를 원하는 방식으로 찾을 수 있습니다. 결과 화면 왼쪽의 줄 번호는 접기/펼치기 상태에 맞춰 보이는 줄만 다시 매겨져, 구조가 접혀 있어도 위치를 가늠하기 쉽습니다. 입력창에도 동일한 방식의 검색(포함/일치/정규식)이 있어 원본 텍스트에서 바로 위치를 찾고 강조 표시로 확인할 수 있습니다. Enter(다음) / Shift+Enter(이전)로 일치 항목을 이동할 수 있습니다.',
+        usage_h2="이 도구는 이렇게 사용하세요",
+        usage_items=[
+            "왼쪽 입력창에 XML 문자열을 붙여넣으면 자동으로 유효성을 검사하고 결과를 그려줍니다.",
+            "유효하지 않은 XML이면 오류가 발생한 대략적인 줄/열 위치를 함께 알려줍니다.",
+            '"정렬(Format)" 버튼을 누르면 입력창의 내용도 선택한 들여쓰기 기준으로 정리됩니다.',
+            '결과가 길 때는 "모두 접기"로 전체 구조를 먼저 훑어본 뒤, 줄 번호 옆의 ▾/▸ 버튼으로 필요한 엘리먼트만 펼쳐볼 수 있습니다.',
+            "모든 처리는 브라우저 안에서만 이뤄지며, 입력한 데이터는 서버로 전송되지 않습니다.",
+            '입력을 마치고 결과가 유효함으로 확인되면 자동으로 "결과" 탭으로 전환되고, 검색창에 바로 입력할 수 있도록 포커스가 이동합니다.',
+            '검색 방식을 "포함"(부분 일치), "일치"(정확히 같은 값), "정규식"(정규 표현식) 중에서 선택할 수 있습니다.',
+            "입력창 상단에도 같은 검색 기능(포함/일치/정규식, 이전·다음 이동, 강조 표시)이 있어 원본 텍스트에서 바로 찾을 수 있습니다.",
+            "엘리먼트, 속성, 텍스트 노드, 주석, CDATA 구간을 모두 인식해 트리 뷰에서 색상으로 구분해 보여줍니다.",
+        ],
+        tips_h2="관련 팁",
+        tips_items=[
+            "RSS 피드나 SOAP 응답처럼 깊게 중첩된 문서는 먼저 '모두 접기'로 전체 구조를 훑어본 뒤 필요한 분기만 펼쳐보세요.",
+            "정규식 검색 모드는 여러 엘리먼트에 걸친 속성 값을 한 번에 찾을 때 유용합니다. (예: 아이디, 날짜, 네임스페이스 점검)",
+            "<?xml ...?> 선언으로 시작하는 문서라면 정렬·복사·다운로드 시 선언부가 자동으로 유지됩니다.",
+            "CDATA 구간은 마크업이나 특수문자를 이스케이프 없이 텍스트 안에 그대로 담을 때 유용하며, 포매터도 이를 그대로 보존합니다.",
+        ],
+    ),
+    "ja": dict(
+        title="XMLフォーマッター / ビューア - オンラインXML検証・整形 | ウェブツールボックス",
+        description="オンラインXMLフォーマッター。入力した文字列が正しいXMLかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。折りたたみ/展開とタグ・属性・テキスト検索に対応し、データはブラウザ内でのみ処理されます。",
+        keywords="XMLフォーマッター, XMLビューア, XML validator, XML beautify, XML pretty print, オンラインXMLツール",
+        og_title="XMLフォーマッター / ビューア | ウェブツールボックス",
+        og_description="XML文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインXMLフォーマッター。",
+        jsonld_name="XMLフォーマッター / ビューア",
+        jsonld_description="XML文字列の妥当性を検証し、読みやすいツリー形式に整理する無料オンラインツール。検索と折りたたみ/展開機能を提供します。",
+        h1="XMLフォーマッター / ビューア",
+        lead="XML文字列を入力すると妥当性を検証し、インデントとシンタックスハイライトを適用したツリーで表示します。入力値はサーバーに送信されずブラウザ内でのみ処理されます。",
+        btn_format="整列(Format)", btn_sample="サンプルを読み込む", btn_clear="クリア",
+        indent_label="インデントサイズ", indent2="インデント2桁", indent4="インデント4桁", indenttab="インデントTab",
+        btn_copy="コピー", btn_copy_minify="圧縮コピー", btn_download=".xmlをダウンロード",
+        tabs_aria="入力/出力の切り替え", tab_input="入力", tab_output="出力",
+        status_idle="XMLを入力してください",
+        input_search_mode_label="検索方式", opt_contains="部分一致", opt_exact_line="完全一致(行)", opt_regex="正規表現",
+        input_search_placeholder="入力テキストを検索…", prev_title="前の一致項目", next_title="次の一致項目", clear_title="検索語をクリア",
+        input_placeholder="ここにXML文字列を貼り付けてください。",
+        output_label="出力", expand_all="▾ すべて展開", collapse_all="▸ すべて折りたたむ",
+        opt_exact="完全一致", output_search_placeholder="タグ・属性・テキストを検索…",
+        hint='Tip. 入力を止めると検証が行われ、正常なら自動的に「出力」タブに切り替わります。出力タブのドットは現在の妥当性ステータスを示します。エレメントを折りたたむ/展開する▾/▸ボタンは行番号の隣(左余白)にあり、クリックしやすくなっています。検索ボックスは出力タブが開くと自動的にフォーカスされ、検索方式(部分一致/完全一致/正規表現)を選べばタグ名・属性名/値・テキストを希望の方法で探せます。出力画面左側の行番号は折りたたみ状態に合わせて表示中の行だけに振り直されるため、構造が折りたたまれていても位置を把握しやすくなっています。入力ボックスにも同じ方式の検索があり、元のテキストで直接位置を探してハイライトで確認できます。Enter(次へ) / Shift+Enter(前へ)で一致項目を移動できます。',
+        usage_h2="このツールの使い方",
+        usage_items=[
+            "左側の入力ボックスにXML文字列を貼り付けると、自動的に妥当性を検証し結果を描画します。",
+            "無効なXMLの場合は、エラーが発生したおおまかな行/列位置も合わせてお知らせします。",
+            "「整列(Format)」ボタンを押すと、入力ボックスの内容も選択したインデント基準で整形されます。",
+            "結果が長い場合は「すべて折りたたむ」で全体の構造を先に把握し、行番号隣の▾/▸ボタンで必要なエレメントだけ展開できます。",
+            "すべての処理はブラウザ内でのみ行われ、入力したデータがサーバーに送信されることはありません。",
+            "入力を終えて結果が有効と確認されると自動的に「出力」タブに切り替わり、検索ボックスにすぐ入力できるようフォーカスが移動します。",
+            "検索方式を「部分一致」、「完全一致」、「正規表現」から選べます。",
+            "入力ボックス上部にも同じ検索機能があり、元のテキストで直接検索できます。",
+            "エレメント、属性、テキストノード、コメント、CDATAセクションをすべて認識し、ツリービューで色分けして表示します。",
+        ],
+        tips_h2="関連のヒント",
+        tips_items=[
+            "RSSフィードやSOAPレスポンスのように深くネストした文書は、まず「すべて折りたたむ」で全体構造を把握してから必要な部分だけ展開しましょう。",
+            "正規表現の検索モードは、複数のエレメントにまたがる属性値をまとめて探したいとき(ID、日付、名前空間の確認など)に便利です。",
+            "<?xml ...?>宣言で始まる文書の場合、整列・コピー・ダウンロード時にこの宣言が自動的に保持されます。",
+            "CDATAセクションは、マークアップや特殊文字をエスケープせずにテキスト内へそのまま埋め込みたいときに便利で、フォーマッターもそのまま保持します。",
+        ],
+    ),
+    "zh": dict(
+        title="XML 格式化 / 查看器 - 在线 XML 验证与整理 | 网页工具箱",
+        description="在线 XML 格式化工具。检查输入的字符串是否为有效 XML，并带缩进和语法高亮清晰展示。支持折叠/展开以及标签/属性/文本搜索，数据仅在浏览器中处理。",
+        keywords="XML 格式化, XML 查看器, XML validator, XML beautify, XML pretty print, 在线 XML 工具",
+        og_title="XML 格式化 / 查看器 | 网页工具箱",
+        og_description="支持验证、易读树形视图、搜索及折叠/展开的免费在线 XML 格式化工具。",
+        jsonld_name="XML 格式化 / 查看器",
+        jsonld_description="验证 XML 字符串并以易读树形结构整理展示的免费在线工具。提供搜索与折叠/展开功能。",
+        h1="XML 格式化 / 查看器",
+        lead="输入 XML 字符串即可验证其有效性，并以带缩进和语法高亮的树形结构展示。输入内容不会发送到服务器，仅在浏览器中处理。",
+        btn_format="格式化(Format)", btn_sample="加载示例", btn_clear="清除",
+        indent_label="缩进大小", indent2="2 空格缩进", indent4="4 空格缩进", indenttab="Tab 缩进",
+        btn_copy="复制", btn_copy_minify="复制压缩版", btn_download="下载 .xml",
+        tabs_aria="切换输入/输出", tab_input="输入", tab_output="输出",
+        status_idle="请输入 XML",
+        input_search_mode_label="搜索方式", opt_contains="包含", opt_exact_line="精确(整行)", opt_regex="正则表达式",
+        input_search_placeholder="在输入文本中搜索…", prev_title="上一个匹配项", next_title="下一个匹配项", clear_title="清除搜索词",
+        input_placeholder="在此粘贴 XML 字符串。",
+        output_label="输出", expand_all="▾ 全部展开", collapse_all="▸ 全部折叠",
+        opt_exact="精确", output_search_placeholder="搜索标签、属性或文本…",
+        hint='提示：停止输入后会自动验证，若有效则自动切换到"输出"标签页。输出标签上的圆点表示当前的有效性状态。用于折叠/展开元素的 ▾/▸ 按钮位于行号旁边(左侧留白)，方便点击。打开输出标签页时搜索框会自动获得焦点，可选择搜索模式(包含/精确/正则)按需要查找标签名、属性名/值和文本内容。输出区域左侧的行号会根据折叠状态重新编号，只显示当前可见的行，即使结构被折叠也能轻松定位。输入面板也有相同方式的搜索，可直接在原始文本中定位并高亮显示。按 Enter(下一个) / Shift+Enter(上一个) 可在匹配项之间移动。',
+        usage_h2="使用方法",
+        usage_items=[
+            "在左侧输入框中粘贴 XML 字符串，将自动验证并绘制结果。",
+            "如果 XML 无效，会告知您大致的错误行/列位置。",
+            '点击"格式化(Format)"按钮后，输入框中的内容也会按所选缩进量重新整理。',
+            '当结果较长时，可先用"全部折叠"浏览整体结构，再通过行号旁的 ▾/▸ 按钮展开需要的元素。',
+            "所有处理都在浏览器中进行，输入的数据不会发送到服务器。",
+            '输入完成且结果确认有效后，会自动切换到"输出"标签页，并将焦点移至搜索框以便直接输入。',
+            '可在"包含"、"精确"、"正则"中选择搜索模式。',
+            "输入框上方也有相同的搜索功能，可直接在原始文本中搜索。",
+            "元素、属性、文本节点、注释和 CDATA 区段都会被识别，并在树形视图中以不同颜色区分显示。",
+        ],
+        tips_h2="相关小技巧",
+        tips_items=[
+            "对于 RSS 订阅或 SOAP 响应这类层级很深的文档，建议先点击“全部折叠”了解整体结构，再展开需要查看的分支。",
+            "正则表达式搜索模式可以一次性匹配多个元素中的属性值，适合用于检查 ID、日期或命名空间。",
+            "如果 XML 以 <?xml ...?> 声明开头，在格式化、复制或下载时会自动保留该声明。",
+            "CDATA 区段适合在文本中直接嵌入标记或特殊字符而无需转义，格式化工具也会原样保留它们。",
+        ],
     ),
 }
 
@@ -549,7 +1142,9 @@ class FormatUrls(dict):
 
 
 def fmt(s, urls):
-    return s.format(home=urls["home"], about=urls["about"], privacy=urls["privacy"], tool=urls["tool"])
+    return s.format(home=urls["home"], about=urls["about"], privacy=urls["privacy"], tool=urls["tool"],
+                     tool_xml=urls["tool_xml"], faq=urls["faq"], contact=urls["contact"],
+                     terms=urls["terms"], updates=urls["updates"])
 
 
 def theme_fouc_script():
@@ -610,24 +1205,57 @@ def hreflang_links(page_key):
     return "\n".join(links)
 
 
+def breadcrumb_jsonld(lang, page_key, page_title):
+    urls = urls_for(lang)
+    items = [
+        {"@type": "ListItem", "position": 1, "name": SITE_NAME[lang], "item": SITE_DOMAIN + urls["home"]},
+        {"@type": "ListItem", "position": 2, "name": page_title, "item": SITE_DOMAIN + urls[page_key]},
+    ]
+    import json as _json
+    data = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
+    return '<script type="application/ld+json">\n%s\n</script>' % _json.dumps(data, ensure_ascii=False, indent=2)
+
+
+OG_LOCALE = {"en": "en_US", "ko": "ko_KR", "ja": "ja_JP", "zh": "zh_CN"}
+
+THEME_COLOR_LIGHT = "#ffffff"
+THEME_COLOR_DARK = "#14161a"
+
+
 def head_block(lang, page_key, title, description, keywords=None, og_title=None, og_description=None,
                robots="index, follow", extra=""):
     urls = urls_for(lang)
     canonical = SITE_DOMAIN + urls[page_key]
     kw = ('<meta name="keywords" content="%s" />\n' % keywords) if keywords else ""
+    og_img = "%s/assets/img/og-%s.png" % (SITE_DOMAIN, lang)
+    alt_locales = "\n".join(
+        '<meta property="og:locale:alternate" content="%s" />' % OG_LOCALE[l] for l in LANGS if l != lang
+    )
+    final_og_title = og_title or title
+    final_og_desc = og_description or description
     return '''<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>%s</title>
 <meta name="description" content="%s" />
 %s<link rel="canonical" href="%s" />
 <meta name="robots" content="%s" />
+<meta name="theme-color" content="%s" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="%s" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="%s" />
 <meta property="og:title" content="%s" />
 <meta property="og:description" content="%s" />
 <meta property="og:url" content="%s" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="%s" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="%s" />
+%s
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="%s" />
+<meta name="twitter:description" content="%s" />
+<meta name="twitter:image" content="%s" />
 
 %s
 
@@ -635,8 +1263,10 @@ def head_block(lang, page_key, title, description, keywords=None, og_title=None,
 <link rel="stylesheet" href="/assets/css/style.css" />
 %s
 %s
-%s''' % (title, description, kw, canonical, robots, SITE_NAME[lang], og_title or title,
-         og_description or description, canonical, hreflang_links(page_key), ICON_DATA_URI,
+%s''' % (title, description, kw, canonical, robots, THEME_COLOR_LIGHT, THEME_COLOR_DARK,
+         SITE_NAME[lang], final_og_title, final_og_desc, canonical, og_img,
+         OG_LOCALE[lang], alt_locales, final_og_title, final_og_desc, og_img,
+         hreflang_links(page_key), ICON_DATA_URI,
          theme_fouc_script(), lang_detect_script(lang), extra)
 
 
@@ -662,6 +1292,10 @@ def header_nav(lang, active_key, asset_home="/"):
     n = NAV[lang]
     def cur(key):
         return ' aria-current="page"' if key == active_key else ""
+    tool_links = "\n      ".join(
+        '<li><a href="%s"%s>%s</a></li>' % (urls[url_key], cur(url_key), n[nav_key])
+        for url_key, nav_key in TOOL_NAV_ITEMS
+    )
     return '''<a class="skip-link" href="#main-content">%s</a>
 
 <header class="site-header">
@@ -673,7 +1307,7 @@ def header_nav(lang, active_key, asset_home="/"):
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="%s">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="%s"%s>%s</a></li>
-      <li><a href="%s"%s>%s</a></li>
+      %s
       <li><a href="%s"%s>%s</a></li>
       <li><a href="%s"%s>%s</a></li>
     </ul>
@@ -684,7 +1318,7 @@ def header_nav(lang, active_key, asset_home="/"):
   </div>
 </header>''' % (n["skip"], urls["home"], SITE_NAME[lang], n["menu"],
                  urls["home"], cur("home"), n["home"],
-                 urls["tool"], cur("tool"), n["tool"],
+                 tool_links,
                  urls["about"], cur("about"), n["about"],
                  urls["privacy"], cur("privacy"), n["privacy"],
                  lang_switcher(lang, active_key), n["dark"])
@@ -693,21 +1327,28 @@ def header_nav(lang, active_key, asset_home="/"):
 def footer_block(lang):
     urls = urls_for(lang)
     n = NAV[lang]
+    tool_links = "\n      ".join(
+        '<a href="%s">%s</a>' % (urls[url_key], n[nav_key]) for url_key, nav_key in TOOL_NAV_ITEMS
+    )
+    page_links = "\n      ".join(
+        '<a href="%s">%s</a>' % (urls[url_key], n[nav_key]) for url_key, nav_key in FOOTER_NAV_ITEMS
+    )
     return '''<footer class="site-footer">
   <div class="container footer-inner">
     <span>&copy; <span id="footer-year">2026</span> %s. All rights reserved.</span>
     <nav class="footer-links">
-      <a href="%s">%s</a>
-      <a href="%s">%s</a>
-      <a href="%s">%s</a>
+      %s
+      %s
+      <button type="button" class="footer-settings-btn" data-cookie-settings>%s</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>''' % (
-        SITE_NAME[lang], urls["about"], n["about"], urls["privacy"], n["privacy"], urls["tool"], n["tool"])
+        SITE_NAME[lang], page_links, tool_links, n["cookie_settings"])
 
 
 def page_wrap(lang, head, body):
@@ -744,12 +1385,20 @@ def render_index(lang):
   "@type": "WebSite",
   "name": "%s",
   "url": "%s",
-  "description": "%s"
+  "description": "%s",
+  "inLanguage": "%s"
 }
-</script>''' % (SITE_NAME[lang], SITE_DOMAIN + urls["home"], c["hero_p"][:120])
+</script>''' % (SITE_NAME[lang], SITE_DOMAIN + urls["home"], c["hero_p"][:120], LANG_META[lang]["html_lang"])
     head = head_block(lang, "home", c["title"], c["description"], c["keywords"], c["og_title"], c["og_description"], extra=jsonld)
     cards = '''<article class="tool-card">
         <div class="tool-card-icon">\U0001F9E9</div>
+        <h3><a href="%s">%s</a></h3>
+        <p>%s</p>
+        <span class="tag">%s</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-card-icon">\U0001F4C4</div>
         <h3><a href="%s">%s</a></h3>
         <p>%s</p>
         <span class="tag">%s</span>
@@ -761,7 +1410,8 @@ def render_index(lang):
         <p>%s</p>
         <span class="tag">%s</span>
       </article>''' % (urls["tool"], c["card1_title"], c["card1_desc"], c["card1_tag"],
-                        c["card2_title"], c["card2_desc"], c["card2_tag"])
+                        urls["tool_xml"], c["card2_title"], c["card2_desc"], c["card2_tag"],
+                        c["card3_title"], c["card3_desc"], c["card3_tag"])
     why_items = "\n      ".join(
         '<li><strong>%s</strong> — %s</li>' % (t, d) for t, d in c["why_items"]
     )
@@ -797,7 +1447,8 @@ def render_index(lang):
 def render_about(lang):
     c = CONTENT["about"][lang]
     urls = urls_for(lang)
-    head = head_block(lang, "about", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"])
+    head = head_block(lang, "about", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=breadcrumb_jsonld(lang, "about", c["h1"]))
     s2_items = "\n        ".join(
         '<li><strong>%s</strong> — %s</li>' % (t, fmt(d, urls)) for t, d in c["s2_items"]
     )
@@ -826,6 +1477,7 @@ def render_about(lang):
       <h2>%s</h2>
       <ul>
         <li>%s</li>
+        <li>%s</li>
       </ul>
       <p>%s</p>
     </section>
@@ -844,14 +1496,15 @@ def render_about(lang):
 </main>
 
 ''' % (c["h1"], c["lead"], c["s1_h2"], fmt(c["s1_p"], urls), c["s2_h2"], s2_items,
-       c["s3_h2"], fmt(c["s3_item"], urls), c["s3_p"], c["s4_h2"], fmt(c["s4_p"], urls),
+       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), c["s3_p"], c["s4_h2"], fmt(c["s4_p"], urls),
        c["s5_h2"], c["s5_p"], CONTACT_EMAIL, CONTACT_EMAIL) + footer_block(lang)
     return page_wrap(lang, head, body)
 
 
 def render_privacy(lang):
     c = CONTENT["privacy"][lang]
-    head = head_block(lang, "privacy", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"])
+    head = head_block(lang, "privacy", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=breadcrumb_jsonld(lang, "privacy", c["h1"]))
     body = header_nav(lang, "privacy") + '''
 
 <main id="main-content">
@@ -871,6 +1524,7 @@ def render_privacy(lang):
 
     <section>
       <h2>%s</h2>
+      <p>%s</p>
       <p>%s</p>
     </section>
 
@@ -910,12 +1564,214 @@ def render_privacy(lang):
 
 ''' % (c["h1"], c["effective"], c["intro"],
        c["s1_h2"], c["s1_p1"], c["s1_p2"],
-       c["s2_h2"], c["s2_p1"],
+       c["s2_h2"], c["s2_p1"], c["s2_p2"],
        c["s3_h2"], c["s3_p1"], c["s3_li1"], c["s3_li2"], c["s3_li3"], c["s3_p2"],
        c["s4_h2"], c["s4_p1"],
        c["s5_h2"], c["s5_p1"],
        c["s6_h2"], c["s6_p1"], CONTACT_EMAIL, CONTACT_EMAIL,
        c["s7_h2"], c["s7_p1"]) + footer_block(lang)
+    return page_wrap(lang, head, body)
+
+
+def faq_jsonld(lang, items):
+    import json as _json
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": re.sub("<[^>]+>", "", q),
+                "acceptedAnswer": {"@type": "Answer", "text": re.sub("<[^>]+>", "", a)},
+            }
+            for q, a in items
+        ],
+    }
+    return '<script type="application/ld+json">\n%s\n</script>' % _json.dumps(data, ensure_ascii=False, indent=2)
+
+
+def render_faq(lang):
+    c = CONTENT["faq"][lang]
+    urls = urls_for(lang)
+    items = [(q, fmt(a, urls)) for q, a in c["items"]]
+    head = head_block(lang, "faq", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=faq_jsonld(lang, items) + "\n" + breadcrumb_jsonld(lang, "faq", c["h1"]))
+    faq_items = "\n      ".join(
+        '<details class="faq-item"><summary>%s</summary><div class="faq-answer"><p>%s</p></div></details>' % (q, a)
+        for q, a in items
+    )
+    body = header_nav(lang, "faq") + '''
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>%s</h1>
+    <p>%s</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <div class="faq-list">
+      %s
+    </div>
+  </div>
+</main>
+
+''' % (c["h1"], c["lead"], faq_items) + footer_block(lang)
+    return page_wrap(lang, head, body)
+
+
+def render_contact(lang):
+    c = CONTENT["contact"][lang]
+    urls = urls_for(lang)
+    head = head_block(lang, "contact", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=breadcrumb_jsonld(lang, "contact", c["h1"]))
+    s2_items = "\n        ".join("<li>%s</li>" % item for item in c["s2_items"])
+    body = header_nav(lang, "contact") + '''
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>%s</h1>
+    <p>%s</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+      <p><a href="mailto:%s">%s</a></p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <ul>
+        %s
+      </ul>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+  </div>
+</main>
+
+''' % (c["h1"], c["lead"], c["s1_h2"], c["s1_p"], CONTACT_EMAIL, CONTACT_EMAIL,
+       c["s2_h2"], s2_items, c["s3_h2"], fmt(c["s3_p"], urls)) + footer_block(lang)
+    return page_wrap(lang, head, body)
+
+
+def render_terms(lang):
+    c = CONTENT["terms"][lang]
+    urls = urls_for(lang)
+    head = head_block(lang, "terms", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=breadcrumb_jsonld(lang, "terms", c["h1"]))
+    body = header_nav(lang, "terms") + '''
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>%s</h1>
+    <p>%s</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <p>%s</p>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+      <ul>
+        <li>%s</li>
+        <li>%s</li>
+        <li>%s</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+    </section>
+
+    <section>
+      <h2>%s</h2>
+      <p>%s</p>
+      <p><a href="mailto:%s">%s</a></p>
+    </section>
+  </div>
+</main>
+
+''' % (c["h1"], c["effective"], c["intro"],
+       c["s1_h2"], c["s1_p1"],
+       c["s2_h2"], fmt(c["s2_p1"], urls),
+       c["s3_h2"], c["s3_p1"], c["s3_li1"], c["s3_li2"], c["s3_li3"],
+       c["s4_h2"], c["s4_p1"],
+       c["s5_h2"], c["s5_p1"],
+       c["s6_h2"], c["s6_p1"],
+       c["s7_h2"], c["s7_p1"],
+       c["s8_h2"], fmt(c["s8_p1"], urls),
+       c["s9_h2"], fmt(c["s9_p1"], urls), CONTACT_EMAIL, CONTACT_EMAIL) + footer_block(lang)
+    return page_wrap(lang, head, body)
+
+
+def render_updates(lang):
+    c = CONTENT["updates"][lang]
+    urls = urls_for(lang)
+    head = head_block(lang, "updates", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=breadcrumb_jsonld(lang, "updates", c["h1"]))
+    entries_html = "\n    ".join(
+        '''<article class="update-entry">
+      <p class="update-date">%s</p>
+      <h2>%s</h2>
+      <ul>
+        %s
+      </ul>
+    </article>''' % (date, title, "\n        ".join("<li>%s</li>" % b for b in bullets))
+        for date, title, bullets in c["entries"]
+    )
+    body = header_nav(lang, "updates") + '''
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>%s</h1>
+    <p>%s</p>
+  </div>
+
+  <div class="container prose section-tight update-list" style="max-width: 760px;">
+    %s
+
+    <p>%s</p>
+  </div>
+</main>
+
+''' % (c["h1"], c["lead"], entries_html, fmt(c["outro"], urls)) + footer_block(lang)
     return page_wrap(lang, head, body)
 
 
@@ -949,8 +1805,11 @@ def render_notfound(lang):
     return page_wrap(lang, head, body)
 
 
-def render_tool(lang):
-    c = CONTENT["tool"][lang]
+def render_tool_page(lang, content_key, page_key, id_prefix, css_href, js_src):
+    """도구 페이지 공통 렌더러. json-formatter/xml-formatter 모두 이 함수 하나로 생성한다.
+    새 도구를 추가할 때는 CONTENT[content_key]에 콘텐츠를 채우고 이 함수를 얇게 감싸는
+    wrapper 함수(및 urls_for/NAV/TOOL_NAV_ITEMS 항목)만 추가하면 된다."""
+    c = CONTENT[content_key][lang]
     urls = urls_for(lang)
     n = NAV[lang]
     jsonld = '''<script type="application/ld+json">
@@ -962,15 +1821,18 @@ def render_tool(lang):
   "operatingSystem": "Any (Web Browser)",
   "url": "%s",
   "description": "%s",
+  "inLanguage": "%s",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
-</script>''' % (c["jsonld_name"], SITE_DOMAIN + urls["tool"], c["jsonld_description"])
-    head = head_block(lang, "tool", c["title"], c["description"], c["keywords"], c["og_title"], c["og_description"], extra=jsonld)
-    head = head.replace('href="/assets/css/style.css" />', 'href="/assets/css/style.css" />\n<link rel="stylesheet" href="/tools/json-formatter.css" />')
+</script>''' % (c["jsonld_name"], SITE_DOMAIN + urls[page_key], c["jsonld_description"], LANG_META[lang]["html_lang"])
+    head = head_block(lang, page_key, c["title"], c["description"], c["keywords"], c["og_title"], c["og_description"],
+                       extra=jsonld + "\n" + breadcrumb_jsonld(lang, page_key, c["h1"]))
+    head = head.replace('href="/assets/css/style.css" />', 'href="/assets/css/style.css" />\n<link rel="stylesheet" href="%s" />' % css_href)
 
     usage_lis = "\n      ".join("<li>%s</li>" % item for item in c["usage_items"])
+    tips_lis = "\n      ".join("<li>%s</li>" % item for item in c["tips_items"])
 
-    body = header_nav(lang, "tool") + '''
+    body = header_nav(lang, page_key) + '''
 
 <main id="main-content">
   <div class="page-header container">
@@ -1086,13 +1948,37 @@ def render_tool(lang):
     <ul>
       %(usage_lis)s
     </ul>
+
+    <h2>%(tips_h2)s</h2>
+    <ul>
+      %(tips_lis)s
+    </ul>
+
+    <h2>%(related_h2)s</h2>
+    <ul>
+      <li><a href="%(related_url)s">%(related_link_text)s</a></li>
+      <li><a href="%(faq_url)s">%(faq_link_text)s</a></li>
+    </ul>
   </div>
 </main>
 
-''' % dict(**c, usage_lis=usage_lis) + footer_block(lang)
+''' % dict(**c, usage_lis=usage_lis, tips_lis=tips_lis, related_h2=n["related_h2"],
+       related_url=(urls["tool_xml"] if page_key == "tool" else urls["tool"]),
+       related_link_text=(n["tool_xml"] if page_key == "tool" else n["tool"]),
+       faq_url=urls["faq"], faq_link_text=n["faq"]) + footer_block(lang)
+    if id_prefix != "json":
+        body = body.replace('"json-', '"' + id_prefix + '-')
     body = body.replace('<script src="/assets/js/main.js"></script>\n<script src="/assets/js/i18n.js"></script>',
-                         '<script src="/assets/js/main.js"></script>\n<script src="/tools/json-formatter.js"></script>\n<script src="/assets/js/i18n.js"></script>')
+                         '<script src="/assets/js/main.js"></script>\n<script src="%s"></script>\n<script src="/assets/js/i18n.js"></script>' % js_src)
     return page_wrap(lang, head, body)
+
+
+def render_tool(lang):
+    return render_tool_page(lang, "tool", "tool", "json", "/tools/json-formatter.css", "/tools/json-formatter.js")
+
+
+def render_tool_xml(lang):
+    return render_tool_page(lang, "tool_xml", "tool_xml", "xml", "/tools/xml-formatter.css", "/tools/xml-formatter.js")
 
 
 # ---------------------------------------------------------------------------
@@ -1106,12 +1992,23 @@ def build():
         written.append(write_file(prefix + "/index.html", render_index(lang)))
         written.append(write_file(prefix + "/about.html", render_about(lang)))
         written.append(write_file(prefix + "/privacy.html", render_privacy(lang)))
+        written.append(write_file(prefix + "/faq.html", render_faq(lang)))
+        written.append(write_file(prefix + "/contact.html", render_contact(lang)))
+        written.append(write_file(prefix + "/terms.html", render_terms(lang)))
+        written.append(write_file(prefix + "/updates.html", render_updates(lang)))
         written.append(write_file(prefix + "/404.html", render_notfound(lang)))
         written.append(write_file(prefix + "/tools/json-formatter.html", render_tool(lang)))
+        written.append(write_file(prefix + "/tools/xml-formatter.html", render_tool_xml(lang)))
 
     # sitemap.xml (404는 noindex이므로 제외)
+    import datetime
+    today = datetime.date.today().isoformat()
+    priority_map = {"home": "1.0", "about": "0.6", "privacy": "0.3", "faq": "0.5", "contact": "0.4",
+                     "terms": "0.3", "updates": "0.5", "tool": "0.9", "tool_xml": "0.9"}
+    changefreq_map = {"home": "weekly", "about": "monthly", "privacy": "yearly", "faq": "monthly", "contact": "yearly",
+                       "terms": "yearly", "updates": "weekly", "tool": "weekly", "tool_xml": "weekly"}
     url_entries = []
-    for page_key in ["home", "about", "privacy", "tool"]:
+    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml"]:
         for lang in LANGS:
             loc = SITE_DOMAIN + urls_for(lang)[page_key]
             alt_links = "\n".join(
@@ -1121,7 +2018,10 @@ def build():
             )
             alt_links += '\n    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s" />' % (
                 SITE_DOMAIN, urls_for(DEFAULT_LANG)[page_key])
-            url_entries.append('  <url>\n    <loc>%s</loc>\n%s\n  </url>' % (loc, alt_links))
+            url_entries.append(
+                '  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n%s\n  </url>'
+                % (loc, today, changefreq_map[page_key], priority_map[page_key], alt_links)
+            )
     sitemap = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">

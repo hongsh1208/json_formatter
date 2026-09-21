@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service | WebToolBox</title>
+<meta name="description" content="Terms of Service for WebToolBox — acceptance of terms, service description, user responsibilities, disclaimer of warranty, and limitation of liability." />
+<link rel="canonical" href="https://example.com/terms.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="Terms of Service | WebToolBox" />
+<meta property="og:description" content="The terms that apply to using WebToolBox and its tools." />
+<meta property="og:url" content="https://example.com/terms.html" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Terms of Service | WebToolBox" />
+<meta name="twitter:description" content="The terms that apply to using WebToolBox and its tools." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/terms.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/terms.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/terms.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/terms.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/terms.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WebToolBox",
+      "item": "https://example.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Terms of Service",
+      "item": "https://example.com/terms.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">W</span>
+      WebToolBox
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/terms.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/terms.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/terms.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/terms.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Terms of Service</h1>
+    <p>Effective date: September 21, 2026</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <p>These Terms of Service ("Terms") govern your use of WebToolBox (the "Site") and the tools it provides. By using the Site, you agree to these Terms.</p>
+
+    <section>
+      <h2>1. Acceptance of terms</h2>
+      <p>By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.</p>
+    </section>
+
+    <section>
+      <h2>2. Description of the service</h2>
+      <p>WebToolBox provides free, browser-based utilities (such as the <a href="/tools/json-formatter.html">JSON Formatter</a> and <a href="/tools/xml-formatter.html">XML Formatter</a>) that run entirely on the client side. No account is required, and no fee is currently charged for using the tools.</p>
+    </section>
+
+    <section>
+      <h2>3. User responsibilities</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Site for any unlawful purpose, or to process content that is illegal, infringing, or harmful to others.</li>
+        <li>Attempt to disrupt the Site's operation, including through excessive automated requests, scraping at a scale that degrades service for others, or attempts to bypass security measures.</li>
+        <li>Reverse-engineer, decompile, or attempt to extract the source code of the Site except as permitted by applicable law.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Intellectual property</h2>
+      <p>The Site's design, code, layout, and branding are the property of the Site operator unless otherwise noted. Since the tools process your input entirely in your browser and never transmit it to our servers, you retain all rights to the data you enter — we make no claim to it.</p>
+    </section>
+
+    <section>
+      <h2>5. Disclaimer of warranty</h2>
+      <p>The Site and its tools are provided "as is" and "as available," without warranties of any kind, express or implied, including but not limited to accuracy, reliability, or fitness for a particular purpose. While we aim for correctness, you are responsible for verifying any output (such as formatted JSON or XML) before relying on it for important or production use.</p>
+    </section>
+
+    <section>
+      <h2>6. Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, the Site operator shall not be liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, the Site or its tools.</p>
+    </section>
+
+    <section>
+      <h2>7. Changes to the service</h2>
+      <p>We may add, modify, or discontinue any tool or feature of the Site at any time, with or without notice.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to these terms</h2>
+      <p>We may revise these Terms from time to time. Continued use of the Site after changes take effect constitutes acceptance of the revised Terms. Significant changes will be noted on our <a href="/updates.html">What's New</a> page.</p>
+    </section>
+
+    <section>
+      <h2>9. Contact</h2>
+      <p>Questions about these Terms can be directed to us via our <a href="/contact.html">Contact page</a> or the email address below.</p>
+      <p><a href="mailto:hongsh119@gmail.com">hongsh119@gmail.com</a></p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

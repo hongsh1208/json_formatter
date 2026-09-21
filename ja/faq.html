@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>よくある質問 | ウェブツールボックス</title>
+<meta name="description" content="ウェブツールボックスの料金、データの取り扱い、ブラウザ対応、JSON/XMLフォーマッターの使い方など、よくある質問への回答です。" />
+<link rel="canonical" href="https://example.com/ja/faq.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ウェブツールボックス" />
+<meta property="og:title" content="よくある質問 | ウェブツールボックス" />
+<meta property="og:description" content="ウェブツールボックスと提供ツールに関するよくある質問への回答です。" />
+<meta property="og:url" content="https://example.com/ja/faq.html" />
+<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="よくある質問 | ウェブツールボックス" />
+<meta name="twitter:description" content="ウェブツールボックスと提供ツールに関するよくある質問への回答です。" />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/faq.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/faq.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/faq.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/faq.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/faq.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ウェブツールボックスは無料ですか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、すべてのツールは完全に無料で、会員登録やアカウント作成は不要です。運営費を賄うため今後広告を掲載する場合がありますが、ツール自体は引き続き無料で提供します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "入力したデータはサーバーに送信されますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。JSONフォーマッターやXMLフォーマッターなどのツールは、すべての処理をブラウザ内(JavaScript)で行います。入力したテキストがサーバーに送信・保存されることはありません。詳しくはプライバシーポリシーをご覧ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会員登録は必要ですか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不要です。どのツールもアカウントやログインなしですぐに利用できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "対応ブラウザは?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スマートフォンでも使えますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "JSONやXMLが無効な場合はどうなりますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "今後もツールは追加されますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ウェブツールボックスはJSONフォーマッターから始まり、現在はXMLフォーマッターも提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針はサイト紹介ページをご覧ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不具合報告や機能提案はどうすればいいですか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "お問い合わせページからご連絡ください。いただいたご意見はすべて確認しています。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ウェブツールボックス",
+      "item": "https://example.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "よくある質問",
+      "item": "https://example.com/ja/faq.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ja/">
+      <span class="nav-brand-mark">W</span>
+      ウェブツールボックス
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ja/">ホーム</a></li>
+      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+      <li><a href="/ja/about.html">サイト紹介</a></li>
+      <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="言語選択">🇯🇵</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/faq.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/faq.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/faq.html" data-lang-option="ja" aria-current="true">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/faq.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>よくある質問</h1>
+    <p>ウェブツールボックスの利用方法、データの取り扱い、ツールの使い方に関するよくある質問をまとめました。</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <div class="faq-list">
+      <details class="faq-item"><summary>ウェブツールボックスは無料ですか?</summary><div class="faq-answer"><p>はい、すべてのツールは完全に無料で、会員登録やアカウント作成は不要です。運営費を賄うため今後広告を掲載する場合がありますが、ツール自体は引き続き無料で提供します。</p></div></details>
+      <details class="faq-item"><summary>入力したデータはサーバーに送信されますか?</summary><div class="faq-answer"><p>いいえ。JSONフォーマッターやXMLフォーマッターなどのツールは、すべての処理をブラウザ内(JavaScript)で行います。入力したテキストがサーバーに送信・保存されることはありません。詳しくは<a href="/ja/privacy.html">プライバシーポリシー</a>をご覧ください。</p></div></details>
+      <details class="faq-item"><summary>会員登録は必要ですか?</summary><div class="faq-answer"><p>不要です。どのツールもアカウントやログインなしですぐに利用できます。</p></div></details>
+      <details class="faq-item"><summary>対応ブラウザは?</summary><div class="faq-answer"><p>パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。</p></div></details>
+      <details class="faq-item"><summary>スマートフォンでも使えますか?</summary><div class="faq-answer"><p>はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。</p></div></details>
+      <details class="faq-item"><summary>JSONやXMLが無効な場合はどうなりますか?</summary><div class="faq-answer"><p>ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。</p></div></details>
+      <details class="faq-item"><summary>今後もツールは追加されますか?</summary><div class="faq-answer"><p>はい。ウェブツールボックスはJSONフォーマッターから始まり、現在は<a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="/ja/about.html">サイト紹介</a>ページをご覧ください。</p></div></details>
+      <details class="faq-item"><summary>不具合報告や機能提案はどうすればいいですか?</summary><div class="faq-answer"><p><a href="/ja/contact.html">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。</p></div></details>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
+      <a href="/ja/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

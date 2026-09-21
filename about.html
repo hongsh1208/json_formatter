@@ -7,13 +7,25 @@
 <meta name="description" content="WebToolBox is a free collection of online developer tools you can use right in your browser, no sign-up required. Learn about the service, its principles, and available features." />
 <link rel="canonical" href="https://example.com/about.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="WebToolBox" />
 <meta property="og:title" content="About | WebToolBox" />
 <meta property="og:description" content="An introduction to WebToolBox and the principles behind it." />
 <meta property="og:url" content="https://example.com/about.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About | WebToolBox" />
+<meta name="twitter:description" content="An introduction to WebToolBox and the principles behind it." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/about.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/about.html" />
@@ -58,7 +70,26 @@
     } catch (e) {}
   })();
 </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WebToolBox",
+      "item": "https://example.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://example.com/about.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -73,6 +104,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/">Home</a></li>
       <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
       <li><a href="/about.html" aria-current="page">About</a></li>
       <li><a href="/privacy.html">Privacy Policy</a></li>
     </ul>
@@ -117,6 +149,7 @@
       <h2>Available features</h2>
       <ul>
         <li><a href="/tools/json-formatter.html">JSON Formatter / Viewer</a> — Validates JSON strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching keys and values.</li>
+        <li><a href="/tools/xml-formatter.html">XML Formatter / Viewer</a> — Validates XML strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching tags, attributes, and text.</li>
       </ul>
       <p>Suggestions for new features or improvements are always welcome.</p>
     </section>
@@ -139,14 +172,21 @@
     <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

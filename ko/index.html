@@ -8,13 +8,25 @@
 <meta name="keywords" content="온라인 도구, JSON 포매터, JSON 뷰어, JSON validator, 웹 유틸리티, 무료 개발자 도구" />
 <link rel="canonical" href="https://example.com/ko/" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="웹툴박스" />
 <meta property="og:title" content="웹툴박스 | 무료 온라인 개발자 도구 모음" />
 <meta property="og:description" content="JSON 포매터를 비롯해 브라우저에서 바로 쓰는 무료 온라인 도구를 제공합니다. 데이터는 서버에 저장되지 않습니다." />
 <meta property="og:url" content="https://example.com/ko/" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ko.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="웹툴박스 | 무료 온라인 개발자 도구 모음" />
+<meta name="twitter:description" content="JSON 포매터를 비롯해 브라우저에서 바로 쓰는 무료 온라인 도구를 제공합니다. 데이터는 서버에 저장되지 않습니다." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ko.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
@@ -42,7 +54,8 @@
   "@type": "WebSite",
   "name": "웹툴박스",
   "url": "https://example.com/ko/",
-  "description": "웹툴박스는 개발과 업무 중 자주 필요한 자잔한 작업들을 브라우저에서 바로 끝낼 수 있게 만든 무료 온라인 유틸리티 모음입니다. 입력한 데이터는 서버로 전송되지 않고 내 컴퓨터(브라우저) 안에서만 처리되어 안전하게 사"
+  "description": "웹툴박스는 개발과 업무 중 자주 필요한 자잔한 작업들을 브라우저에서 바로 끝낼 수 있게 만든 무료 온라인 유틸리티 모음입니다. 입력한 데이터는 서버로 전송되지 않고 내 컴퓨터(브라우저) 안에서만 처리되어 안전하게 사",
+  "inLanguage": "ko"
 }
 </script>
 </head>
@@ -59,6 +72,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/" aria-current="page">홈</a></li>
       <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
+      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
       <li><a href="/ko/about.html">사이트 소개</a></li>
       <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
     </ul>
@@ -95,6 +109,13 @@
         <span class="tag">JSON · Formatter · Validator</span>
       </article>
 
+      <article class="tool-card">
+        <div class="tool-card-icon">📄</div>
+        <h3><a href="/ko/tools/xml-formatter.html">XML 포매터 / 뷰어</a></h3>
+        <p>입력한 문자열이 올바른 XML인지 검사하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 태그·속성·텍스트 검색 기능을 제공합니다.</p>
+        <span class="tag">XML · Formatter · Validator</span>
+      </article>
+
       <article class="tool-card is-soon" aria-disabled="true">
         <div class="tool-card-icon">🛠️</div>
         <h3>다음 도구 준비 중</h3>
@@ -120,14 +141,21 @@
     <span>&copy; <span id="footer-year">2026</span> 웹툴박스. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ko/about.html">사이트 소개</a>
+      <a href="/ko/faq.html">자주 묻는 질문</a>
+      <a href="/ko/updates.html">업데이트 소식</a>
+      <a href="/ko/contact.html">문의하기</a>
+      <a href="/ko/terms.html">이용약관</a>
       <a href="/ko/privacy.html">개인정보처리방침</a>
       <a href="/ko/tools/json-formatter.html">JSON 포매터</a>
+      <a href="/ko/tools/xml-formatter.html">XML 포매터</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

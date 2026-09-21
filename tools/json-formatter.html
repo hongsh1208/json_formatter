@@ -8,13 +8,25 @@
 <meta name="keywords" content="JSON formatter, JSON viewer, JSON validator, JSON beautify, JSON pretty print, online JSON tool" />
 <link rel="canonical" href="https://example.com/tools/json-formatter.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="WebToolBox" />
 <meta property="og:title" content="JSON Formatter / Viewer | WebToolBox" />
 <meta property="og:description" content="A free online JSON formatter with validation, a readable tree view, search, and collapse/expand." />
 <meta property="og:url" content="https://example.com/tools/json-formatter.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="JSON Formatter / Viewer | WebToolBox" />
+<meta name="twitter:description" content="A free online JSON formatter with validation, a readable tree view, search, and collapse/expand." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/tools/json-formatter.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/json-formatter.html" />
@@ -69,7 +81,28 @@
   "operatingSystem": "Any (Web Browser)",
   "url": "https://example.com/tools/json-formatter.html",
   "description": "A free online tool that validates JSON strings and displays them as a readable tree. Includes search and collapse/expand.",
+  "inLanguage": "en",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WebToolBox",
+      "item": "https://example.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON Formatter / Viewer",
+      "item": "https://example.com/tools/json-formatter.html"
+    }
+  ]
 }
 </script>
 </head>
@@ -86,6 +119,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/">Home</a></li>
       <li><a href="/tools/json-formatter.html" aria-current="page">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/privacy.html">Privacy Policy</a></li>
     </ul>
@@ -226,6 +260,20 @@
       <li>Choose a search mode: "Contains" (partial match), "Exact" (exact match), or "Regex" (regular expression).</li>
       <li>The input panel has the same search feature (Contains/Exact/Regex, previous/next navigation, highlighting) so you can search directly in the original text.</li>
     </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>Use "Copy minified" instead of "Copy" when you need a compact payload for an API request or a config value — no extra whitespace or line breaks.</li>
+      <li>Switch the indent size to Tab if your project's style guide calls for tabs instead of spaces.</li>
+      <li>The Regex search mode can match a pattern across every key or value at once — handy for auditing IDs, dates, or emails in a large document.</li>
+      <li>For deeply nested JSON, click "Collapse all" first to see the overall shape, then expand only the branch you actually need to inspect.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
   </div>
 </main>
 
@@ -234,8 +282,14 @@
     <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
     </nav>
   </div>
 </footer>
@@ -243,6 +297,7 @@
 <script src="/assets/js/main.js"></script>
 <script src="/tools/json-formatter.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

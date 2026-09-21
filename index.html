@@ -8,13 +8,25 @@
 <meta name="keywords" content="online tools, JSON formatter, JSON viewer, JSON validator, web utilities, free developer tools" />
 <link rel="canonical" href="https://example.com/" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="WebToolBox" />
 <meta property="og:title" content="WebToolBox | Free Online Developer Tools" />
 <meta property="og:description" content="Free online tools including a JSON Formatter, usable right in your browser. Your data is never stored on our servers." />
 <meta property="og:url" content="https://example.com/" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WebToolBox | Free Online Developer Tools" />
+<meta name="twitter:description" content="Free online tools including a JSON Formatter, usable right in your browser. Your data is never stored on our servers." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
@@ -65,7 +77,8 @@
   "@type": "WebSite",
   "name": "WebToolBox",
   "url": "https://example.com/",
-  "description": "WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and wo"
+  "description": "WebToolBox is a free collection of online utilities for the small, everyday tasks that come up during development and wo",
+  "inLanguage": "en"
 }
 </script>
 </head>
@@ -82,6 +95,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/" aria-current="page">Home</a></li>
       <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/privacy.html">Privacy Policy</a></li>
     </ul>
@@ -118,6 +132,13 @@
         <span class="tag">JSON · Formatter · Validator</span>
       </article>
 
+      <article class="tool-card">
+        <div class="tool-card-icon">📄</div>
+        <h3><a href="/tools/xml-formatter.html">XML Formatter / Viewer</a></h3>
+        <p>Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and tag/attribute/text search.</p>
+        <span class="tag">XML · Formatter · Validator</span>
+      </article>
+
       <article class="tool-card is-soon" aria-disabled="true">
         <div class="tool-card-icon">🛠️</div>
         <h3>More tools coming soon</h3>
@@ -143,14 +164,21 @@
     <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
       <a href="/privacy.html">Privacy Policy</a>
       <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

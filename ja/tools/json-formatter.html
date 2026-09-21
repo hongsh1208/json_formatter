@@ -8,13 +8,25 @@
 <meta name="keywords" content="JSONフォーマッター, JSONビューア, JSON validator, JSON beautify, JSON pretty print, オンラインJSONツール" />
 <link rel="canonical" href="https://example.com/ja/tools/json-formatter.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ウェブツールボックス" />
 <meta property="og:title" content="JSONフォーマッター / ビューア | ウェブツールボックス" />
 <meta property="og:description" content="JSON文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインJSONフォーマッター。" />
 <meta property="og:url" content="https://example.com/ja/tools/json-formatter.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="JSONフォーマッター / ビューア | ウェブツールボックス" />
+<meta name="twitter:description" content="JSON文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインJSONフォーマッター。" />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/tools/json-formatter.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/json-formatter.html" />
@@ -46,7 +58,28 @@
   "operatingSystem": "Any (Web Browser)",
   "url": "https://example.com/ja/tools/json-formatter.html",
   "description": "JSON文字列の妥当性を検証し、読みやすいツリー形式に整理する無料オンラインツール。検索と折りたたみ/展開機能を提供します。",
+  "inLanguage": "ja",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ウェブツールボックス",
+      "item": "https://example.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSONフォーマッター / ビューア",
+      "item": "https://example.com/ja/tools/json-formatter.html"
+    }
+  ]
 }
 </script>
 </head>
@@ -63,6 +96,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/">ホーム</a></li>
       <li><a href="/ja/tools/json-formatter.html" aria-current="page">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
       <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
     </ul>
@@ -203,6 +237,20 @@
       <li>検索方式を「部分一致」(部分一致)、「完全一致」(完全一致)、「正規表現」(正規表現)から選べます。</li>
       <li>入力ボックス上部にも同じ検索機能(部分一致/完全一致/正規表現、前・次移動、ハイライト表示)があり、元のテキストで直接検索できます。</li>
     </ul>
+
+    <h2>関連のヒント</h2>
+    <ul>
+      <li>APIリクエストの本文や設定値など、余白のないコンパクトな形式が必要なときは「コピー」の代わりに「圧縮コピー」を使いましょう。</li>
+      <li>プロジェクトのスタイルガイドでタブが指定されている場合は、インデントサイズを「Tab」に切り替えてください。</li>
+      <li>正規表現の検索モードは、文書全体から特定パターンのキーや値をまとめて探したいとき(IDや日付、メール形式のチェックなど)に便利です。</li>
+      <li>深くネストされたJSONは、まず「すべて折りたたむ」で全体の構造を把握してから、実際に確認したい部分だけ展開すると効率的です。</li>
+    </ul>
+
+    <h2>関連リンク</h2>
+    <ul>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+      <li><a href="/ja/faq.html">よくある質問</a></li>
+    </ul>
   </div>
 </main>
 
@@ -211,8 +259,14 @@
     <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
       <a href="/ja/privacy.html">プライバシーポリシー</a>
       <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>
 </footer>
@@ -220,6 +274,7 @@
 <script src="/assets/js/main.js"></script>
 <script src="/tools/json-formatter.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

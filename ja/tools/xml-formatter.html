@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XMLフォーマッター / ビューア - オンラインXML検証・整形 | ウェブツールボックス</title>
+<meta name="description" content="オンラインXMLフォーマッター。入力した文字列が正しいXMLかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。折りたたみ/展開とタグ・属性・テキスト検索に対応し、データはブラウザ内でのみ処理されます。" />
+<meta name="keywords" content="XMLフォーマッター, XMLビューア, XML validator, XML beautify, XML pretty print, オンラインXMLツール" />
+<link rel="canonical" href="https://example.com/ja/tools/xml-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ウェブツールボックス" />
+<meta property="og:title" content="XMLフォーマッター / ビューア | ウェブツールボックス" />
+<meta property="og:description" content="XML文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインXMLフォーマッター。" />
+<meta property="og:url" content="https://example.com/ja/tools/xml-formatter.html" />
+<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="XMLフォーマッター / ビューア | ウェブツールボックス" />
+<meta name="twitter:description" content="XML文字列の検証と読みやすいツリービュー、検索、折りたたみ/展開に対応した無料オンラインXMLフォーマッター。" />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/tools/xml-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/xml-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "XMLフォーマッター / ビューア",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://example.com/ja/tools/xml-formatter.html",
+  "description": "XML文字列の妥当性を検証し、読みやすいツリー形式に整理する無料オンラインツール。検索と折りたたみ/展開機能を提供します。",
+  "inLanguage": "ja",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ウェブツールボックス",
+      "item": "https://example.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "XMLフォーマッター / ビューア",
+      "item": "https://example.com/ja/tools/xml-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ja/">
+      <span class="nav-brand-mark">W</span>
+      ウェブツールボックス
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ja/">ホーム</a></li>
+      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html" aria-current="page">XMLフォーマッター</a></li>
+      <li><a href="/ja/about.html">サイト紹介</a></li>
+      <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="言語選択">🇯🇵</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/xml-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/xml-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/xml-formatter.html" data-lang-option="ja" aria-current="true">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/xml-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>XMLフォーマッター / ビューア</h1>
+    <p>XML文字列を入力すると妥当性を検証し、インデントとシンタックスハイライトを適用したツリーで表示します。入力値はサーバーに送信されずブラウザ内でのみ処理されます。</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">整列(Format)</button>
+      <button class="btn" id="btn-sample" type="button">サンプルを読み込む</button>
+      <button class="btn" id="btn-clear" type="button">クリア</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">インデントサイズ</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>インデント2桁</option>
+        <option value="4">インデント4桁</option>
+        <option value="tab">インデントTab</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">コピー</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">圧縮コピー</button>
+      <button class="btn btn-sm" id="btn-download" type="button">.xmlをダウンロード</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="入力/出力の切り替え">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        入力
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        出力
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="入力">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="xml-status-top" class="status-pill is-idle">XMLを入力してください</span>
+          <span id="xml-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="xml-input-search-mode" class="visually-hidden">検索方式</label>
+          <select class="jf-select jf-search-mode" id="xml-input-search-mode">
+            <option value="contains" selected>部分一致</option>
+            <option value="exact">完全一致(行)</option>
+            <option value="regex">正規表現</option>
+          </select>
+          <label for="xml-input-search" class="visually-hidden">検索方式</label>
+          <input type="text" id="xml-input-search" placeholder="入力テキストを検索…" />
+          <span class="jf-search-count" id="xml-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="前の一致項目" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="次の一致項目" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="検索語をクリア" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="xml-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="xml-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="xml-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="xml-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="ここにXML文字列を貼り付けてください。"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="xml-status" class="status-pill is-idle">XMLを入力してください</span>
+          <span id="xml-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="出力" hidden>
+        <div class="jf-panel-head">
+          <span>出力</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ すべて展開</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ すべて折りたたむ</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="xml-search-mode" class="visually-hidden">検索方式</label>
+          <select class="jf-select jf-search-mode" id="xml-search-mode" disabled>
+            <option value="contains" selected>部分一致</option>
+            <option value="exact">完全一致</option>
+            <option value="regex">正規表現</option>
+          </select>
+          <label for="xml-search" class="visually-hidden">タグ・属性・テキストを検索…</label>
+          <input type="text" id="xml-search" placeholder="タグ・属性・テキストを検索…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="前の一致項目" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="次の一致項目" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="検索語をクリア" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="xml-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="xml-output-gutter-inner"></div>
+          </div>
+          <div id="xml-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. 入力を止めると検証が行われ、正常なら自動的に「出力」タブに切り替わります。出力タブのドットは現在の妥当性ステータスを示します。エレメントを折りたたむ/展開する▾/▸ボタンは行番号の隣(左余白)にあり、クリックしやすくなっています。検索ボックスは出力タブが開くと自動的にフォーカスされ、検索方式(部分一致/完全一致/正規表現)を選べばタグ名・属性名/値・テキストを希望の方法で探せます。出力画面左側の行番号は折りたたみ状態に合わせて表示中の行だけに振り直されるため、構造が折りたたまれていても位置を把握しやすくなっています。入力ボックスにも同じ方式の検索があり、元のテキストで直接位置を探してハイライトで確認できます。Enter(次へ) / Shift+Enter(前へ)で一致項目を移動できます。</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>このツールの使い方</h2>
+    <ul>
+      <li>左側の入力ボックスにXML文字列を貼り付けると、自動的に妥当性を検証し結果を描画します。</li>
+      <li>無効なXMLの場合は、エラーが発生したおおまかな行/列位置も合わせてお知らせします。</li>
+      <li>「整列(Format)」ボタンを押すと、入力ボックスの内容も選択したインデント基準で整形されます。</li>
+      <li>結果が長い場合は「すべて折りたたむ」で全体の構造を先に把握し、行番号隣の▾/▸ボタンで必要なエレメントだけ展開できます。</li>
+      <li>すべての処理はブラウザ内でのみ行われ、入力したデータがサーバーに送信されることはありません。</li>
+      <li>入力を終えて結果が有効と確認されると自動的に「出力」タブに切り替わり、検索ボックスにすぐ入力できるようフォーカスが移動します。</li>
+      <li>検索方式を「部分一致」、「完全一致」、「正規表現」から選べます。</li>
+      <li>入力ボックス上部にも同じ検索機能があり、元のテキストで直接検索できます。</li>
+      <li>エレメント、属性、テキストノード、コメント、CDATAセクションをすべて認識し、ツリービューで色分けして表示します。</li>
+    </ul>
+
+    <h2>関連のヒント</h2>
+    <ul>
+      <li>RSSフィードやSOAPレスポンスのように深くネストした文書は、まず「すべて折りたたむ」で全体構造を把握してから必要な部分だけ展開しましょう。</li>
+      <li>正規表現の検索モードは、複数のエレメントにまたがる属性値をまとめて探したいとき(ID、日付、名前空間の確認など)に便利です。</li>
+      <li><?xml ...?>宣言で始まる文書の場合、整列・コピー・ダウンロード時にこの宣言が自動的に保持されます。</li>
+      <li>CDATAセクションは、マークアップや特殊文字をエスケープせずにテキスト内へそのまま埋め込みたいときに便利で、フォーマッターもそのまま保持します。</li>
+    </ul>
+
+    <h2>関連リンク</h2>
+    <ul>
+      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/faq.html">よくある質問</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
+      <a href="/ja/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/xml-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

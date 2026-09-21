@@ -8,13 +8,25 @@
 <meta name="keywords" content="オンラインツール, JSONフォーマッター, JSONビューア, JSON validator, ウェブユーティリティ, 無料開発者ツール" />
 <link rel="canonical" href="https://example.com/ja/" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ウェブツールボックス" />
 <meta property="og:title" content="ウェブツールボックス | 無料オンライン開発者ツール集" />
 <meta property="og:description" content="JSONフォーマッターをはじめ、ブラウザですぐ使える無料オンラインツールを提供します。データはサーバーに保存されません。" />
 <meta property="og:url" content="https://example.com/ja/" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ウェブツールボックス | 無料オンライン開発者ツール集" />
+<meta name="twitter:description" content="JSONフォーマッターをはじめ、ブラウザですぐ使える無料オンラインツールを提供します。データはサーバーに保存されません。" />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/" />
@@ -42,7 +54,8 @@
   "@type": "WebSite",
   "name": "ウェブツールボックス",
   "url": "https://example.com/ja/",
-  "description": "ウェブツールボックスは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安"
+  "description": "ウェブツールボックスは、開発や業務中によく必要になる細かな作業をブラウザ上ですぐに済ませられるようにした無料のオンラインユーティリティ集です。入力したデータはサーバーに送信されず、お使いのコンピューター（ブラウザ）内でのみ処理されるため、安",
+  "inLanguage": "ja"
 }
 </script>
 </head>
@@ -59,6 +72,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/" aria-current="page">ホーム</a></li>
       <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
       <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
     </ul>
@@ -95,6 +109,13 @@
         <span class="tag">JSON · Formatter · Validator</span>
       </article>
 
+      <article class="tool-card">
+        <div class="tool-card-icon">📄</div>
+        <h3><a href="/ja/tools/xml-formatter.html">XMLフォーマッター / ビューア</a></h3>
+        <p>入力した文字列が正しいXMLかどうかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。ツリーの折りたたみ/展開とタグ・属性・テキストの検索機能を提供します。</p>
+        <span class="tag">XML · Formatter · Validator</span>
+      </article>
+
       <article class="tool-card is-soon" aria-disabled="true">
         <div class="tool-card-icon">🛠️</div>
         <h3>次のツールを準備中</h3>
@@ -120,14 +141,21 @@
     <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
       <a href="/ja/privacy.html">プライバシーポリシー</a>
       <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

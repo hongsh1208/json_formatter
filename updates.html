@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What's New | WebToolBox</title>
+<meta name="description" content="A changelog of what's new on WebToolBox — new tools, language support, and site improvements." />
+<link rel="canonical" href="https://example.com/updates.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="What's New | WebToolBox" />
+<meta property="og:description" content="See what's recently been added or improved on WebToolBox." />
+<meta property="og:url" content="https://example.com/updates.html" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="What's New | WebToolBox" />
+<meta name="twitter:description" content="See what's recently been added or improved on WebToolBox." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/updates.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/updates.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/updates.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/updates.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/updates.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WebToolBox",
+      "item": "https://example.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "What's New",
+      "item": "https://example.com/updates.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">W</span>
+      WebToolBox
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/updates.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/updates.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/updates.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/updates.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>What's New</h1>
+    <p>A running log of new tools and improvements on WebToolBox.</p>
+  </div>
+
+  <div class="container prose section-tight update-list" style="max-width: 760px;">
+    <article class="update-entry">
+      <p class="update-date">September 21, 2026</p>
+      <h2>XML Formatter, FAQ, and Contact page added</h2>
+      <ul>
+        <li>Added a new XML Formatter / Viewer tool alongside the JSON Formatter, with the same validation, tree view, and search experience.</li>
+        <li>Added an FAQ page answering common questions about pricing, data handling, and browser support.</li>
+        <li>Added a dedicated Contact page for bug reports and feature requests.</li>
+        <li>Added a cookie/ad consent banner for visitors from the EEA, UK, and Switzerland.</li>
+      </ul>
+    </article>
+    <article class="update-entry">
+      <p class="update-date">September 20, 2026</p>
+      <h2>WebToolBox launches with the JSON Formatter</h2>
+      <ul>
+        <li>Launched WebToolBox with our first tool: the JSON Formatter / Viewer, with validation, an indented syntax-highlighted tree, collapsing/expanding nodes, and key/value search.</li>
+        <li>Added light and dark theme support with automatic detection.</li>
+        <li>Published our Privacy Policy and About page.</li>
+        <li>Added English, Korean, Japanese, and Chinese language support with automatic browser-language detection.</li>
+      </ul>
+    </article>
+
+    <p>Have an idea for a tool or feature you'd like to see? Let us know on the <a href="/contact.html">Contact page</a> — see our <a href="/about.html">About</a> page for the principles guiding what we build next.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

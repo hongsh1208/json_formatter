@@ -7,13 +7,25 @@
 <meta name="description" content="ウェブツールボックスのプライバシーポリシーです。収集する情報、Cookie・ローカルストレージの利用、広告(Google AdSense)に関するデータの取り扱いについてご案内します。" />
 <link rel="canonical" href="https://example.com/ja/privacy.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ウェブツールボックス" />
 <meta property="og:title" content="プライバシーポリシー | ウェブツールボックス" />
 <meta property="og:description" content="ウェブツールボックスの個人情報の収集・利用およびCookieの使用に関するご案内です。" />
 <meta property="og:url" content="https://example.com/ja/privacy.html" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://example.com/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="プライバシーポリシー | ウェブツールボックス" />
+<meta name="twitter:description" content="ウェブツールボックスの個人情報の収集・利用およびCookieの使用に関するご案内です。" />
+<meta name="twitter:image" content="https://example.com/assets/img/og-ja.png" />
 
 <link rel="alternate" hreflang="en" href="https://example.com/privacy.html" />
 <link rel="alternate" hreflang="ko" href="https://example.com/ko/privacy.html" />
@@ -35,7 +47,26 @@
 <script>
   try { localStorage.setItem("wtb-lang", "ja"); } catch (e) {}
 </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ウェブツールボックス",
+      "item": "https://example.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "プライバシーポリシー",
+      "item": "https://example.com/ja/privacy.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">本文へスキップ</a>
@@ -50,6 +81,7 @@
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/">ホーム</a></li>
       <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
       <li><a href="/ja/privacy.html" aria-current="page">プライバシーポリシー</a></li>
     </ul>
@@ -86,6 +118,7 @@
     <section>
       <h2>2. Cookie(クッキー)および類似技術の使用</h2>
       <p>本サイトはサービス利用分析および広告配信のためにCookieを使用する場合があります。Cookieとはウェブサイトが利用者のブラウザに保存する少量の情報で、利用者はブラウザの設定でCookieの保存を拒否または削除できます。ただし、Cookieの保存を拒否した場合、一部機能のご利用に支障が生じる可能性があります。</p>
+      <p>EEA(欧州経済領域)・英国・スイスからアクセスされたと推定される場合、初回訪問時に同意バナーが表示され、必須以外(広告・分析)のCookieについて同意するかどうかを選択できます。選択内容はブラウザに保存され、画面下部の「Cookie設定」リンクからいつでも変更できます。</p>
     </section>
 
     <section>
@@ -127,14 +160,21 @@
     <span>&copy; <span id="footer-year">2026</span> ウェブツールボックス. All rights reserved.</span>
     <nav class="footer-links">
       <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
       <a href="/ja/privacy.html">プライバシーポリシー</a>
       <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
 <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

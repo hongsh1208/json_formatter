@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ | WebToolBox</title>
+<meta name="description" content="Frequently asked questions about WebToolBox — pricing, data handling, browser support, and how the JSON/XML Formatter tools work." />
+<link rel="canonical" href="https://example.com/faq.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WebToolBox" />
+<meta property="og:title" content="FAQ | WebToolBox" />
+<meta property="og:description" content="Answers to common questions about WebToolBox and its tools." />
+<meta property="og:url" content="https://example.com/faq.html" />
+<meta property="og:image" content="https://example.com/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FAQ | WebToolBox" />
+<meta name="twitter:description" content="Answers to common questions about WebToolBox and its tools." />
+<meta name="twitter:image" content="https://example.com/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://example.com/faq.html" />
+<link rel="alternate" hreflang="ko" href="https://example.com/ko/faq.html" />
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/faq.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://example.com/zh/faq.html" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/faq.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>W</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("wtb-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("wtb-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("wtb-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("wtb-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is WebToolBox free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Tools like the JSON Formatter and XML Formatter process everything locally in your browser using JavaScript. The text you paste in is never transmitted to or stored on our servers. See our Privacy Policy for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No account or login is required for any tool. Just open the page and start using it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which browsers are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these tools on my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my JSON or XML is invalid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will more tools be added?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. WebToolBox started with a JSON Formatter and now also offers an XML Formatter. We plan to keep adding small, genuinely useful browser-based tools over time — see our About page for our guiding principles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I report a bug or suggest a feature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please reach out through our Contact page. We read every message."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "WebToolBox",
+      "item": "https://example.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Frequently Asked Questions",
+      "item": "https://example.com/faq.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">W</span>
+      WebToolBox
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/faq.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/faq.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/faq.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/faq.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Frequently Asked Questions</h1>
+    <p>Common questions about WebToolBox, how it handles your data, and how the tools work.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <div class="faq-list">
+      <details class="faq-item"><summary>Is WebToolBox free to use?</summary><div class="faq-answer"><p>Yes. All tools are completely free, and there is no sign-up or account required. We may show ads in the future to help cover hosting costs, but the tools themselves will remain free.</p></div></details>
+      <details class="faq-item"><summary>Is my data sent to a server?</summary><div class="faq-answer"><p>No. Tools like the JSON Formatter and XML Formatter process everything locally in your browser using JavaScript. The text you paste in is never transmitted to or stored on our servers. See our <a href="/privacy.html">Privacy Policy</a> for details.</p></div></details>
+      <details class="faq-item"><summary>Do I need to create an account?</summary><div class="faq-answer"><p>No account or login is required for any tool. Just open the page and start using it.</p></div></details>
+      <details class="faq-item"><summary>Which browsers are supported?</summary><div class="faq-answer"><p>Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse.</p></div></details>
+      <details class="faq-item"><summary>Can I use these tools on my phone?</summary><div class="faq-answer"><p>Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents.</p></div></details>
+      <details class="faq-item"><summary>What happens if my JSON or XML is invalid?</summary><div class="faq-answer"><p>The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes.</p></div></details>
+      <details class="faq-item"><summary>Will more tools be added?</summary><div class="faq-answer"><p>Yes. WebToolBox started with a JSON Formatter and now also offers an <a href="/tools/xml-formatter.html">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="/about.html">About</a> page for our guiding principles.</p></div></details>
+      <details class="faq-item"><summary>How do I report a bug or suggest a feature?</summary><div class="faq-answer"><p>Please reach out through our <a href="/contact.html">Contact page</a>. We read every message.</p></div></details>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> WebToolBox. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
