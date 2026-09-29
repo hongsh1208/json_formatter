@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SQL 포매터 / 쿼리 정렬기 - 무료 온라인 도구 | Formix</title>
+<meta name="description" content="SQL 쿼리를 무료로 온라인에서 들여쓰기하고 보기 좋게 정리하세요. MySQL, PostgreSQL, SQL Server, Oracle PL/SQL, BigQuery, Snowflake 등을 지원합니다. 모든 처리는 브라우저 안에서만 이뤄지며 서버로 전송되지 않습니다." />
+<meta name="keywords" content="sql 포매터, sql 정렬, 온라인 sql 포맷터, sql 예쁘게 만들기, mysql 포매터, postgresql 포매터, 무료 sql 정리 도구" />
+<link rel="canonical" href="https://formix.site/ko/tools/sql-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="SQL 포매터 / 쿼리 정렬기 | Formix" />
+<meta property="og:description" content="여러 SQL 방언을 지원하는 무료 온라인 SQL 포매터. 모든 처리는 브라우저 안에서 이뤄집니다." />
+<meta property="og:url" content="https://formix.site/ko/tools/sql-formatter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-ko.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SQL 포매터 / 쿼리 정렬기 | Formix" />
+<meta name="twitter:description" content="여러 SQL 방언을 지원하는 무료 온라인 SQL 포매터. 모든 처리는 브라우저 안에서 이뤄집니다." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-ko.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/sql-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "ko"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SQL 포매터 / 쿼리 정렬기",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/ko/tools/sql-formatter.html",
+  "description": "SQL 쿼리를 들여쓰기와 키워드 대소문자로 보기 좋게 정리해주는 무료 온라인 도구. 여러 SQL 방언을 지원합니다.",
+  "inLanguage": "ko",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/ko/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SQL 포매터",
+      "item": "https://formix.site/ko/tools/sql-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ko/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ko/">홈</a></li>
+      <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
+      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+      <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+      <li><a href="/ko/tools/sql-formatter.html" aria-current="page">SQL 포매터</a></li>
+      <li><a href="/ko/about.html">사이트 소개</a></li>
+      <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="언어 선택">🇰🇷</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/sql-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/sql-formatter.html" data-lang-option="ko" aria-current="true">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/sql-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/sql-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="다크 모드로 전환">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>SQL 포매터</h1>
+    <p>왼쪽에 SQL 쿼리를 붙여넣으면 오른쪽에 보기 좋게 들여쓰기된 결과가 표시됩니다. 사용 중인 데이터베이스에 맞는 SQL 방언을 선택하면 더 정확한 결과를 얻을 수 있습니다. 데이터는 서버로 전송되지 않습니다.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">정렬</button>
+      <button class="btn" id="btn-sample" type="button">예시 불러오기</button>
+      <button class="btn" id="btn-clear" type="button">지우기</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">들여쓰기 크기</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>들여쓰기 2칸</option>
+        <option value="4">들여쓰기 4칸</option>
+        <option value="tab">들여쓰기 Tab</option>
+      </select>
+            <label for="sql-dialect-select" class="visually-hidden">SQL 방언</label>
+      <select class="jf-select sql-dialect-select" id="sql-dialect-select">
+        <option value="sql" selected>표준 SQL</option>
+        <option value="mysql">MySQL / MariaDB</option>
+        <option value="postgresql">PostgreSQL</option>
+        <option value="tsql">SQL Server (T-SQL)</option>
+        <option value="plsql">Oracle PL/SQL</option>
+        <option value="bigquery">Google BigQuery</option>
+        <option value="snowflake">Snowflake</option>
+        <option value="sqlite">SQLite</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">복사</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">압축 복사</button>
+      <button class="btn btn-sm" id="btn-download" type="button">결과 다운로드</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="입력/결과 전환">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        입력
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        결과
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="입력">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="sql-status-top" class="status-pill is-idle">SQL 쿼리를 붙여넣어주세요</span>
+          <span id="sql-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="sql-input-search-mode" class="visually-hidden">검색 방식</label>
+          <select class="jf-select jf-search-mode" id="sql-input-search-mode">
+            <option value="contains" selected>포함</option>
+            <option value="exact">일치(줄)</option>
+            <option value="regex">정규식</option>
+          </select>
+          <label for="sql-input-search" class="visually-hidden">검색 방식</label>
+          <input type="text" id="sql-input-search" placeholder="입력한 텍스트에서 검색…" />
+          <span class="jf-search-count" id="sql-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="이전 일치 항목" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="다음 일치 항목" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="검색어 지우기" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="sql-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="sql-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="sql-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="여기에 SQL 쿼리를 붙여넣으세요. 예: SELECT * FROM users WHERE id = 1"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="sql-status" class="status-pill is-idle">SQL 쿼리를 붙여넣어주세요</span>
+          <span id="sql-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="결과" hidden>
+        <div class="jf-panel-head">
+          <span>결과</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ 모두 펼치기</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ 모두 접기</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="sql-search-mode" class="visually-hidden">검색 방식</label>
+          <select class="jf-select jf-search-mode" id="sql-search-mode" disabled>
+            <option value="contains" selected>포함</option>
+            <option value="exact">일치</option>
+            <option value="regex">정규식</option>
+          </select>
+          <label for="sql-search" class="visually-hidden">결과 텍스트에서 검색…</label>
+          <input type="text" id="sql-search" placeholder="결과 텍스트에서 검색…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="이전 일치 항목" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="다음 일치 항목" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="검색어 지우기" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="sql-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-output-gutter-inner"></div>
+          </div>
+          <div id="sql-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. 이 도구는 SQL을 보기 좋게 "정렬(포맷팅)"할 뿐, 쿼리가 실제 데이터베이스에서 의미적으로 올바르게 실행되는지는 검증하지 않습니다. 사용 중인 데이터베이스에 가장 가까운 방언을 선택하면 더 정확한 결과를 얻을 수 있습니다. 괄호나 따옴표가 맞지 않는 등 구문 자체를 해석할 수 없는 경우 대략적인 오류 위치를 표시합니다. 키워드는 일반적인 SQL 스타일 관례에 따라 기본적으로 대문자로 변환됩니다. 이 도구는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를 로컬에 내장하여 사용하므로, 처리는 여전히 브라우저 안에서만 이뤄집니다.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>이 도구는 이렇게 사용하세요</h2>
+    <ul>
+      <li>왼쪽 입력창에 SQL 쿼리를 붙여넣으세요.</li>
+      <li>사용 중인 데이터베이스에 맞는 "SQL 방언"(MySQL, PostgreSQL, SQL Server 등)을 선택하면 더 정확하게 정렬됩니다.</li>
+      <li>"정렬" 버튼을 클릭하거나(입력하는 동안 자동으로도 정렬됩니다) 오른쪽에서 결과를 확인하세요.</li>
+      <li>구문을 해석할 수 없으면 오류가 발생한 대략적인 줄/열 위치를 알려줍니다.</li>
+      <li>들여쓰기 크기 드롭다운으로 결과의 들여쓰기를 조절한 뒤, "복사" 또는 "결과 다운로드"로 가져갈 수 있습니다.</li>
+      <li>모든 처리는 브라우저 안에서만 이뤄지며, 입력한 SQL은 서버로 전송되지 않습니다.</li>
+    </ul>
+
+    <h2>관련 팁</h2>
+    <ul>
+      <li>이 도구는 SQL을 정렬/포맷팅할 뿐, 실제 데이터베이스 스키마 기준으로 쿼리가 유효한지나 실행 가능한지는 검사하지 않습니다.</li>
+      <li>방언마다 키워드와 문법 차이가 있습니다(예: LIMIT vs TOP, 백틱 vs 큰따옴표). 사용 중인 데이터베이스에 맞는 방언을 선택하세요.</li>
+      <li>SELECT, FROM, WHERE 같은 키워드는 가독성을 위한 일반적인 관례에 따라 자동으로 대문자로 변환됩니다.</li>
+      <li>JSON이나 XML 작업도 필요하다면, 아래 관련 링크의 JSON 포매터, XML 포매터, JSON ↔ XML 변환기를 사용해보세요.</li>
+    </ul>
+
+    <h2>관련 링크</h2>
+    <ul>
+      <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
+      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+      <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+      <li><a href="/ko/faq.html">자주 묻는 질문</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ko/about.html">사이트 소개</a>
+      <a href="/ko/faq.html">자주 묻는 질문</a>
+      <a href="/ko/updates.html">업데이트 소식</a>
+      <a href="/ko/contact.html">문의하기</a>
+      <a href="/ko/terms.html">이용약관</a>
+      <a href="/ko/privacy.html">개인정보처리방침</a>
+      <a href="/ko/tools/json-formatter.html">JSON 포매터</a>
+      <a href="/ko/tools/xml-formatter.html">XML 포매터</a>
+      <a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a>
+      <a href="/ko/tools/sql-formatter.html">SQL 포매터</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/vendor/sql-formatter.min.js"></script>
+<script src="/tools/sql-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

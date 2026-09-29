@@ -39,6 +39,16 @@ SITE_NAME = {"en": "Formix", "ko": "Formix", "ja": "Formix", "zh": "Formix"}
 
 CONTACT_EMAIL = "hongsh119@gmail.com"
 
+# 검색엔진 소유 확인용 메타 태그 (필요한 값만 채우면 모든 페이지 <head>에 자동 삽입됩니다).
+# - Google Search Console: "설정 > 소유권 확인 > HTML 태그" 방식에서 나오는 content 값만 넣으면 됨
+#   (도메인 전체를 한 번에 확인하려면 Cloudflare DNS에 TXT 레코드를 추가하는 방법도 가능 — 그 경우 이 값은 비워둬도 됨)
+# - Bing Webmaster Tools: Search Console에서 가져오기(Import) 하면 별도 설정 불필요
+# - Naver 서치어드바이저: 이미 navere88de02083cfff01e4c5a3cf913b0e9c.html 파일로 소유 확인 완료 (별도 설정 불필요)
+SEARCH_ENGINE_VERIFICATION = {
+    "google": "",  # 예: "abcDEF123..."
+    "bing": "",    # 예: "ABCDEF1234567890..."
+}
+
 ICON_DATA_URI = (
     'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>'
     '<rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/>'
@@ -63,13 +73,16 @@ def urls_for(lang):
         "updates": p + "/updates.html",
         "tool": p + "/tools/json-formatter.html",
         "tool_xml": p + "/tools/xml-formatter.html",
+        "tool_converter": p + "/tools/json-xml-converter.html",
+        "tool_sql": p + "/tools/sql-formatter.html",
         "notfound": p + "/404.html",
     }
 
 
 # 헤더 내비게이션에 노출할 도구 목록. 새 도구를 추가할 때 이 리스트에 (urls_for 키, NAV 라벨 키)만
 # 추가하면 헤더/푸터/언어 스위처가 모두 자동으로 반영된다.
-TOOL_NAV_ITEMS = [("tool", "tool"), ("tool_xml", "tool_xml")]
+TOOL_NAV_ITEMS = [("tool", "tool"), ("tool_xml", "tool_xml"), ("tool_converter", "tool_converter"),
+                   ("tool_sql", "tool_sql")]
 
 # 푸터에 노출할 일반 페이지(도구가 아닌 페이지) 목록. 새 페이지를 추가할 때 이 리스트에
 # (urls_for 키, NAV 라벨 키)만 추가하면 푸터/사이트맵이 자동으로 반영된다.
@@ -77,22 +90,26 @@ FOOTER_NAV_ITEMS = [("about", "about"), ("faq", "faq"), ("updates", "updates"), 
                      ("terms", "terms"), ("privacy", "privacy")]
 
 NAV = {
-    "en": {"home": "Home", "tool": "JSON Formatter", "tool_xml": "XML Formatter", "about": "About",
+    "en": {"home": "Home", "tool": "JSON Formatter", "tool_xml": "XML Formatter",
+           "tool_converter": "JSON ↔ XML Converter", "tool_sql": "SQL Formatter", "about": "About",
            "privacy": "Privacy Policy", "faq": "FAQ", "contact": "Contact", "related_h2": "Related",
            "cookie_settings": "Cookie preferences", "terms": "Terms of Service", "updates": "What's New",
            "menu": "Open menu", "dark": "Switch to dark mode", "light": "Switch to light mode",
            "lang": "Select language", "skip": "Skip to content"},
-    "ko": {"home": "홈", "tool": "JSON 포매터", "tool_xml": "XML 포매터", "about": "사이트 소개",
+    "ko": {"home": "홈", "tool": "JSON 포매터", "tool_xml": "XML 포매터",
+           "tool_converter": "JSON ↔ XML 변환기", "tool_sql": "SQL 포매터", "about": "사이트 소개",
            "privacy": "개인정보처리방침", "faq": "자주 묻는 질문", "contact": "문의하기", "related_h2": "관련 링크",
            "cookie_settings": "쿠키 설정", "terms": "이용약관", "updates": "업데이트 소식",
            "menu": "메뉴 열기", "dark": "다크 모드로 전환", "light": "라이트 모드로 전환",
            "lang": "언어 선택", "skip": "본문으로 건너뛰기"},
-    "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "tool_xml": "XMLフォーマッター", "about": "サイト紹介",
+    "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "tool_xml": "XMLフォーマッター",
+           "tool_converter": "JSON ↔ XML 変換ツール", "tool_sql": "SQLフォーマッター", "about": "サイト紹介",
            "privacy": "プライバシーポリシー", "faq": "よくある質問", "contact": "お問い合わせ", "related_h2": "関連リンク",
            "cookie_settings": "Cookie設定", "terms": "利用規約", "updates": "更新情報",
            "menu": "メニューを開く", "dark": "ダークモードに切り替え", "light": "ライトモードに切り替え",
            "lang": "言語選択", "skip": "本文へスキップ"},
-    "zh": {"home": "首页", "tool": "JSON 格式化", "tool_xml": "XML 格式化", "about": "关于本站",
+    "zh": {"home": "首页", "tool": "JSON 格式化", "tool_xml": "XML 格式化",
+           "tool_converter": "JSON ↔ XML 转换工具", "tool_sql": "SQL 格式化", "about": "关于本站",
            "privacy": "隐私政策", "faq": "常见问题", "contact": "联系我们", "related_h2": "相关链接",
            "cookie_settings": "Cookie 设置", "terms": "使用条款", "updates": "更新日志",
            "menu": "打开菜单", "dark": "切换到深色模式", "light": "切换到浅色模式",
@@ -122,9 +139,12 @@ CONTENT["index"] = {
         card2_title="XML Formatter / Viewer",
         card2_desc="Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and tag/attribute/text search.",
         card2_tag="XML · Formatter · Validator",
-        card3_title="More tools coming soon",
-        card3_desc="Text/encoding conversion, case conversion, and more tools will be added over time.",
-        card3_tag="Coming soon",
+        card3_title="JSON ↔ XML Converter",
+        card3_desc="Converts JSON to XML or XML to JSON, with automatic format detection. Includes line/column error hints and configurable indentation.",
+        card3_tag="JSON · XML · Converter",
+        card4_title="SQL Formatter / Beautifier",
+        card4_desc="Beautifies SQL queries with proper indentation and keyword casing. Supports multiple dialects including MySQL, PostgreSQL, SQL Server, and BigQuery.",
+        card4_tag="SQL · Formatter · Beautifier",
         why_h2="Why Formix?",
         why_items=[
             ("No install or sign-up", "Just open the link and start using it right away."),
@@ -150,9 +170,12 @@ CONTENT["index"] = {
         card2_title="XML 포매터 / 뷰어",
         card2_desc="입력한 문자열이 올바른 XML인지 검사하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 태그·속성·텍스트 검색 기능을 제공합니다.",
         card2_tag="XML · Formatter · Validator",
-        card3_title="다음 도구 준비 중",
-        card3_desc="텍스트/인코딩 변환, 대소문자 변환 등 새로운 도구를 순차적으로 추가할 예정입니다.",
-        card3_tag="Coming soon",
+        card3_title="JSON ↔ XML 변환기",
+        card3_desc="JSON을 XML로, XML을 JSON으로 변환합니다. 형식을 자동으로 감지하며, 오류 줄/열 안내와 들여쓰기 설정을 지원합니다.",
+        card3_tag="JSON · XML · Converter",
+        card4_title="SQL 포매터 / 정렬기",
+        card4_desc="SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.",
+        card4_tag="SQL · Formatter · Beautifier",
         why_h2="왜 Formix인가요?",
         why_items=[
             ("설치·가입 불필요", "링크만 열면 바로 사용할 수 있습니다."),
@@ -178,9 +201,12 @@ CONTENT["index"] = {
         card2_title="XMLフォーマッター / ビューア",
         card2_desc="入力した文字列が正しいXMLかどうかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。ツリーの折りたたみ/展開とタグ・属性・テキストの検索機能を提供します。",
         card2_tag="XML · Formatter · Validator",
-        card3_title="次のツールを準備中",
-        card3_desc="テキスト/エンコード変換、大文字小文字変換など、新しいツールを順次追加していく予定です。",
-        card3_tag="Coming soon",
+        card3_title="JSON ↔ XML 変換ツール",
+        card3_desc="JSONをXMLに、XMLをJSONに変換します。形式を自動検出し、エラーの行/列表示とインデント設定に対応しています。",
+        card3_tag="JSON · XML · Converter",
+        card4_title="SQLフォーマッター / 整形ツール",
+        card4_desc="SQLクエリを見やすくインデント・整形します。MySQL、PostgreSQL、SQL Server、BigQueryなど複数の方言に対応しています。",
+        card4_tag="SQL · Formatter · Beautifier",
         why_h2="なぜFormixなのか?",
         why_items=[
             ("インストール・登録不要", "リンクを開くだけですぐに利用できます。"),
@@ -206,9 +232,12 @@ CONTENT["index"] = {
         card2_title="XML 格式化 / 查看器",
         card2_desc="检查输入的字符串是否为有效的 XML，并以带缩进和语法高亮的树形结构清晰展示。支持节点折叠/展开以及标签·属性·文本搜索功能。",
         card2_tag="XML · Formatter · Validator",
-        card3_title="更多工具即将上线",
-        card3_desc="文本/编码转换、大小写转换等新工具将陆续添加。",
-        card3_tag="Coming soon",
+        card3_title="JSON ↔ XML 转换工具",
+        card3_desc="将 JSON 转换为 XML，或将 XML 转换为 JSON，支持自动检测格式、错误行/列提示以及自定义缩进。",
+        card3_tag="JSON · XML · Converter",
+        card4_title="SQL 格式化 / 美化工具",
+        card4_desc="为 SQL 查询语句添加清晰的缩进和关键字大小写格式化。支持 MySQL、PostgreSQL、SQL Server、BigQuery 等多种方言。",
+        card4_tag="SQL · Formatter · Beautifier",
         why_h2="为什么选择Formix?",
         why_items=[
             ("无需安装、无需注册", "打开链接即可立即使用。"),
@@ -238,7 +267,9 @@ CONTENT["about"] = {
         s3_h2="Available features",
         s3_item='<a href="{tool}">JSON Formatter / Viewer</a> — Validates JSON strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching keys and values.',
         s3_item2='<a href="{tool_xml}">XML Formatter / Viewer</a> — Validates XML strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching tags, attributes, and text.',
-        s3_p="Suggestions for new features or improvements are always welcome.",
+        s3_item3='<a href="{tool_converter}">JSON ↔ XML Converter</a> — Converts JSON to XML or XML to JSON, with automatic format detection and configurable indentation.',
+        s3_item4='<a href="{tool_sql}">SQL Formatter</a> — Beautifies SQL queries with proper indentation and keyword casing, supporting multiple dialects (MySQL, PostgreSQL, SQL Server, BigQuery, and more).',
+        s3_p='Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), bundled locally so formatting still runs entirely in your browser.',
         s4_h2="About advertising and running this service",
         s4_p='Formix may introduce advertising services such as Google AdSense in the future to help support running the site. If we do, how related data is handled will be explained transparently on the <a href="{privacy}">Privacy Policy</a> page, and the core functionality of our tools (e.g. JSON processing) will remain free regardless of whether ads are shown.',
         s5_h2="Contact",
@@ -262,7 +293,9 @@ CONTENT["about"] = {
         s3_h2="제공 중인 기능",
         s3_item='<a href="{tool}">JSON 포매터 / 뷰어</a> — JSON 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 키·값 검색을 지원합니다.',
         s3_item2='<a href="{tool_xml}">XML 포매터 / 뷰어</a> — XML 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 태그·속성·텍스트 검색을 지원합니다.',
-        s3_p="새로운 기능 제안이나 개선 의견은 언제든 환영합니다.",
+        s3_item3='<a href="{tool_converter}">JSON ↔ XML 변환기</a> — JSON을 XML로, XML을 JSON으로 변환합니다. 형식 자동 감지와 들여쓰기 설정을 지원합니다.',
+        s3_item4='<a href="{tool_sql}">SQL 포매터</a> — SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.',
+        s3_p='새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를 사용하며, 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다.',
         s4_h2="광고 및 서비스 운영에 대해",
         s4_p='Formix는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="{privacy}">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.',
         s5_h2="문의", s5_p="버그 제보, 기능 제안, 기타 문의는 아래 이메일로 연락해 주세요.",
@@ -285,7 +318,9 @@ CONTENT["about"] = {
         s3_h2="提供中の機能",
         s3_item='<a href="{tool}">JSONフォーマッター / ビューア</a> — JSON文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、キー・値の検索に対応しています。',
         s3_item2='<a href="{tool_xml}">XMLフォーマッター / ビューア</a> — XML文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、タグ・属性・テキストの検索に対応しています。',
-        s3_p="新機能のご提案や改善のご意見はいつでも歓迎します。",
+        s3_item3='<a href="{tool_converter}">JSON ↔ XML 変換ツール</a> — JSONをXMLに、XMLをJSONに変換します。形式の自動検出とインデント設定に対応しています。',
+        s3_item4='<a href="{tool_sql}">SQLフォーマッター</a> — SQLクエリを見やすくインデント・整形します。MySQL、PostgreSQL、SQL Server、BigQueryなど複数の方言に対応しています。',
+        s3_p='新機能のご提案や改善のご意見はいつでも歓迎します。SQLフォーマッターはオープンソースの<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>ライブラリ(MITライセンス)を使用しており、ローカルにバンドル(vendor)しているため処理はすべてブラウザ内で完結します。',
         s4_h2="広告およびサービス運営について",
         s4_p='Formixはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="{privacy}">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。',
         s5_h2="お問い合わせ", s5_p="不具合報告、機能提案、その他のお問い合わせは下記メールアドレスまでご連絡ください。",
@@ -308,7 +343,9 @@ CONTENT["about"] = {
         s3_h2="已提供的功能",
         s3_item='<a href="{tool}">JSON 格式化 / 查看器</a> — 验证 JSON 字符串的有效性，并以带缩进和语法高亮的树形结构展示。支持节点折叠/展开以及键值搜索。',
         s3_item2='<a href="{tool_xml}">XML 格式化 / 查看器</a> — 验证 XML 字符串的有效性，并以带缩进和语法高亮的树形结构展示。支持节点折叠/展开以及标签·属性·文本搜索。',
-        s3_p="欢迎随时提出新功能建议或改进意见。",
+        s3_item3='<a href="{tool_converter}">JSON ↔ XML 转换工具</a> — 将 JSON 转换为 XML，或将 XML 转换为 JSON，支持自动检测格式与自定义缩进。',
+        s3_item4='<a href="{tool_sql}">SQL 格式化工具</a> — 为 SQL 查询语句添加清晰的缩进和关键字大小写格式化，支持 MySQL、PostgreSQL、SQL Server、BigQuery 等多种方言。',
+        s3_p='欢迎随时提出新功能建议或改进意见。SQL 格式化工具使用了开源的 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 库(MIT 许可)，该库已本地打包(vendor)，因此所有处理仍完全在您的浏览器中进行。',
         s4_h2="关于广告与服务运营",
         s4_p='为了维持服务运营，Formix未来可能会引入 Google AdSense 等广告服务。如果引入广告，相关数据的处理方式将在<a href="{privacy}">隐私政策</a>页面中透明说明，工具的核心功能(如 JSON 处理)将始终免费提供，不受广告影响。',
         s5_h2="联系方式", s5_p="如有错误反馈、功能建议或其他咨询，请通过以下邮箱联系我们。",
@@ -441,7 +478,7 @@ CONTENT["faq"] = {
             ("Which browsers are supported?", "Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse."),
             ("Can I use these tools on my phone?", "Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents."),
             ("What happens if my JSON or XML is invalid?", "The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes."),
-            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
+            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>, a <a href="{tool_converter}">JSON ↔ XML Converter</a>, and a <a href="{tool_sql}">SQL Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
             ("How do I report a bug or suggest a feature?", 'Please reach out through our <a href="{contact}">Contact page</a>. We read every message.'),
         ],
     ),
@@ -459,7 +496,7 @@ CONTENT["faq"] = {
             ("어떤 브라우저를 지원하나요?", "PC와 모바일의 최신 브라우저(Chrome, Edge, Firefox, Safari)에서 모두 사용할 수 있습니다. DOMParser, JSON.parse 등 널리 지원되는 표준 자바스크립트 API를 사용합니다."),
             ("모바일에서도 사용할 수 있나요?", "네, 모바일 브라우저에서도 반응형으로 정상 동작합니다. 다만 긴 JSON·XML 문서를 다룰 때는 화면이 큰 기기가 더 편리합니다."),
             ("JSON이나 XML이 유효하지 않으면 어떻게 되나요?", "상태 배지와 함께 문제가 발생한 대략적인 줄/열 위치를 알려줘 빠르게 확인하고 수정할 수 있습니다. JSON 포매터는 따옴표 누락 같은 흔한 실수를 자동으로 보정하기도 합니다."),
-            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
+            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>, <a href="{tool_converter}">JSON ↔ XML 변환기</a>, <a href="{tool_sql}">SQL 포매터</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
             ("버그 제보나 기능 제안은 어떻게 하나요?", '<a href="{contact}">문의하기</a> 페이지를 통해 연락해주세요. 보내주시는 의견은 모두 확인하고 있습니다.'),
         ],
     ),
@@ -477,7 +514,7 @@ CONTENT["faq"] = {
             ("対応ブラウザは?", "パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。"),
             ("スマートフォンでも使えますか?", "はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。"),
             ("JSONやXMLが無効な場合はどうなりますか?", "ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。"),
-            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
+            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>、<a href="{tool_converter}">JSON ↔ XML 変換ツール</a>、<a href="{tool_sql}">SQLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
             ("不具合報告や機能提案はどうすればいいですか?", '<a href="{contact}">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。'),
         ],
     ),
@@ -495,7 +532,7 @@ CONTENT["faq"] = {
             ("支持哪些浏览器?", "电脑和手机上的主流最新浏览器(Chrome、Edge、Firefox、Safari)均可正常使用。工具使用的是 DOMParser、JSON.parse 等广泛支持的标准 JavaScript API。"),
             ("可以在手机上使用吗?", "可以，本站在移动浏览器上也能自适应正常显示。不过在处理较长的 JSON/XML 文档时，使用大屏幕设备会更方便。"),
             ("如果我的 JSON 或 XML 无效会怎样?", "工具会显示状态标记，并告知大致的错误行/列位置，方便您快速定位并修正问题。JSON 格式化工具还能自动修正部分常见错误，例如缺失的引号。"),
-            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
+            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>、<a href="{tool_converter}">JSON ↔ XML 转换工具</a>和 <a href="{tool_sql}">SQL 格式化工具</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
             ("如何反馈错误或提出功能建议?", '请通过<a href="{contact}">联系我们</a>页面与我们联系，我们会查看每一条反馈。'),
         ],
     ),
@@ -1127,6 +1164,376 @@ CONTENT["tool_xml"] = {
     ),
 }
 
+CONTENT["tool_converter"] = {
+    "en": dict(
+        title="JSON to XML / XML to JSON Converter - Free Online Tool | Formix",
+        description="Convert JSON to XML or XML to JSON instantly in your browser. Paste either format and Formix detects it automatically, or pick a direction manually. Your data is never sent to a server.",
+        keywords="json to xml, xml to json, json xml converter, convert json to xml online, convert xml to json online, json xml converter free",
+        og_title="JSON to XML / XML to JSON Converter | Formix",
+        og_description="A free online converter between JSON and XML, with automatic format detection. Runs entirely in your browser.",
+        jsonld_name="JSON to XML / XML to JSON Converter",
+        jsonld_description="A free online tool that converts JSON to XML and XML to JSON, with automatic format detection and configurable indentation.",
+        h1="JSON ↔ XML Converter",
+        lead="Paste JSON or XML on the left and get the other format on the right. Formix detects which one you pasted automatically — or you can pick a direction yourself. Nothing is sent to a server.",
+        btn_format="Convert", btn_sample="Load sample", btn_clear="Clear",
+        indent_label="Indent size", indent2="2-space indent", indent4="4-space indent", indenttab="Tab indent",
+        btn_copy="Copy", btn_copy_minify="Copy minified", btn_download="Download result",
+        tabs_aria="Switch between input and output", tab_input="Input", tab_output="Output",
+        status_idle="Paste some JSON or XML",
+        input_search_mode_label="Search mode", opt_contains="Contains", opt_exact_line="Exact (line)", opt_regex="Regex",
+        input_search_placeholder="Search the input text…", prev_title="Previous match", next_title="Next match", clear_title="Clear search",
+        input_placeholder="Paste JSON or XML here — Formix detects the format automatically.",
+        output_label="Output", expand_all="▾ Expand all", collapse_all="▸ Collapse all",
+        opt_exact="Exact", output_search_placeholder="Search the output text…",
+        direction_label="Conversion direction", dir_auto="Auto-detect", dir_json2xml="JSON → XML", dir_xml2json="XML → JSON",
+        hint="Tip. In "
+             '"Auto-detect" mode, Formix looks at the first character you pasted (“{”/“[” for JSON, “<” for XML) '
+             "to pick a direction automatically; if the format is ambiguous, choose a direction manually from the dropdown. "
+             "Because JSON and XML don't model data identically, the conversion follows a fixed, documented convention: a JSON array's "
+             "repeated values become repeated XML elements with the same tag name, and XML attributes round-trip through a "
+             '“@attributes” object in the JSON. This means a JSON → XML → JSON round trip won’t always reproduce the exact original '
+             "shape (for example, top-level arrays get wrapped in a <root><item> element), which is expected for any generic converter.",
+        usage_h2="How to use this tool",
+        usage_items=[
+            "Paste JSON or XML into the input box on the left — the format is detected automatically and the result appears on the right.",
+            'If auto-detection picks the wrong format, open the "Conversion direction" dropdown and choose JSON → XML or XML → JSON manually.',
+            "If the input isn't valid JSON or XML, you'll get an approximate line/column for where the problem is.",
+            'Use the indent-size dropdown to control how the converted output is pretty-printed, then "Copy" or "Download result" to grab it.',
+            '"Copy minified" copies the converted output with all unnecessary whitespace removed — handy for pasting into config files or API requests.',
+            "Everything happens in your browser — the data you paste is never sent to a server.",
+        ],
+        tips_h2="Related tips",
+        tips_items=[
+            "JSON object keys become XML element names — keys with spaces or symbols that aren't valid XML tag names are sanitized automatically.",
+            "A JSON array like [\"a\", \"b\"] converts to two sibling elements with the same tag name (not a single element containing a list), since XML has no native array type.",
+            "When converting XML that has attributes (e.g. <book id=\"1\">), they appear under an \"@attributes\" key in the resulting JSON so no information is lost.",
+            "Need to also validate or pretty-print your JSON or XML on its own? Try the dedicated JSON Formatter or XML Formatter tools linked below.",
+        ],
+    ),
+    "ko": dict(
+        title="JSON to XML / XML to JSON 변환기 - 무료 온라인 도구 | Formix",
+        description="브라우저에서 바로 JSON을 XML로, XML을 JSON으로 변환하세요. 어떤 형식을 붙여넣든 Formix가 자동으로 감지하며, 방향을 직접 선택할 수도 있습니다. 데이터는 서버로 전송되지 않습니다.",
+        keywords="json to xml, xml to json, json xml 변환, json xml 변환기, json을 xml로 변환, xml을 json으로 변환, 온라인 json xml 변환기",
+        og_title="JSON to XML / XML to JSON 변환기 | Formix",
+        og_description="자동 형식 감지를 지원하는 무료 온라인 JSON ↔ XML 변환기. 모든 처리는 브라우저 안에서 이뤄집니다.",
+        jsonld_name="JSON to XML / XML to JSON 변환기",
+        jsonld_description="JSON을 XML로, XML을 JSON으로 변환해주는 무료 온라인 도구. 자동 형식 감지와 들여쓰기 설정을 지원합니다.",
+        h1="JSON ↔ XML 변환기",
+        lead="왼쪽에 JSON 또는 XML을 붙여넣으면 오른쪽에 반대 형식으로 변환된 결과가 표시됩니다. 어떤 형식을 붙여넣었는지는 Formix가 자동으로 감지하며, 방향을 직접 선택할 수도 있습니다. 데이터는 서버로 전송되지 않습니다.",
+        btn_format="변환", btn_sample="예시 불러오기", btn_clear="지우기",
+        indent_label="들여쓰기 크기", indent2="들여쓰기 2칸", indent4="들여쓰기 4칸", indenttab="들여쓰기 Tab",
+        btn_copy="복사", btn_copy_minify="압축 복사", btn_download="결과 다운로드",
+        tabs_aria="입력/결과 전환", tab_input="입력", tab_output="결과",
+        status_idle="JSON 또는 XML을 붙여넣어주세요",
+        input_search_mode_label="검색 방식", opt_contains="포함", opt_exact_line="일치(줄)", opt_regex="정규식",
+        input_search_placeholder="입력한 텍스트에서 검색…", prev_title="이전 일치 항목", next_title="다음 일치 항목", clear_title="검색어 지우기",
+        input_placeholder="여기에 JSON 또는 XML을 붙여넣으세요. 형식은 자동으로 감지됩니다.",
+        output_label="결과", expand_all="▾ 모두 펼치기", collapse_all="▸ 모두 접기",
+        opt_exact="일치", output_search_placeholder="결과 텍스트에서 검색…",
+        direction_label="변환 방향", dir_auto="자동 감지", dir_json2xml="JSON → XML", dir_xml2json="XML → JSON",
+        hint='Tip. "자동 감지" 모드에서는 붙여넣은 텍스트의 첫 글자({ 또는 [ 는 JSON, < 는 XML)로 방향을 자동으로 판단합니다. '
+             "형식이 애매하면 드롭다운에서 방향을 직접 선택해주세요. JSON과 XML은 데이터를 표현하는 방식이 근본적으로 다르기 때문에, "
+             "변환은 정해진 규칙을 따릅니다: JSON 배열의 반복되는 값은 같은 태그명을 가진 XML 엘리먼트 여러 개로 변환되고, "
+             'XML 속성(attribute)은 JSON에서 "@attributes" 객체로 보존됩니다. 이 때문에 JSON → XML → JSON으로 왕복 변환하면 '
+             "원래 모양이 완전히 똑같이 복원되지 않을 수 있습니다(예: 최상위 배열은 <root><item> 구조로 감싸짐). "
+             "이는 범용 변환기라면 자연스럽게 발생하는 특성입니다.",
+        usage_h2="이 도구는 이렇게 사용하세요",
+        usage_items=[
+            "왼쪽 입력창에 JSON 또는 XML을 붙여넣으면 형식이 자동으로 감지되어 오른쪽에 변환 결과가 표시됩니다.",
+            '자동 감지가 원하는 형식과 다르게 판단했다면 "변환 방향" 드롭다운에서 JSON → XML 또는 XML → JSON을 직접 선택하세요.',
+            "입력이 유효한 JSON/XML이 아니면 오류가 발생한 대략적인 줄/열 위치를 알려줍니다.",
+            '들여쓰기 크기 드롭다운으로 변환 결과의 정렬 방식을 조절한 뒤, "복사" 또는 "결과 다운로드"로 가져갈 수 있습니다.',
+            '"압축 복사"는 불필요한 공백을 모두 제거한 변환 결과를 복사합니다. 설정 파일이나 API 요청에 붙여넣을 때 유용합니다.',
+            "모든 처리는 브라우저 안에서만 이뤄지며, 입력한 데이터는 서버로 전송되지 않습니다.",
+        ],
+        tips_h2="관련 팁",
+        tips_items=[
+            "JSON 객체의 키는 XML 엘리먼트 이름이 됩니다. 공백이나 기호가 포함되어 XML 태그명으로 쓸 수 없는 키는 자동으로 정리(sanitize)됩니다.",
+            'XML에는 배열 타입이 없기 때문에, [\"a\", \"b\"] 같은 JSON 배열은 하나의 엘리먼트가 아니라 같은 태그명을 가진 형제 엘리먼트 두 개로 변환됩니다.',
+            '속성이 있는 XML(예: <book id="1">)을 변환하면, 정보 손실 없이 결과 JSON의 "@attributes" 키 아래에 담깁니다.',
+            "JSON이나 XML 자체의 유효성 검사·정렬만 필요하다면, 아래 관련 링크의 JSON 포매터 또는 XML 포매터를 사용해보세요.",
+        ],
+    ),
+    "ja": dict(
+        title="JSON to XML / XML to JSON 変換ツール - 無料オンラインツール | Formix",
+        description="ブラウザ上でJSONをXMLに、XMLをJSONに即座に変換できます。どちらの形式を貼り付けてもFormixが自動判定し、方向を手動で選ぶことも可能です。データはサーバーに送信されません。",
+        keywords="json to xml, xml to json, json xml 変換, json xml 変換ツール, json xmlに変換, xml jsonに変換, オンライン json xml 変換",
+        og_title="JSON to XML / XML to JSON 変換ツール | Formix",
+        og_description="自動フォーマット判定に対応した無料オンラインJSON ↔ XML変換ツール。すべての処理はブラウザ内で行われます。",
+        jsonld_name="JSON to XML / XML to JSON 変換ツール",
+        jsonld_description="JSONをXMLに、XMLをJSONに変換する無料オンラインツール。自動フォーマット判定とインデント設定に対応しています。",
+        h1="JSON ↔ XML 変換ツール",
+        lead="左側にJSONまたはXMLを貼り付けると、右側に反対の形式に変換された結果が表示されます。どちらの形式かはFormixが自動判定し、方向を手動で選ぶこともできます。データはサーバーに送信されません。",
+        btn_format="変換", btn_sample="サンプルを読み込む", btn_clear="クリア",
+        indent_label="インデントサイズ", indent2="インデント2桁", indent4="インデント4桁", indenttab="インデントTab",
+        btn_copy="コピー", btn_copy_minify="圧縮コピー", btn_download="結果をダウンロード",
+        tabs_aria="入力/出力の切り替え", tab_input="入力", tab_output="出力",
+        status_idle="JSONまたはXMLを貼り付けてください",
+        input_search_mode_label="検索方式", opt_contains="部分一致", opt_exact_line="完全一致(行)", opt_regex="正規表現",
+        input_search_placeholder="入力テキストを検索…", prev_title="前の一致項目", next_title="次の一致項目", clear_title="検索語をクリア",
+        input_placeholder="ここにJSONまたはXMLを貼り付けてください。形式は自動的に判定されます。",
+        output_label="出力", expand_all="▾ すべて展開", collapse_all="▸ すべて折りたたむ",
+        opt_exact="完全一致", output_search_placeholder="出力テキストを検索…",
+        direction_label="変換方向", dir_auto="自動判定", dir_json2xml="JSON → XML", dir_xml2json="XML → JSON",
+        hint='Tip. 「自動判定」モードでは、貼り付けたテキストの最初の文字({または[はJSON、<はXML)から方向を自動的に判定します。'
+             "判定が曖昧な場合はドロップダウンから方向を手動で選択してください。JSONとXMLはデータの表現方法が根本的に異なるため、"
+             "変換は決まった規則に従います: JSON配列の繰り返し値は、同じタグ名を持つ複数のXML要素に変換され、"
+             "XML属性(attribute)はJSON側で「@attributes」オブジェクトとして保持されます。このため、JSON → XML → JSONと往復変換しても、"
+             "元の形が完全に同じ状態には戻らない場合があります(例: 最上位の配列は<root><item>構造でラップされます)。"
+             "これは汎用的な変換ツールであれば自然に生じる特性です。",
+        usage_h2="この機能の使い方",
+        usage_items=[
+            "左側の入力欄にJSONまたはXMLを貼り付けると、形式が自動的に判定され右側に変換結果が表示されます。",
+            "自動判定が意図と異なる場合は「変換方向」ドロップダウンからJSON → XMLまたはXML → JSONを手動で選択してください。",
+            "入力が有効なJSON/XMLでない場合、エラーが発生したおおよその行・列位置をお知らせします。",
+            "インデントサイズのドロップダウンで変換結果の整形方法を調整し、「コピー」または「結果をダウンロード」で取得できます。",
+            "「圧縮コピー」は不要な空白をすべて取り除いた変換結果をコピーします。設定ファイルやAPIリクエストへの貼り付けに便利です。",
+            "すべての処理はブラウザ内でのみ行われ、入力したデータがサーバーに送信されることはありません。",
+        ],
+        tips_h2="関連のヒント",
+        tips_items=[
+            "JSONオブジェクトのキーはXML要素名になります。空白や記号を含みXMLタグ名として使えないキーは自動的に整形(sanitize)されます。",
+            "XMLには配列型がないため、[\"a\", \"b\"]のようなJSON配列は1つの要素ではなく、同じタグ名を持つ兄弟要素2つに変換されます。",
+            "属性を持つXML(例: <book id=\"1\">)を変換すると、情報を失わずに結果のJSONの「@attributes」キー以下に格納されます。",
+            "JSONやXML自体の検証・整形だけが必要な場合は、下の関連リンクからJSONフォーマッターまたはXMLフォーマッターをお試しください。",
+        ],
+    ),
+    "zh": dict(
+        title="JSON to XML / XML to JSON 转换工具 - 免费在线工具 | Formix",
+        description="在浏览器中即时将 JSON 转换为 XML，或将 XML 转换为 JSON。无论粘贴哪种格式，Formix 都会自动识别，也可以手动选择转换方向。数据不会发送到服务器。",
+        keywords="json to xml, xml to json, json xml 转换, json xml 转换工具, json转xml, xml转json, 在线 json xml 转换",
+        og_title="JSON to XML / XML to JSON 转换工具 | Formix",
+        og_description="支持自动格式识别的免费在线 JSON ↔ XML 转换工具，所有处理都在浏览器内完成。",
+        jsonld_name="JSON to XML / XML to JSON 转换工具",
+        jsonld_description="将 JSON 转换为 XML、将 XML 转换为 JSON 的免费在线工具，支持自动格式识别和缩进设置。",
+        h1="JSON ↔ XML 转换工具",
+        lead="在左侧粘贴 JSON 或 XML，右侧会显示转换为另一种格式的结果。Formix 会自动识别粘贴的格式，你也可以手动选择转换方向。数据不会发送到服务器。",
+        btn_format="转换", btn_sample="加载示例", btn_clear="清空",
+        indent_label="缩进大小", indent2="2 个空格缩进", indent4="4 个空格缩进", indenttab="Tab 缩进",
+        btn_copy="复制", btn_copy_minify="复制压缩结果", btn_download="下载结果",
+        tabs_aria="切换输入/输出", tab_input="输入", tab_output="输出",
+        status_idle="请粘贴 JSON 或 XML",
+        input_search_mode_label="搜索方式", opt_contains="包含", opt_exact_line="精确匹配(行)", opt_regex="正则表达式",
+        input_search_placeholder="在输入文本中搜索…", prev_title="上一个匹配项", next_title="下一个匹配项", clear_title="清除搜索",
+        input_placeholder="在此粘贴 JSON 或 XML，格式将被自动识别。",
+        output_label="输出", expand_all="▾ 全部展开", collapse_all="▸ 全部折叠",
+        opt_exact="精确匹配", output_search_placeholder="在输出文本中搜索…",
+        direction_label="转换方向", dir_auto="自动识别", dir_json2xml="JSON → XML", dir_xml2json="XML → JSON",
+        hint='提示：在"自动识别"模式下，Formix 会根据粘贴文本的第一个字符({或[表示JSON，<表示XML)自动判断转换方向；'
+             "如果格式不明确，可以在下拉菜单中手动选择方向。由于 JSON 和 XML 表达数据的方式本质上不同，"
+             "转换遵循固定规则：JSON 数组中重复的值会转换为多个同名的 XML 元素，"
+             'XML 属性(attribute)会保留在结果 JSON 的 "@attributes" 对象中。因此，经过 JSON → XML → JSON 的往返转换后，'
+             "原始结构可能无法完全还原(例如，顶层数组会被包裹在 <root><item> 结构中)。这是任何通用转换工具都会有的正常特性。",
+        usage_h2="使用方法",
+        usage_items=[
+            "在左侧输入框粘贴 JSON 或 XML，格式会被自动识别，转换结果会显示在右侧。",
+            '如果自动识别的格式不符合预期，可以在"转换方向"下拉菜单中手动选择 JSON → XML 或 XML → JSON。',
+            "如果输入不是有效的 JSON/XML，会提示大致的出错行/列位置。",
+            '使用缩进大小下拉菜单调整转换结果的排版方式，然后通过"复制"或"下载结果"获取。',
+            '"复制压缩结果"会复制去除所有不必要空白的转换结果，适合粘贴到配置文件或 API 请求中。',
+            "所有处理均在浏览器内完成，输入的数据不会发送到服务器。",
+        ],
+        tips_h2="相关提示",
+        tips_items=[
+            "JSON 对象的键会成为 XML 元素名称；包含空格或符号、无法作为 XML 标签名的键会被自动清理(sanitize)。",
+            '由于 XML 没有原生的数组类型，像 ["a", "b"] 这样的 JSON 数组会转换为两个同名的兄弟元素，而不是一个包含列表的元素。',
+            '转换带有属性的 XML(例如 <book id="1">)时，属性会被保留在结果 JSON 的 "@attributes" 键下，不会丢失信息。',
+            "如果只需要单独校验或格式化 JSON 或 XML，请尝试下方相关链接中的 JSON 格式化工具或 XML 格式化工具。",
+        ],
+    ),
+}
+
+CONTENT["tool_sql"] = {
+    "en": dict(
+        title="SQL Formatter / Beautifier - Free Online Tool | Formix",
+        description="Beautify and indent SQL queries online, free. Supports MySQL, PostgreSQL, SQL Server, Oracle PL/SQL, BigQuery, Snowflake, and more. Runs entirely in your browser — nothing is sent to a server.",
+        keywords="sql formatter, sql beautifier, format sql online, sql pretty print, mysql formatter, postgresql formatter, online sql formatter free",
+        og_title="SQL Formatter / Beautifier | Formix",
+        og_description="A free online SQL formatter that beautifies queries with proper indentation, supporting multiple SQL dialects. Runs entirely in your browser.",
+        jsonld_name="SQL Formatter / Beautifier",
+        jsonld_description="A free online tool that beautifies SQL queries with indentation and keyword casing, supporting multiple SQL dialects.",
+        h1="SQL Formatter",
+        lead="Paste a SQL query on the left and get a neatly indented, readable version on the right. Choose the SQL dialect that matches your database for the most accurate result. Nothing is sent to a server.",
+        btn_format="Format", btn_sample="Load sample", btn_clear="Clear",
+        indent_label="Indent size", indent2="2-space indent", indent4="4-space indent", indenttab="Tab indent",
+        btn_copy="Copy", btn_copy_minify="Copy minified", btn_download="Download result",
+        tabs_aria="Switch between input and output", tab_input="Input", tab_output="Output",
+        status_idle="Paste a SQL query",
+        input_search_mode_label="Search mode", opt_contains="Contains", opt_exact_line="Exact (line)", opt_regex="Regex",
+        input_search_placeholder="Search the input text…", prev_title="Previous match", next_title="Next match", clear_title="Clear search",
+        input_placeholder="Paste a SQL query here, e.g. SELECT * FROM users WHERE id = 1",
+        output_label="Output", expand_all="▾ Expand all", collapse_all="▸ Collapse all",
+        opt_exact="Exact", output_search_placeholder="Search the output text…",
+        dialect_label="SQL dialect",
+        dialect_standard="Standard SQL", dialect_mysql="MySQL / MariaDB", dialect_postgresql="PostgreSQL",
+        dialect_tsql="SQL Server (T-SQL)", dialect_plsql="Oracle PL/SQL", dialect_bigquery="Google BigQuery",
+        dialect_snowflake="Snowflake", dialect_sqlite="SQLite",
+        hint="Tip. This tool beautifies (reformats) SQL — it does not validate whether the query is semantically correct or would run "
+             "successfully against a real database. Pick the dialect closest to the database you use for the best formatting result. "
+             "If the query can't be parsed at all (for example, unbalanced parentheses or quotes), an approximate error location is shown. "
+             "Keywords are uppercased by default, following common SQL style conventions. This tool bundles the open-source "
+             '<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> '
+             "library (MIT License) locally, so formatting still happens entirely in your browser.",
+        usage_h2="How to use this tool",
+        usage_items=[
+            "Paste your SQL query into the input box on the left.",
+            'Pick the "SQL dialect" that matches your database (MySQL, PostgreSQL, SQL Server, and more) for the most accurate formatting.',
+            'Click "Format" (or just wait — it also formats automatically as you type) to see the beautified result on the right.',
+            "If the query can't be parsed, you'll get an approximate line/column for where the problem is.",
+            'Use the indent-size dropdown to control the output indentation, then "Copy" or "Download result" to grab it.',
+            "Everything happens in your browser — your SQL is never sent to a server.",
+        ],
+        tips_h2="Related tips",
+        tips_items=[
+            "This tool formats/beautifies SQL — it doesn't check whether the query is valid against your actual database schema or would execute successfully.",
+            "Different dialects have different keyword sets and syntax quirks (e.g. LIMIT vs TOP, backticks vs double quotes); pick the one matching your database for best results.",
+            "Keywords (SELECT, FROM, WHERE, and so on) are uppercased automatically, a common convention for readability.",
+            "Need to also work with JSON or XML? Try the dedicated JSON Formatter, XML Formatter, or JSON ↔ XML Converter tools linked below.",
+        ],
+    ),
+    "ko": dict(
+        title="SQL 포매터 / 쿼리 정렬기 - 무료 온라인 도구 | Formix",
+        description="SQL 쿼리를 무료로 온라인에서 들여쓰기하고 보기 좋게 정리하세요. MySQL, PostgreSQL, SQL Server, Oracle PL/SQL, BigQuery, Snowflake 등을 지원합니다. 모든 처리는 브라우저 안에서만 이뤄지며 서버로 전송되지 않습니다.",
+        keywords="sql 포매터, sql 정렬, 온라인 sql 포맷터, sql 예쁘게 만들기, mysql 포매터, postgresql 포매터, 무료 sql 정리 도구",
+        og_title="SQL 포매터 / 쿼리 정렬기 | Formix",
+        og_description="여러 SQL 방언을 지원하는 무료 온라인 SQL 포매터. 모든 처리는 브라우저 안에서 이뤄집니다.",
+        jsonld_name="SQL 포매터 / 쿼리 정렬기",
+        jsonld_description="SQL 쿼리를 들여쓰기와 키워드 대소문자로 보기 좋게 정리해주는 무료 온라인 도구. 여러 SQL 방언을 지원합니다.",
+        h1="SQL 포매터",
+        lead="왼쪽에 SQL 쿼리를 붙여넣으면 오른쪽에 보기 좋게 들여쓰기된 결과가 표시됩니다. 사용 중인 데이터베이스에 맞는 SQL 방언을 선택하면 더 정확한 결과를 얻을 수 있습니다. 데이터는 서버로 전송되지 않습니다.",
+        btn_format="정렬", btn_sample="예시 불러오기", btn_clear="지우기",
+        indent_label="들여쓰기 크기", indent2="들여쓰기 2칸", indent4="들여쓰기 4칸", indenttab="들여쓰기 Tab",
+        btn_copy="복사", btn_copy_minify="압축 복사", btn_download="결과 다운로드",
+        tabs_aria="입력/결과 전환", tab_input="입력", tab_output="결과",
+        status_idle="SQL 쿼리를 붙여넣어주세요",
+        input_search_mode_label="검색 방식", opt_contains="포함", opt_exact_line="일치(줄)", opt_regex="정규식",
+        input_search_placeholder="입력한 텍스트에서 검색…", prev_title="이전 일치 항목", next_title="다음 일치 항목", clear_title="검색어 지우기",
+        input_placeholder="여기에 SQL 쿼리를 붙여넣으세요. 예: SELECT * FROM users WHERE id = 1",
+        output_label="결과", expand_all="▾ 모두 펼치기", collapse_all="▸ 모두 접기",
+        opt_exact="일치", output_search_placeholder="결과 텍스트에서 검색…",
+        dialect_label="SQL 방언",
+        dialect_standard="표준 SQL", dialect_mysql="MySQL / MariaDB", dialect_postgresql="PostgreSQL",
+        dialect_tsql="SQL Server (T-SQL)", dialect_plsql="Oracle PL/SQL", dialect_bigquery="Google BigQuery",
+        dialect_snowflake="Snowflake", dialect_sqlite="SQLite",
+        hint='Tip. 이 도구는 SQL을 보기 좋게 "정렬(포맷팅)"할 뿐, 쿼리가 실제 데이터베이스에서 의미적으로 올바르게 실행되는지는 '
+             "검증하지 않습니다. 사용 중인 데이터베이스에 가장 가까운 방언을 선택하면 더 정확한 결과를 얻을 수 있습니다. "
+             "괄호나 따옴표가 맞지 않는 등 구문 자체를 해석할 수 없는 경우 대략적인 오류 위치를 표시합니다. "
+             "키워드는 일반적인 SQL 스타일 관례에 따라 기본적으로 대문자로 변환됩니다. 이 도구는 오픈소스 "
+             '<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> '
+             "라이브러리(MIT 라이선스)를 로컬에 내장하여 사용하므로, 처리는 여전히 브라우저 안에서만 이뤄집니다.",
+        usage_h2="이 도구는 이렇게 사용하세요",
+        usage_items=[
+            "왼쪽 입력창에 SQL 쿼리를 붙여넣으세요.",
+            '사용 중인 데이터베이스에 맞는 "SQL 방언"(MySQL, PostgreSQL, SQL Server 등)을 선택하면 더 정확하게 정렬됩니다.',
+            '"정렬" 버튼을 클릭하거나(입력하는 동안 자동으로도 정렬됩니다) 오른쪽에서 결과를 확인하세요.',
+            "구문을 해석할 수 없으면 오류가 발생한 대략적인 줄/열 위치를 알려줍니다.",
+            '들여쓰기 크기 드롭다운으로 결과의 들여쓰기를 조절한 뒤, "복사" 또는 "결과 다운로드"로 가져갈 수 있습니다.',
+            "모든 처리는 브라우저 안에서만 이뤄지며, 입력한 SQL은 서버로 전송되지 않습니다.",
+        ],
+        tips_h2="관련 팁",
+        tips_items=[
+            "이 도구는 SQL을 정렬/포맷팅할 뿐, 실제 데이터베이스 스키마 기준으로 쿼리가 유효한지나 실행 가능한지는 검사하지 않습니다.",
+            "방언마다 키워드와 문법 차이가 있습니다(예: LIMIT vs TOP, 백틱 vs 큰따옴표). 사용 중인 데이터베이스에 맞는 방언을 선택하세요.",
+            "SELECT, FROM, WHERE 같은 키워드는 가독성을 위한 일반적인 관례에 따라 자동으로 대문자로 변환됩니다.",
+            "JSON이나 XML 작업도 필요하다면, 아래 관련 링크의 JSON 포매터, XML 포매터, JSON ↔ XML 변환기를 사용해보세요.",
+        ],
+    ),
+    "ja": dict(
+        title="SQLフォーマッター / 整形ツール - 無料オンラインツール | Formix",
+        description="SQLクエリを無料でオンライン整形・インデントできます。MySQL、PostgreSQL、SQL Server、Oracle PL/SQL、BigQuery、Snowflakeなどに対応。すべての処理はブラウザ内で行われ、サーバーには送信されません。",
+        keywords="sql フォーマッター, sql 整形, オンライン sql フォーマッター, sql 見やすく, mysql フォーマッター, postgresql フォーマッター, 無料 sql 整形ツール",
+        og_title="SQLフォーマッター / 整形ツール | Formix",
+        og_description="複数のSQL方言に対応した無料オンラインSQLフォーマッター。すべての処理はブラウザ内で行われます。",
+        jsonld_name="SQLフォーマッター / 整形ツール",
+        jsonld_description="SQLクエリをインデントとキーワードの大文字化で見やすく整形する無料オンラインツール。複数のSQL方言に対応しています。",
+        h1="SQLフォーマッター",
+        lead="左側にSQLクエリを貼り付けると、右側に見やすくインデントされた結果が表示されます。お使いのデータベースに合ったSQL方言を選択すると、より正確な結果が得られます。データはサーバーに送信されません。",
+        btn_format="整形", btn_sample="例を読み込む", btn_clear="クリア",
+        indent_label="インデントサイズ", indent2="インデント2文字", indent4="インデント4文字", indenttab="インデントTab",
+        btn_copy="コピー", btn_copy_minify="圧縮コピー", btn_download="結果をダウンロード",
+        tabs_aria="入力/結果切り替え", tab_input="入力", tab_output="結果",
+        status_idle="SQLクエリを貼り付けてください",
+        input_search_mode_label="検索モード", opt_contains="含む", opt_exact_line="完全一致(行)", opt_regex="正規表現",
+        input_search_placeholder="入力テキストを検索…", prev_title="前の一致", next_title="次の一致", clear_title="検索をクリア",
+        input_placeholder="ここにSQLクエリを貼り付けてください。例: SELECT * FROM users WHERE id = 1",
+        output_label="結果", expand_all="▾ すべて展開", collapse_all="▸ すべて折りたたむ",
+        opt_exact="完全一致", output_search_placeholder="結果テキストを検索…",
+        dialect_label="SQL方言",
+        dialect_standard="標準SQL", dialect_mysql="MySQL / MariaDB", dialect_postgresql="PostgreSQL",
+        dialect_tsql="SQL Server (T-SQL)", dialect_plsql="Oracle PL/SQL", dialect_bigquery="Google BigQuery",
+        dialect_snowflake="Snowflake", dialect_sqlite="SQLite",
+        hint="Tip. このツールはSQLを見やすく「整形」するだけで、クエリが実際のデータベースで意味的に正しく実行できるかどうかは検証しません。"
+             "お使いのデータベースに最も近い方言を選択すると、より正確な整形結果が得られます。"
+             "括弧や引用符が対応していないなど、構文自体を解析できない場合はおおよそのエラー位置が表示されます。"
+             "キーワードは一般的なSQLのスタイル規約に従い、デフォルトで大文字に変換されます。このツールはオープンソースの"
+             '<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>'
+             "ライブラリ(MITライセンス)をローカルにバンドルしているため、処理は引き続きブラウザ内で完結します。",
+        usage_h2="このツールの使い方",
+        usage_items=[
+            "左側の入力欄にSQLクエリを貼り付けます。",
+            "お使いのデータベースに合った「SQL方言」(MySQL、PostgreSQL、SQL Serverなど)を選択すると、より正確に整形されます。",
+            "「整形」ボタンをクリックするか(入力中も自動で整形されます)、右側で結果を確認してください。",
+            "構文を解析できない場合は、問題が発生したおおよその行/列位置が表示されます。",
+            "インデントサイズのドロップダウンで出力のインデントを調整し、「コピー」または「結果をダウンロード」で取得できます。",
+            "すべての処理はブラウザ内で行われ、入力したSQLがサーバーに送信されることはありません。",
+        ],
+        tips_h2="関連のヒント",
+        tips_items=[
+            "このツールはSQLの整形のみを行い、実際のデータベーススキーマに対してクエリが有効か、実行可能かは検証しません。",
+            "方言によってキーワードや構文が異なります(例: LIMIT と TOP、バッククォートとダブルクォートなど)。お使いのデータベースに合った方言を選択してください。",
+            "SELECT、FROM、WHEREなどのキーワードは、可読性のための一般的な慣例に従い自動的に大文字に変換されます。",
+            "JSONやXMLの作業も必要な場合は、下記の関連リンクにあるJSONフォーマッター、XMLフォーマッター、JSON ↔ XML 変換ツールもご利用ください。",
+        ],
+    ),
+    "zh": dict(
+        title="SQL 格式化工具 / 美化工具 - 免费在线工具 | Formix",
+        description="免费在线格式化和缩进 SQL 查询语句。支持 MySQL、PostgreSQL、SQL Server、Oracle PL/SQL、BigQuery、Snowflake 等。所有处理均在浏览器中完成，不会发送到服务器。",
+        keywords="sql 格式化, sql 美化, 在线 sql 格式化工具, sql 语句整理, mysql 格式化, postgresql 格式化, 免费 sql 整理工具",
+        og_title="SQL 格式化工具 / 美化工具 | Formix",
+        og_description="支持多种 SQL 方言的免费在线 SQL 格式化工具，所有处理均在浏览器中完成。",
+        jsonld_name="SQL 格式化工具 / 美化工具",
+        jsonld_description="通过缩进和关键字大小写格式化，让 SQL 查询更易读的免费在线工具，支持多种 SQL 方言。",
+        h1="SQL 格式化工具",
+        lead="在左侧粘贴 SQL 查询语句，右侧会显示带有清晰缩进的易读结果。选择与您所用数据库匹配的 SQL 方言可获得更准确的结果。数据不会发送到服务器。",
+        btn_format="格式化", btn_sample="加载示例", btn_clear="清空",
+        indent_label="缩进大小", indent2="2 格缩进", indent4="4 格缩进", indenttab="Tab 缩进",
+        btn_copy="复制", btn_copy_minify="复制压缩结果", btn_download="下载结果",
+        tabs_aria="切换输入/结果", tab_input="输入", tab_output="结果",
+        status_idle="请粘贴 SQL 查询语句",
+        input_search_mode_label="搜索模式", opt_contains="包含", opt_exact_line="精确匹配(整行)", opt_regex="正则表达式",
+        input_search_placeholder="在输入文本中搜索…", prev_title="上一个匹配项", next_title="下一个匹配项", clear_title="清除搜索",
+        input_placeholder="在此粘贴 SQL 查询语句，例如：SELECT * FROM users WHERE id = 1",
+        output_label="结果", expand_all="▾ 全部展开", collapse_all="▸ 全部折叠",
+        opt_exact="精确匹配", output_search_placeholder="在结果文本中搜索…",
+        dialect_label="SQL 方言",
+        dialect_standard="标准 SQL", dialect_mysql="MySQL / MariaDB", dialect_postgresql="PostgreSQL",
+        dialect_tsql="SQL Server (T-SQL)", dialect_plsql="Oracle PL/SQL", dialect_bigquery="Google BigQuery",
+        dialect_snowflake="Snowflake", dialect_sqlite="SQLite",
+        hint='提示。此工具只对 SQL 进行"格式化(美化)"，并不会验证查询在实际数据库中语义上是否正确或能否成功执行。'
+             "选择与您所用数据库最接近的方言可获得更准确的格式化结果。"
+             "如果查询完全无法解析(例如括号或引号不匹配)，将显示大致的错误位置。"
+             "关键字默认会按照常见的 SQL 风格约定转换为大写。此工具在本地打包(vendor)了开源的 "
+             '<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> '
+             "库(MIT 许可)，因此格式化处理仍完全在您的浏览器中进行。",
+        usage_h2="使用方法",
+        usage_items=[
+            "将 SQL 查询语句粘贴到左侧的输入框中。",
+            '选择与您所用数据库匹配的"SQL 方言"(MySQL、PostgreSQL、SQL Server 等)以获得更准确的格式化结果。',
+            '点击"格式化"按钮(输入时也会自动格式化)，即可在右侧查看美化后的结果。',
+            "如果查询无法解析，会提示大致的出错行/列位置。",
+            '使用缩进大小下拉菜单调整输出的缩进方式，然后通过"复制"或"下载结果"获取。',
+            "所有处理均在浏览器内完成，您输入的 SQL 不会发送到服务器。",
+        ],
+        tips_h2="相关提示",
+        tips_items=[
+            "此工具仅对 SQL 进行格式化/美化，不会检查查询是否符合您实际的数据库结构或是否能成功执行。",
+            "不同方言的关键字和语法存在差异(例如 LIMIT 与 TOP、反引号与双引号等)，请选择与您所用数据库匹配的方言以获得最佳效果。",
+            "SELECT、FROM、WHERE 等关键字会按照提升可读性的常见约定自动转换为大写。",
+            "如果还需要处理 JSON 或 XML，请尝试下方相关链接中的 JSON 格式化工具、XML 格式化工具或 JSON ↔ XML 转换工具。",
+        ],
+    ),
+}
+
 # ---------------------------------------------------------------------------
 # 렌더링 헬퍼
 # ---------------------------------------------------------------------------
@@ -1143,8 +1550,8 @@ class FormatUrls(dict):
 
 def fmt(s, urls):
     return s.format(home=urls["home"], about=urls["about"], privacy=urls["privacy"], tool=urls["tool"],
-                     tool_xml=urls["tool_xml"], faq=urls["faq"], contact=urls["contact"],
-                     terms=urls["terms"], updates=urls["updates"])
+                     tool_xml=urls["tool_xml"], tool_converter=urls["tool_converter"], tool_sql=urls["tool_sql"],
+                     faq=urls["faq"], contact=urls["contact"], terms=urls["terms"], updates=urls["updates"])
 
 
 def theme_fouc_script():
@@ -1222,6 +1629,15 @@ THEME_COLOR_LIGHT = "#ffffff"
 THEME_COLOR_DARK = "#14161a"
 
 
+def search_verification_tags():
+    tags = []
+    if SEARCH_ENGINE_VERIFICATION.get("google"):
+        tags.append('<meta name="google-site-verification" content="%s" />' % SEARCH_ENGINE_VERIFICATION["google"])
+    if SEARCH_ENGINE_VERIFICATION.get("bing"):
+        tags.append('<meta name="msvalidate.01" content="%s" />' % SEARCH_ENGINE_VERIFICATION["bing"])
+    return "\n".join(tags)
+
+
 def head_block(lang, page_key, title, description, keywords=None, og_title=None, og_description=None,
                robots="index, follow", extra=""):
     urls = urls_for(lang)
@@ -1241,7 +1657,7 @@ def head_block(lang, page_key, title, description, keywords=None, og_title=None,
 <meta name="robots" content="%s" />
 <meta name="theme-color" content="%s" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="%s" media="(prefers-color-scheme: dark)" />
-
+%s
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="%s" />
 <meta property="og:title" content="%s" />
@@ -1264,6 +1680,7 @@ def head_block(lang, page_key, title, description, keywords=None, og_title=None,
 %s
 %s
 %s''' % (title, description, kw, canonical, robots, THEME_COLOR_LIGHT, THEME_COLOR_DARK,
+         search_verification_tags(),
          SITE_NAME[lang], final_og_title, final_og_desc, canonical, og_img,
          OG_LOCALE[lang], alt_locales, final_og_title, final_og_desc, og_img,
          hreflang_links(page_key), ICON_DATA_URI,
@@ -1404,14 +1821,22 @@ def render_index(lang):
         <span class="tag">%s</span>
       </article>
 
-      <article class="tool-card is-soon" aria-disabled="true">
-        <div class="tool-card-icon">\U0001F6E0️</div>
-        <h3>%s</h3>
+      <article class="tool-card">
+        <div class="tool-card-icon">\U0001F504</div>
+        <h3><a href="%s">%s</a></h3>
+        <p>%s</p>
+        <span class="tag">%s</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-card-icon">\U0001F5C4️</div>
+        <h3><a href="%s">%s</a></h3>
         <p>%s</p>
         <span class="tag">%s</span>
       </article>''' % (urls["tool"], c["card1_title"], c["card1_desc"], c["card1_tag"],
                         urls["tool_xml"], c["card2_title"], c["card2_desc"], c["card2_tag"],
-                        c["card3_title"], c["card3_desc"], c["card3_tag"])
+                        urls["tool_converter"], c["card3_title"], c["card3_desc"], c["card3_tag"],
+                        urls["tool_sql"], c["card4_title"], c["card4_desc"], c["card4_tag"])
     why_items = "\n      ".join(
         '<li><strong>%s</strong> — %s</li>' % (t, d) for t, d in c["why_items"]
     )
@@ -1478,6 +1903,8 @@ def render_about(lang):
       <ul>
         <li>%s</li>
         <li>%s</li>
+        <li>%s</li>
+        <li>%s</li>
       </ul>
       <p>%s</p>
     </section>
@@ -1496,7 +1923,7 @@ def render_about(lang):
 </main>
 
 ''' % (c["h1"], c["lead"], c["s1_h2"], fmt(c["s1_p"], urls), c["s2_h2"], s2_items,
-       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), c["s3_p"], c["s4_h2"], fmt(c["s4_p"], urls),
+       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), fmt(c["s3_item3"], urls), fmt(c["s3_item4"], urls), fmt(c["s3_p"], urls), c["s4_h2"], fmt(c["s4_p"], urls),
        c["s5_h2"], c["s5_p"], CONTACT_EMAIL, CONTACT_EMAIL) + footer_block(lang)
     return page_wrap(lang, head, body)
 
@@ -1805,7 +2232,7 @@ def render_notfound(lang):
     return page_wrap(lang, head, body)
 
 
-def render_tool_page(lang, content_key, page_key, id_prefix, css_href, js_src):
+def render_tool_page(lang, content_key, page_key, id_prefix, css_href, js_src, extra_toolbar=""):
     """도구 페이지 공통 렌더러. json-formatter/xml-formatter 모두 이 함수 하나로 생성한다.
     새 도구를 추가할 때는 CONTENT[content_key]에 콘텐츠를 채우고 이 함수를 얇게 감싸는
     wrapper 함수(및 urls_for/NAV/TOOL_NAV_ITEMS 항목)만 추가하면 된다."""
@@ -1852,6 +2279,7 @@ def render_tool_page(lang, content_key, page_key, id_prefix, css_href, js_src):
         <option value="4">%(indent4)s</option>
         <option value="tab">%(indenttab)s</option>
       </select>
+      %(extra_toolbar)s
       <button class="btn btn-sm" id="btn-copy" type="button">%(btn_copy)s</button>
       <button class="btn btn-sm" id="btn-copy-minify" type="button">%(btn_copy_minify)s</button>
       <button class="btn btn-sm" id="btn-download" type="button">%(btn_download)s</button>
@@ -1956,16 +2384,18 @@ def render_tool_page(lang, content_key, page_key, id_prefix, css_href, js_src):
 
     <h2>%(related_h2)s</h2>
     <ul>
-      <li><a href="%(related_url)s">%(related_link_text)s</a></li>
+      %(related_lis)s
       <li><a href="%(faq_url)s">%(faq_link_text)s</a></li>
     </ul>
   </div>
 </main>
 
 ''' % dict(**c, usage_lis=usage_lis, tips_lis=tips_lis, related_h2=n["related_h2"],
-       related_url=(urls["tool_xml"] if page_key == "tool" else urls["tool"]),
-       related_link_text=(n["tool_xml"] if page_key == "tool" else n["tool"]),
-       faq_url=urls["faq"], faq_link_text=n["faq"]) + footer_block(lang)
+       related_lis="\n      ".join(
+           '<li><a href="%s">%s</a></li>' % (urls[other_key], n[nav_key])
+           for other_key, nav_key in TOOL_NAV_ITEMS if other_key != page_key
+       ),
+       faq_url=urls["faq"], faq_link_text=n["faq"], extra_toolbar=extra_toolbar) + footer_block(lang)
     if id_prefix != "json":
         body = body.replace('"json-', '"' + id_prefix + '-')
     body = body.replace('<script src="/assets/js/main.js"></script>\n<script src="/assets/js/i18n.js"></script>',
@@ -1979,6 +2409,43 @@ def render_tool(lang):
 
 def render_tool_xml(lang):
     return render_tool_page(lang, "tool_xml", "tool_xml", "xml", "/tools/xml-formatter.css", "/tools/xml-formatter.js")
+
+
+def render_tool_converter(lang):
+    c = CONTENT["tool_converter"][lang]
+    direction_select = '''      <label for="json-direction-select" class="visually-hidden">%s</label>
+      <select class="jf-select conv-direction-select" id="json-direction-select">
+        <option value="auto" selected>%s</option>
+        <option value="json2xml">%s</option>
+        <option value="xml2json">%s</option>
+      </select>''' % (c["direction_label"], c["dir_auto"], c["dir_json2xml"], c["dir_xml2json"])
+    return render_tool_page(lang, "tool_converter", "tool_converter", "conv",
+                             "/tools/json-xml-converter.css", "/tools/json-xml-converter.js",
+                             extra_toolbar=direction_select)
+
+
+def render_tool_sql(lang):
+    c = CONTENT["tool_sql"][lang]
+    dialect_select = '''      <label for="json-dialect-select" class="visually-hidden">%s</label>
+      <select class="jf-select sql-dialect-select" id="json-dialect-select">
+        <option value="sql" selected>%s</option>
+        <option value="mysql">%s</option>
+        <option value="postgresql">%s</option>
+        <option value="tsql">%s</option>
+        <option value="plsql">%s</option>
+        <option value="bigquery">%s</option>
+        <option value="snowflake">%s</option>
+        <option value="sqlite">%s</option>
+      </select>''' % (c["dialect_label"], c["dialect_standard"], c["dialect_mysql"], c["dialect_postgresql"],
+                       c["dialect_tsql"], c["dialect_plsql"], c["dialect_bigquery"], c["dialect_snowflake"],
+                       c["dialect_sqlite"])
+    body = render_tool_page(lang, "tool_sql", "tool_sql", "sql",
+                             "/tools/sql-formatter.css", "/tools/sql-formatter.js",
+                             extra_toolbar=dialect_select)
+    # sql-formatter(오픈소스, MIT) 라이브러리를 이 페이지에서만 로드한다.
+    body = body.replace('<script src="/tools/sql-formatter.js"></script>',
+                         '<script src="/tools/vendor/sql-formatter.min.js"></script>\n<script src="/tools/sql-formatter.js"></script>')
+    return body
 
 
 # ---------------------------------------------------------------------------
@@ -1999,16 +2466,20 @@ def build():
         written.append(write_file(prefix + "/404.html", render_notfound(lang)))
         written.append(write_file(prefix + "/tools/json-formatter.html", render_tool(lang)))
         written.append(write_file(prefix + "/tools/xml-formatter.html", render_tool_xml(lang)))
+        written.append(write_file(prefix + "/tools/json-xml-converter.html", render_tool_converter(lang)))
+        written.append(write_file(prefix + "/tools/sql-formatter.html", render_tool_sql(lang)))
 
     # sitemap.xml (404는 noindex이므로 제외)
     import datetime
     today = datetime.date.today().isoformat()
     priority_map = {"home": "1.0", "about": "0.6", "privacy": "0.3", "faq": "0.5", "contact": "0.4",
-                     "terms": "0.3", "updates": "0.5", "tool": "0.9", "tool_xml": "0.9"}
+                     "terms": "0.3", "updates": "0.5", "tool": "0.9", "tool_xml": "0.9", "tool_converter": "0.9",
+                     "tool_sql": "0.9"}
     changefreq_map = {"home": "weekly", "about": "monthly", "privacy": "yearly", "faq": "monthly", "contact": "yearly",
-                       "terms": "yearly", "updates": "weekly", "tool": "weekly", "tool_xml": "weekly"}
+                       "terms": "yearly", "updates": "weekly", "tool": "weekly", "tool_xml": "weekly", "tool_converter": "weekly",
+                       "tool_sql": "weekly"}
     url_entries = []
-    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml"]:
+    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml", "tool_converter", "tool_sql"]:
         for lang in LANGS:
             loc = SITE_DOMAIN + urls_for(lang)[page_key]
             alt_links = "\n".join(

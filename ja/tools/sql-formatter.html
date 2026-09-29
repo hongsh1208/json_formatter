@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SQLフォーマッター / 整形ツール - 無料オンラインツール | Formix</title>
+<meta name="description" content="SQLクエリを無料でオンライン整形・インデントできます。MySQL、PostgreSQL、SQL Server、Oracle PL/SQL、BigQuery、Snowflakeなどに対応。すべての処理はブラウザ内で行われ、サーバーには送信されません。" />
+<meta name="keywords" content="sql フォーマッター, sql 整形, オンライン sql フォーマッター, sql 見やすく, mysql フォーマッター, postgresql フォーマッター, 無料 sql 整形ツール" />
+<link rel="canonical" href="https://formix.site/ja/tools/sql-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="SQLフォーマッター / 整形ツール | Formix" />
+<meta property="og:description" content="複数のSQL方言に対応した無料オンラインSQLフォーマッター。すべての処理はブラウザ内で行われます。" />
+<meta property="og:url" content="https://formix.site/ja/tools/sql-formatter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-ja.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SQLフォーマッター / 整形ツール | Formix" />
+<meta name="twitter:description" content="複数のSQL方言に対応した無料オンラインSQLフォーマッター。すべての処理はブラウザ内で行われます。" />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-ja.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/sql-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "ja"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SQLフォーマッター / 整形ツール",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/ja/tools/sql-formatter.html",
+  "description": "SQLクエリをインデントとキーワードの大文字化で見やすく整形する無料オンラインツール。複数のSQL方言に対応しています。",
+  "inLanguage": "ja",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SQLフォーマッター",
+      "item": "https://formix.site/ja/tools/sql-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/ja/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/ja/">ホーム</a></li>
+      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+      <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
+      <li><a href="/ja/tools/sql-formatter.html" aria-current="page">SQLフォーマッター</a></li>
+      <li><a href="/ja/about.html">サイト紹介</a></li>
+      <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="言語選択">🇯🇵</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/sql-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/sql-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/sql-formatter.html" data-lang-option="ja" aria-current="true">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/sql-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="ダークモードに切り替え">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>SQLフォーマッター</h1>
+    <p>左側にSQLクエリを貼り付けると、右側に見やすくインデントされた結果が表示されます。お使いのデータベースに合ったSQL方言を選択すると、より正確な結果が得られます。データはサーバーに送信されません。</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">整形</button>
+      <button class="btn" id="btn-sample" type="button">例を読み込む</button>
+      <button class="btn" id="btn-clear" type="button">クリア</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">インデントサイズ</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>インデント2文字</option>
+        <option value="4">インデント4文字</option>
+        <option value="tab">インデントTab</option>
+      </select>
+            <label for="sql-dialect-select" class="visually-hidden">SQL方言</label>
+      <select class="jf-select sql-dialect-select" id="sql-dialect-select">
+        <option value="sql" selected>標準SQL</option>
+        <option value="mysql">MySQL / MariaDB</option>
+        <option value="postgresql">PostgreSQL</option>
+        <option value="tsql">SQL Server (T-SQL)</option>
+        <option value="plsql">Oracle PL/SQL</option>
+        <option value="bigquery">Google BigQuery</option>
+        <option value="snowflake">Snowflake</option>
+        <option value="sqlite">SQLite</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">コピー</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">圧縮コピー</button>
+      <button class="btn btn-sm" id="btn-download" type="button">結果をダウンロード</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="入力/結果切り替え">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        入力
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        結果
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="入力">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="sql-status-top" class="status-pill is-idle">SQLクエリを貼り付けてください</span>
+          <span id="sql-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="sql-input-search-mode" class="visually-hidden">検索モード</label>
+          <select class="jf-select jf-search-mode" id="sql-input-search-mode">
+            <option value="contains" selected>含む</option>
+            <option value="exact">完全一致(行)</option>
+            <option value="regex">正規表現</option>
+          </select>
+          <label for="sql-input-search" class="visually-hidden">検索モード</label>
+          <input type="text" id="sql-input-search" placeholder="入力テキストを検索…" />
+          <span class="jf-search-count" id="sql-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="前の一致" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="次の一致" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="検索をクリア" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="sql-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="sql-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="sql-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="ここにSQLクエリを貼り付けてください。例: SELECT * FROM users WHERE id = 1"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="sql-status" class="status-pill is-idle">SQLクエリを貼り付けてください</span>
+          <span id="sql-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="結果" hidden>
+        <div class="jf-panel-head">
+          <span>結果</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ すべて展開</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ すべて折りたたむ</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="sql-search-mode" class="visually-hidden">検索モード</label>
+          <select class="jf-select jf-search-mode" id="sql-search-mode" disabled>
+            <option value="contains" selected>含む</option>
+            <option value="exact">完全一致</option>
+            <option value="regex">正規表現</option>
+          </select>
+          <label for="sql-search" class="visually-hidden">結果テキストを検索…</label>
+          <input type="text" id="sql-search" placeholder="結果テキストを検索…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="前の一致" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="次の一致" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="検索をクリア" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="sql-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-output-gutter-inner"></div>
+          </div>
+          <div id="sql-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. このツールはSQLを見やすく「整形」するだけで、クエリが実際のデータベースで意味的に正しく実行できるかどうかは検証しません。お使いのデータベースに最も近い方言を選択すると、より正確な整形結果が得られます。括弧や引用符が対応していないなど、構文自体を解析できない場合はおおよそのエラー位置が表示されます。キーワードは一般的なSQLのスタイル規約に従い、デフォルトで大文字に変換されます。このツールはオープンソースの<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>ライブラリ(MITライセンス)をローカルにバンドルしているため、処理は引き続きブラウザ内で完結します。</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>このツールの使い方</h2>
+    <ul>
+      <li>左側の入力欄にSQLクエリを貼り付けます。</li>
+      <li>お使いのデータベースに合った「SQL方言」(MySQL、PostgreSQL、SQL Serverなど)を選択すると、より正確に整形されます。</li>
+      <li>「整形」ボタンをクリックするか(入力中も自動で整形されます)、右側で結果を確認してください。</li>
+      <li>構文を解析できない場合は、問題が発生したおおよその行/列位置が表示されます。</li>
+      <li>インデントサイズのドロップダウンで出力のインデントを調整し、「コピー」または「結果をダウンロード」で取得できます。</li>
+      <li>すべての処理はブラウザ内で行われ、入力したSQLがサーバーに送信されることはありません。</li>
+    </ul>
+
+    <h2>関連のヒント</h2>
+    <ul>
+      <li>このツールはSQLの整形のみを行い、実際のデータベーススキーマに対してクエリが有効か、実行可能かは検証しません。</li>
+      <li>方言によってキーワードや構文が異なります(例: LIMIT と TOP、バッククォートとダブルクォートなど)。お使いのデータベースに合った方言を選択してください。</li>
+      <li>SELECT、FROM、WHEREなどのキーワードは、可読性のための一般的な慣例に従い自動的に大文字に変換されます。</li>
+      <li>JSONやXMLの作業も必要な場合は、下記の関連リンクにあるJSONフォーマッター、XMLフォーマッター、JSON ↔ XML 変換ツールもご利用ください。</li>
+    </ul>
+
+    <h2>関連リンク</h2>
+    <ul>
+      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+      <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
+      <li><a href="/ja/faq.html">よくある質問</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/ja/about.html">サイト紹介</a>
+      <a href="/ja/faq.html">よくある質問</a>
+      <a href="/ja/updates.html">更新情報</a>
+      <a href="/ja/contact.html">お問い合わせ</a>
+      <a href="/ja/terms.html">利用規約</a>
+      <a href="/ja/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/tools/json-formatter.html">JSONフォーマッター</a>
+      <a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>
+      <a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a>
+      <a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/vendor/sql-formatter.min.js"></script>
+<script src="/tools/sql-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

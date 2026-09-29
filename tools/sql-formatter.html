@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SQL Formatter / Beautifier - Free Online Tool | Formix</title>
+<meta name="description" content="Beautify and indent SQL queries online, free. Supports MySQL, PostgreSQL, SQL Server, Oracle PL/SQL, BigQuery, Snowflake, and more. Runs entirely in your browser — nothing is sent to a server." />
+<meta name="keywords" content="sql formatter, sql beautifier, format sql online, sql pretty print, mysql formatter, postgresql formatter, online sql formatter free" />
+<link rel="canonical" href="https://formix.site/tools/sql-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="SQL Formatter / Beautifier | Formix" />
+<meta property="og:description" content="A free online SQL formatter that beautifies queries with proper indentation, supporting multiple SQL dialects. Runs entirely in your browser." />
+<meta property="og:url" content="https://formix.site/tools/sql-formatter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SQL Formatter / Beautifier | Formix" />
+<meta name="twitter:description" content="A free online SQL formatter that beautifies queries with proper indentation, supporting multiple SQL dialects. Runs entirely in your browser." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/sql-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("formix-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("formix-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("formix-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SQL Formatter / Beautifier",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/tools/sql-formatter.html",
+  "description": "A free online tool that beautifies SQL queries with indentation and keyword casing, supporting multiple SQL dialects.",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SQL Formatter",
+      "item": "https://formix.site/tools/sql-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+      <li><a href="/tools/sql-formatter.html" aria-current="page">SQL Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/sql-formatter.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/sql-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/sql-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/sql-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>SQL Formatter</h1>
+    <p>Paste a SQL query on the left and get a neatly indented, readable version on the right. Choose the SQL dialect that matches your database for the most accurate result. Nothing is sent to a server.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Format</button>
+      <button class="btn" id="btn-sample" type="button">Load sample</button>
+      <button class="btn" id="btn-clear" type="button">Clear</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Indent size</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>2-space indent</option>
+        <option value="4">4-space indent</option>
+        <option value="tab">Tab indent</option>
+      </select>
+            <label for="sql-dialect-select" class="visually-hidden">SQL dialect</label>
+      <select class="jf-select sql-dialect-select" id="sql-dialect-select">
+        <option value="sql" selected>Standard SQL</option>
+        <option value="mysql">MySQL / MariaDB</option>
+        <option value="postgresql">PostgreSQL</option>
+        <option value="tsql">SQL Server (T-SQL)</option>
+        <option value="plsql">Oracle PL/SQL</option>
+        <option value="bigquery">Google BigQuery</option>
+        <option value="snowflake">Snowflake</option>
+        <option value="sqlite">SQLite</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">Copy</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Copy minified</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Download result</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Switch between input and output">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Input
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Output
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Input">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="sql-status-top" class="status-pill is-idle">Paste a SQL query</span>
+          <span id="sql-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="sql-input-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="sql-input-search-mode">
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact (line)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="sql-input-search" class="visually-hidden">Search mode</label>
+          <input type="text" id="sql-input-search" placeholder="Search the input text…" />
+          <span class="jf-search-count" id="sql-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="sql-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="sql-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="sql-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Paste a SQL query here, e.g. SELECT * FROM users WHERE id = 1"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="sql-status" class="status-pill is-idle">Paste a SQL query</span>
+          <span id="sql-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Output" hidden>
+        <div class="jf-panel-head">
+          <span>Output</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Expand all</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Collapse all</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="sql-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="sql-search-mode" disabled>
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="sql-search" class="visually-hidden">Search the output text…</label>
+          <input type="text" id="sql-search" placeholder="Search the output text…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="sql-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-output-gutter-inner"></div>
+          </div>
+          <div id="sql-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. This tool beautifies (reformats) SQL — it does not validate whether the query is semantically correct or would run successfully against a real database. Pick the dialect closest to the database you use for the best formatting result. If the query can't be parsed at all (for example, unbalanced parentheses or quotes), an approximate error location is shown. Keywords are uppercased by default, following common SQL style conventions. This tool bundles the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License) locally, so formatting still happens entirely in your browser.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>How to use this tool</h2>
+    <ul>
+      <li>Paste your SQL query into the input box on the left.</li>
+      <li>Pick the "SQL dialect" that matches your database (MySQL, PostgreSQL, SQL Server, and more) for the most accurate formatting.</li>
+      <li>Click "Format" (or just wait — it also formats automatically as you type) to see the beautified result on the right.</li>
+      <li>If the query can't be parsed, you'll get an approximate line/column for where the problem is.</li>
+      <li>Use the indent-size dropdown to control the output indentation, then "Copy" or "Download result" to grab it.</li>
+      <li>Everything happens in your browser — your SQL is never sent to a server.</li>
+    </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>This tool formats/beautifies SQL — it doesn't check whether the query is valid against your actual database schema or would execute successfully.</li>
+      <li>Different dialects have different keyword sets and syntax quirks (e.g. LIMIT vs TOP, backticks vs double quotes); pick the one matching your database for best results.</li>
+      <li>Keywords (SELECT, FROM, WHERE, and so on) are uppercased automatically, a common convention for readability.</li>
+      <li>Need to also work with JSON or XML? Try the dedicated JSON Formatter, XML Formatter, or JSON ↔ XML Converter tools linked below.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>
+      <a href="/tools/sql-formatter.html">SQL Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/vendor/sql-formatter.min.js"></script>
+<script src="/tools/sql-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

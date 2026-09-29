@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JSON to XML / XML to JSON Converter - Free Online Tool | Formix</title>
+<meta name="description" content="Convert JSON to XML or XML to JSON instantly in your browser. Paste either format and Formix detects it automatically, or pick a direction manually. Your data is never sent to a server." />
+<meta name="keywords" content="json to xml, xml to json, json xml converter, convert json to xml online, convert xml to json online, json xml converter free" />
+<link rel="canonical" href="https://formix.site/tools/json-xml-converter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="JSON to XML / XML to JSON Converter | Formix" />
+<meta property="og:description" content="A free online converter between JSON and XML, with automatic format detection. Runs entirely in your browser." />
+<meta property="og:url" content="https://formix.site/tools/json-xml-converter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="JSON to XML / XML to JSON Converter | Formix" />
+<meta name="twitter:description" content="A free online converter between JSON and XML, with automatic format detection. Runs entirely in your browser." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/json-xml-converter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("formix-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("formix-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("formix-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "JSON to XML / XML to JSON Converter",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/tools/json-xml-converter.html",
+  "description": "A free online tool that converts JSON to XML and XML to JSON, with automatic format detection and configurable indentation.",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON ↔ XML Converter",
+      "item": "https://formix.site/tools/json-xml-converter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/tools/json-xml-converter.html" aria-current="page">JSON ↔ XML Converter</a></li>
+      <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/json-xml-converter.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/json-xml-converter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/json-xml-converter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/json-xml-converter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>JSON ↔ XML Converter</h1>
+    <p>Paste JSON or XML on the left and get the other format on the right. Formix detects which one you pasted automatically — or you can pick a direction yourself. Nothing is sent to a server.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Convert</button>
+      <button class="btn" id="btn-sample" type="button">Load sample</button>
+      <button class="btn" id="btn-clear" type="button">Clear</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Indent size</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>2-space indent</option>
+        <option value="4">4-space indent</option>
+        <option value="tab">Tab indent</option>
+      </select>
+            <label for="conv-direction-select" class="visually-hidden">Conversion direction</label>
+      <select class="jf-select conv-direction-select" id="conv-direction-select">
+        <option value="auto" selected>Auto-detect</option>
+        <option value="json2xml">JSON → XML</option>
+        <option value="xml2json">XML → JSON</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">Copy</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Copy minified</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Download result</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Switch between input and output">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Input
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Output
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Input">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="conv-status-top" class="status-pill is-idle">Paste some JSON or XML</span>
+          <span id="conv-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="conv-input-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="conv-input-search-mode">
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact (line)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="conv-input-search" class="visually-hidden">Search mode</label>
+          <input type="text" id="conv-input-search" placeholder="Search the input text…" />
+          <span class="jf-search-count" id="conv-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="conv-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="conv-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="conv-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="conv-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Paste JSON or XML here — Formix detects the format automatically."
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="conv-status" class="status-pill is-idle">Paste some JSON or XML</span>
+          <span id="conv-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Output" hidden>
+        <div class="jf-panel-head">
+          <span>Output</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Expand all</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Collapse all</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="conv-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="conv-search-mode" disabled>
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="conv-search" class="visually-hidden">Search the output text…</label>
+          <input type="text" id="conv-search" placeholder="Search the output text…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="conv-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="conv-output-gutter-inner"></div>
+          </div>
+          <div id="conv-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. In "Auto-detect" mode, Formix looks at the first character you pasted (“{”/“[” for JSON, “<” for XML) to pick a direction automatically; if the format is ambiguous, choose a direction manually from the dropdown. Because JSON and XML don't model data identically, the conversion follows a fixed, documented convention: a JSON array's repeated values become repeated XML elements with the same tag name, and XML attributes round-trip through a “@attributes” object in the JSON. This means a JSON → XML → JSON round trip won’t always reproduce the exact original shape (for example, top-level arrays get wrapped in a <root><item> element), which is expected for any generic converter.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>How to use this tool</h2>
+    <ul>
+      <li>Paste JSON or XML into the input box on the left — the format is detected automatically and the result appears on the right.</li>
+      <li>If auto-detection picks the wrong format, open the "Conversion direction" dropdown and choose JSON → XML or XML → JSON manually.</li>
+      <li>If the input isn't valid JSON or XML, you'll get an approximate line/column for where the problem is.</li>
+      <li>Use the indent-size dropdown to control how the converted output is pretty-printed, then "Copy" or "Download result" to grab it.</li>
+      <li>"Copy minified" copies the converted output with all unnecessary whitespace removed — handy for pasting into config files or API requests.</li>
+      <li>Everything happens in your browser — the data you paste is never sent to a server.</li>
+    </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>JSON object keys become XML element names — keys with spaces or symbols that aren't valid XML tag names are sanitized automatically.</li>
+      <li>A JSON array like ["a", "b"] converts to two sibling elements with the same tag name (not a single element containing a list), since XML has no native array type.</li>
+      <li>When converting XML that has attributes (e.g. <book id="1">), they appear under an "@attributes" key in the resulting JSON so no information is lost.</li>
+      <li>Need to also validate or pretty-print your JSON or XML on its own? Try the dedicated JSON Formatter or XML Formatter tools linked below.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>
+      <a href="/tools/sql-formatter.html">SQL Formatter</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/json-xml-converter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
