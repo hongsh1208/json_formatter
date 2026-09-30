@@ -76,6 +76,7 @@ def urls_for(lang):
         "tool_converter": p + "/tools/json-xml-converter.html",
         "tool_sql": p + "/tools/sql-formatter.html",
         "tool_code": p + "/tools/code-viewer.html",
+        "tool_number": p + "/tools/number-reader.html",
         "notfound": p + "/404.html",
     }
 
@@ -83,7 +84,7 @@ def urls_for(lang):
 # 헤더 내비게이션에 노출할 도구 목록. 새 도구를 추가할 때 이 리스트에 (urls_for 키, NAV 라벨 키)만
 # 추가하면 헤더/푸터/언어 스위처가 모두 자동으로 반영된다.
 TOOL_NAV_ITEMS = [("tool", "tool"), ("tool_xml", "tool_xml"), ("tool_converter", "tool_converter"),
-                   ("tool_sql", "tool_sql"), ("tool_code", "tool_code")]
+                   ("tool_sql", "tool_sql"), ("tool_code", "tool_code"), ("tool_number", "tool_number")]
 
 # 푸터에 노출할 일반 페이지(도구가 아닌 페이지) 목록. 새 페이지를 추가할 때 이 리스트에
 # (urls_for 키, NAV 라벨 키)만 추가하면 푸터/사이트맵이 자동으로 반영된다.
@@ -92,25 +93,29 @@ FOOTER_NAV_ITEMS = [("about", "about"), ("faq", "faq"), ("updates", "updates"), 
 
 NAV = {
     "en": {"home": "Home", "tool": "JSON Formatter", "tool_xml": "XML Formatter",
-           "tool_converter": "JSON ↔ XML Converter", "tool_sql": "SQL Formatter", "tool_code": "Code Viewer", "about": "About",
+           "tool_converter": "JSON ↔ XML Converter", "tool_sql": "SQL Formatter", "tool_code": "Code Viewer",
+           "tool_number": "Number Reader", "about": "About",
            "privacy": "Privacy Policy", "faq": "FAQ", "contact": "Contact", "related_h2": "Related",
            "cookie_settings": "Cookie preferences", "terms": "Terms of Service", "updates": "What's New",
            "menu": "Open menu", "dark": "Switch to dark mode", "light": "Switch to light mode",
            "lang": "Select language", "skip": "Skip to content"},
     "ko": {"home": "홈", "tool": "JSON 포매터", "tool_xml": "XML 포매터",
-           "tool_converter": "JSON ↔ XML 변환기", "tool_sql": "SQL 포매터", "tool_code": "코드 뷰어", "about": "사이트 소개",
+           "tool_converter": "JSON ↔ XML 변환기", "tool_sql": "SQL 포매터", "tool_code": "코드 뷰어",
+           "tool_number": "숫자 읽기 변환기", "about": "사이트 소개",
            "privacy": "개인정보처리방침", "faq": "자주 묻는 질문", "contact": "문의하기", "related_h2": "관련 링크",
            "cookie_settings": "쿠키 설정", "terms": "이용약관", "updates": "업데이트 소식",
            "menu": "메뉴 열기", "dark": "다크 모드로 전환", "light": "라이트 모드로 전환",
            "lang": "언어 선택", "skip": "본문으로 건너뛰기"},
     "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "tool_xml": "XMLフォーマッター",
-           "tool_converter": "JSON ↔ XML 変換ツール", "tool_sql": "SQLフォーマッター", "tool_code": "コードビューア", "about": "サイト紹介",
+           "tool_converter": "JSON ↔ XML 変換ツール", "tool_sql": "SQLフォーマッター", "tool_code": "コードビューア",
+           "tool_number": "数字の読み方変換", "about": "サイト紹介",
            "privacy": "プライバシーポリシー", "faq": "よくある質問", "contact": "お問い合わせ", "related_h2": "関連リンク",
            "cookie_settings": "Cookie設定", "terms": "利用規約", "updates": "更新情報",
            "menu": "メニューを開く", "dark": "ダークモードに切り替え", "light": "ライトモードに切り替え",
            "lang": "言語選択", "skip": "本文へスキップ"},
     "zh": {"home": "首页", "tool": "JSON 格式化", "tool_xml": "XML 格式化",
-           "tool_converter": "JSON ↔ XML 转换工具", "tool_sql": "SQL 格式化", "tool_code": "代码查看器", "about": "关于本站",
+           "tool_converter": "JSON ↔ XML 转换工具", "tool_sql": "SQL 格式化", "tool_code": "代码查看器",
+           "tool_number": "数字读法转换", "about": "关于本站",
            "privacy": "隐私政策", "faq": "常见问题", "contact": "联系我们", "related_h2": "相关链接",
            "cookie_settings": "Cookie 设置", "terms": "使用条款", "updates": "更新日志",
            "menu": "打开菜单", "dark": "切换到深色模式", "light": "切换到浅色模式",
@@ -149,6 +154,9 @@ CONTENT["index"] = {
         card5_title="Code Viewer",
         card5_desc="Paste source code, pick a language (Java, C#, Python, Go, and 15+ more), and view it with syntax highlighting for easier reading and sharing.",
         card5_tag="Code · Syntax Highlighting · Viewer",
+        card6_title="Number Reader",
+        card6_desc="Converts numbers into words — cardinal, ordinal, phone/account digits, time, date, and currency, with multiple reading styles per language.",
+        card6_tag="Numbers · Reader · Converter",
         why_h2="Why Formix?",
         why_items=[
             ("No install or sign-up", "Just open the link and start using it right away."),
@@ -183,6 +191,9 @@ CONTENT["index"] = {
         card5_title="코드 뷰어",
         card5_desc="소스 코드를 붙여넣고 언어(Java, C#, Python, Go 등 20여 개)를 선택하면 문법 강조가 적용된 화면으로 보기 좋게 표시합니다.",
         card5_tag="Code · Syntax Highlighting · Viewer",
+        card6_title="숫자 읽기 변환기",
+        card6_desc="숫자를 문자로 변환합니다. 일반(기수), 서수, 전화·계좌번호, 시간, 날짜, 화폐 모드를 지원하며 언어별로 여러 표기 방식(예: 한자어/고유어/갖은자)을 제공합니다.",
+        card6_tag="숫자 · 읽기 · 변환기",
         why_h2="왜 Formix인가요?",
         why_items=[
             ("설치·가입 불필요", "링크만 열면 바로 사용할 수 있습니다."),
@@ -217,6 +228,9 @@ CONTENT["index"] = {
         card5_title="コードビューア",
         card5_desc="ソースコードを貼り付けて言語(Java、C#、Python、Goなど20以上)を選択すると、シンタックスハイライト付きで見やすく表示します。",
         card5_tag="Code · Syntax Highlighting · Viewer",
+        card6_title="数字の読み方変換",
+        card6_desc="数字を文字に変換します。基数・序数・電話/口座番号・時刻・日付・通貨に対応し、言語ごとに複数の表記方式(標準/大字など)を提供します。",
+        card6_tag="数字 · 読み方 · 変換",
         why_h2="なぜFormixなのか?",
         why_items=[
             ("インストール・登録不要", "リンクを開くだけですぐに利用できます。"),
@@ -251,6 +265,9 @@ CONTENT["index"] = {
         card5_title="代码查看器",
         card5_desc="粘贴源代码并选择语言(Java、C#、Python、Go 等 20 多种)，即可获得带语法高亮的易读展示。",
         card5_tag="Code · Syntax Highlighting · Viewer",
+        card6_title="数字读法转换",
+        card6_desc="将数字转换为文字。支持基数、序数、电话/账号、时间、日期、货币模式，并为每种语言提供多种读法(如小写/大写)。",
+        card6_tag="数字 · 读法 · 转换",
         why_h2="为什么选择Formix?",
         why_items=[
             ("无需安装、无需注册", "打开链接即可立即使用。"),
@@ -283,7 +300,8 @@ CONTENT["about"] = {
         s3_item3='<a href="{tool_converter}">JSON ↔ XML Converter</a> — Converts JSON to XML or XML to JSON, with automatic format detection and configurable indentation.',
         s3_item4='<a href="{tool_sql}">SQL Formatter</a> — Beautifies SQL queries with proper indentation and keyword casing, supporting multiple dialects (MySQL, PostgreSQL, SQL Server, BigQuery, and more).',
         s3_item5='<a href="{tool_code}">Code Viewer</a> — Paste source code and pick a language to view it with syntax highlighting, supporting 20+ languages including Java, C#, Python, and Go.',
-        s3_p='Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), and the Code Viewer uses <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> (MIT License), both bundled locally so processing still runs entirely in your browser.',
+        s3_item6='<a href="{tool_number}">Number Reader</a> — Converts numbers into words for cardinal, ordinal, phone/account digits, time, date, and currency, with multiple reading styles per language.',
+        s3_p='Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), and the Code Viewer uses <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> (MIT License), both bundled locally so processing still runs entirely in your browser. The Number Reader is implemented with our own code and uses no external library.',
         s4_h2="About advertising and running this service",
         s4_p='Formix may introduce advertising services such as Google AdSense in the future to help support running the site. If we do, how related data is handled will be explained transparently on the <a href="{privacy}">Privacy Policy</a> page, and the core functionality of our tools (e.g. JSON processing) will remain free regardless of whether ads are shown.',
         s5_h2="Contact",
@@ -310,7 +328,8 @@ CONTENT["about"] = {
         s3_item3='<a href="{tool_converter}">JSON ↔ XML 변환기</a> — JSON을 XML로, XML을 JSON으로 변환합니다. 형식 자동 감지와 들여쓰기 설정을 지원합니다.',
         s3_item4='<a href="{tool_sql}">SQL 포매터</a> — SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.',
         s3_item5='<a href="{tool_code}">코드 뷰어</a> — 소스 코드를 붙여넣고 언어를 선택하면 문법 강조가 적용된 화면으로 보여줍니다. Java, C#, Python, Go 등 20여 개 언어를 지원합니다.',
-        s3_p='새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를, 코드 뷰어는 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 라이선스)를 사용하며, 둘 다 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다.',
+        s3_item6='<a href="{tool_number}">숫자 읽기 변환기</a> — 숫자를 일반(기수), 서수, 전화·계좌번호, 시간, 날짜, 화폐 등으로 변환해 읽는 법을 보여줍니다. 언어별로 여러 표기 방식을 지원합니다.',
+        s3_p='새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를, 코드 뷰어는 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 라이선스)를 사용하며, 둘 다 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다. 숫자 읽기 변환기는 외부 라이브러리 없이 자체 구현했습니다.',
         s4_h2="광고 및 서비스 운영에 대해",
         s4_p='Formix는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="{privacy}">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.',
         s5_h2="문의", s5_p="버그 제보, 기능 제안, 기타 문의는 아래 이메일로 연락해 주세요.",
@@ -336,7 +355,8 @@ CONTENT["about"] = {
         s3_item3='<a href="{tool_converter}">JSON ↔ XML 変換ツール</a> — JSONをXMLに、XMLをJSONに変換します。形式の自動検出とインデント設定に対応しています。',
         s3_item4='<a href="{tool_sql}">SQLフォーマッター</a> — SQLクエリを見やすくインデント・整形します。MySQL、PostgreSQL、SQL Server、BigQueryなど複数の方言に対応しています。',
         s3_item5='<a href="{tool_code}">コードビューア</a> — ソースコードを貼り付けて言語を選択すると、シンタックスハイライト付きで表示します。Java、C#、Python、Goなど20以上の言語に対応しています。',
-        s3_p='新機能のご提案や改善のご意見はいつでも歓迎します。SQLフォーマッターはオープンソースの<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>ライブラリ(MITライセンス)を、コードビューアは<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MITライセンス)を使用しており、どちらもローカルにバンドル(vendor)しているため処理はすべてブラウザ内で完結します。',
+        s3_item6='<a href="{tool_number}">数字の読み方変換</a> — 数字を基数・序数・電話/口座番号・時刻・日付・通貨などに変換して読み方を表示します。言語ごとに複数の表記方式に対応しています。',
+        s3_p='新機能のご提案や改善のご意見はいつでも歓迎します。SQLフォーマッターはオープンソースの<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>ライブラリ(MITライセンス)を、コードビューアは<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MITライセンス)を使用しており、どちらもローカルにバンドル(vendor)しているため処理はすべてブラウザ内で完結します。数字の読み方変換は外部ライブラリを使わず独自に実装しています。',
         s4_h2="広告およびサービス運営について",
         s4_p='Formixはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="{privacy}">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。',
         s5_h2="お問い合わせ", s5_p="不具合報告、機能提案、その他のお問い合わせは下記メールアドレスまでご連絡ください。",
@@ -362,7 +382,8 @@ CONTENT["about"] = {
         s3_item3='<a href="{tool_converter}">JSON ↔ XML 转换工具</a> — 将 JSON 转换为 XML，或将 XML 转换为 JSON，支持自动检测格式与自定义缩进。',
         s3_item4='<a href="{tool_sql}">SQL 格式化工具</a> — 为 SQL 查询语句添加清晰的缩进和关键字大小写格式化，支持 MySQL、PostgreSQL、SQL Server、BigQuery 等多种方言。',
         s3_item5='<a href="{tool_code}">代码查看器</a> — 粘贴源代码并选择语言，即可获得带语法高亮的展示，支持 Java、C#、Python、Go 等 20 多种语言。',
-        s3_p='欢迎随时提出新功能建议或改进意见。SQL 格式化工具使用了开源的 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 库(MIT 许可)，代码查看器使用了 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 许可)，两者均已本地打包(vendor)，因此所有处理仍完全在您的浏览器中进行。',
+        s3_item6='<a href="{tool_number}">数字读法转换</a> — 将数字转换为基数、序数、电话/账号、时间、日期、货币等读法。每种语言均支持多种表示方式。',
+        s3_p='欢迎随时提出新功能建议或改进意见。SQL 格式化工具使用了开源的 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 库(MIT 许可)，代码查看器使用了 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 许可)，两者均已本地打包(vendor)，因此所有处理仍完全在您的浏览器中进行。数字读法转换未使用任何外部库，为我们自行实现。',
         s4_h2="关于广告与服务运营",
         s4_p='为了维持服务运营，Formix未来可能会引入 Google AdSense 等广告服务。如果引入广告，相关数据的处理方式将在<a href="{privacy}">隐私政策</a>页面中透明说明，工具的核心功能(如 JSON 处理)将始终免费提供，不受广告影响。',
         s5_h2="联系方式", s5_p="如有错误反馈、功能建议或其他咨询，请通过以下邮箱联系我们。",
@@ -495,7 +516,7 @@ CONTENT["faq"] = {
             ("Which browsers are supported?", "Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse."),
             ("Can I use these tools on my phone?", "Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents."),
             ("What happens if my JSON or XML is invalid?", "The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes."),
-            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>, a <a href="{tool_converter}">JSON ↔ XML Converter</a>, a <a href="{tool_sql}">SQL Formatter</a>, and a <a href="{tool_code}">Code Viewer</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
+            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>, a <a href="{tool_converter}">JSON ↔ XML Converter</a>, a <a href="{tool_sql}">SQL Formatter</a>, a <a href="{tool_code}">Code Viewer</a>, and a <a href="{tool_number}">Number Reader</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
             ("How do I report a bug or suggest a feature?", 'Please reach out through our <a href="{contact}">Contact page</a>. We read every message.'),
         ],
     ),
@@ -513,7 +534,7 @@ CONTENT["faq"] = {
             ("어떤 브라우저를 지원하나요?", "PC와 모바일의 최신 브라우저(Chrome, Edge, Firefox, Safari)에서 모두 사용할 수 있습니다. DOMParser, JSON.parse 등 널리 지원되는 표준 자바스크립트 API를 사용합니다."),
             ("모바일에서도 사용할 수 있나요?", "네, 모바일 브라우저에서도 반응형으로 정상 동작합니다. 다만 긴 JSON·XML 문서를 다룰 때는 화면이 큰 기기가 더 편리합니다."),
             ("JSON이나 XML이 유효하지 않으면 어떻게 되나요?", "상태 배지와 함께 문제가 발생한 대략적인 줄/열 위치를 알려줘 빠르게 확인하고 수정할 수 있습니다. JSON 포매터는 따옴표 누락 같은 흔한 실수를 자동으로 보정하기도 합니다."),
-            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>, <a href="{tool_converter}">JSON ↔ XML 변환기</a>, <a href="{tool_sql}">SQL 포매터</a>, <a href="{tool_code}">코드 뷰어</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
+            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>, <a href="{tool_converter}">JSON ↔ XML 변환기</a>, <a href="{tool_sql}">SQL 포매터</a>, <a href="{tool_code}">코드 뷰어</a>, <a href="{tool_number}">숫자 읽기 변환기</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
             ("버그 제보나 기능 제안은 어떻게 하나요?", '<a href="{contact}">문의하기</a> 페이지를 통해 연락해주세요. 보내주시는 의견은 모두 확인하고 있습니다.'),
         ],
     ),
@@ -531,7 +552,7 @@ CONTENT["faq"] = {
             ("対応ブラウザは?", "パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。"),
             ("スマートフォンでも使えますか?", "はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。"),
             ("JSONやXMLが無効な場合はどうなりますか?", "ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。"),
-            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>、<a href="{tool_converter}">JSON ↔ XML 変換ツール</a>、<a href="{tool_sql}">SQLフォーマッター</a>、<a href="{tool_code}">コードビューア</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
+            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>、<a href="{tool_converter}">JSON ↔ XML 変換ツール</a>、<a href="{tool_sql}">SQLフォーマッター</a>、<a href="{tool_code}">コードビューア</a>、<a href="{tool_number}">数字の読み方変換</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
             ("不具合報告や機能提案はどうすればいいですか?", '<a href="{contact}">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。'),
         ],
     ),
@@ -549,7 +570,7 @@ CONTENT["faq"] = {
             ("支持哪些浏览器?", "电脑和手机上的主流最新浏览器(Chrome、Edge、Firefox、Safari)均可正常使用。工具使用的是 DOMParser、JSON.parse 等广泛支持的标准 JavaScript API。"),
             ("可以在手机上使用吗?", "可以，本站在移动浏览器上也能自适应正常显示。不过在处理较长的 JSON/XML 文档时，使用大屏幕设备会更方便。"),
             ("如果我的 JSON 或 XML 无效会怎样?", "工具会显示状态标记，并告知大致的错误行/列位置，方便您快速定位并修正问题。JSON 格式化工具还能自动修正部分常见错误，例如缺失的引号。"),
-            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>、<a href="{tool_converter}">JSON ↔ XML 转换工具</a>、<a href="{tool_sql}">SQL 格式化工具</a>和 <a href="{tool_code}">代码查看器</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
+            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>、<a href="{tool_converter}">JSON ↔ XML 转换工具</a>、<a href="{tool_sql}">SQL 格式化工具</a>、<a href="{tool_code}">代码查看器</a>和 <a href="{tool_number}">数字读法转换</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
             ("如何反馈错误或提出功能建议?", '请通过<a href="{contact}">联系我们</a>页面与我们联系，我们会查看每一条反馈。'),
         ],
     ),
@@ -1738,6 +1759,175 @@ CONTENT["tool_code"] = {
     ),
 }
 
+CONTENT["tool_number"] = {
+    "en": dict(
+        title="Number Reader / Number to Words Converter - Free Online Tool | Formix",
+        description="Convert numbers into words online, free. Supports cardinal, ordinal, phone/account digit reading, time, date, and currency, with multiple reading styles (e.g. Sino vs. native Korean, or standard vs. formal). Runs entirely in your browser.",
+        keywords="number to words, number reader online, spell out numbers, ordinal number converter, currency to words, number to words converter free",
+        og_title="Number Reader / Number to Words Converter | Formix",
+        og_description="A free online tool that converts numbers into words, covering cardinal, ordinal, phone numbers, time, date, and currency. Runs entirely in your browser.",
+        jsonld_name="Number Reader / Number to Words Converter",
+        jsonld_description="A free online tool that converts numbers into words for cardinal, ordinal, phone/account digits, time, date, and currency, with multiple reading styles.",
+        h1="Number Reader",
+        lead="Enter numbers on the left (one per line), pick a mode and style, and see how they're read out loud on the right. Nothing is sent to a server.",
+        btn_format="Convert", btn_sample="Load sample", btn_clear="Clear",
+        indent_label="Indent size", indent2="2-space indent", indent4="4-space indent", indenttab="Tab indent",
+        btn_copy="Copy", btn_copy_minify="Copy", btn_download="Download result",
+        tabs_aria="Switch between input and output", tab_input="Input", tab_output="Output",
+        status_idle="Enter a number (one per line)",
+        input_search_mode_label="Search mode", opt_contains="Contains", opt_exact_line="Exact (line)", opt_regex="Regex",
+        input_search_placeholder="Search the input text…", prev_title="Previous match", next_title="Next match", clear_title="Clear search",
+        input_placeholder="Enter a number (one per line)",
+        output_label="Output", expand_all="▾ Expand all", collapse_all="▸ Collapse all",
+        opt_exact="Exact", output_search_placeholder="Search the output text…",
+        mode_label="Mode", style_label="Style",
+        mode_cardinal="Number (cardinal)", mode_ordinal="Ordinal", mode_digits="Phone / account number",
+        mode_time="Time", mode_date="Date", mode_currency="Currency",
+        hint="Tip. Everything runs locally in your browser — nothing you type is ever sent to a server. "
+             "Large integers of any length are supported, along with negative numbers and decimals. "
+             "For Korean, try the \"All styles\" option to compare the native (고유어) and Sino-Korean (한자어) readings side by side. "
+             "Some highly informal or dialectal readings (for example, certain day-of-month readings in Japanese) are simplified for consistency.",
+        usage_h2="How to use this tool",
+        usage_items=[
+            "Enter one number per line in the box on the left — the format depends on the mode (a plain number, a phone number, a time like 14:30, a date like 2026-09-30, etc.).",
+            'Pick a "Mode" (cardinal, ordinal, phone/account number, time, date, or currency) and, where available, a "Style" (for example Sino vs. native Korean, or standard vs. formal).',
+            'Click "Convert" (or just wait — it also updates automatically as you type) to see the reading on the right, one line per input line.',
+            '"Copy" or "Download result" to grab the converted text.',
+            "Everything happens in your browser — nothing you enter is sent to a server.",
+        ],
+        tips_h2="Related tips",
+        tips_items=[
+            "For Korean, native-style (고유어) numbers only exist for 0–99 — larger native-range requests automatically fall back to the Sino-Korean (한자어) reading.",
+            "\"Formal\" / \"大写\" / \"大字\" styles are the anti-fraud number forms traditionally used on checks, invoices, and legal documents in East Asia.",
+            "This tool only converts numbers to words for reading purposes — it doesn't perform currency conversion between different currencies.",
+        ],
+    ),
+    "ko": dict(
+        title="숫자 읽기 변환기 - 무료 온라인 도구 | Formix",
+        description="숫자를 문자로 변환해 무료로 온라인에서 읽는 법을 확인하세요. 일반(기수), 서수, 전화·계좌번호, 시간, 날짜, 화폐를 지원하며, 한자어/고유어/갖은자 등 여러 표기 방식을 제공합니다. 모든 처리는 브라우저 안에서만 이뤄집니다.",
+        keywords="숫자 한글로 변환, 숫자 읽기, 금액 한글 표기, 서수 변환, 전화번호 읽기, 숫자 한자어 고유어, 무료 숫자 변환기",
+        og_title="숫자 읽기 변환기 | Formix",
+        og_description="일반(기수), 서수, 전화번호, 시간, 날짜, 화폐까지 지원하는 무료 온라인 숫자 읽기 변환기. 모든 처리는 브라우저 안에서 이뤄집니다.",
+        jsonld_name="숫자 읽기 변환기",
+        jsonld_description="숫자를 일반(기수), 서수, 전화·계좌번호, 시간, 날짜, 화폐 등 다양한 방식으로 읽어주는 무료 온라인 도구. 언어별로 여러 표기 방식을 지원합니다.",
+        h1="숫자 읽기 변환기",
+        lead="왼쪽에 숫자를 입력하고(한 줄에 하나씩) 모드와 표기 방식을 선택하면 오른쪽에 읽는 법이 표시됩니다. 데이터는 서버로 전송되지 않습니다.",
+        btn_format="변환", btn_sample="예시 불러오기", btn_clear="지우기",
+        indent_label="들여쓰기 크기", indent2="들여쓰기 2칸", indent4="들여쓰기 4칸", indenttab="들여쓰기 Tab",
+        btn_copy="복사", btn_copy_minify="복사", btn_download="결과 다운로드",
+        tabs_aria="입력/결과 전환", tab_input="입력", tab_output="결과",
+        status_idle="숫자를 입력해주세요 (한 줄에 하나씩)",
+        input_search_mode_label="검색 방식", opt_contains="포함", opt_exact_line="일치(줄)", opt_regex="정규식",
+        input_search_placeholder="입력한 텍스트에서 검색…", prev_title="이전 일치 항목", next_title="다음 일치 항목", clear_title="검색어 지우기",
+        input_placeholder="숫자를 입력해주세요 (한 줄에 하나씩)",
+        output_label="결과", expand_all="▾ 모두 펼치기", collapse_all="▸ 모두 접기",
+        opt_exact="일치", output_search_placeholder="결과 텍스트에서 검색…",
+        mode_label="모드", style_label="표기 방식",
+        mode_cardinal="일반 숫자(기수)", mode_ordinal="서수", mode_digits="전화·계좌번호",
+        mode_time="시간", mode_date="날짜", mode_currency="화폐",
+        hint='Tip. 모든 변환은 브라우저 안에서만 이뤄지며, 입력한 내용은 서버로 전송되지 않습니다. '
+             '자릿수에 관계없이 아주 큰 정수는 물론 음수·소수점도 지원합니다. '
+             '한국어에서는 "전체 비교" 옵션으로 고유어와 한자어 읽기를 한눈에 비교해볼 수 있습니다. '
+             '일본어 날짜의 일부 관용적 읽기(1일=ついたち 등)처럼 매우 구어적이거나 방언적인 읽기는 일관성을 위해 단순화되어 있습니다.',
+        usage_h2="이 도구는 이렇게 사용하세요",
+        usage_items=[
+            "왼쪽 입력창에 한 줄에 하나씩 숫자를 입력하세요. 형식은 모드에 따라 다릅니다(일반 숫자, 전화번호, 14:30 같은 시간, 2026-09-30 같은 날짜 등).",
+            '"모드"(일반, 서수, 전화·계좌번호, 시간, 날짜, 화폐)를 선택하고, 가능하다면 "표기 방식"(예: 한자어/고유어, 표준/갖은자)도 선택하세요.',
+            '"변환" 버튼을 클릭하거나(입력하는 동안 자동으로도 적용됩니다) 오른쪽에서 입력한 줄마다 읽는 법을 확인하세요.',
+            '"복사" 또는 "결과 다운로드"로 변환된 텍스트를 가져갈 수 있습니다.',
+            "모든 처리는 브라우저 안에서만 이뤄지며, 입력한 내용은 서버로 전송되지 않습니다.",
+        ],
+        tips_h2="관련 팁",
+        tips_items=[
+            "한국어 고유어(순우리말) 표기는 0~99까지만 존재합니다. 그 범위를 벗어나면 자동으로 한자어 읽기로 대체됩니다.",
+            '"갖은자" 표기는 계약서·수표·영수증 등에서 금액 위변조를 방지하기 위해 전통적으로 사용해온 한자 표기입니다(壹, 貳, 參 등).',
+            "이 도구는 숫자를 읽는 법(문자 표기)만 변환할 뿐, 서로 다른 통화 간의 환율 변환은 제공하지 않습니다.",
+        ],
+    ),
+    "ja": dict(
+        title="数字の読み方変換 - 無料オンラインツール | Formix",
+        description="数字を文字に変換して読み方を無料でオンライン確認できます。基数・序数・電話/口座番号・時刻・日付・通貨に対応し、標準・大字など複数の表記方式を提供します。すべての処理はブラウザ内で行われます。",
+        keywords="数字 読み方 変換, 数値 漢数字 変換, 序数 変換, 電話番号 読み方, 大字 変換, 無料 数字変換ツール",
+        og_title="数字の読み方変換 | Formix",
+        og_description="基数・序数・電話番号・時刻・日付・通貨に対応した無料オンライン数字読み上げ変換ツール。すべての処理はブラウザ内で行われます。",
+        jsonld_name="数字の読み方変換",
+        jsonld_description="数字を基数・序数・電話/口座番号・時刻・日付・通貨など様々な形式で変換する無料オンラインツール。複数の表記方式に対応しています。",
+        h1="数字の読み方変換",
+        lead="左側に数字を入力し(1行に1つ)、モードと表記方式を選択すると、右側に読み方が表示されます。データはサーバーに送信されません。",
+        btn_format="変換", btn_sample="例を読み込む", btn_clear="クリア",
+        indent_label="インデントサイズ", indent2="インデント2文字", indent4="インデント4文字", indenttab="インデントTab",
+        btn_copy="コピー", btn_copy_minify="コピー", btn_download="結果をダウンロード",
+        tabs_aria="入力/結果切り替え", tab_input="入力", tab_output="結果",
+        status_idle="数値を入力してください（1行に1つ）",
+        input_search_mode_label="検索モード", opt_contains="含む", opt_exact_line="完全一致(行)", opt_regex="正規表現",
+        input_search_placeholder="入力テキストを検索…", prev_title="前の一致", next_title="次の一致", clear_title="検索をクリア",
+        input_placeholder="数値を入力してください（1行に1つ）",
+        output_label="結果", expand_all="▾ すべて展開", collapse_all="▸ すべて折りたたむ",
+        opt_exact="完全一致", output_search_placeholder="結果テキストを検索…",
+        mode_label="モード", style_label="表記方式",
+        mode_cardinal="数値（基数）", mode_ordinal="序数", mode_digits="電話・口座番号",
+        mode_time="時刻", mode_date="日付", mode_currency="通貨",
+        hint="Tip. すべての変換はブラウザ内でのみ行われ、入力内容はサーバーに送信されません。"
+             "桁数に関わらず非常に大きな整数、負の数、小数にも対応しています。"
+             "日付の一部の慣用的な読み方（1日=ついたち 等）のような非常に口語的・方言的な読みは、一貫性のため簡略化しています。",
+        usage_h2="このツールの使い方",
+        usage_items=[
+            "左側の入力欄に1行に1つずつ数値を入力します。形式はモードによって異なります（数値、電話番号、14:30のような時刻、2026-09-30のような日付など）。",
+            "「モード」（基数、序数、電話・口座番号、時刻、日付、通貨）を選択し、可能な場合は「表記方式」（標準/大字など）も選択します。",
+            "「変換」ボタンをクリックするか（入力中も自動で適用されます）、右側で各行の読み方を確認してください。",
+            "「コピー」または「結果をダウンロード」で変換されたテキストを取得できます。",
+            "すべての処理はブラウザ内で行われ、入力した内容がサーバーに送信されることはありません。",
+        ],
+        tips_h2="関連のヒント",
+        tips_items=[
+            "「大字」表記は、証書・契約書・領収書などで金額の改ざんを防ぐために伝統的に使われてきた漢数字表記です（壱、弐、参 等）。",
+            "日付の年は慣例に従い、桁ごとに読む形式（二〇二六年 等）で表示されます。",
+            "このツールは数字の読み方（文字表記）を変換するだけで、通貨間の為替換算は行いません。",
+        ],
+    ),
+    "zh": dict(
+        title="数字读法转换 - 免费在线工具 | Formix",
+        description="将数字转换为文字，免费在线查看读法。支持基数、序数、电话/账号、时间、日期、货币，并提供小写/大写等多种表示方式。所有处理均在浏览器中完成。",
+        keywords="数字转中文, 数字大写转换, 序数转换, 电话号码读法, 金额大写, 免费数字转换工具",
+        og_title="数字读法转换 | Formix",
+        og_description="支持基数、序数、电话号码、时间、日期、货币的免费在线数字读法转换工具，所有处理均在浏览器中完成。",
+        jsonld_name="数字读法转换",
+        jsonld_description="将数字转换为基数、序数、电话/账号、时间、日期、货币等多种形式的免费在线工具，支持多种表示方式。",
+        h1="数字读法转换",
+        lead="在左侧输入数字（每行一个），选择模式和表示方式后，右侧会显示读法。数据不会发送到服务器。",
+        btn_format="转换", btn_sample="加载示例", btn_clear="清空",
+        indent_label="缩进大小", indent2="2 格缩进", indent4="4 格缩进", indenttab="Tab 缩进",
+        btn_copy="复制", btn_copy_minify="复制", btn_download="下载结果",
+        tabs_aria="切换输入/结果", tab_input="输入", tab_output="结果",
+        status_idle="请输入数字（每行一个）",
+        input_search_mode_label="搜索模式", opt_contains="包含", opt_exact_line="精确匹配(整行)", opt_regex="正则表达式",
+        input_search_placeholder="在输入文本中搜索…", prev_title="上一个匹配项", next_title="下一个匹配项", clear_title="清除搜索",
+        input_placeholder="请输入数字（每行一个）",
+        output_label="结果", expand_all="▾ 全部展开", collapse_all="▸ 全部折叠",
+        opt_exact="精确匹配", output_search_placeholder="在结果文本中搜索…",
+        mode_label="模式", style_label="表示方式",
+        mode_cardinal="数字（基数）", mode_ordinal="序数", mode_digits="电话·账号",
+        mode_time="时间", mode_date="日期", mode_currency="货币",
+        hint="提示。所有转换均在浏览器本地完成，您输入的内容不会发送到服务器。"
+             "支持任意位数的大整数、负数和小数。"
+             "部分非常口语化或方言化的读法（例如日语中某些日期的习惯读法）为保持一致性已做简化处理。",
+        usage_h2="使用方法",
+        usage_items=[
+            "在左侧输入框中每行输入一个数字，格式取决于所选模式（普通数字、电话号码、14:30 这样的时间、2026-09-30 这样的日期等）。",
+            "选择「模式」（基数、序数、电话/账号、时间、日期、货币），如可选，也选择「表示方式」（例如小写/大写）。",
+            "点击「转换」按钮（输入时也会自动转换），即可在右侧查看每一行的读法。",
+            "通过「复制」或「下载结果」获取转换后的文本。",
+            "所有处理均在浏览器内完成，您输入的内容不会发送到服务器。",
+        ],
+        tips_h2="相关提示",
+        tips_items=[
+            "「大写」表示方式（壹、贰、叁等）是财务票据、合同等场景中传统上用于防止金额篡改的汉字数字写法。",
+            "日期中的年份按照惯例逐位读出（例如 二〇二六年）。",
+            "此工具仅转换数字的读法（文字表示），不提供不同货币之间的汇率换算。",
+        ],
+    ),
+}
+
 # ---------------------------------------------------------------------------
 # 렌더링 헬퍼
 # ---------------------------------------------------------------------------
@@ -1755,7 +1945,7 @@ class FormatUrls(dict):
 def fmt(s, urls):
     return s.format(home=urls["home"], about=urls["about"], privacy=urls["privacy"], tool=urls["tool"],
                      tool_xml=urls["tool_xml"], tool_converter=urls["tool_converter"], tool_sql=urls["tool_sql"],
-                     tool_code=urls["tool_code"],
+                     tool_code=urls["tool_code"], tool_number=urls["tool_number"],
                      faq=urls["faq"], contact=urls["contact"], terms=urls["terms"], updates=urls["updates"])
 
 
@@ -2045,11 +2235,19 @@ def render_index(lang):
         <h3><a href="%s">%s</a></h3>
         <p>%s</p>
         <span class="tag">%s</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-card-icon">\U0001F522</div>
+        <h3><a href="%s">%s</a></h3>
+        <p>%s</p>
+        <span class="tag">%s</span>
       </article>''' % (urls["tool"], c["card1_title"], c["card1_desc"], c["card1_tag"],
                         urls["tool_xml"], c["card2_title"], c["card2_desc"], c["card2_tag"],
                         urls["tool_converter"], c["card3_title"], c["card3_desc"], c["card3_tag"],
                         urls["tool_sql"], c["card4_title"], c["card4_desc"], c["card4_tag"],
-                        urls["tool_code"], c["card5_title"], c["card5_desc"], c["card5_tag"])
+                        urls["tool_code"], c["card5_title"], c["card5_desc"], c["card5_tag"],
+                        urls["tool_number"], c["card6_title"], c["card6_desc"], c["card6_tag"])
     why_items = "\n      ".join(
         '<li><strong>%s</strong> — %s</li>' % (t, d) for t, d in c["why_items"]
     )
@@ -2119,6 +2317,7 @@ def render_about(lang):
         <li>%s</li>
         <li>%s</li>
         <li>%s</li>
+        <li>%s</li>
       </ul>
       <p>%s</p>
     </section>
@@ -2137,7 +2336,7 @@ def render_about(lang):
 </main>
 
 ''' % (c["h1"], c["lead"], c["s1_h2"], fmt(c["s1_p"], urls), c["s2_h2"], s2_items,
-       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), fmt(c["s3_item3"], urls), fmt(c["s3_item4"], urls), fmt(c["s3_item5"], urls), fmt(c["s3_p"], urls), c["s4_h2"], fmt(c["s4_p"], urls),
+       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), fmt(c["s3_item3"], urls), fmt(c["s3_item4"], urls), fmt(c["s3_item5"], urls), fmt(c["s3_item6"], urls), fmt(c["s3_p"], urls), c["s4_h2"], fmt(c["s4_p"], urls),
        c["s5_h2"], c["s5_p"], CONTACT_EMAIL, CONTACT_EMAIL) + footer_block(lang)
     return page_wrap(lang, head, body)
 
@@ -2690,6 +2889,28 @@ def render_tool_code(lang):
     return body
 
 
+def render_tool_number(lang):
+    c = CONTENT["tool_number"][lang]
+    extra_toolbar = '''      <label for="json-mode-select" class="visually-hidden">%s</label>
+      <select class="jf-select num-mode-select" id="json-mode-select">
+        <option value="cardinal" selected>%s</option>
+        <option value="ordinal">%s</option>
+        <option value="digits">%s</option>
+        <option value="time">%s</option>
+        <option value="date">%s</option>
+        <option value="currency">%s</option>
+      </select>
+      <span id="json-style-label-wrap">
+        <label for="json-style-select" class="visually-hidden">%s</label>
+        <select class="jf-select num-style-select" id="json-style-select"></select>
+      </span>''' % (c["mode_label"], c["mode_cardinal"], c["mode_ordinal"], c["mode_digits"],
+                     c["mode_time"], c["mode_date"], c["mode_currency"], c["style_label"])
+    body = render_tool_page(lang, "tool_number", "tool_number", "num",
+                             "/tools/number-reader.css", "/tools/number-reader.js",
+                             extra_toolbar=extra_toolbar)
+    return body
+
+
 # ---------------------------------------------------------------------------
 # 실행부: 각 언어 x 각 페이지 조합으로 정적 파일 생성 + sitemap
 # ---------------------------------------------------------------------------
@@ -2711,18 +2932,19 @@ def build():
         written.append(write_file(prefix + "/tools/json-xml-converter.html", render_tool_converter(lang)))
         written.append(write_file(prefix + "/tools/sql-formatter.html", render_tool_sql(lang)))
         written.append(write_file(prefix + "/tools/code-viewer.html", render_tool_code(lang)))
+        written.append(write_file(prefix + "/tools/number-reader.html", render_tool_number(lang)))
 
     # sitemap.xml (404는 noindex이므로 제외)
     import datetime
     today = datetime.date.today().isoformat()
     priority_map = {"home": "1.0", "about": "0.6", "privacy": "0.3", "faq": "0.5", "contact": "0.4",
                      "terms": "0.3", "updates": "0.5", "tool": "0.9", "tool_xml": "0.9", "tool_converter": "0.9",
-                     "tool_sql": "0.9", "tool_code": "0.9"}
+                     "tool_sql": "0.9", "tool_code": "0.9", "tool_number": "0.9"}
     changefreq_map = {"home": "weekly", "about": "monthly", "privacy": "yearly", "faq": "monthly", "contact": "yearly",
                        "terms": "yearly", "updates": "weekly", "tool": "weekly", "tool_xml": "weekly", "tool_converter": "weekly",
-                       "tool_sql": "weekly", "tool_code": "weekly"}
+                       "tool_sql": "weekly", "tool_code": "weekly", "tool_number": "weekly"}
     url_entries = []
-    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml", "tool_converter", "tool_sql", "tool_code"]:
+    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml", "tool_converter", "tool_sql", "tool_code", "tool_number"]:
         for lang in LANGS:
             loc = SITE_DOMAIN + urls_for(lang)[page_key]
             alt_links = "\n".join(

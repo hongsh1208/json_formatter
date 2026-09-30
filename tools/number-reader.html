@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Number Reader / Number to Words Converter - Free Online Tool | Formix</title>
+<meta name="description" content="Convert numbers into words online, free. Supports cardinal, ordinal, phone/account digit reading, time, date, and currency, with multiple reading styles (e.g. Sino vs. native Korean, or standard vs. formal). Runs entirely in your browser." />
+<meta name="keywords" content="number to words, number reader online, spell out numbers, ordinal number converter, currency to words, number to words converter free" />
+<link rel="canonical" href="https://formix.site/tools/number-reader.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Number Reader / Number to Words Converter | Formix" />
+<meta property="og:description" content="A free online tool that converts numbers into words, covering cardinal, ordinal, phone numbers, time, date, and currency. Runs entirely in your browser." />
+<meta property="og:url" content="https://formix.site/tools/number-reader.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Number Reader / Number to Words Converter | Formix" />
+<meta name="twitter:description" content="A free online tool that converts numbers into words, covering cardinal, ordinal, phone numbers, time, date, and currency. Runs entirely in your browser." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/number-reader.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/number-reader.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/number-reader.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/number-reader.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/number-reader.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/number-reader.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("formix-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("formix-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("formix-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Number Reader / Number to Words Converter",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/tools/number-reader.html",
+  "description": "A free online tool that converts numbers into words for cardinal, ordinal, phone/account digits, time, date, and currency, with multiple reading styles.",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Number Reader",
+      "item": "https://formix.site/tools/number-reader.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+      <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+      <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+      <li><a href="/tools/number-reader.html" aria-current="page">Number Reader</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/number-reader.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/number-reader.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/number-reader.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/number-reader.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Number Reader</h1>
+    <p>Enter numbers on the left (one per line), pick a mode and style, and see how they're read out loud on the right. Nothing is sent to a server.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Convert</button>
+      <button class="btn" id="btn-sample" type="button">Load sample</button>
+      <button class="btn" id="btn-clear" type="button">Clear</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Indent size</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>2-space indent</option>
+        <option value="4">4-space indent</option>
+        <option value="tab">Tab indent</option>
+      </select>
+            <label for="num-mode-select" class="visually-hidden">Mode</label>
+      <select class="jf-select num-mode-select" id="num-mode-select">
+        <option value="cardinal" selected>Number (cardinal)</option>
+        <option value="ordinal">Ordinal</option>
+        <option value="digits">Phone / account number</option>
+        <option value="time">Time</option>
+        <option value="date">Date</option>
+        <option value="currency">Currency</option>
+      </select>
+      <span id="num-style-label-wrap">
+        <label for="num-style-select" class="visually-hidden">Style</label>
+        <select class="jf-select num-style-select" id="num-style-select"></select>
+      </span>
+      <button class="btn btn-sm" id="btn-copy" type="button">Copy</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Copy</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Download result</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Switch between input and output">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Input
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Output
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Input">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="num-status-top" class="status-pill is-idle">Enter a number (one per line)</span>
+          <span id="num-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="num-input-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="num-input-search-mode">
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact (line)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="num-input-search" class="visually-hidden">Search mode</label>
+          <input type="text" id="num-input-search" placeholder="Search the input text…" />
+          <span class="jf-search-count" id="num-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="num-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="num-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="num-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="num-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Enter a number (one per line)"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="num-status" class="status-pill is-idle">Enter a number (one per line)</span>
+          <span id="num-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Output" hidden>
+        <div class="jf-panel-head">
+          <span>Output</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Expand all</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Collapse all</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="num-search-mode" class="visually-hidden">Search mode</label>
+          <select class="jf-select jf-search-mode" id="num-search-mode" disabled>
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="num-search" class="visually-hidden">Search the output text…</label>
+          <input type="text" id="num-search" placeholder="Search the output text…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Previous match" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Next match" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Clear search" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="num-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="num-output-gutter-inner"></div>
+          </div>
+          <div id="num-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Tip. Everything runs locally in your browser — nothing you type is ever sent to a server. Large integers of any length are supported, along with negative numbers and decimals. For Korean, try the "All styles" option to compare the native (고유어) and Sino-Korean (한자어) readings side by side. Some highly informal or dialectal readings (for example, certain day-of-month readings in Japanese) are simplified for consistency.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>How to use this tool</h2>
+    <ul>
+      <li>Enter one number per line in the box on the left — the format depends on the mode (a plain number, a phone number, a time like 14:30, a date like 2026-09-30, etc.).</li>
+      <li>Pick a "Mode" (cardinal, ordinal, phone/account number, time, date, or currency) and, where available, a "Style" (for example Sino vs. native Korean, or standard vs. formal).</li>
+      <li>Click "Convert" (or just wait — it also updates automatically as you type) to see the reading on the right, one line per input line.</li>
+      <li>"Copy" or "Download result" to grab the converted text.</li>
+      <li>Everything happens in your browser — nothing you enter is sent to a server.</li>
+    </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>For Korean, native-style (고유어) numbers only exist for 0–99 — larger native-range requests automatically fall back to the Sino-Korean (한자어) reading.</li>
+      <li>"Formal" / "大写" / "大字" styles are the anti-fraud number forms traditionally used on checks, invoices, and legal documents in East Asia.</li>
+      <li>This tool only converts numbers to words for reading purposes — it doesn't perform currency conversion between different currencies.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+      <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+      <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+      <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>
+      <a href="/tools/sql-formatter.html">SQL Formatter</a>
+      <a href="/tools/code-viewer.html">Code Viewer</a>
+      <a href="/tools/number-reader.html">Number Reader</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/number-reader.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

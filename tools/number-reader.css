@@ -1,0 +1,212 @@
+/* 숫자 읽기 변환기 전용 스타일 (style.css 뒤에 로드) */
+
+.jf-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.jf-toolbar .spacer {
+  flex: 1;
+}
+.jf-select {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+
+.jf-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 14px;
+}
+.jf-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.jf-tab:hover {
+  color: var(--color-text);
+}
+.jf-tab.is-active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+.jf-tab-badge {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: var(--color-text-muted);
+}
+.jf-tab-badge.is-valid { background: var(--color-success); }
+.jf-tab-badge.is-invalid { background: var(--color-danger); }
+.jf-tab-badge.is-idle { background: var(--color-text-muted); }
+
+.jf-tabpanels { display: block; }
+.jf-panel[hidden] { display: none; }
+
+.jf-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.jf-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+.jf-panel-head-status {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+
+.jf-editor {
+  display: flex;
+  align-items: stretch;
+  min-height: 46vh;
+}
+
+.jf-gutter {
+  flex: none;
+  width: 48px;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-bg-inset);
+  border-right: 1px solid var(--color-border);
+}
+.jf-gutter-inner { padding: 14px 8px 14px 0; }
+.jf-gutter-line {
+  height: 1.55em;
+  line-height: 1.55em;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+.jf-gutter-number {
+  margin-left: auto;
+  padding-right: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.jf-input-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 46vh;
+  background: var(--color-bg);
+}
+
+#num-input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 46vh;
+  resize: vertical;
+  border: none;
+  outline: none;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  white-space: pre;
+  overflow: auto;
+  background: transparent;
+  color: var(--color-text);
+}
+
+.jf-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+.jf-error-detail {
+  color: var(--color-danger);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+}
+
+.jf-output-body { display: flex; align-items: stretch; }
+
+#num-output {
+  flex: 1;
+  min-width: 0;
+  min-height: 46vh;
+  max-height: 74vh;
+  overflow: auto;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+}
+
+.jf-placeholder {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  padding: 8px 2px;
+}
+
+.jf-hint {
+  margin-top: 18px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
+/* 숫자 읽기 도구는 재구성(reformat)이 아니라 변환이므로, 들여쓰기 선택·압축 복사·
+   트리 전용 컨트롤(펼치기/접기, 입출력 검색)은 표시하지 않는다. */
+#indent-select,
+label[for="indent-select"],
+#btn-copy-minify,
+#btn-expand-all,
+#btn-collapse-all {
+  display: none;
+}
+#panel-input .jf-search,
+#panel-output .jf-search {
+  display: none;
+}
+
+.num-mode-select { min-width: 168px; }
+.num-style-select { min-width: 168px; }
+
+.num-output-text {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--color-text);
+  line-height: 1.55em;
+}
+.num-line-ok { color: var(--color-text); }
+.num-line-error {
+  color: var(--color-danger);
+  font-style: italic;
+}
