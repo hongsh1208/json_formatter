@@ -95,12 +95,19 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="打开菜单">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/zh/">首页</a></li>
-      <li><a href="/zh/tools/json-formatter.html" aria-current="page">JSON 格式化</a></li>
-      <li><a href="/zh/tools/xml-formatter.html">XML 格式化</a></li>
-      <li><a href="/zh/tools/json-xml-converter.html">JSON ↔ XML 转换工具</a></li>
-      <li><a href="/zh/tools/sql-formatter.html">SQL 格式化</a></li>
-      <li><a href="/zh/tools/code-viewer.html">代码查看器</a></li>
-      <li><a href="/zh/tools/number-reader.html">数字读法转换</a></li>
+      <li class="nav-dropdown" data-tools-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+          工具 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+          <li><a href="/zh/tools/json-formatter.html" aria-current="page">JSON 格式化</a></li>
+        <li><a href="/zh/tools/xml-formatter.html">XML 格式化</a></li>
+        <li><a href="/zh/tools/json-xml-converter.html">JSON ↔ XML 转换工具</a></li>
+        <li><a href="/zh/tools/sql-formatter.html">SQL 格式化</a></li>
+        <li><a href="/zh/tools/code-viewer.html">代码查看器</a></li>
+        <li><a href="/zh/tools/number-reader.html">数字读法转换</a></li>
+        </ul>
+      </li>
       <li><a href="/zh/about.html">关于本站</a></li>
       <li><a href="/zh/privacy.html">隐私政策</a></li>
     </ul>
@@ -118,6 +125,13 @@
     </div>
   </div>
 </header>
+<nav class="breadcrumb" aria-label="面包屑导航">
+  <ol class="breadcrumb-list container">
+    <li><a href="/zh/">首页</a></li>
+    <li><span class="breadcrumb-group">工具</span></li>
+    <li aria-current="page"><span>JSON 格式化</span></li>
+  </ol>
+</nav>
 
 <main id="main-content">
   <div class="page-header container">

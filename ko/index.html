@@ -71,12 +71,19 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/" aria-current="page">홈</a></li>
-      <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
-      <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
-      <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
-      <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
-      <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
-      <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+      <li class="nav-dropdown" data-tools-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+          도구 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+          <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
+        <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+        <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+        <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
+        <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
+        <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+        </ul>
+      </li>
       <li><a href="/ko/about.html">사이트 소개</a></li>
       <li><a href="/ko/privacy.html">개인정보처리방침</a></li>
     </ul>
@@ -95,6 +102,7 @@
   </div>
 </header>
 
+
 <main id="main-content">
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
@@ -106,47 +114,47 @@
     <h2 style="margin-bottom: 4px;">제공 기능</h2>
     <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">아래 기능을 바로 사용해보세요. 새로운 도구는 계속 추가될 예정입니다.</p>
     <div class="card-grid" style="margin-top: 20px;">
-      <article class="tool-card">
+      <a class="tool-card" href="/ko/tools/json-formatter.html">
         <div class="tool-card-icon">🧩</div>
-        <h3><a href="/ko/tools/json-formatter.html">JSON 포매터 / 뷰어</a></h3>
+        <h3>JSON 포매터 / 뷰어</h3>
         <p>입력한 문자열이 올바른 JSON인지 검사하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 키·값 검색 기능을 제공합니다.</p>
         <span class="tag">JSON · Formatter · Validator</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ko/tools/xml-formatter.html">
         <div class="tool-card-icon">📄</div>
-        <h3><a href="/ko/tools/xml-formatter.html">XML 포매터 / 뷰어</a></h3>
+        <h3>XML 포매터 / 뷰어</h3>
         <p>입력한 문자열이 올바른 XML인지 검사하고, 들여쓰기와 문법 강조를 적용해 가독성 좋게 보여줍니다. 트리 접기/펼치기와 태그·속성·텍스트 검색 기능을 제공합니다.</p>
         <span class="tag">XML · Formatter · Validator</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ko/tools/json-xml-converter.html">
         <div class="tool-card-icon">🔄</div>
-        <h3><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></h3>
+        <h3>JSON ↔ XML 변환기</h3>
         <p>JSON을 XML로, XML을 JSON으로 변환합니다. 형식을 자동으로 감지하며, 오류 줄/열 안내와 들여쓰기 설정을 지원합니다.</p>
         <span class="tag">JSON · XML · Converter</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ko/tools/sql-formatter.html">
         <div class="tool-card-icon">🗄️</div>
-        <h3><a href="/ko/tools/sql-formatter.html">SQL 포매터 / 정렬기</a></h3>
+        <h3>SQL 포매터 / 정렬기</h3>
         <p>SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.</p>
         <span class="tag">SQL · Formatter · Beautifier</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ko/tools/code-viewer.html">
         <div class="tool-card-icon">🎨</div>
-        <h3><a href="/ko/tools/code-viewer.html">코드 뷰어</a></h3>
+        <h3>코드 뷰어</h3>
         <p>소스 코드를 붙여넣고 언어(Java, C#, Python, Go 등 20여 개)를 선택하면 문법 강조가 적용된 화면으로 보기 좋게 표시합니다.</p>
         <span class="tag">Code · Syntax Highlighting · Viewer</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ko/tools/number-reader.html">
         <div class="tool-card-icon">🔢</div>
-        <h3><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></h3>
+        <h3>숫자 읽기 변환기</h3>
         <p>숫자를 문자로 변환합니다. 일반(기수), 서수, 전화·계좌번호, 시간, 날짜, 화폐 모드를 지원하며 언어별로 여러 표기 방식(예: 한자어/고유어/갖은자)을 제공합니다.</p>
         <span class="tag">숫자 · 읽기 · 변환기</span>
-      </article>
+      </a>
     </div>
   </section>
 

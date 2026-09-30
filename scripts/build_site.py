@@ -98,28 +98,32 @@ NAV = {
            "privacy": "Privacy Policy", "faq": "FAQ", "contact": "Contact", "related_h2": "Related",
            "cookie_settings": "Cookie preferences", "terms": "Terms of Service", "updates": "What's New",
            "menu": "Open menu", "dark": "Switch to dark mode", "light": "Switch to light mode",
-           "lang": "Select language", "skip": "Skip to content"},
+           "lang": "Select language", "skip": "Skip to content",
+           "tools_group": "Tools", "breadcrumb_aria": "Breadcrumb"},
     "ko": {"home": "홈", "tool": "JSON 포매터", "tool_xml": "XML 포매터",
            "tool_converter": "JSON ↔ XML 변환기", "tool_sql": "SQL 포매터", "tool_code": "코드 뷰어",
            "tool_number": "숫자 읽기 변환기", "about": "사이트 소개",
            "privacy": "개인정보처리방침", "faq": "자주 묻는 질문", "contact": "문의하기", "related_h2": "관련 링크",
            "cookie_settings": "쿠키 설정", "terms": "이용약관", "updates": "업데이트 소식",
            "menu": "메뉴 열기", "dark": "다크 모드로 전환", "light": "라이트 모드로 전환",
-           "lang": "언어 선택", "skip": "본문으로 건너뛰기"},
+           "lang": "언어 선택", "skip": "본문으로 건너뛰기",
+           "tools_group": "도구", "breadcrumb_aria": "현재 위치"},
     "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "tool_xml": "XMLフォーマッター",
            "tool_converter": "JSON ↔ XML 変換ツール", "tool_sql": "SQLフォーマッター", "tool_code": "コードビューア",
            "tool_number": "数字の読み方変換", "about": "サイト紹介",
            "privacy": "プライバシーポリシー", "faq": "よくある質問", "contact": "お問い合わせ", "related_h2": "関連リンク",
            "cookie_settings": "Cookie設定", "terms": "利用規約", "updates": "更新情報",
            "menu": "メニューを開く", "dark": "ダークモードに切り替え", "light": "ライトモードに切り替え",
-           "lang": "言語選択", "skip": "本文へスキップ"},
+           "lang": "言語選択", "skip": "本文へスキップ",
+           "tools_group": "ツール", "breadcrumb_aria": "パンくずリスト"},
     "zh": {"home": "首页", "tool": "JSON 格式化", "tool_xml": "XML 格式化",
            "tool_converter": "JSON ↔ XML 转换工具", "tool_sql": "SQL 格式化", "tool_code": "代码查看器",
            "tool_number": "数字读法转换", "about": "关于本站",
            "privacy": "隐私政策", "faq": "常见问题", "contact": "联系我们", "related_h2": "相关链接",
            "cookie_settings": "Cookie 设置", "terms": "使用条款", "updates": "更新日志",
            "menu": "打开菜单", "dark": "切换到深色模式", "light": "切换到浅色模式",
-           "lang": "选择语言", "skip": "跳转到正文"},
+           "lang": "选择语言", "skip": "跳转到正文",
+           "tools_group": "工具", "breadcrumb_aria": "面包屑导航"},
 }
 
 # ---------------------------------------------------------------------------
@@ -2099,15 +2103,40 @@ def lang_switcher(lang, current_page_key):
       </div>''' % (NAV[lang]["lang"], LANG_META[lang]["flag"], "\n          ".join(items))
 
 
+TOOL_PAGE_KEYS = set(url_key for url_key, _ in TOOL_NAV_ITEMS)
+
+
+def breadcrumb_html(lang, active_key):
+    """모든 페이지 상단에 표시되는 현재 위치(홈 > [도구 >] 현재 페이지) 표시줄.
+    홈/404 페이지에는 표시하지 않는다."""
+    if active_key in ("home", "notfound"):
+        return ""
+    urls = urls_for(lang)
+    n = NAV[lang]
+    items = ['<li><a href="%s">%s</a></li>' % (urls["home"], n["home"])]
+    if active_key in TOOL_PAGE_KEYS:
+        items.append('<li><span class="breadcrumb-group">%s</span></li>' % n["tools_group"])
+    items.append('<li aria-current="page"><span>%s</span></li>' % n[active_key])
+    return '''<nav class="breadcrumb" aria-label="%s">
+  <ol class="breadcrumb-list container">
+    %s
+  </ol>
+</nav>''' % (n["breadcrumb_aria"], "\n    ".join(items))
+
+
 def header_nav(lang, active_key, asset_home="/"):
     urls = urls_for(lang)
     n = NAV[lang]
     def cur(key):
         return ' aria-current="page"' if key == active_key else ""
-    tool_links = "\n      ".join(
+    tool_links = "\n        ".join(
         '<li><a href="%s"%s>%s</a></li>' % (urls[url_key], cur(url_key), n[nav_key])
         for url_key, nav_key in TOOL_NAV_ITEMS
     )
+    tools_active_cls = " is-active" if active_key in TOOL_PAGE_KEYS else ""
+    # aria-expanded는 실제 펼침 상태(항상 닫힘으로 시작)만 나타내고,
+    # 현재 도구 페이지 여부는 is-active 클래스로만 표시한다.
+    tools_expanded = "false"
     return '''<a class="skip-link" href="#main-content">%s</a>
 
 <header class="site-header">
@@ -2119,7 +2148,14 @@ def header_nav(lang, active_key, asset_home="/"):
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="%s">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="%s"%s>%s</a></li>
-      %s
+      <li class="nav-dropdown" data-tools-dropdown>
+        <button class="nav-dropdown-toggle%s" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="%s">
+          %s <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+          %s
+        </ul>
+      </li>
       <li><a href="%s"%s>%s</a></li>
       <li><a href="%s"%s>%s</a></li>
     </ul>
@@ -2128,12 +2164,15 @@ def header_nav(lang, active_key, asset_home="/"):
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="%s">\U0001F319</button>
     </div>
   </div>
-</header>''' % (n["skip"], urls["home"], SITE_NAME[lang], n["menu"],
-                 urls["home"], cur("home"), n["home"],
-                 tool_links,
-                 urls["about"], cur("about"), n["about"],
-                 urls["privacy"], cur("privacy"), n["privacy"],
-                 lang_switcher(lang, active_key), n["dark"])
+</header>
+%s''' % (n["skip"], urls["home"], SITE_NAME[lang], n["menu"],
+         urls["home"], cur("home"), n["home"],
+         tools_active_cls, tools_expanded, n["tools_group"],
+         tool_links,
+         urls["about"], cur("about"), n["about"],
+         urls["privacy"], cur("privacy"), n["privacy"],
+         lang_switcher(lang, active_key), n["dark"],
+         breadcrumb_html(lang, active_key))
 
 
 def footer_block(lang):
@@ -2202,47 +2241,47 @@ def render_index(lang):
 }
 </script>''' % (SITE_NAME[lang], SITE_DOMAIN + urls["home"], c["hero_p"][:120], LANG_META[lang]["html_lang"])
     head = head_block(lang, "home", c["title"], c["description"], c["keywords"], c["og_title"], c["og_description"], extra=jsonld)
-    cards = '''<article class="tool-card">
+    cards = '''<a class="tool-card" href="%s">
         <div class="tool-card-icon">\U0001F9E9</div>
-        <h3><a href="%s">%s</a></h3>
+        <h3>%s</h3>
         <p>%s</p>
         <span class="tag">%s</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="%s">
         <div class="tool-card-icon">\U0001F4C4</div>
-        <h3><a href="%s">%s</a></h3>
+        <h3>%s</h3>
         <p>%s</p>
         <span class="tag">%s</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="%s">
         <div class="tool-card-icon">\U0001F504</div>
-        <h3><a href="%s">%s</a></h3>
+        <h3>%s</h3>
         <p>%s</p>
         <span class="tag">%s</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="%s">
         <div class="tool-card-icon">\U0001F5C4️</div>
-        <h3><a href="%s">%s</a></h3>
+        <h3>%s</h3>
         <p>%s</p>
         <span class="tag">%s</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="%s">
         <div class="tool-card-icon">\U0001F3A8</div>
-        <h3><a href="%s">%s</a></h3>
+        <h3>%s</h3>
         <p>%s</p>
         <span class="tag">%s</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="%s">
         <div class="tool-card-icon">\U0001F522</div>
-        <h3><a href="%s">%s</a></h3>
+        <h3>%s</h3>
         <p>%s</p>
         <span class="tag">%s</span>
-      </article>''' % (urls["tool"], c["card1_title"], c["card1_desc"], c["card1_tag"],
+      </a>''' % (urls["tool"], c["card1_title"], c["card1_desc"], c["card1_tag"],
                         urls["tool_xml"], c["card2_title"], c["card2_desc"], c["card2_tag"],
                         urls["tool_converter"], c["card3_title"], c["card3_desc"], c["card3_tag"],
                         urls["tool_sql"], c["card4_title"], c["card4_desc"], c["card4_tag"],

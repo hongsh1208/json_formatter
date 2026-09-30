@@ -71,12 +71,19 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/" aria-current="page">ホーム</a></li>
-      <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
-      <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
-      <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
-      <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
-      <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
-      <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+      <li class="nav-dropdown" data-tools-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+          ツール <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+          <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
+        <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+        <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
+        <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
+        <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
+        <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+        </ul>
+      </li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
       <li><a href="/ja/privacy.html">プライバシーポリシー</a></li>
     </ul>
@@ -95,6 +102,7 @@
   </div>
 </header>
 
+
 <main id="main-content">
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
@@ -106,47 +114,47 @@
     <h2 style="margin-bottom: 4px;">提供機能</h2>
     <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">下記の機能をすぐにお試しください。新しいツールも順次追加していく予定です。</p>
     <div class="card-grid" style="margin-top: 20px;">
-      <article class="tool-card">
+      <a class="tool-card" href="/ja/tools/json-formatter.html">
         <div class="tool-card-icon">🧩</div>
-        <h3><a href="/ja/tools/json-formatter.html">JSONフォーマッター / ビューア</a></h3>
+        <h3>JSONフォーマッター / ビューア</h3>
         <p>入力した文字列が正しいJSONかどうかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。ツリーの折りたたみ/展開とキー・値の検索機能を提供します。</p>
         <span class="tag">JSON · Formatter · Validator</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ja/tools/xml-formatter.html">
         <div class="tool-card-icon">📄</div>
-        <h3><a href="/ja/tools/xml-formatter.html">XMLフォーマッター / ビューア</a></h3>
+        <h3>XMLフォーマッター / ビューア</h3>
         <p>入力した文字列が正しいXMLかどうかを検証し、インデントとシンタックスハイライトを適用して読みやすく表示します。ツリーの折りたたみ/展開とタグ・属性・テキストの検索機能を提供します。</p>
         <span class="tag">XML · Formatter · Validator</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ja/tools/json-xml-converter.html">
         <div class="tool-card-icon">🔄</div>
-        <h3><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></h3>
+        <h3>JSON ↔ XML 変換ツール</h3>
         <p>JSONをXMLに、XMLをJSONに変換します。形式を自動検出し、エラーの行/列表示とインデント設定に対応しています。</p>
         <span class="tag">JSON · XML · Converter</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ja/tools/sql-formatter.html">
         <div class="tool-card-icon">🗄️</div>
-        <h3><a href="/ja/tools/sql-formatter.html">SQLフォーマッター / 整形ツール</a></h3>
+        <h3>SQLフォーマッター / 整形ツール</h3>
         <p>SQLクエリを見やすくインデント・整形します。MySQL、PostgreSQL、SQL Server、BigQueryなど複数の方言に対応しています。</p>
         <span class="tag">SQL · Formatter · Beautifier</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ja/tools/code-viewer.html">
         <div class="tool-card-icon">🎨</div>
-        <h3><a href="/ja/tools/code-viewer.html">コードビューア</a></h3>
+        <h3>コードビューア</h3>
         <p>ソースコードを貼り付けて言語(Java、C#、Python、Goなど20以上)を選択すると、シンタックスハイライト付きで見やすく表示します。</p>
         <span class="tag">Code · Syntax Highlighting · Viewer</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/ja/tools/number-reader.html">
         <div class="tool-card-icon">🔢</div>
-        <h3><a href="/ja/tools/number-reader.html">数字の読み方変換</a></h3>
+        <h3>数字の読み方変換</h3>
         <p>数字を文字に変換します。基数・序数・電話/口座番号・時刻・日付・通貨に対応し、言語ごとに複数の表記方式(標準/大字など)を提供します。</p>
         <span class="tag">数字 · 読み方 · 変換</span>
-      </article>
+      </a>
     </div>
   </section>
 

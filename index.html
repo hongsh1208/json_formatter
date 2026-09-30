@@ -94,12 +94,19 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/" aria-current="page">Home</a></li>
-      <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
-      <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
-      <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
-      <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
-      <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
-      <li><a href="/tools/number-reader.html">Number Reader</a></li>
+      <li class="nav-dropdown" data-tools-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+          Tools <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+          <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+        <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+        <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+        <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+        <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+        <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/privacy.html">Privacy Policy</a></li>
     </ul>
@@ -118,6 +125,7 @@
   </div>
 </header>
 
+
 <main id="main-content">
   <section class="hero container">
     <span class="eyebrow">FREE ONLINE TOOLS</span>
@@ -129,47 +137,47 @@
     <h2 style="margin-bottom: 4px;">Available tools</h2>
     <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">Try the tool below right away — more tools are on the way.</p>
     <div class="card-grid" style="margin-top: 20px;">
-      <article class="tool-card">
+      <a class="tool-card" href="/tools/json-formatter.html">
         <div class="tool-card-icon">🧩</div>
-        <h3><a href="/tools/json-formatter.html">JSON Formatter / Viewer</a></h3>
+        <h3>JSON Formatter / Viewer</h3>
         <p>Checks whether your input is valid JSON and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and key/value search.</p>
         <span class="tag">JSON · Formatter · Validator</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/tools/xml-formatter.html">
         <div class="tool-card-icon">📄</div>
-        <h3><a href="/tools/xml-formatter.html">XML Formatter / Viewer</a></h3>
+        <h3>XML Formatter / Viewer</h3>
         <p>Checks whether your input is valid XML and displays it as a readable, syntax-highlighted tree. Includes collapsible nodes and tag/attribute/text search.</p>
         <span class="tag">XML · Formatter · Validator</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/tools/json-xml-converter.html">
         <div class="tool-card-icon">🔄</div>
-        <h3><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></h3>
+        <h3>JSON ↔ XML Converter</h3>
         <p>Converts JSON to XML or XML to JSON, with automatic format detection. Includes line/column error hints and configurable indentation.</p>
         <span class="tag">JSON · XML · Converter</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/tools/sql-formatter.html">
         <div class="tool-card-icon">🗄️</div>
-        <h3><a href="/tools/sql-formatter.html">SQL Formatter / Beautifier</a></h3>
+        <h3>SQL Formatter / Beautifier</h3>
         <p>Beautifies SQL queries with proper indentation and keyword casing. Supports multiple dialects including MySQL, PostgreSQL, SQL Server, and BigQuery.</p>
         <span class="tag">SQL · Formatter · Beautifier</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/tools/code-viewer.html">
         <div class="tool-card-icon">🎨</div>
-        <h3><a href="/tools/code-viewer.html">Code Viewer</a></h3>
+        <h3>Code Viewer</h3>
         <p>Paste source code, pick a language (Java, C#, Python, Go, and 15+ more), and view it with syntax highlighting for easier reading and sharing.</p>
         <span class="tag">Code · Syntax Highlighting · Viewer</span>
-      </article>
+      </a>
 
-      <article class="tool-card">
+      <a class="tool-card" href="/tools/number-reader.html">
         <div class="tool-card-icon">🔢</div>
-        <h3><a href="/tools/number-reader.html">Number Reader</a></h3>
+        <h3>Number Reader</h3>
         <p>Converts numbers into words — cardinal, ordinal, phone/account digits, time, date, and currency, with multiple reading styles per language.</p>
         <span class="tag">Numbers · Reader · Converter</span>
-      </article>
+      </a>
     </div>
   </section>
 

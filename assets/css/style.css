@@ -272,6 +272,152 @@ svg {
   cursor: pointer;
 }
 
+/* ---------- 상단 메뉴: 도구 드롭다운 ---------- */
+.nav-dropdown {
+  position: relative;
+}
+/* 버튼과 드롭다운 메뉴 사이의 여백(8px)에서 마우스가 벗어난 것으로 잘못 판정되어
+   메뉴가 깜빡이며 닫히지 않도록, 그 틈을 이어주는 보이지 않는 다리(bridge). */
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 8px;
+}
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+.nav-dropdown-toggle:hover {
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+}
+.nav-dropdown-toggle.is-active {
+  color: var(--color-accent);
+  background: var(--color-bg-elevated);
+}
+.nav-caret {
+  font-size: 0.7em;
+  transition: transform 0.15s ease;
+}
+.nav-dropdown-toggle[aria-expanded="true"] .nav-caret {
+  transform: rotate(180deg);
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 30;
+  min-width: 200px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+.nav-dropdown-menu[hidden] {
+  display: none;
+}
+/* 마우스를 올리면(hover) 바로 펼쳐지는 느낌을 주기 위한 살짝의 펼침 애니메이션.
+   (CSS 트랜지션은 display:none ↔ block 사이를 지원하지 않으므로 애니메이션을 사용) */
+@keyframes nav-dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav-dropdown-menu:not([hidden]) {
+  animation: nav-dropdown-in 0.15s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-dropdown-menu:not([hidden]) {
+    animation: none;
+  }
+}
+.nav-dropdown-menu li + li {
+  margin-top: 2px;
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:hover {
+  background: var(--color-bg-inset);
+  text-decoration: none;
+}
+.nav-dropdown-menu a[aria-current="page"] {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ---------- 현재 위치 표시줄 (breadcrumb) ---------- */
+.breadcrumb {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-inset);
+}
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  /* margin은 지정하지 않음: .container의 margin:0 auto가 그대로 적용되어
+     본문(container)과 동일하게 가운데 정렬되도록 하기 위함(여기서 margin:0을
+     주면 .container의 auto 중앙 정렬이 깨져 왼쪽 끝에 붙어버리는 문제가 있었음).
+     좌우 padding도 0으로 둬서(위아래만 지정) .nav/.page-header/.section-tight 등
+     사이트의 다른 .container 요소들과 동일한 좌측 시작 위치에 맞춤(그 요소들도
+     각자의 padding 선언이 상하값만 가져 .container의 좌우 20px를 덮어써 0이 됨) */
+  padding: 10px 0;
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+.breadcrumb-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.breadcrumb-list li:not(:first-child)::before {
+  content: "›";
+  color: var(--color-text-muted);
+}
+.breadcrumb-list a {
+  color: var(--color-text-muted);
+}
+.breadcrumb-list a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.breadcrumb-list li[aria-current="page"] span {
+  color: var(--color-text);
+  font-weight: 600;
+}
+.breadcrumb-group {
+  color: var(--color-text-muted);
+}
+
 /* ---------- 메인 레이아웃 ---------- */
 main {
   min-height: 60vh;
@@ -424,12 +570,22 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-bg-elevated);
+  color: inherit;
+  text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .tool-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-accent);
+  text-decoration: none;
+}
+.tool-card:hover h3 {
+  color: var(--color-accent);
+}
+.tool-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 .tool-card-icon {
   width: 40px;
@@ -444,13 +600,8 @@ main {
 .tool-card h3 {
   margin: 0;
   font-size: 1.08rem;
-}
-.tool-card h3 a {
   color: var(--color-text);
-}
-.tool-card h3 a:hover {
-  text-decoration: none;
-  color: var(--color-accent);
+  transition: color 0.15s ease;
 }
 .tool-card p {
   margin: 0;
@@ -617,6 +768,28 @@ main {
   }
   .site-header {
     position: sticky;
+  }
+
+  /* 모바일에서는 드롭다운을 펼친 목록 형태로 표시 */
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 8px;
+  }
+  .nav-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0 0 0 12px;
+    margin-top: 2px;
+  }
+  .nav-dropdown-menu a {
+    padding: 8px;
+  }
+
+  .breadcrumb-list {
+    padding: 8px 0;
   }
 }
 
