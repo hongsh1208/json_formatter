@@ -416,3 +416,22 @@
   word-break: break-word;
   color: var(--color-text);
 }
+
+/* 출력 결과 문법 강조 */
+.sql-keyword {
+  color: var(--json-key);
+  font-weight: 700;
+}
+.sql-string {
+  color: var(--json-string);
+}
+.sql-number {
+  color: var(--json-number);
+}
+.sql-comment {
+  color: var(--json-null);
+  font-style: italic;
+}
+.sql-punct {
+  color: var(--json-punct);
+}

@@ -123,8 +123,15 @@
       name: "JSON Formatter",
       maker: "Formix",
       isFree: true,
+      rating: 4.8,
       tags: ["json", "formatter", "viewer"],
       pricing: { amount: 0, currency: "USD" },
+      screenshots: [],
+      relatedTools: [
+        { id: "xml-formatter", name: "XML Formatter" },
+        { id: "sql-formatter", name: "SQL Formatter" },
+        { id: "code-viewer", name: "Code Viewer" },
+      ],
       deprecatedSince: null,
     },
     null,
@@ -345,9 +352,79 @@
       .replace(/"/g, "&quot;");
   }
 
-  function renderOutputText(text) {
+  // ---------------------------------------------------------------
+  // 5-1. 출력 문법 강조 (JSON 포매터 / XML 포매터와 같은 색상 규칙 재사용)
+  // ---------------------------------------------------------------
+
+  function highlightJsonText(text) {
+    // 문자열 뒤에 ":"가 바로(공백 허용) 이어지면 키, 아니면 값(문자열)으로 취급한다.
+    // 캡처 그룹으로 문자열 부분과 뒤따르는 구분자(공백+:)를 분리해 문자열에만 색을 칠한다.
+    var re = /("(?:\\.|[^"\\])*")([ \t]*:)?|\b(?:true|false|null)\b|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|[{}\[\],:]/g;
+    var html = "";
+    var cursor = 0;
+    var m;
+    while ((m = re.exec(text)) !== null) {
+      html += escapeHtml(text.slice(cursor, m.index));
+      var tok = m[0];
+      if (m[1] !== undefined) {
+        var isKey = m[2] !== undefined;
+        html += '<span class="' + (isKey ? "json-key" : "json-string") + '">' + escapeHtml(m[1]) + "</span>";
+        if (isKey) html += escapeHtml(m[2]);
+      } else if (tok === "true" || tok === "false") {
+        html += '<span class="json-boolean">' + tok + "</span>";
+      } else if (tok === "null") {
+        html += '<span class="json-null">' + tok + "</span>";
+      } else if (/^[{}\[\],:]$/.test(tok)) {
+        html += '<span class="json-punct">' + tok + "</span>";
+      } else {
+        html += '<span class="json-number">' + tok + "</span>";
+      }
+      cursor = m.index + tok.length;
+    }
+    html += escapeHtml(text.slice(cursor));
+    return html;
+  }
+
+  function renderXmlTag(tag) {
+    if (/^<\?/.test(tag)) {
+      return '<span class="xml-decl">' + escapeHtml(tag) + "</span>";
+    }
+    var m = /^<(\/)?([^\s/>]+)(\s*\/)?>$/.exec(tag);
+    if (!m) return escapeHtml(tag);
+    var closing = !!m[1];
+    var tagName = m[2];
+    var selfClose = !!m[3];
+    var html = '<span class="xml-bracket">' + (closing ? "&lt;/" : "&lt;") + "</span>";
+    html += '<span class="xml-tag">' + escapeHtml(tagName) + "</span>";
+    html += '<span class="xml-bracket">' + (selfClose ? " /&gt;" : "&gt;") + "</span>";
+    return html;
+  }
+
+  function highlightXmlText(text) {
+    var html = "";
+    var cursor = 0;
+    var re = /<[^>]*>/g;
+    var m;
+    while ((m = re.exec(text)) !== null) {
+      var textRun = text.slice(cursor, m.index);
+      html += textRun.trim() === "" ? escapeHtml(textRun) : '<span class="xml-text">' + escapeHtml(textRun) + "</span>";
+      html += renderXmlTag(m[0]);
+      cursor = m.index + m[0].length;
+    }
+    var tailRun = text.slice(cursor);
+    html += tailRun.trim() === "" ? escapeHtml(tailRun) : '<span class="xml-text">' + escapeHtml(tailRun) + "</span>";
+    return html;
+  }
+
+  function renderOutputText(text, kind) {
     els.output.innerHTML = '<pre class="conv-output-text"></pre>';
-    els.output.firstChild.textContent = text;
+    if (kind === "json") {
+      els.output.firstChild.innerHTML = highlightJsonText(text);
+    } else if (kind === "xml") {
+      els.output.firstChild.innerHTML = highlightXmlText(text);
+    } else {
+      els.output.firstChild.textContent = text;
+    }
     renderOutputGutter(text);
   }
 
@@ -704,7 +781,7 @@
       state.outputText = jsonToXml(parsedJson.value, indentStr);
       setStatus("valid", T.statusValidText, T.statusValidTop);
       renderGutter(text);
-      renderOutputText(state.outputText);
+      renderOutputText(state.outputText, state.outputKind);
       setToolbarEnabled(true);
       return;
     }
@@ -726,7 +803,7 @@
     state.outputText = JSON.stringify(parsedXml.value, null, indentStr);
     setStatus("valid", T.statusValidText, T.statusValidTop);
     renderGutter(text);
-    renderOutputText(state.outputText);
+    renderOutputText(state.outputText, state.outputKind);
     setToolbarEnabled(true);
   }
 

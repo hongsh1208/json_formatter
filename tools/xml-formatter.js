@@ -132,19 +132,49 @@
 
   var SAMPLE_XML =
     '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    "<toolbox>\n" +
+    '<toolbox version="2.4.1" updated="2026-09-30">\n' +
+    "  <!-- Formix official tool catalog -->\n" +
     '  <tool id="json-formatter" available="true">\n' +
     "    <name>JSON Formatter</name>\n" +
     "    <maker>Formix</maker>\n" +
-    "    <category>Developer Tools</category>\n" +
-    "    <price>0.00</price>\n" +
+    "    <category>Data</category>\n" +
+    '    <price currency="USD">0.00</price>\n' +
     "    <description><![CDATA[Validate and beautify JSON right in your browser.]]></description>\n" +
+    "    <tags>\n" +
+    "      <tag>json</tag>\n" +
+    "      <tag>formatter</tag>\n" +
+    "      <tag>viewer</tag>\n" +
+    "    </tags>\n" +
+    "  </tool>\n" +
+    '  <tool id="xml-formatter" available="true">\n' +
+    "    <name>XML Formatter</name>\n" +
+    "    <maker>Formix</maker>\n" +
+    "    <category>Data</category>\n" +
+    '    <price currency="USD">0.00</price>\n' +
+    "    <description><![CDATA[Validate and beautify XML with a collapsible tree view.]]></description>\n" +
+    "    <tags>\n" +
+    "      <tag>xml</tag>\n" +
+    "      <tag>formatter</tag>\n" +
+    "    </tags>\n" +
+    "  </tool>\n" +
+    '  <tool id="sql-formatter" available="true">\n' +
+    "    <name>SQL Formatter</name>\n" +
+    "    <maker>Formix</maker>\n" +
+    "    <category>Database</category>\n" +
+    '    <price currency="USD">0.00</price>\n' +
+    "    <description><![CDATA[Beautify SQL queries across multiple dialects.]]></description>\n" +
+    "  </tool>\n" +
+    '  <tool id="code-viewer" available="true">\n' +
+    "    <name>Code Viewer</name>\n" +
+    "    <maker>Formix</maker>\n" +
+    "    <category>Developer</category>\n" +
+    '    <price currency="USD">0.00</price>\n' +
+    "    <description><![CDATA[Syntax highlighting for 20+ programming languages.]]></description>\n" +
     "  </tool>\n" +
     '  <tool id="csv-converter" available="false">\n' +
     "    <name>CSV Converter</name>\n" +
     "    <maker>Formix</maker>\n" +
-    "    <category>Developer Tools</category>\n" +
-    "    <price>0.00</price>\n" +
+    "    <category>Data</category>\n" +
     "    <!-- Coming soon -->\n" +
     "  </tool>\n" +
     "</toolbox>";

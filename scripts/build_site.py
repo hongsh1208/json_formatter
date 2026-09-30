@@ -75,6 +75,7 @@ def urls_for(lang):
         "tool_xml": p + "/tools/xml-formatter.html",
         "tool_converter": p + "/tools/json-xml-converter.html",
         "tool_sql": p + "/tools/sql-formatter.html",
+        "tool_code": p + "/tools/code-viewer.html",
         "notfound": p + "/404.html",
     }
 
@@ -82,7 +83,7 @@ def urls_for(lang):
 # 헤더 내비게이션에 노출할 도구 목록. 새 도구를 추가할 때 이 리스트에 (urls_for 키, NAV 라벨 키)만
 # 추가하면 헤더/푸터/언어 스위처가 모두 자동으로 반영된다.
 TOOL_NAV_ITEMS = [("tool", "tool"), ("tool_xml", "tool_xml"), ("tool_converter", "tool_converter"),
-                   ("tool_sql", "tool_sql")]
+                   ("tool_sql", "tool_sql"), ("tool_code", "tool_code")]
 
 # 푸터에 노출할 일반 페이지(도구가 아닌 페이지) 목록. 새 페이지를 추가할 때 이 리스트에
 # (urls_for 키, NAV 라벨 키)만 추가하면 푸터/사이트맵이 자동으로 반영된다.
@@ -91,25 +92,25 @@ FOOTER_NAV_ITEMS = [("about", "about"), ("faq", "faq"), ("updates", "updates"), 
 
 NAV = {
     "en": {"home": "Home", "tool": "JSON Formatter", "tool_xml": "XML Formatter",
-           "tool_converter": "JSON ↔ XML Converter", "tool_sql": "SQL Formatter", "about": "About",
+           "tool_converter": "JSON ↔ XML Converter", "tool_sql": "SQL Formatter", "tool_code": "Code Viewer", "about": "About",
            "privacy": "Privacy Policy", "faq": "FAQ", "contact": "Contact", "related_h2": "Related",
            "cookie_settings": "Cookie preferences", "terms": "Terms of Service", "updates": "What's New",
            "menu": "Open menu", "dark": "Switch to dark mode", "light": "Switch to light mode",
            "lang": "Select language", "skip": "Skip to content"},
     "ko": {"home": "홈", "tool": "JSON 포매터", "tool_xml": "XML 포매터",
-           "tool_converter": "JSON ↔ XML 변환기", "tool_sql": "SQL 포매터", "about": "사이트 소개",
+           "tool_converter": "JSON ↔ XML 변환기", "tool_sql": "SQL 포매터", "tool_code": "코드 뷰어", "about": "사이트 소개",
            "privacy": "개인정보처리방침", "faq": "자주 묻는 질문", "contact": "문의하기", "related_h2": "관련 링크",
            "cookie_settings": "쿠키 설정", "terms": "이용약관", "updates": "업데이트 소식",
            "menu": "메뉴 열기", "dark": "다크 모드로 전환", "light": "라이트 모드로 전환",
            "lang": "언어 선택", "skip": "본문으로 건너뛰기"},
     "ja": {"home": "ホーム", "tool": "JSONフォーマッター", "tool_xml": "XMLフォーマッター",
-           "tool_converter": "JSON ↔ XML 変換ツール", "tool_sql": "SQLフォーマッター", "about": "サイト紹介",
+           "tool_converter": "JSON ↔ XML 変換ツール", "tool_sql": "SQLフォーマッター", "tool_code": "コードビューア", "about": "サイト紹介",
            "privacy": "プライバシーポリシー", "faq": "よくある質問", "contact": "お問い合わせ", "related_h2": "関連リンク",
            "cookie_settings": "Cookie設定", "terms": "利用規約", "updates": "更新情報",
            "menu": "メニューを開く", "dark": "ダークモードに切り替え", "light": "ライトモードに切り替え",
            "lang": "言語選択", "skip": "本文へスキップ"},
     "zh": {"home": "首页", "tool": "JSON 格式化", "tool_xml": "XML 格式化",
-           "tool_converter": "JSON ↔ XML 转换工具", "tool_sql": "SQL 格式化", "about": "关于本站",
+           "tool_converter": "JSON ↔ XML 转换工具", "tool_sql": "SQL 格式化", "tool_code": "代码查看器", "about": "关于本站",
            "privacy": "隐私政策", "faq": "常见问题", "contact": "联系我们", "related_h2": "相关链接",
            "cookie_settings": "Cookie 设置", "terms": "使用条款", "updates": "更新日志",
            "menu": "打开菜单", "dark": "切换到深色模式", "light": "切换到浅色模式",
@@ -145,6 +146,9 @@ CONTENT["index"] = {
         card4_title="SQL Formatter / Beautifier",
         card4_desc="Beautifies SQL queries with proper indentation and keyword casing. Supports multiple dialects including MySQL, PostgreSQL, SQL Server, and BigQuery.",
         card4_tag="SQL · Formatter · Beautifier",
+        card5_title="Code Viewer",
+        card5_desc="Paste source code, pick a language (Java, C#, Python, Go, and 15+ more), and view it with syntax highlighting for easier reading and sharing.",
+        card5_tag="Code · Syntax Highlighting · Viewer",
         why_h2="Why Formix?",
         why_items=[
             ("No install or sign-up", "Just open the link and start using it right away."),
@@ -176,6 +180,9 @@ CONTENT["index"] = {
         card4_title="SQL 포매터 / 정렬기",
         card4_desc="SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.",
         card4_tag="SQL · Formatter · Beautifier",
+        card5_title="코드 뷰어",
+        card5_desc="소스 코드를 붙여넣고 언어(Java, C#, Python, Go 등 20여 개)를 선택하면 문법 강조가 적용된 화면으로 보기 좋게 표시합니다.",
+        card5_tag="Code · Syntax Highlighting · Viewer",
         why_h2="왜 Formix인가요?",
         why_items=[
             ("설치·가입 불필요", "링크만 열면 바로 사용할 수 있습니다."),
@@ -207,6 +214,9 @@ CONTENT["index"] = {
         card4_title="SQLフォーマッター / 整形ツール",
         card4_desc="SQLクエリを見やすくインデント・整形します。MySQL、PostgreSQL、SQL Server、BigQueryなど複数の方言に対応しています。",
         card4_tag="SQL · Formatter · Beautifier",
+        card5_title="コードビューア",
+        card5_desc="ソースコードを貼り付けて言語(Java、C#、Python、Goなど20以上)を選択すると、シンタックスハイライト付きで見やすく表示します。",
+        card5_tag="Code · Syntax Highlighting · Viewer",
         why_h2="なぜFormixなのか?",
         why_items=[
             ("インストール・登録不要", "リンクを開くだけですぐに利用できます。"),
@@ -238,6 +248,9 @@ CONTENT["index"] = {
         card4_title="SQL 格式化 / 美化工具",
         card4_desc="为 SQL 查询语句添加清晰的缩进和关键字大小写格式化。支持 MySQL、PostgreSQL、SQL Server、BigQuery 等多种方言。",
         card4_tag="SQL · Formatter · Beautifier",
+        card5_title="代码查看器",
+        card5_desc="粘贴源代码并选择语言(Java、C#、Python、Go 等 20 多种)，即可获得带语法高亮的易读展示。",
+        card5_tag="Code · Syntax Highlighting · Viewer",
         why_h2="为什么选择Formix?",
         why_items=[
             ("无需安装、无需注册", "打开链接即可立即使用。"),
@@ -269,7 +282,8 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XML Formatter / Viewer</a> — Validates XML strings and displays them as an indented, syntax-highlighted tree. Supports collapsing/expanding nodes and searching tags, attributes, and text.',
         s3_item3='<a href="{tool_converter}">JSON ↔ XML Converter</a> — Converts JSON to XML or XML to JSON, with automatic format detection and configurable indentation.',
         s3_item4='<a href="{tool_sql}">SQL Formatter</a> — Beautifies SQL queries with proper indentation and keyword casing, supporting multiple dialects (MySQL, PostgreSQL, SQL Server, BigQuery, and more).',
-        s3_p='Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), bundled locally so formatting still runs entirely in your browser.',
+        s3_item5='<a href="{tool_code}">Code Viewer</a> — Paste source code and pick a language to view it with syntax highlighting, supporting 20+ languages including Java, C#, Python, and Go.',
+        s3_p='Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), and the Code Viewer uses <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> (MIT License), both bundled locally so processing still runs entirely in your browser.',
         s4_h2="About advertising and running this service",
         s4_p='Formix may introduce advertising services such as Google AdSense in the future to help support running the site. If we do, how related data is handled will be explained transparently on the <a href="{privacy}">Privacy Policy</a> page, and the core functionality of our tools (e.g. JSON processing) will remain free regardless of whether ads are shown.',
         s5_h2="Contact",
@@ -295,7 +309,8 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XML 포매터 / 뷰어</a> — XML 문자열의 유효성을 검사하고, 들여쓰기·문법 강조가 적용된 트리 형태로 보여줍니다. 노드 접기/펼치기와 태그·속성·텍스트 검색을 지원합니다.',
         s3_item3='<a href="{tool_converter}">JSON ↔ XML 변환기</a> — JSON을 XML로, XML을 JSON으로 변환합니다. 형식 자동 감지와 들여쓰기 설정을 지원합니다.',
         s3_item4='<a href="{tool_sql}">SQL 포매터</a> — SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.',
-        s3_p='새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를 사용하며, 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다.',
+        s3_item5='<a href="{tool_code}">코드 뷰어</a> — 소스 코드를 붙여넣고 언어를 선택하면 문법 강조가 적용된 화면으로 보여줍니다. Java, C#, Python, Go 등 20여 개 언어를 지원합니다.',
+        s3_p='새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를, 코드 뷰어는 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 라이선스)를 사용하며, 둘 다 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다.',
         s4_h2="광고 및 서비스 운영에 대해",
         s4_p='Formix는 서비스 운영을 위해 향후 Google AdSense 등 광고 서비스를 도입할 수 있습니다. 광고 도입 시 관련 데이터 처리 방식은 <a href="{privacy}">개인정보처리방침</a> 페이지를 통해 투명하게 안내하며, 도구의 핵심 기능(예: JSON 처리)은 광고 여부와 무관하게 계속 무료로 제공됩니다.',
         s5_h2="문의", s5_p="버그 제보, 기능 제안, 기타 문의는 아래 이메일로 연락해 주세요.",
@@ -320,7 +335,8 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XMLフォーマッター / ビューア</a> — XML文字列の妥当性を検証し、インデントとシンタックスハイライトを適用したツリー形式で表示します。ノードの折りたたみ/展開、タグ・属性・テキストの検索に対応しています。',
         s3_item3='<a href="{tool_converter}">JSON ↔ XML 変換ツール</a> — JSONをXMLに、XMLをJSONに変換します。形式の自動検出とインデント設定に対応しています。',
         s3_item4='<a href="{tool_sql}">SQLフォーマッター</a> — SQLクエリを見やすくインデント・整形します。MySQL、PostgreSQL、SQL Server、BigQueryなど複数の方言に対応しています。',
-        s3_p='新機能のご提案や改善のご意見はいつでも歓迎します。SQLフォーマッターはオープンソースの<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>ライブラリ(MITライセンス)を使用しており、ローカルにバンドル(vendor)しているため処理はすべてブラウザ内で完結します。',
+        s3_item5='<a href="{tool_code}">コードビューア</a> — ソースコードを貼り付けて言語を選択すると、シンタックスハイライト付きで表示します。Java、C#、Python、Goなど20以上の言語に対応しています。',
+        s3_p='新機能のご提案や改善のご意見はいつでも歓迎します。SQLフォーマッターはオープンソースの<a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a>ライブラリ(MITライセンス)を、コードビューアは<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MITライセンス)を使用しており、どちらもローカルにバンドル(vendor)しているため処理はすべてブラウザ内で完結します。',
         s4_h2="広告およびサービス運営について",
         s4_p='Formixはサービス運営のため、今後 Google AdSense などの広告サービスを導入する場合があります。導入時の関連データの取り扱いは<a href="{privacy}">プライバシーポリシー</a>ページで透明性を持ってご案内し、ツールの中核機能(JSON処理など)は広告の有無にかかわらず引き続き無料で提供します。',
         s5_h2="お問い合わせ", s5_p="不具合報告、機能提案、その他のお問い合わせは下記メールアドレスまでご連絡ください。",
@@ -345,7 +361,8 @@ CONTENT["about"] = {
         s3_item2='<a href="{tool_xml}">XML 格式化 / 查看器</a> — 验证 XML 字符串的有效性，并以带缩进和语法高亮的树形结构展示。支持节点折叠/展开以及标签·属性·文本搜索。',
         s3_item3='<a href="{tool_converter}">JSON ↔ XML 转换工具</a> — 将 JSON 转换为 XML，或将 XML 转换为 JSON，支持自动检测格式与自定义缩进。',
         s3_item4='<a href="{tool_sql}">SQL 格式化工具</a> — 为 SQL 查询语句添加清晰的缩进和关键字大小写格式化，支持 MySQL、PostgreSQL、SQL Server、BigQuery 等多种方言。',
-        s3_p='欢迎随时提出新功能建议或改进意见。SQL 格式化工具使用了开源的 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 库(MIT 许可)，该库已本地打包(vendor)，因此所有处理仍完全在您的浏览器中进行。',
+        s3_item5='<a href="{tool_code}">代码查看器</a> — 粘贴源代码并选择语言，即可获得带语法高亮的展示，支持 Java、C#、Python、Go 等 20 多种语言。',
+        s3_p='欢迎随时提出新功能建议或改进意见。SQL 格式化工具使用了开源的 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 库(MIT 许可)，代码查看器使用了 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 许可)，两者均已本地打包(vendor)，因此所有处理仍完全在您的浏览器中进行。',
         s4_h2="关于广告与服务运营",
         s4_p='为了维持服务运营，Formix未来可能会引入 Google AdSense 等广告服务。如果引入广告，相关数据的处理方式将在<a href="{privacy}">隐私政策</a>页面中透明说明，工具的核心功能(如 JSON 处理)将始终免费提供，不受广告影响。',
         s5_h2="联系方式", s5_p="如有错误反馈、功能建议或其他咨询，请通过以下邮箱联系我们。",
@@ -478,7 +495,7 @@ CONTENT["faq"] = {
             ("Which browsers are supported?", "Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse."),
             ("Can I use these tools on my phone?", "Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents."),
             ("What happens if my JSON or XML is invalid?", "The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes."),
-            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>, a <a href="{tool_converter}">JSON ↔ XML Converter</a>, and a <a href="{tool_sql}">SQL Formatter</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
+            ("Will more tools be added?", 'Yes. Formix started with a JSON Formatter and now also offers an <a href="{tool_xml}">XML Formatter</a>, a <a href="{tool_converter}">JSON ↔ XML Converter</a>, a <a href="{tool_sql}">SQL Formatter</a>, and a <a href="{tool_code}">Code Viewer</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="{about}">About</a> page for our guiding principles.'),
             ("How do I report a bug or suggest a feature?", 'Please reach out through our <a href="{contact}">Contact page</a>. We read every message.'),
         ],
     ),
@@ -496,7 +513,7 @@ CONTENT["faq"] = {
             ("어떤 브라우저를 지원하나요?", "PC와 모바일의 최신 브라우저(Chrome, Edge, Firefox, Safari)에서 모두 사용할 수 있습니다. DOMParser, JSON.parse 등 널리 지원되는 표준 자바스크립트 API를 사용합니다."),
             ("모바일에서도 사용할 수 있나요?", "네, 모바일 브라우저에서도 반응형으로 정상 동작합니다. 다만 긴 JSON·XML 문서를 다룰 때는 화면이 큰 기기가 더 편리합니다."),
             ("JSON이나 XML이 유효하지 않으면 어떻게 되나요?", "상태 배지와 함께 문제가 발생한 대략적인 줄/열 위치를 알려줘 빠르게 확인하고 수정할 수 있습니다. JSON 포매터는 따옴표 누락 같은 흔한 실수를 자동으로 보정하기도 합니다."),
-            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>, <a href="{tool_converter}">JSON ↔ XML 변환기</a>, <a href="{tool_sql}">SQL 포매터</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
+            ("앞으로 도구가 더 추가되나요?", '네. Formix는 JSON 포매터로 시작해 현재는 <a href="{tool_xml}">XML 포매터</a>, <a href="{tool_converter}">JSON ↔ XML 변환기</a>, <a href="{tool_sql}">SQL 포매터</a>, <a href="{tool_code}">코드 뷰어</a>도 제공하고 있습니다. 앞으로도 실무에 유용한 브라우저 기반 도구를 계속 추가할 예정입니다. 운영 철학은 <a href="{about}">사이트 소개</a> 페이지를 참고해주세요.'),
             ("버그 제보나 기능 제안은 어떻게 하나요?", '<a href="{contact}">문의하기</a> 페이지를 통해 연락해주세요. 보내주시는 의견은 모두 확인하고 있습니다.'),
         ],
     ),
@@ -514,7 +531,7 @@ CONTENT["faq"] = {
             ("対応ブラウザは?", "パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。"),
             ("スマートフォンでも使えますか?", "はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。"),
             ("JSONやXMLが無効な場合はどうなりますか?", "ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。"),
-            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>、<a href="{tool_converter}">JSON ↔ XML 変換ツール</a>、<a href="{tool_sql}">SQLフォーマッター</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
+            ("今後もツールは追加されますか?", 'はい。FormixはJSONフォーマッターから始まり、現在は<a href="{tool_xml}">XMLフォーマッター</a>、<a href="{tool_converter}">JSON ↔ XML 変換ツール</a>、<a href="{tool_sql}">SQLフォーマッター</a>、<a href="{tool_code}">コードビューア</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="{about}">サイト紹介</a>ページをご覧ください。'),
             ("不具合報告や機能提案はどうすればいいですか?", '<a href="{contact}">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。'),
         ],
     ),
@@ -532,7 +549,7 @@ CONTENT["faq"] = {
             ("支持哪些浏览器?", "电脑和手机上的主流最新浏览器(Chrome、Edge、Firefox、Safari)均可正常使用。工具使用的是 DOMParser、JSON.parse 等广泛支持的标准 JavaScript API。"),
             ("可以在手机上使用吗?", "可以，本站在移动浏览器上也能自适应正常显示。不过在处理较长的 JSON/XML 文档时，使用大屏幕设备会更方便。"),
             ("如果我的 JSON 或 XML 无效会怎样?", "工具会显示状态标记，并告知大致的错误行/列位置，方便您快速定位并修正问题。JSON 格式化工具还能自动修正部分常见错误，例如缺失的引号。"),
-            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>、<a href="{tool_converter}">JSON ↔ XML 转换工具</a>和 <a href="{tool_sql}">SQL 格式化工具</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
+            ("以后会添加更多工具吗?", '会的。Formix从 JSON 格式化工具起步，目前也提供 <a href="{tool_xml}">XML 格式化工具</a>、<a href="{tool_converter}">JSON ↔ XML 转换工具</a>、<a href="{tool_sql}">SQL 格式化工具</a>和 <a href="{tool_code}">代码查看器</a>。我们会持续添加对实际工作有帮助的浏览器端工具，运营理念请参阅<a href="{about}">关于本站</a>页面。'),
             ("如何反馈错误或提出功能建议?", '请通过<a href="{contact}">联系我们</a>页面与我们联系，我们会查看每一条反馈。'),
         ],
     ),
@@ -1534,6 +1551,193 @@ CONTENT["tool_sql"] = {
     ),
 }
 
+CONTENT["tool_code"] = {
+    "en": dict(
+        title="Code Viewer / Syntax Highlighter - Free Online Tool | Formix",
+        description="Paste source code and view it with syntax highlighting online, free. Supports Java, C#, C, C++, Python, JavaScript, TypeScript, Go, Rust, Kotlin, Swift, PHP, Ruby, HTML/XML, CSS, Bash, JSON, YAML, Markdown, and SQL. Runs entirely in your browser.",
+        keywords="code viewer online, syntax highlighter, code syntax highlighting, java syntax highlighter, c# syntax highlighter, python syntax highlighter online, free code highlighter",
+        og_title="Code Viewer / Syntax Highlighter | Formix",
+        og_description="A free online code viewer with syntax highlighting for 20+ languages. Runs entirely in your browser.",
+        jsonld_name="Code Viewer / Syntax Highlighter",
+        jsonld_description="A free online tool that displays pasted source code with syntax highlighting, supporting over 20 programming and markup languages.",
+        h1="Code Viewer",
+        lead="Paste your source code on the left, pick its language, and get a syntax-highlighted, easy-to-read view on the right. Nothing is sent to a server.",
+        btn_format="Highlight", btn_sample="Load sample", btn_clear="Clear",
+        indent_label="Indent size", indent2="2-space indent", indent4="4-space indent", indenttab="Tab indent",
+        btn_copy="Copy", btn_copy_minify="Copy", btn_download="Download result",
+        tabs_aria="Switch between input and output", tab_input="Input", tab_output="Output",
+        status_idle="Paste some source code",
+        input_search_mode_label="Search mode", opt_contains="Contains", opt_exact_line="Exact (line)", opt_regex="Regex",
+        input_search_placeholder="Search the input text…", prev_title="Previous match", next_title="Next match", clear_title="Clear search",
+        input_placeholder="Paste source code here",
+        output_label="Output", expand_all="▾ Expand all", collapse_all="▸ Collapse all",
+        opt_exact="Exact", output_search_placeholder="Search the output text…",
+        language_label="Language",
+        language_plain="Plain text (no highlighting)", language_java="Java", language_csharp="C#", language_c="C", language_cpp="C++",
+        language_python="Python", language_javascript="JavaScript", language_typescript="TypeScript", language_go="Go",
+        language_rust="Rust", language_kotlin="Kotlin", language_swift="Swift", language_php="PHP", language_ruby="Ruby",
+        language_markup="HTML / XML", language_css="CSS", language_bash="Bash / Shell", language_json="JSON",
+        language_yaml="YAML", language_markdown="Markdown", language_sql="SQL",
+        hint="Tip. This tool only highlights syntax for readability — it does not check whether your code compiles or runs correctly. "
+             "Pick the language that matches your code for the most accurate coloring; if you're not sure, \"Plain text\" simply shows the code as-is. "
+             "This tool bundles the open-source "
+             '<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> '
+             "library (MIT License) locally, so highlighting still happens entirely in your browser.",
+        usage_h2="How to use this tool",
+        usage_items=[
+            "Paste your source code into the input box on the left.",
+            'Pick the "Language" that matches your code (Java, C#, Python, Go, and more) for accurate highlighting.',
+            'Click "Highlight" (or just wait — it also updates automatically as you type) to see the colored result on the right.',
+            '"Copy" or "Download result" to grab the highlighted output, or the original text.',
+            "Everything happens in your browser — your code is never sent to a server.",
+        ],
+        tips_h2="Related tips",
+        tips_items=[
+            "This tool only adds syntax coloring for readability — it doesn't compile, run, lint, or validate your code in any way.",
+            "If a language isn't listed or the highlighting looks off, try the closest related language, or use \"Plain text\".",
+            "Need to also work with JSON, XML, or SQL specifically? Try the dedicated JSON Formatter, XML Formatter, JSON ↔ XML Converter, or SQL Formatter tools linked below.",
+        ],
+    ),
+    "ko": dict(
+        title="코드 뷰어 / 문법 강조 - 무료 온라인 도구 | Formix",
+        description="소스 코드를 붙여넣으면 무료로 온라인에서 문법 강조(syntax highlighting)가 적용된 화면으로 볼 수 있습니다. Java, C#, C, C++, Python, JavaScript, TypeScript, Go, Rust, Kotlin, Swift, PHP, Ruby, HTML/XML, CSS, Bash, JSON, YAML, Markdown, SQL을 지원합니다. 모든 처리는 브라우저 안에서만 이뤄집니다.",
+        keywords="코드 뷰어, 문법 강조, syntax highlighter, 온라인 코드 하이라이터, java 문법 강조, c# 문법 강조, python 코드 색상, 무료 코드 뷰어",
+        og_title="코드 뷰어 / 문법 강조 | Formix",
+        og_description="20개 이상 언어를 지원하는 무료 온라인 코드 뷰어. 모든 처리는 브라우저 안에서 이뤄집니다.",
+        jsonld_name="코드 뷰어 / 문법 강조",
+        jsonld_description="붙여넣은 소스 코드에 문법 강조를 적용해 보여주는 무료 온라인 도구. 20개 이상의 프로그래밍/마크업 언어를 지원합니다.",
+        h1="코드 뷰어",
+        lead="왼쪽에 소스 코드를 붙여넣고 언어를 선택하면 오른쪽에 문법 강조가 적용된 보기 좋은 결과가 표시됩니다. 데이터는 서버로 전송되지 않습니다.",
+        btn_format="강조 적용", btn_sample="예시 불러오기", btn_clear="지우기",
+        indent_label="들여쓰기 크기", indent2="들여쓰기 2칸", indent4="들여쓰기 4칸", indenttab="들여쓰기 Tab",
+        btn_copy="복사", btn_copy_minify="복사", btn_download="결과 다운로드",
+        tabs_aria="입력/결과 전환", tab_input="입력", tab_output="결과",
+        status_idle="소스 코드를 붙여넣어주세요",
+        input_search_mode_label="검색 방식", opt_contains="포함", opt_exact_line="일치(줄)", opt_regex="정규식",
+        input_search_placeholder="입력한 텍스트에서 검색…", prev_title="이전 일치 항목", next_title="다음 일치 항목", clear_title="검색어 지우기",
+        input_placeholder="여기에 소스 코드를 붙여넣으세요",
+        output_label="결과", expand_all="▾ 모두 펼치기", collapse_all="▸ 모두 접기",
+        opt_exact="일치", output_search_placeholder="결과 텍스트에서 검색…",
+        language_label="언어",
+        language_plain="일반 텍스트(강조 없음)", language_java="Java", language_csharp="C#", language_c="C", language_cpp="C++",
+        language_python="Python", language_javascript="JavaScript", language_typescript="TypeScript", language_go="Go",
+        language_rust="Rust", language_kotlin="Kotlin", language_swift="Swift", language_php="PHP", language_ruby="Ruby",
+        language_markup="HTML / XML", language_css="CSS", language_bash="Bash / Shell", language_json="JSON",
+        language_yaml="YAML", language_markdown="Markdown", language_sql="SQL",
+        hint='Tip. 이 도구는 가독성을 위해 문법 강조만 적용할 뿐, 코드가 실제로 컴파일되거나 정상 동작하는지는 검사하지 않습니다. '
+             '코드에 맞는 언어를 선택해야 가장 정확한 색상이 적용됩니다. 잘 모르겠다면 "일반 텍스트"를 선택하면 원본 그대로 표시됩니다. '
+             "이 도구는 오픈소스 "
+             '<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> '
+             "라이브러리(MIT 라이선스)를 로컬에 내장하여 사용하므로, 처리는 여전히 브라우저 안에서만 이뤄집니다.",
+        usage_h2="이 도구는 이렇게 사용하세요",
+        usage_items=[
+            "왼쪽 입력창에 소스 코드를 붙여넣으세요.",
+            '코드에 맞는 "언어"(Java, C#, Python, Go 등)를 선택하면 정확하게 강조됩니다.',
+            '"강조 적용" 버튼을 클릭하거나(입력하는 동안 자동으로도 적용됩니다) 오른쪽에서 결과를 확인하세요.',
+            '"복사" 또는 "결과 다운로드"로 강조된 결과나 원본 텍스트를 가져갈 수 있습니다.',
+            "모든 처리는 브라우저 안에서만 이뤄지며, 입력한 코드는 서버로 전송되지 않습니다.",
+        ],
+        tips_h2="관련 팁",
+        tips_items=[
+            "이 도구는 가독성을 위한 문법 색상만 입힐 뿐, 코드를 컴파일하거나 실행하거나 검사하지 않습니다.",
+            "목록에 없는 언어이거나 강조가 어색하다면 가장 비슷한 언어를 선택하거나 \"일반 텍스트\"를 사용해보세요.",
+            "JSON, XML, SQL을 다뤄야 한다면 아래 관련 링크의 JSON 포매터, XML 포매터, JSON ↔ XML 변환기, SQL 포매터를 사용해보세요.",
+        ],
+    ),
+    "ja": dict(
+        title="コードビューア / シンタックスハイライト - 無料オンラインツール | Formix",
+        description="ソースコードを貼り付けるだけで無料でシンタックスハイライトが適用された表示を確認できます。Java、C#、C、C++、Python、JavaScript、TypeScript、Go、Rust、Kotlin、Swift、PHP、Ruby、HTML/XML、CSS、Bash、JSON、YAML、Markdown、SQLに対応。すべての処理はブラウザ内で行われます。",
+        keywords="コードビューア, シンタックスハイライト, オンライン コードハイライター, java 色分け, c# シンタックスハイライト, python コード表示, 無料 コードビューア",
+        og_title="コードビューア / シンタックスハイライト | Formix",
+        og_description="20以上の言語に対応した無料オンラインコードビューア。すべての処理はブラウザ内で行われます。",
+        jsonld_name="コードビューア / シンタックスハイライト",
+        jsonld_description="貼り付けたソースコードにシンタックスハイライトを適用して表示する無料オンラインツール。20以上のプログラミング/マークアップ言語に対応しています。",
+        h1="コードビューア",
+        lead="左側にソースコードを貼り付けて言語を選択すると、右側にシンタックスハイライト付きの見やすい結果が表示されます。データはサーバーに送信されません。",
+        btn_format="ハイライト適用", btn_sample="例を読み込む", btn_clear="クリア",
+        indent_label="インデントサイズ", indent2="インデント2文字", indent4="インデント4文字", indenttab="インデントTab",
+        btn_copy="コピー", btn_copy_minify="コピー", btn_download="結果をダウンロード",
+        tabs_aria="入力/結果切り替え", tab_input="入力", tab_output="結果",
+        status_idle="ソースコードを貼り付けてください",
+        input_search_mode_label="検索モード", opt_contains="含む", opt_exact_line="完全一致(行)", opt_regex="正規表現",
+        input_search_placeholder="入力テキストを検索…", prev_title="前の一致", next_title="次の一致", clear_title="検索をクリア",
+        input_placeholder="ここにソースコードを貼り付けてください",
+        output_label="結果", expand_all="▾ すべて展開", collapse_all="▸ すべて折りたたむ",
+        opt_exact="完全一致", output_search_placeholder="結果テキストを検索…",
+        language_label="言語",
+        language_plain="プレーンテキスト(ハイライトなし)", language_java="Java", language_csharp="C#", language_c="C", language_cpp="C++",
+        language_python="Python", language_javascript="JavaScript", language_typescript="TypeScript", language_go="Go",
+        language_rust="Rust", language_kotlin="Kotlin", language_swift="Swift", language_php="PHP", language_ruby="Ruby",
+        language_markup="HTML / XML", language_css="CSS", language_bash="Bash / Shell", language_json="JSON",
+        language_yaml="YAML", language_markdown="Markdown", language_sql="SQL",
+        hint="Tip. このツールは可読性のためにシンタックスハイライトを適用するだけで、コードが実際にコンパイル・実行できるかどうかは検証しません。"
+             "コードに合った言語を選択すると、より正確な色付けになります。わからない場合は「プレーンテキスト」を選ぶと原文のまま表示されます。"
+             "このツールはオープンソースの"
+             '<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>'
+             "ライブラリ(MITライセンス)をローカルにバンドルしているため、処理は引き続きブラウザ内で完結します。",
+        usage_h2="このツールの使い方",
+        usage_items=[
+            "左側の入力欄にソースコードを貼り付けます。",
+            "コードに合った「言語」(Java、C#、Python、Goなど)を選択すると、正確にハイライトされます。",
+            "「ハイライト適用」ボタンをクリックするか(入力中も自動で適用されます)、右側で結果を確認してください。",
+            "「コピー」または「結果をダウンロード」でハイライトされた結果や元のテキストを取得できます。",
+            "すべての処理はブラウザ内で行われ、入力したコードがサーバーに送信されることはありません。",
+        ],
+        tips_h2="関連のヒント",
+        tips_items=[
+            "このツールは可読性のための色付けのみを行い、コードのコンパイル・実行・検証は一切行いません。",
+            "一覧にない言語や、ハイライトが不自然な場合は近い言語を選ぶか、「プレーンテキスト」をお使いください。",
+            "JSON、XML、SQLを扱う場合は、下記の関連リンクにあるJSONフォーマッター、XMLフォーマッター、JSON ↔ XML 変換ツール、SQLフォーマッターもご利用ください。",
+        ],
+    ),
+    "zh": dict(
+        title="代码查看器 / 语法高亮 - 免费在线工具 | Formix",
+        description="粘贴源代码即可免费在线获得语法高亮展示。支持 Java、C#、C、C++、Python、JavaScript、TypeScript、Go、Rust、Kotlin、Swift、PHP、Ruby、HTML/XML、CSS、Bash、JSON、YAML、Markdown、SQL。所有处理均在浏览器中完成。",
+        keywords="代码查看器, 语法高亮, 在线代码高亮工具, java 语法高亮, c# 语法高亮, python 代码高亮, 免费代码查看器",
+        og_title="代码查看器 / 语法高亮 | Formix",
+        og_description="支持 20 多种语言的免费在线代码查看器，所有处理均在浏览器中完成。",
+        jsonld_name="代码查看器 / 语法高亮",
+        jsonld_description="为粘贴的源代码添加语法高亮展示的免费在线工具，支持 20 多种编程/标记语言。",
+        h1="代码查看器",
+        lead="在左侧粘贴源代码并选择语言，右侧会显示带语法高亮的易读结果。数据不会发送到服务器。",
+        btn_format="应用高亮", btn_sample="加载示例", btn_clear="清空",
+        indent_label="缩进大小", indent2="2 格缩进", indent4="4 格缩进", indenttab="Tab 缩进",
+        btn_copy="复制", btn_copy_minify="复制", btn_download="下载结果",
+        tabs_aria="切换输入/结果", tab_input="输入", tab_output="结果",
+        status_idle="请粘贴源代码",
+        input_search_mode_label="搜索模式", opt_contains="包含", opt_exact_line="精确匹配(整行)", opt_regex="正则表达式",
+        input_search_placeholder="在输入文本中搜索…", prev_title="上一个匹配项", next_title="下一个匹配项", clear_title="清除搜索",
+        input_placeholder="在此粘贴源代码",
+        output_label="结果", expand_all="▾ 全部展开", collapse_all="▸ 全部折叠",
+        opt_exact="精确匹配", output_search_placeholder="在结果文本中搜索…",
+        language_label="语言",
+        language_plain="纯文本(不高亮)", language_java="Java", language_csharp="C#", language_c="C", language_cpp="C++",
+        language_python="Python", language_javascript="JavaScript", language_typescript="TypeScript", language_go="Go",
+        language_rust="Rust", language_kotlin="Kotlin", language_swift="Swift", language_php="PHP", language_ruby="Ruby",
+        language_markup="HTML / XML", language_css="CSS", language_bash="Bash / Shell", language_json="JSON",
+        language_yaml="YAML", language_markdown="Markdown", language_sql="SQL",
+        hint='提示。此工具仅为提升可读性而添加语法高亮，并不会检查代码是否能够正确编译或运行。'
+             '选择与代码匹配的语言可获得更准确的着色效果；如果不确定，选择"纯文本"即可按原样显示代码。'
+             "此工具在本地打包(vendor)了开源的 "
+             '<a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> '
+             "库(MIT 许可)，因此高亮处理仍完全在您的浏览器中进行。",
+        usage_h2="使用方法",
+        usage_items=[
+            "将源代码粘贴到左侧的输入框中。",
+            '选择与代码匹配的"语言"(Java、C#、Python、Go 等)以获得准确的高亮效果。',
+            '点击"应用高亮"按钮(输入时也会自动应用)，即可在右侧查看高亮后的结果。',
+            '通过"复制"或"下载结果"获取高亮结果或原始文本。',
+            "所有处理均在浏览器内完成，您输入的代码不会发送到服务器。",
+        ],
+        tips_h2="相关提示",
+        tips_items=[
+            "此工具仅添加用于提升可读性的语法着色，不会编译、运行或校验您的代码。",
+            "如果列表中没有对应语言，或高亮效果不理想，可尝试选择相近的语言，或使用「纯文本」。",
+            "如果还需要处理 JSON、XML 或 SQL，请尝试下方相关链接中的 JSON 格式化工具、XML 格式化工具、JSON ↔ XML 转换工具或 SQL 格式化工具。",
+        ],
+    ),
+}
+
 # ---------------------------------------------------------------------------
 # 렌더링 헬퍼
 # ---------------------------------------------------------------------------
@@ -1551,6 +1755,7 @@ class FormatUrls(dict):
 def fmt(s, urls):
     return s.format(home=urls["home"], about=urls["about"], privacy=urls["privacy"], tool=urls["tool"],
                      tool_xml=urls["tool_xml"], tool_converter=urls["tool_converter"], tool_sql=urls["tool_sql"],
+                     tool_code=urls["tool_code"],
                      faq=urls["faq"], contact=urls["contact"], terms=urls["terms"], updates=urls["updates"])
 
 
@@ -1833,10 +2038,18 @@ def render_index(lang):
         <h3><a href="%s">%s</a></h3>
         <p>%s</p>
         <span class="tag">%s</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-card-icon">\U0001F3A8</div>
+        <h3><a href="%s">%s</a></h3>
+        <p>%s</p>
+        <span class="tag">%s</span>
       </article>''' % (urls["tool"], c["card1_title"], c["card1_desc"], c["card1_tag"],
                         urls["tool_xml"], c["card2_title"], c["card2_desc"], c["card2_tag"],
                         urls["tool_converter"], c["card3_title"], c["card3_desc"], c["card3_tag"],
-                        urls["tool_sql"], c["card4_title"], c["card4_desc"], c["card4_tag"])
+                        urls["tool_sql"], c["card4_title"], c["card4_desc"], c["card4_tag"],
+                        urls["tool_code"], c["card5_title"], c["card5_desc"], c["card5_tag"])
     why_items = "\n      ".join(
         '<li><strong>%s</strong> — %s</li>' % (t, d) for t, d in c["why_items"]
     )
@@ -1905,6 +2118,7 @@ def render_about(lang):
         <li>%s</li>
         <li>%s</li>
         <li>%s</li>
+        <li>%s</li>
       </ul>
       <p>%s</p>
     </section>
@@ -1923,7 +2137,7 @@ def render_about(lang):
 </main>
 
 ''' % (c["h1"], c["lead"], c["s1_h2"], fmt(c["s1_p"], urls), c["s2_h2"], s2_items,
-       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), fmt(c["s3_item3"], urls), fmt(c["s3_item4"], urls), fmt(c["s3_p"], urls), c["s4_h2"], fmt(c["s4_p"], urls),
+       c["s3_h2"], fmt(c["s3_item"], urls), fmt(c["s3_item2"], urls), fmt(c["s3_item3"], urls), fmt(c["s3_item4"], urls), fmt(c["s3_item5"], urls), fmt(c["s3_p"], urls), c["s4_h2"], fmt(c["s4_p"], urls),
        c["s5_h2"], c["s5_p"], CONTACT_EMAIL, CONTACT_EMAIL) + footer_block(lang)
     return page_wrap(lang, head, body)
 
@@ -2448,6 +2662,34 @@ def render_tool_sql(lang):
     return body
 
 
+def render_tool_code(lang):
+    c = CONTENT["tool_code"][lang]
+    lang_options = [
+        ("plain", "language_plain"), ("java", "language_java"), ("csharp", "language_csharp"),
+        ("c", "language_c"), ("cpp", "language_cpp"), ("python", "language_python"),
+        ("javascript", "language_javascript"), ("typescript", "language_typescript"), ("go", "language_go"),
+        ("rust", "language_rust"), ("kotlin", "language_kotlin"), ("swift", "language_swift"),
+        ("php", "language_php"), ("ruby", "language_ruby"), ("markup", "language_markup"),
+        ("css", "language_css"), ("bash", "language_bash"), ("json", "language_json"),
+        ("yaml", "language_yaml"), ("markdown", "language_markdown"), ("sql", "language_sql"),
+    ]
+    options_html = "\n        ".join(
+        '<option value="%s"%s>%s</option>' % (val, ' selected' if val == "plain" else "", c[key])
+        for val, key in lang_options
+    )
+    language_select = '''      <label for="json-language-select" class="visually-hidden">%s</label>
+      <select class="jf-select code-language-select" id="json-language-select">
+        %s
+      </select>''' % (c["language_label"], options_html)
+    body = render_tool_page(lang, "tool_code", "tool_code", "code",
+                             "/tools/code-viewer.css", "/tools/code-viewer.js",
+                             extra_toolbar=language_select)
+    # Prism.js(오픈소스, MIT) 라이브러리를 이 페이지에서만 로드한다.
+    body = body.replace('<script src="/tools/code-viewer.js"></script>',
+                         '<script src="/tools/vendor/prism-bundle.min.js"></script>\n<script src="/tools/code-viewer.js"></script>')
+    return body
+
+
 # ---------------------------------------------------------------------------
 # 실행부: 각 언어 x 각 페이지 조합으로 정적 파일 생성 + sitemap
 # ---------------------------------------------------------------------------
@@ -2468,18 +2710,19 @@ def build():
         written.append(write_file(prefix + "/tools/xml-formatter.html", render_tool_xml(lang)))
         written.append(write_file(prefix + "/tools/json-xml-converter.html", render_tool_converter(lang)))
         written.append(write_file(prefix + "/tools/sql-formatter.html", render_tool_sql(lang)))
+        written.append(write_file(prefix + "/tools/code-viewer.html", render_tool_code(lang)))
 
     # sitemap.xml (404는 noindex이므로 제외)
     import datetime
     today = datetime.date.today().isoformat()
     priority_map = {"home": "1.0", "about": "0.6", "privacy": "0.3", "faq": "0.5", "contact": "0.4",
                      "terms": "0.3", "updates": "0.5", "tool": "0.9", "tool_xml": "0.9", "tool_converter": "0.9",
-                     "tool_sql": "0.9"}
+                     "tool_sql": "0.9", "tool_code": "0.9"}
     changefreq_map = {"home": "weekly", "about": "monthly", "privacy": "yearly", "faq": "monthly", "contact": "yearly",
                        "terms": "yearly", "updates": "weekly", "tool": "weekly", "tool_xml": "weekly", "tool_converter": "weekly",
-                       "tool_sql": "weekly"}
+                       "tool_sql": "weekly", "tool_code": "weekly"}
     url_entries = []
-    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml", "tool_converter", "tool_sql"]:
+    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml", "tool_converter", "tool_sql", "tool_code"]:
         for lang in LANGS:
             loc = SITE_DOMAIN + urls_for(lang)[page_key]
             alt_links = "\n".join(

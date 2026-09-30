@@ -116,10 +116,19 @@
   };
 
   var SAMPLE_SQL =
-    "select u.id, u.name, count(o.id) as order_count, sum(o.total) as total_spent " +
-    "from users u left join orders o on o.user_id = u.id " +
-    "where u.created_at >= '2026-01-01' and u.status = 'active' " +
-    "group by u.id, u.name having count(o.id) > 0 order by total_spent desc limit 20;";
+    "with recent_orders as (" +
+    "select o.id, o.user_id, o.total, o.created_at from orders o where o.created_at >= '2026-01-01'" +
+    "), user_totals as (" +
+    "select user_id, sum(total) as total_spent, count(*) as order_count from recent_orders group by user_id" +
+    ") " +
+    "select u.id, u.name, u.email, ut.total_spent, ut.order_count, " +
+    "case when ut.total_spent >= 1000 then 'gold' when ut.total_spent >= 500 then 'silver' else 'bronze' end as tier " +
+    "from users u " +
+    "inner join user_totals ut on ut.user_id = u.id " +
+    "left join addresses a on a.user_id = u.id and a.is_primary = true " +
+    "where u.status = 'active' " +
+    "and exists (select 1 from subscriptions s where s.user_id = u.id and s.active = true) " +
+    "order by ut.total_spent desc limit 50;";
 
   // ---------------------------------------------------------------
   // 1. 들여쓰기 / 방언 옵션
@@ -160,9 +169,54 @@
       .replace(/"/g, "&quot;");
   }
 
+  // ---------------------------------------------------------------
+  // 1-1. 출력 문법 강조
+  // ---------------------------------------------------------------
+
+  var SQL_KEYWORDS = (
+    "SELECT FROM WHERE JOIN INNER LEFT RIGHT FULL OUTER CROSS ON AS AND OR NOT NULL IS IN EXISTS " +
+    "BETWEEN LIKE ILIKE GROUP BY ORDER HAVING LIMIT OFFSET DISTINCT UNION ALL INTERSECT EXCEPT " +
+    "INSERT INTO VALUES UPDATE SET DELETE CREATE TABLE ALTER DROP VIEW INDEX IF FUNCTION PROCEDURE TRIGGER " +
+    "CASE WHEN THEN ELSE END ASC DESC WITH OVER PARTITION WINDOW RECURSIVE " +
+    "PRIMARY KEY FOREIGN REFERENCES DEFAULT CONSTRAINT UNIQUE CHECK CASCADE " +
+    "BEGIN COMMIT ROLLBACK TRANSACTION GRANT REVOKE TRUE FALSE"
+  ).split(/\s+/);
+  var SQL_KEYWORD_SET = {};
+  SQL_KEYWORDS.forEach(function (k) {
+    SQL_KEYWORD_SET[k] = true;
+  });
+
+  function highlightSqlText(text) {
+    var re =
+      /(--[^\n]*)|(\/\*[\s\S]*?\*\/)|('(?:[^'\\]|\\.|'')*')|("(?:[^"\\]|\\.)*")|(\b\d+(?:\.\d+)?\b)|(\b[A-Za-z_][A-Za-z0-9_]*\b)|([(),;.])/g;
+    var html = "";
+    var cursor = 0;
+    var m;
+    while ((m = re.exec(text)) !== null) {
+      html += escapeHtml(text.slice(cursor, m.index));
+      var tok = m[0];
+      if (m[1] || m[2]) {
+        html += '<span class="sql-comment">' + escapeHtml(tok) + "</span>";
+      } else if (m[3] || m[4]) {
+        html += '<span class="sql-string">' + escapeHtml(tok) + "</span>";
+      } else if (m[5]) {
+        html += '<span class="sql-number">' + escapeHtml(tok) + "</span>";
+      } else if (m[6]) {
+        html += SQL_KEYWORD_SET[tok] ? '<span class="sql-keyword">' + tok + "</span>" : escapeHtml(tok);
+      } else if (m[7]) {
+        html += '<span class="sql-punct">' + escapeHtml(tok) + "</span>";
+      } else {
+        html += escapeHtml(tok);
+      }
+      cursor = m.index + tok.length;
+    }
+    html += escapeHtml(text.slice(cursor));
+    return html;
+  }
+
   function renderOutputText(text) {
     els.output.innerHTML = '<pre class="sql-output-text"></pre>';
-    els.output.firstChild.textContent = text;
+    els.output.firstChild.innerHTML = highlightSqlText(text);
     renderOutputGutter(text);
   }
 

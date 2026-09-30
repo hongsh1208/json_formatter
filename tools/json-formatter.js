@@ -163,15 +163,36 @@
 
   var SAMPLE_JSON = JSON.stringify(
     {
-      id: 1024,
-      name: "JSON Formatter",
-      maker: "Formix",
-      isFree: true,
+      id: "formix-platform",
+      name: "Formix Platform",
+      version: "2.4.1",
+      isActive: true,
+      releaseDate: "2026-09-30",
       rating: 4.8,
-      tags: ["json", "formatter", "viewer"],
-      pricing: { amount: 0, currency: "USD" },
-      screenshots: [],
-      deprecatedSince: null,
+      downloads: 128340,
+      maintainers: [
+        { name: "Alex Kim", role: "Lead Developer", email: "alex@formix.site" },
+        { name: "Jamie Park", role: "Designer", email: "jamie@formix.site" },
+      ],
+      tools: [
+        { id: "json-formatter", name: "JSON Formatter", category: "Data", free: true },
+        { id: "xml-formatter", name: "XML Formatter", category: "Data", free: true },
+        { id: "json-xml-converter", name: "JSON ↔ XML Converter", category: "Data", free: true },
+        { id: "sql-formatter", name: "SQL Formatter", category: "Database", free: true },
+        { id: "code-viewer", name: "Code Viewer", category: "Developer", free: true },
+      ],
+      pricing: {
+        plan: "free",
+        currency: "USD",
+        monthlyPrice: 0,
+        features: ["No sign-up required", "Client-side processing", "Dark mode"],
+      },
+      metadata: {
+        tags: ["json", "formatter", "developer-tools", "free"],
+        deprecated: false,
+        supportedLanguages: ["en", "ko", "ja", "zh"],
+        lastUpdated: null,
+      },
     },
     null,
     2

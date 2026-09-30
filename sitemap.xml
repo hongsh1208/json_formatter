@@ -485,4 +485,48 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
   </url>
+  <url>
+    <loc>https://formix.site/tools/code-viewer.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/ko/tools/code-viewer.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/ja/tools/code-viewer.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/zh/tools/code-viewer.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
 </urlset>

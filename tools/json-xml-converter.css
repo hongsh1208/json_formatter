@@ -416,3 +416,20 @@
   word-break: break-word;
   color: var(--color-text);
 }
+
+/* 출력 결과 문법 강조: JSON 쪽은 위의 .json-key 등을 그대로 재사용하고,
+   XML 쪽은 아래 규칙으로 태그/텍스트를 구분한다. */
+.xml-tag {
+  color: var(--json-key);
+  font-weight: 700;
+}
+.xml-text {
+  color: var(--color-text);
+}
+.xml-decl {
+  color: var(--color-text-muted);
+}
+.xml-punct,
+.xml-bracket {
+  color: var(--json-punct);
+}
