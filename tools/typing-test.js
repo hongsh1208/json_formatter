@@ -470,10 +470,13 @@
     }
 
     function renderPassage(text) {
+      // 예전에는 공백을 줄바꿈 없는 공백(&nbsp;)으로 바꿔서 그렸는데, 그러면
+      // 문장 안 어디에서도 줄바꿈이 일어날 수 없어서 긴 문장이 패널 밖으로
+      // 넘쳐 잘려 보이는 문제가 있었다. .tt-char에 이미 white-space: pre-wrap이
+      // 적용돼 있어 일반 공백으로도 그대로 보존되므로 그냥 원문 글자를 쓴다.
       var html = "";
       for (var i = 0; i < text.length; i++) {
-        var ch = text[i] === " " ? " " : text[i];
-        html += '<span class="tt-char" data-i="' + i + '">' + ch + "</span>";
+        html += '<span class="tt-char" data-i="' + i + '">' + escapeHtml(text[i]) + "</span>";
       }
       passageEl.innerHTML = html;
     }
