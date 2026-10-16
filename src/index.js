@@ -8,15 +8,22 @@
 // functions/api/leaderboard.js 자체는 수정하지 않고 그대로 재사용한다
 // (onRequestGet/onRequestPost가 받는 {request, env} 형태만 맞춰주면 된다).
 
-import { onRequestGet, onRequestPost } from "../functions/api/leaderboard.js";
+import { onRequestGet as leaderboardGet, onRequestPost as leaderboardPost } from "../functions/api/leaderboard.js";
+import { onRequestGet as guestbookGet, onRequestPost as guestbookPost } from "../functions/api/guestbook.js";
 
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/leaderboard") {
-      if (request.method === "GET") return onRequestGet({ request, env, ctx });
-      if (request.method === "POST") return onRequestPost({ request, env, ctx });
+      if (request.method === "GET") return leaderboardGet({ request, env, ctx });
+      if (request.method === "POST") return leaderboardPost({ request, env, ctx });
+      return new Response("Method Not Allowed", { status: 405, headers: { Allow: "GET, POST" } });
+    }
+
+    if (url.pathname === "/api/guestbook") {
+      if (request.method === "GET") return guestbookGet({ request, env, ctx });
+      if (request.method === "POST") return guestbookPost({ request, env, ctx });
       return new Response("Method Not Allowed", { status: 405, headers: { Allow: "GET, POST" } });
     }
 

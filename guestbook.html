@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guestbook | Formix</title>
+<meta name="description" content="Leave a short, one-line message on the Formix guestbook and see what other visitors have shared." />
+<link rel="canonical" href="https://formix.site/guestbook.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Guestbook | Formix" />
+<meta property="og:description" content="A public space where visitors can leave a short note." />
+<meta property="og:url" content="https://formix.site/guestbook.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Guestbook | Formix" />
+<meta name="twitter:description" content="A public space where visitors can leave a short note." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/guestbook.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/guestbook.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/guestbook.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/guestbook.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/guestbook.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/guestbook.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/guestbook.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/guestbook.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/guestbook.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/guestbook.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh', 'es', 'vi', 'pt', 'id', 'de'].slice();
+      var stored = localStorage.getItem("formix-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("formix-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("formix-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guestbook",
+      "item": "https://formix.site/guestbook.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Tools <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+          <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+          <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+          <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Games <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/games/typing-test.html">Typing Speed Test</a></li>
+          <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language"><img class="flag-icon flag-icon-toggle" src="/assets/img/flags/us.svg" alt="" loading="lazy" width="20" height="15"></button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/guestbook.html" data-lang-option="en" aria-current="true"><img class="flag-icon" src="/assets/img/flags/us.svg" alt="" loading="lazy" width="20" height="15"> <span>English</span></a></li>
+          <li><a href="/ko/guestbook.html" data-lang-option="ko"><img class="flag-icon" src="/assets/img/flags/kr.svg" alt="" loading="lazy" width="20" height="15"> <span>한국어</span></a></li>
+          <li><a href="/ja/guestbook.html" data-lang-option="ja"><img class="flag-icon" src="/assets/img/flags/jp.svg" alt="" loading="lazy" width="20" height="15"> <span>日本語</span></a></li>
+          <li><a href="/zh/guestbook.html" data-lang-option="zh"><img class="flag-icon" src="/assets/img/flags/cn.svg" alt="" loading="lazy" width="20" height="15"> <span>中文</span></a></li>
+          <li><a href="/es/guestbook.html" data-lang-option="es"><img class="flag-icon" src="/assets/img/flags/es.svg" alt="" loading="lazy" width="20" height="15"> <span>Español</span></a></li>
+          <li><a href="/vi/guestbook.html" data-lang-option="vi"><img class="flag-icon" src="/assets/img/flags/vn.svg" alt="" loading="lazy" width="20" height="15"> <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/guestbook.html" data-lang-option="pt"><img class="flag-icon" src="/assets/img/flags/br.svg" alt="" loading="lazy" width="20" height="15"> <span>Português</span></a></li>
+          <li><a href="/id/guestbook.html" data-lang-option="id"><img class="flag-icon" src="/assets/img/flags/id.svg" alt="" loading="lazy" width="20" height="15"> <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/guestbook.html" data-lang-option="de"><img class="flag-icon" src="/assets/img/flags/de.svg" alt="" loading="lazy" width="20" height="15"> <span>Deutsch</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list container">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page"><span>Guestbook</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Guestbook</h1>
+    <p>Leave a short, one-line note — anything's welcome. Every visitor can see it.</p>
+  </div>
+
+  <div class="container section-tight" style="max-width: 640px;">
+    <div class="gb-form" id="gb-form" data-gb-loading="Loading…" data-gb-empty="No messages yet — be the first to say hello!" data-gb-error="Couldn't load the guestbook right now."
+         data-gb-submitting="Posting…" data-gb-success="Posted!" data-gb-error-submit="Couldn't post your message. Please try again."
+         data-gb-rate-limited="Please wait a bit before posting again.">
+      <label for="gb-nickname" class="visually-hidden">Name (optional)</label>
+      <input type="text" id="gb-nickname" class="gb-nickname-input" placeholder="Name (optional)" maxlength="20" />
+      <label for="gb-message" class="visually-hidden">Say something in one line…</label>
+      <input type="text" id="gb-message" class="gb-message-input" placeholder="Say something in one line…" maxlength="100" />
+      <button class="btn btn-primary" id="gb-btn-submit" type="button">Post</button>
+      <span class="gb-submit-status" id="gb-submit-status" aria-live="polite"></span>
+    </div>
+
+    <ul class="gb-list" id="gb-list">
+      <li class="gb-status">Loading…</li>
+    </ul>
+
+    <p class="jf-hint">Messages are public and shown to every visitor — please avoid sharing personal information. See our Privacy Policy for details. Posting is optional.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/guestbook.html">Guestbook</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>
+      <a href="/tools/sql-formatter.html">SQL Formatter</a>
+      <a href="/tools/code-viewer.html">Code Viewer</a>
+      <a href="/tools/number-reader.html">Number Reader</a>
+      <a href="/games/typing-test.html">Typing Speed Test</a>
+      <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/guestbook.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

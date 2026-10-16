@@ -200,9 +200,10 @@
     <div class="tt-side" id="tt-leaderboard-wrap" data-lang="pt"
          data-lb-loading="Carregando…" data-lb-empty="Ainda sem registros — seja o primeiro!" data-lb-error="Não foi possível carregar o ranking no momento."
          data-lb-submitting="Enviando…" data-lb-success="Enviado! Você ficou na posição {rank}." data-lb-error-submit="Falha ao enviar, tente novamente."
-         data-lb-rate-limited="Aguarde e tente novamente.">
+         data-lb-rate-limited="Aguarde e tente novamente." data-lb-reset-tpl="Ranking mensal · reinicia em {days}d {hours}h">
       <h2>Ranking</h2>
       <p class="tt-leaderboard-lead">Veja como sua pontuação se compara a todos os resultados enviados.</p>
+      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>
@@ -249,6 +250,7 @@
       <a href="/pt/about.html">Sobre</a>
       <a href="/pt/faq.html">Perguntas frequentes</a>
       <a href="/pt/updates.html">Novidades</a>
+      <a href="/pt/guestbook.html">Livro de visitas</a>
       <a href="/pt/contact.html">Contato</a>
       <a href="/pt/terms.html">Termos de serviço</a>
       <a href="/pt/privacy.html">Política de privacidade</a>

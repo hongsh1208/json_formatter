@@ -5,10 +5,9 @@
 # "정적 자산만 있는 Worker에는 바인딩을 추가할 수 없습니다"라고 표시된다.
 # main(실제 Worker 코드)을 지정해야 D1 등 바인딩을 추가할 수 있는 "진짜" Worker가 된다.
 #
-# D1 바인딩은 이 파일에 직접 적지 않았다 — Cloudflare 대시보드에서 D1 DB를 만든 뒤
-# formix 프로젝트 → 바인딩(Bindings) → "바인딩 추가"에서 D1 database를 선택하고
-# Variable name을 DB로 지정하면 된다(이 wrangler.toml이 배포되고 나면 더 이상
-# "정적 자산만 있는 Worker" 제한에 걸리지 않아야 한다).
+# D1 바인딩: Cloudflare 대시보드에서 "formix-leaderboard" DB를 만들고 바인딩 추가한 뒤,
+# 대시보드가 안내한 대로 이 파일에도 그대로 반영한 값이다. 이게 없으면 다음 배포
+# (git push → wrangler deploy) 때 대시보드에서 추가한 바인딩이 덮어써질 수 있다.
 
 name = "formix"
 compatibility_date = "2026-10-12"
@@ -18,3 +17,7 @@ main = "src/index.js"
 directory = "."
 binding = "ASSETS"
 not_found_handling = "404-page"
+
+[[d1_databases]]
+binding = "DB"
+database_id = "2d196000-0aeb-4c1f-be32-ac117bdfdc16"

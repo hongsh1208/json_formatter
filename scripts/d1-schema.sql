@@ -28,3 +28,14 @@ CREATE TABLE IF NOT EXISTS scores (
 
 CREATE INDEX IF NOT EXISTS idx_scores_lang_wpm ON scores (lang, wpm DESC);
 CREATE INDEX IF NOT EXISTS idx_scores_ip_created ON scores (ip_hash, created_at);
+
+-- 방명록(guestbook.html)용 테이블. 언어별로 나누지 않고 전체 공용으로 쓴다.
+CREATE TABLE IF NOT EXISTS guestbook (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  nickname TEXT NOT NULL,
+  message TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  ip_hash TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_guestbook_created ON guestbook (created_at DESC);

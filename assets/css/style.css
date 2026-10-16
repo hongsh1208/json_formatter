@@ -874,3 +874,81 @@ main {
   color: var(--color-accent);
   text-decoration: underline;
 }
+
+/* 방명록 (guestbook.html) */
+.gb-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.gb-nickname-input {
+  flex: 0 1 160px;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 14px;
+}
+.gb-message-input {
+  flex: 1 1 260px;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 14px;
+}
+.gb-submit-status {
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.gb-submit-status.is-success {
+  color: var(--color-success);
+}
+.gb-submit-status.is-error {
+  color: var(--color-danger);
+}
+.gb-list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.gb-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+}
+.gb-entry:last-child {
+  border-bottom: none;
+}
+.gb-entry-name {
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+.gb-entry-message {
+  flex: 1 1 auto;
+  word-break: break-word;
+}
+.gb-entry-time {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+.gb-status {
+  padding: 16px 14px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
