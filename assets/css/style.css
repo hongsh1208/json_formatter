@@ -218,9 +218,29 @@ svg {
   font-size: 1.05rem;
   line-height: 1;
   padding: 0;
+  overflow: hidden;
 }
 .lang-switch-toggle:hover {
   border-color: var(--color-accent);
+}
+/* 국기 이모지(유니코드) 대신 쓰는 실제 SVG 아이콘. Windows 글꼴은 국기 이모지를
+   지원하지 않아 빈 사각형/글자로만 보이는 경우가 많아 이미지 파일로 대체함. */
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.flag-icon-toggle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: none;
 }
 .lang-switch-menu {
   position: absolute;

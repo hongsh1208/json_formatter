@@ -28,16 +28,20 @@ SITE_DOMAIN = "https://formix.site"
 LANGS = ["en", "ko", "ja", "zh", "es", "vi", "pt", "id", "de"]
 DEFAULT_LANG = "en"
 
+# "flag_cc"는 /assets/img/flags/{flag_cc}.svg 파일명(국가 코드, flag-icons 프로젝트 기준).
+# 국기 이모지(유니코드 Regional Indicator 쌍)는 Windows(특히 Chrome)에서 글꼴이 지원하지
+# 않아 빈 사각형이나 아무것도 표시되지 않는 경우가 많아, 실제 SVG 국기 아이콘을 쓴다.
+# "flag" 키는 더 이상 화면에 렌더링하지 않고, 접근성용 보조 텍스트로만 남겨둔다.
 LANG_META = {
-    "en": {"label": "English", "flag": "\U0001F1FA\U0001F1F8", "html_lang": "en"},
-    "ko": {"label": "한국어", "flag": "\U0001F1F0\U0001F1F7", "html_lang": "ko"},
-    "ja": {"label": "日本語", "flag": "\U0001F1EF\U0001F1F5", "html_lang": "ja"},
-    "zh": {"label": "中文", "flag": "\U0001F1E8\U0001F1F3", "html_lang": "zh-CN"},
-    "es": {"label": "Español", "flag": "\U0001F1EA\U0001F1F8", "html_lang": "es"},
-    "vi": {"label": "Tiếng Việt", "flag": "\U0001F1FB\U0001F1F3", "html_lang": "vi"},
-    "pt": {"label": "Português", "flag": "\U0001F1E7\U0001F1F7", "html_lang": "pt-BR"},
-    "id": {"label": "Bahasa Indonesia", "flag": "\U0001F1EE\U0001F1E9", "html_lang": "id"},
-    "de": {"label": "Deutsch", "flag": "\U0001F1E9\U0001F1EA", "html_lang": "de"},
+    "en": {"label": "English", "flag": "\U0001F1FA\U0001F1F8", "flag_cc": "us", "html_lang": "en"},
+    "ko": {"label": "한국어", "flag": "\U0001F1F0\U0001F1F7", "flag_cc": "kr", "html_lang": "ko"},
+    "ja": {"label": "日本語", "flag": "\U0001F1EF\U0001F1F5", "flag_cc": "jp", "html_lang": "ja"},
+    "zh": {"label": "中文", "flag": "\U0001F1E8\U0001F1F3", "flag_cc": "cn", "html_lang": "zh-CN"},
+    "es": {"label": "Español", "flag": "\U0001F1EA\U0001F1F8", "flag_cc": "es", "html_lang": "es"},
+    "vi": {"label": "Tiếng Việt", "flag": "\U0001F1FB\U0001F1F3", "flag_cc": "vn", "html_lang": "vi"},
+    "pt": {"label": "Português", "flag": "\U0001F1E7\U0001F1F7", "flag_cc": "br", "html_lang": "pt-BR"},
+    "id": {"label": "Bahasa Indonesia", "flag": "\U0001F1EE\U0001F1E9", "flag_cc": "id", "html_lang": "id"},
+    "de": {"label": "Deutsch", "flag": "\U0001F1E9\U0001F1EA", "flag_cc": "de", "html_lang": "de"},
 }
 
 # 숫자 읽기 변환기는 단순 번역이 아니라 언어별 숫자 문법(기수·서수·시간·날짜·화폐 표기)을
@@ -5518,6 +5522,14 @@ def head_block(lang, page_key, title, description, keywords=None, og_title=None,
          theme_fouc_script(), lang_detect_script(lang), extra)
 
 
+def flag_img_html(l, cls="flag-icon"):
+    """국기 이모지 대신 쓰는 실제 SVG 국기 아이콘 <img> 태그.
+    Windows(특히 Chrome)는 유니코드 국기 이모지 글꼴을 지원하지 않아 빈 사각형/텍스트로만
+    보이는 경우가 많아, /assets/img/flags/{cc}.svg 파일을 직접 로드한다."""
+    meta = LANG_META[l]
+    return '<img class="%s" src="/assets/img/flags/%s.svg" alt="" loading="lazy" width="20" height="15">' % (cls, meta["flag_cc"])
+
+
 def lang_switcher(lang, current_page_key):
     page_langs = langs_for_page(current_page_key)
     urls_by_lang = {l: urls_for(l)[current_page_key] for l in page_langs}
@@ -5526,14 +5538,14 @@ def lang_switcher(lang, current_page_key):
         cur = ' aria-current="true"' if l == lang else ""
         items.append(
             '<li><a href="%s" data-lang-option="%s"%s>%s <span>%s</span></a></li>'
-            % (urls_by_lang[l], l, cur, LANG_META[l]["flag"], LANG_META[l]["label"])
+            % (urls_by_lang[l], l, cur, flag_img_html(l), LANG_META[l]["label"])
         )
     return '''<div class="lang-switch" data-lang-switch>
         <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="%s">%s</button>
         <ul class="lang-switch-menu" data-lang-menu hidden>
           %s
         </ul>
-      </div>''' % (NAV[lang]["lang"], LANG_META[lang]["flag"], "\n          ".join(items))
+      </div>''' % (NAV[lang]["lang"], flag_img_html(lang, "flag-icon flag-icon-toggle"), "\n          ".join(items))
 
 
 TOOL_PAGE_KEYS = set(url_key for url_key, _ in TOOL_NAV_ITEMS)

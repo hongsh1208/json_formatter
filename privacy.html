@@ -22,6 +22,11 @@
 <meta property="og:locale:alternate" content="ko_KR" />
 <meta property="og:locale:alternate" content="ja_JP" />
 <meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="de_DE" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Privacy Policy | Formix" />
 <meta name="twitter:description" content="Information on Formix's collection and use of personal data and our use of cookies." />
@@ -31,6 +36,11 @@
 <link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
 <link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
 <link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
 <link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
@@ -47,7 +57,7 @@
 <script>
   (function () {
     try {
-      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var SUPPORTED = ['ko', 'ja', 'zh', 'es', 'vi', 'pt', 'id', 'de'].slice();
       var stored = localStorage.getItem("formix-lang");
       if (stored) {
         if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
@@ -130,12 +140,17 @@
     </ul>
     <div class="nav-right">
       <div class="lang-switch" data-lang-switch>
-        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language"><img class="flag-icon flag-icon-toggle" src="/assets/img/flags/us.svg" alt="" loading="lazy" width="20" height="15"></button>
         <ul class="lang-switch-menu" data-lang-menu hidden>
-          <li><a href="/privacy.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
-          <li><a href="/ko/privacy.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
-          <li><a href="/ja/privacy.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
-          <li><a href="/zh/privacy.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+          <li><a href="/privacy.html" data-lang-option="en" aria-current="true"><img class="flag-icon" src="/assets/img/flags/us.svg" alt="" loading="lazy" width="20" height="15"> <span>English</span></a></li>
+          <li><a href="/ko/privacy.html" data-lang-option="ko"><img class="flag-icon" src="/assets/img/flags/kr.svg" alt="" loading="lazy" width="20" height="15"> <span>한국어</span></a></li>
+          <li><a href="/ja/privacy.html" data-lang-option="ja"><img class="flag-icon" src="/assets/img/flags/jp.svg" alt="" loading="lazy" width="20" height="15"> <span>日本語</span></a></li>
+          <li><a href="/zh/privacy.html" data-lang-option="zh"><img class="flag-icon" src="/assets/img/flags/cn.svg" alt="" loading="lazy" width="20" height="15"> <span>中文</span></a></li>
+          <li><a href="/es/privacy.html" data-lang-option="es"><img class="flag-icon" src="/assets/img/flags/es.svg" alt="" loading="lazy" width="20" height="15"> <span>Español</span></a></li>
+          <li><a href="/vi/privacy.html" data-lang-option="vi"><img class="flag-icon" src="/assets/img/flags/vn.svg" alt="" loading="lazy" width="20" height="15"> <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/privacy.html" data-lang-option="pt"><img class="flag-icon" src="/assets/img/flags/br.svg" alt="" loading="lazy" width="20" height="15"> <span>Português</span></a></li>
+          <li><a href="/id/privacy.html" data-lang-option="id"><img class="flag-icon" src="/assets/img/flags/id.svg" alt="" loading="lazy" width="20" height="15"> <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/privacy.html" data-lang-option="de"><img class="flag-icon" src="/assets/img/flags/de.svg" alt="" loading="lazy" width="20" height="15"> <span>Deutsch</span></a></li>
         </ul>
       </div>
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
