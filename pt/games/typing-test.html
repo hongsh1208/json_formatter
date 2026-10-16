@@ -201,9 +201,11 @@
          data-lb-loading="Carregando…" data-lb-empty="Ainda sem registros — seja o primeiro!" data-lb-error="Não foi possível carregar o ranking no momento."
          data-lb-submitting="Enviando…" data-lb-success="Enviado! Você ficou na posição {rank}." data-lb-error-submit="Falha ao enviar, tente novamente."
          data-lb-rate-limited="Aguarde e tente novamente." data-lb-reset-tpl="Ranking mensal · reinicia em {days}d {hours}h">
-      <h2>Ranking</h2>
+      <div class="tt-leaderboard-head">
+        <h2>Ranking</h2>
+        <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
+      </div>
       <p class="tt-leaderboard-lead">Veja como sua pontuação se compara a todos os resultados enviados.</p>
-      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>

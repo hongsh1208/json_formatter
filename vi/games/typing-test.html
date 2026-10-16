@@ -201,9 +201,11 @@
          data-lb-loading="Đang tải…" data-lb-empty="Chưa có kỷ lục nào — hãy là người đầu tiên!" data-lb-error="Hiện không thể tải bảng xếp hạng."
          data-lb-submitting="Đang gửi…" data-lb-success="Đã gửi! Bạn đứng ở hạng {rank}." data-lb-error-submit="Gửi thất bại, vui lòng thử lại."
          data-lb-rate-limited="Vui lòng chờ và thử lại sau." data-lb-reset-tpl="Xếp hạng theo tháng · làm mới sau {days} ngày {hours} giờ">
-      <h2>Bảng xếp hạng</h2>
+      <div class="tt-leaderboard-head">
+        <h2>Bảng xếp hạng</h2>
+        <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
+      </div>
       <p class="tt-leaderboard-lead">Xem điểm số của bạn so với tất cả các kết quả đã gửi.</p>
-      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>

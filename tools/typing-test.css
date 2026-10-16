@@ -179,6 +179,17 @@
   margin-top: 4px;
 }
 
+.tt-leaderboard-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+
+.tt-leaderboard-head h2 {
+  margin: 0;
+}
+
 .tt-leaderboard-reset {
   display: inline-block;
   font-size: 12.5px;
@@ -187,7 +198,7 @@
   background: color-mix(in srgb, var(--color-accent) 12%, transparent);
   border-radius: 999px;
   padding: 3px 10px;
-  margin: 2px 0 10px;
+  margin: 0;
 }
 
 .tt-leaderboard-table-wrap {

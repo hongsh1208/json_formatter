@@ -201,9 +201,11 @@
          data-lb-loading="불러오는 중…" data-lb-empty="아직 등록된 기록이 없습니다 — 첫 번째 주인공이 되어보세요!" data-lb-error="지금은 랭킹을 불러올 수 없습니다."
          data-lb-submitting="제출 중…" data-lb-success="제출 완료! {rank}위에 올랐습니다." data-lb-error-submit="제출에 실패했습니다. 다시 시도해주세요."
          data-lb-rate-limited="잠시 후 다시 제출해주세요." data-lb-reset-tpl="월간 랭킹 · D-{days} ({hours}시간 후 초기화)">
-      <h2>랭킹</h2>
+      <div class="tt-leaderboard-head">
+        <h2>랭킹</h2>
+        <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
+      </div>
       <p class="tt-leaderboard-lead">지금까지 제출된 기록 중 내 순위를 확인해보세요.</p>
-      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>

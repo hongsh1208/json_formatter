@@ -201,9 +201,11 @@
          data-lb-loading="加载中…" data-lb-empty="暂无记录 — 来成为第一名吧！" data-lb-error="暂时无法加载排行榜。"
          data-lb-submitting="提交中…" data-lb-success="提交成功！你排名第 {rank} 位。" data-lb-error-submit="提交失败，请重试。"
          data-lb-rate-limited="请稍后再试。" data-lb-reset-tpl="月度排行榜 · {days}天{hours}小时后重置">
-      <h2>排行榜</h2>
+      <div class="tt-leaderboard-head">
+        <h2>排行榜</h2>
+        <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
+      </div>
       <p class="tt-leaderboard-lead">查看你的成绩在所有已提交记录中的排名。</p>
-      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>

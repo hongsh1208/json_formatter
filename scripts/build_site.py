@@ -6735,9 +6735,11 @@ def render_tool_typing(lang):
          data-lb-loading="%(leaderboard_loading)s" data-lb-empty="%(leaderboard_empty)s" data-lb-error="%(leaderboard_error)s"
          data-lb-submitting="%(submitting)s" data-lb-success="%(submit_success)s" data-lb-error-submit="%(submit_error)s"
          data-lb-rate-limited="%(submit_rate_limited)s" data-lb-reset-tpl="%(leaderboard_reset_tpl)s">
-      <h2>%(leaderboard_h2)s</h2>
+      <div class="tt-leaderboard-head">
+        <h2>%(leaderboard_h2)s</h2>
+        <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
+      </div>
       <p class="tt-leaderboard-lead">%(leaderboard_lead)s</p>
-      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>

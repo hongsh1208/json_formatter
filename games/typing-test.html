@@ -224,9 +224,11 @@
          data-lb-loading="Loading…" data-lb-empty="No scores yet — be the first!" data-lb-error="Couldn't load the leaderboard right now."
          data-lb-submitting="Submitting…" data-lb-success="Submitted! You ranked #{rank}." data-lb-error-submit="Couldn't submit your score. Please try again."
          data-lb-rate-limited="Please wait a bit before submitting again." data-lb-reset-tpl="Monthly ranking · resets in {days}d {hours}h">
-      <h2>Leaderboard</h2>
+      <div class="tt-leaderboard-head">
+        <h2>Leaderboard</h2>
+        <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
+      </div>
       <p class="tt-leaderboard-lead">See where your score ranks among everyone who has submitted.</p>
-      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>
