@@ -1,0 +1,20 @@
+# Cloudflare Workers 배포 설정.
+#
+# 이 파일이 없으면(이전 상태) "npx wrangler deploy"가 정적 파일만 올리는 배포로
+# 떨어져서, functions/api/leaderboard.js 가 전혀 실행되지 않고 Settings 화면에도
+# "정적 자산만 있는 Worker에는 바인딩을 추가할 수 없습니다"라고 표시된다.
+# main(실제 Worker 코드)을 지정해야 D1 등 바인딩을 추가할 수 있는 "진짜" Worker가 된다.
+#
+# D1 바인딩은 이 파일에 직접 적지 않았다 — Cloudflare 대시보드에서 D1 DB를 만든 뒤
+# formix 프로젝트 → 바인딩(Bindings) → "바인딩 추가"에서 D1 database를 선택하고
+# Variable name을 DB로 지정하면 된다(이 wrangler.toml이 배포되고 나면 더 이상
+# "정적 자산만 있는 Worker" 제한에 걸리지 않아야 한다).
+
+name = "formix"
+compatibility_date = "2026-10-12"
+main = "src/index.js"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+not_found_handling = "404-page"
