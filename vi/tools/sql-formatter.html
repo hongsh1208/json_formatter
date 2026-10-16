@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Công cụ định dạng SQL / Làm đẹp SQL - Công cụ Trực tuyến Miễn phí | Formix</title>
+<meta name="description" content="Định dạng và thụt lề câu lệnh SQL miễn phí trực tuyến. Hỗ trợ MySQL, PostgreSQL, SQL Server, Oracle PL/SQL, BigQuery, Snowflake và nhiều hơn nữa. Mọi xử lý diễn ra trong trình duyệt, không bao giờ gửi lên máy chủ." />
+<meta name="keywords" content="định dạng sql, làm đẹp sql, công cụ định dạng sql trực tuyến, định dạng câu lệnh sql, định dạng mysql, định dạng postgresql, công cụ sql miễn phí" />
+<link rel="canonical" href="https://formix.site/vi/tools/sql-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Công cụ định dạng SQL / Làm đẹp SQL | Formix" />
+<meta property="og:description" content="Công cụ định dạng SQL trực tuyến miễn phí hỗ trợ nhiều phương ngữ SQL; mọi xử lý diễn ra trong trình duyệt." />
+<meta property="og:url" content="https://formix.site/vi/tools/sql-formatter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-vi.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Công cụ định dạng SQL / Làm đẹp SQL | Formix" />
+<meta name="twitter:description" content="Công cụ định dạng SQL trực tuyến miễn phí hỗ trợ nhiều phương ngữ SQL; mọi xử lý diễn ra trong trình duyệt." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-vi.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/sql-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "vi"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Công cụ định dạng SQL / Làm đẹp SQL",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/vi/tools/sql-formatter.html",
+  "description": "Công cụ trực tuyến miễn phí giúp câu lệnh SQL dễ đọc hơn bằng cách thụt lề và viết hoa từ khóa, hỗ trợ nhiều phương ngữ SQL.",
+  "inLanguage": "vi",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/vi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Công cụ định dạng SQL",
+      "item": "https://formix.site/vi/tools/sql-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Chuyển đến nội dung</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/vi/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Mở menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/vi/">Trang chủ</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Công cụ <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a></li>
+          <li><a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a></li>
+          <li><a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a></li>
+          <li><a href="/vi/tools/sql-formatter.html" aria-current="page">Công cụ định dạng SQL</a></li>
+          <li><a href="/vi/tools/code-viewer.html">Xem mã nguồn</a></li>
+          <li><a href="/tools/number-reader.html">Đọc số thành chữ</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Trò chơi <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/vi/games/typing-test.html">Kiểm tra tốc độ đánh máy</a></li>
+          <li><a href="/vi/games/syntax-quiz.html">Đố vui cú pháp lập trình</a></li>
+        </ul>
+      </li>
+      <li><a href="/vi/about.html">Giới thiệu</a></li>
+      <li><a href="/vi/privacy.html">Chính sách bảo mật</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">🇻🇳</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/sql-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/sql-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/sql-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/sql-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+          <li><a href="/es/tools/sql-formatter.html" data-lang-option="es">🇪🇸 <span>Español</span></a></li>
+          <li><a href="/vi/tools/sql-formatter.html" data-lang-option="vi" aria-current="true">🇻🇳 <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/tools/sql-formatter.html" data-lang-option="pt">🇧🇷 <span>Português</span></a></li>
+          <li><a href="/id/tools/sql-formatter.html" data-lang-option="id">🇮🇩 <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/tools/sql-formatter.html" data-lang-option="de">🇩🇪 <span>Deutsch</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Chuyển sang chế độ tối">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
+  <ol class="breadcrumb-list container">
+    <li><a href="/vi/">Trang chủ</a></li>
+    <li><span class="breadcrumb-group">Công cụ</span></li>
+    <li aria-current="page"><span>Công cụ định dạng SQL</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Công cụ định dạng SQL</h1>
+    <p>Dán câu lệnh SQL vào bên trái, bạn sẽ thấy kết quả dễ đọc với thụt lề rõ ràng ở bên phải. Chọn phương ngữ SQL khớp với cơ sở dữ liệu của bạn để có kết quả chính xác hơn. Dữ liệu không bao giờ được gửi lên máy chủ.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Định dạng</button>
+      <button class="btn" id="btn-sample" type="button">Tải ví dụ</button>
+      <button class="btn" id="btn-clear" type="button">Xóa</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Kích thước thụt lề</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>Thụt lề 2 khoảng trắng</option>
+        <option value="4">Thụt lề 4 khoảng trắng</option>
+        <option value="tab">Thụt lề Tab</option>
+      </select>
+            <label for="sql-dialect-select" class="visually-hidden">Phương ngữ SQL</label>
+      <select class="jf-select sql-dialect-select" id="sql-dialect-select">
+        <option value="sql" selected>SQL chuẩn</option>
+        <option value="mysql">MySQL / MariaDB</option>
+        <option value="postgresql">PostgreSQL</option>
+        <option value="tsql">SQL Server (T-SQL)</option>
+        <option value="plsql">Oracle PL/SQL</option>
+        <option value="bigquery">Google BigQuery</option>
+        <option value="snowflake">Snowflake</option>
+        <option value="sqlite">SQLite</option>
+      </select>
+      <button class="btn btn-sm" id="btn-copy" type="button">Sao chép</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Sao chép kết quả rút gọn</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Tải kết quả xuống</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Chuyển đổi giữa nhập và kết quả">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Nhập
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Kết quả
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Nhập">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="sql-status-top" class="status-pill is-idle">Hãy dán câu lệnh SQL</span>
+          <span id="sql-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="sql-input-search-mode" class="visually-hidden">Chế độ tìm kiếm</label>
+          <select class="jf-select jf-search-mode" id="sql-input-search-mode">
+            <option value="contains" selected>Chứa</option>
+            <option value="exact">Khớp chính xác (toàn dòng)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="sql-input-search" class="visually-hidden">Chế độ tìm kiếm</label>
+          <input type="text" id="sql-input-search" placeholder="Tìm trong văn bản nhập…" />
+          <span class="jf-search-count" id="sql-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Kết quả trước" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Kết quả tiếp theo" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Xóa tìm kiếm" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="sql-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="sql-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="sql-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Dán câu lệnh SQL của bạn vào đây, ví dụ: SELECT * FROM users WHERE id = 1"
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="sql-status" class="status-pill is-idle">Hãy dán câu lệnh SQL</span>
+          <span id="sql-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Kết quả" hidden>
+        <div class="jf-panel-head">
+          <span>Kết quả</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Mở rộng tất cả</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Thu gọn tất cả</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="sql-search-mode" class="visually-hidden">Chế độ tìm kiếm</label>
+          <select class="jf-select jf-search-mode" id="sql-search-mode" disabled>
+            <option value="contains" selected>Chứa</option>
+            <option value="exact">Khớp chính xác</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="sql-search" class="visually-hidden">Tìm trong văn bản kết quả…</label>
+          <input type="text" id="sql-search" placeholder="Tìm trong văn bản kết quả…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Kết quả trước" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Kết quả tiếp theo" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Xóa tìm kiếm" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="sql-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="sql-output-gutter-inner"></div>
+          </div>
+          <div id="sql-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Mẹo. Công cụ này chỉ "định dạng (làm đẹp)" SQL; nó không kiểm tra liệu câu lệnh có đúng về mặt ngữ nghĩa hoặc có thể thực thi thành công trên cơ sở dữ liệu thực tế hay không. Chọn phương ngữ gần nhất với cơ sở dữ liệu của bạn sẽ cho kết quả định dạng chính xác hơn. Nếu câu lệnh hoàn toàn không thể phân tích được (ví dụ dấu ngoặc hoặc dấu ngoặc kép không khớp), vị trí lỗi gần đúng sẽ được hiển thị. Các từ khóa sẽ tự động chuyển thành chữ hoa theo quy ước phổ biến của SQL. Công cụ này đóng gói cục bộ thư viện mã nguồn mở <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> (giấy phép MIT), nên việc định dạng vẫn diễn ra hoàn toàn trong trình duyệt của bạn.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>Cách sử dụng công cụ này</h2>
+    <ul>
+      <li>Dán câu lệnh SQL vào khung nhập bên trái.</li>
+      <li>Chọn "Phương ngữ SQL" khớp với cơ sở dữ liệu của bạn (MySQL, PostgreSQL, SQL Server, v.v.) để có kết quả định dạng chính xác hơn.</li>
+      <li>Nhấp "Định dạng" (cũng tự động định dạng khi bạn gõ) để xem kết quả đã làm đẹp ở bên phải.</li>
+      <li>Nếu câu lệnh không thể phân tích được, bạn sẽ nhận được dòng/cột gần đúng của lỗi.</li>
+      <li>Dùng menu kích thước thụt lề để điều chỉnh thụt lề của kết quả, sau đó lấy kết quả bằng "Sao chép" hoặc "Tải kết quả xuống".</li>
+      <li>Mọi xử lý diễn ra trong trình duyệt của bạn — SQL bạn nhập không bao giờ được gửi lên máy chủ.</li>
+    </ul>
+
+    <h2>Mẹo liên quan</h2>
+    <ul>
+      <li>Công cụ này chỉ định dạng/làm đẹp SQL; nó không kiểm tra liệu câu lệnh có khớp với cấu trúc cơ sở dữ liệu thực tế của bạn hay có thực thi thành công hay không.</li>
+      <li>Từ khóa và cú pháp khác nhau giữa các phương ngữ (ví dụ LIMIT so với TOP, dấu backtick so với dấu ngoặc kép); hãy chọn phương ngữ khớp với cơ sở dữ liệu của bạn để có kết quả tốt nhất.</li>
+      <li>Các từ khóa như SELECT, FROM, WHERE sẽ tự động chuyển thành chữ hoa theo quy ước phổ biến giúp tăng khả năng đọc.</li>
+      <li>Nếu bạn cũng cần xử lý JSON hoặc XML, hãy thử Công cụ định dạng JSON, Công cụ định dạng XML hoặc Chuyển đổi JSON ↔ XML trong các liên kết liên quan bên dưới.</li>
+    </ul>
+
+    <h2>Liên quan</h2>
+    <ul>
+      <li><a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a></li>
+      <li><a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a></li>
+      <li><a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a></li>
+      <li><a href="/vi/tools/code-viewer.html">Xem mã nguồn</a></li>
+      <li><a href="/tools/number-reader.html">Đọc số thành chữ</a></li>
+      <li><a href="/vi/faq.html">Câu hỏi thường gặp</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/vi/about.html">Giới thiệu</a>
+      <a href="/vi/faq.html">Câu hỏi thường gặp</a>
+      <a href="/vi/updates.html">Cập nhật mới</a>
+      <a href="/vi/contact.html">Liên hệ</a>
+      <a href="/vi/terms.html">Điều khoản dịch vụ</a>
+      <a href="/vi/privacy.html">Chính sách bảo mật</a>
+      <a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a>
+      <a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a>
+      <a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a>
+      <a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a>
+      <a href="/vi/tools/code-viewer.html">Xem mã nguồn</a>
+      <a href="/tools/number-reader.html">Đọc số thành chữ</a>
+      <a href="/vi/games/typing-test.html">Kiểm tra tốc độ đánh máy</a>
+      <a href="/vi/games/syntax-quiz.html">Đố vui cú pháp lập trình</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Tùy chọn cookie</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/vendor/sql-formatter.min.js"></script>
+<script src="/tools/sql-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

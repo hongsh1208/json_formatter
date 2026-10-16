@@ -1,0 +1,242 @@
+/* Typing Speed Test 전용 스타일 (style.css의 CSS 변수를 그대로 사용) */
+
+/* 랭킹이 페이지 맨 아래에 있어 눈에 띄지 않는다는 피드백을 반영해, 데스크톱에서는
+   타이핑 영역과 랭킹을 좌우로 나란히 배치해 처음부터 함께 보이도록 한다.
+   좁은 화면(모바일)에서는 세로로 쌓이되, 타이핑 도구 다음에 바로 랭킹이 오도록 한다. */
+.tt-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .tt-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+  .tt-side {
+    position: sticky;
+    top: 88px;
+  }
+}
+
+.tt-side {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  padding: 18px;
+}
+
+.tt-side h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.tt-side .tt-leaderboard-table-wrap {
+  background: var(--color-bg);
+}
+
+.tt-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tt-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.tt-stat-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.tt-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.tt-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.tt-panel-head {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.tt-passage {
+  padding: 18px 16px 8px;
+  font-family: var(--font-mono);
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  user-select: none;
+}
+
+.tt-char {
+  white-space: pre-wrap;
+}
+
+.tt-char.is-correct {
+  color: var(--color-success);
+}
+
+.tt-char.is-incorrect {
+  color: var(--color-accent-contrast);
+  background: var(--color-danger);
+  border-radius: 2px;
+}
+
+.tt-char.is-current {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+}
+
+.tt-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px dashed var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 12px 16px 16px;
+  resize: none;
+  outline: none;
+}
+
+.tt-input:disabled {
+  opacity: 0.6;
+}
+
+.tt-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.tt-copied {
+  font-size: 13px;
+  color: var(--color-success);
+}
+
+.tt-submit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.tt-nickname-input {
+  flex: 1 1 220px;
+  max-width: 280px;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.tt-submit-status {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.tt-submit-status.is-success {
+  color: var(--color-success);
+}
+
+.tt-submit-status.is-error {
+  color: var(--color-danger);
+}
+
+.tt-leaderboard-lead {
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.tt-leaderboard-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.tt-leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tt-leaderboard-table th,
+.tt-leaderboard-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tt-leaderboard-table th {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tt-leaderboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tt-leaderboard-table td:nth-child(3),
+.tt-leaderboard-table td:nth-child(4),
+.tt-leaderboard-table th:nth-child(3),
+.tt-leaderboard-table th:nth-child(4) {
+  font-variant-numeric: tabular-nums;
+}
+
+.tt-leaderboard-status {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 20px 14px;
+}
+
+.tt-leaderboard-table tr.is-you {
+  background: var(--color-bg-elevated);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .tt-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tt-passage {
+    font-size: 15px;
+  }
+  .tt-nickname-input {
+    max-width: none;
+    flex-basis: 100%;
+  }
+}

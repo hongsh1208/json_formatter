@@ -71,17 +71,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/" aria-current="page">ホーム</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           ツール <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
-        <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
-        <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
-        <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
-        <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
-        <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+          <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+          <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
+          <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
+          <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
+          <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          ゲーム <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ja/games/typing-test.html">タイピング速度テスト</a></li>
+          <li><a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a></li>
         </ul>
       </li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
@@ -158,6 +167,26 @@
     </div>
   </section>
 
+  <section class="section container">
+    <h2 style="margin-bottom: 4px;">ゲーム</h2>
+    <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">ちょっとした息抜きに楽しめる、ブラウザだけで完結するゲームです — 登録不要、ランキングへの参加も任意です。</p>
+    <div class="card-grid" style="margin-top: 20px;">
+      <a class="tool-card" href="/ja/games/typing-test.html">
+        <div class="tool-card-icon">⌨️</div>
+        <h3>タイピング速度テスト</h3>
+        <p>短い練習文でタイピング速度(WPM)と正確率を測定し、結果をシェアできます。採点はすべてブラウザ内で行われます。</p>
+        <span class="tag">タイピング · WPM · ゲーム</span>
+      </a>
+
+      <a class="tool-card" href="/ja/games/syntax-quiz.html">
+        <div class="tool-card-icon">🧠</div>
+        <h3>コーディング文法クイズ</h3>
+        <p>JavaScript、Python、Java、Cの基本文法を問う選択式クイズです。言語を選んで何問正解できるか試してみましょう。</p>
+        <span class="tag">クイズ · 文法 · ゲーム</span>
+      </a>
+    </div>
+  </section>
+
   <section class="section-tight container prose">
     <h2>なぜFormixなのか?</h2>
     <ul>
@@ -185,6 +214,8 @@
       <a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a>
       <a href="/ja/tools/code-viewer.html">コードビューア</a>
       <a href="/ja/tools/number-reader.html">数字の読み方変換</a>
+      <a href="/ja/games/typing-test.html">タイピング速度テスト</a>
+      <a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>

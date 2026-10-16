@@ -95,17 +95,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/">홈</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle is-active" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           도구 <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
-        <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
-        <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
-        <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
-        <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
-        <li><a href="/ko/tools/number-reader.html" aria-current="page">숫자 읽기 변환기</a></li>
+          <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+          <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+          <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
+          <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
+          <li><a href="/ko/tools/number-reader.html" aria-current="page">숫자 읽기 변환기</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          게임 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ko/games/typing-test.html">타자 속도 테스트</a></li>
+          <li><a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a></li>
         </ul>
       </li>
       <li><a href="/ko/about.html">사이트 소개</a></li>
@@ -300,6 +309,8 @@
       <a href="/ko/tools/sql-formatter.html">SQL 포매터</a>
       <a href="/ko/tools/code-viewer.html">코드 뷰어</a>
       <a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a>
+      <a href="/ko/games/typing-test.html">타자 속도 테스트</a>
+      <a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>

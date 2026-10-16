@@ -79,50 +79,53 @@
     });
   }
 
-  function initToolsDropdown() {
-    var root = document.querySelector("[data-tools-dropdown]");
-    if (!root) return;
-    var toggle = root.querySelector("[data-tools-toggle]");
-    var menu = root.querySelector("[data-tools-menu]");
-    if (!toggle || !menu) return;
+  function initNavDropdowns() {
+    // 헤더의 "도구"/"게임" 드롭다운 모두 같은 data-nav-dropdown* 속성을 쓰므로
+    // 여기서 한 번에 찾아 각각 독립적으로 열고 닫는 동작을 걸어준다.
+    var roots = document.querySelectorAll("[data-nav-dropdown]");
+    roots.forEach(function (root) {
+      var toggle = root.querySelector("[data-nav-dropdown-toggle]");
+      var menu = root.querySelector("[data-nav-dropdown-menu]");
+      if (!toggle || !menu) return;
 
-    var hoverCloseTimer = null;
+      var hoverCloseTimer = null;
 
-    function closeMenu() {
-      clearTimeout(hoverCloseTimer);
-      menu.hidden = true;
-      toggle.setAttribute("aria-expanded", "false");
-    }
-    function openMenu() {
-      clearTimeout(hoverCloseTimer);
-      menu.hidden = false;
-      toggle.setAttribute("aria-expanded", "true");
-    }
-    function scheduleClose() {
-      clearTimeout(hoverCloseTimer);
-      hoverCloseTimer = setTimeout(closeMenu, 250);
-    }
+      function closeMenu() {
+        clearTimeout(hoverCloseTimer);
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      }
+      function openMenu() {
+        clearTimeout(hoverCloseTimer);
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      }
+      function scheduleClose() {
+        clearTimeout(hoverCloseTimer);
+        hoverCloseTimer = setTimeout(closeMenu, 250);
+      }
 
-    toggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      if (menu.hidden) openMenu();
-      else closeMenu();
-    });
+      toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (menu.hidden) openMenu();
+        else closeMenu();
+      });
 
-    // 실제 마우스(hover)가 있는 기기에서는 클릭 없이 올리기만 해도 바로 열리고,
-    // 영역을 벗어나면 약간의 지연 후 닫히도록 한다(버튼→메뉴 사이의 작은 간격을
-    // 지나갈 때 실수로 닫히지 않게 하기 위함). 터치 기기는 클릭 토글만 사용된다.
-    var supportsHover = !window.matchMedia || window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    if (supportsHover) {
-      root.addEventListener("mouseenter", openMenu);
-      root.addEventListener("mouseleave", scheduleClose);
-    }
+      // 실제 마우스(hover)가 있는 기기에서는 클릭 없이 올리기만 해도 바로 열리고,
+      // 영역을 벗어나면 약간의 지연 후 닫히도록 한다(버튼→메뉴 사이의 작은 간격을
+      // 지나갈 때 실수로 닫히지 않게 하기 위함). 터치 기기는 클릭 토글만 사용된다.
+      var supportsHover = !window.matchMedia || window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (supportsHover) {
+        root.addEventListener("mouseenter", openMenu);
+        root.addEventListener("mouseleave", scheduleClose);
+      }
 
-    document.addEventListener("click", function (e) {
-      if (!root.contains(e.target)) closeMenu();
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeMenu();
+      document.addEventListener("click", function (e) {
+        if (!root.contains(e.target)) closeMenu();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeMenu();
+      });
     });
   }
 
@@ -141,7 +144,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initThemeToggle();
     initMobileNav();
-    initToolsDropdown();
+    initNavDropdowns();
     markActiveNavLink();
   });
 })();

@@ -128,7 +128,7 @@
       "name": "Will more tools be added?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Formix started with a JSON Formatter and now also offers an XML Formatter, a JSON ↔ XML Converter, a SQL Formatter, a Code Viewer, and a Number Reader. We plan to keep adding small, genuinely useful browser-based tools over time — see our About page for our guiding principles."
+        "text": "Yes. Formix started with a JSON Formatter and now also offers an XML Formatter, a JSON ↔ XML Converter, a SQL Formatter, a Code Viewer, and a Number Reader, plus two games — a Typing Speed Test and a Coding Syntax Quiz. We plan to keep adding small, genuinely useful browser-based tools and games over time — see our About page for our guiding principles."
       }
     },
     {
@@ -175,17 +175,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/">Home</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           Tools <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
-        <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
-        <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
-        <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
-        <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
-        <li><a href="/tools/number-reader.html">Number Reader</a></li>
+          <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+          <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+          <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+          <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Games <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/games/typing-test.html">Typing Speed Test</a></li>
+          <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a></li>
         </ul>
       </li>
       <li><a href="/about.html">About</a></li>
@@ -226,7 +235,7 @@
       <details class="faq-item"><summary>Which browsers are supported?</summary><div class="faq-answer"><p>Any modern browser (Chrome, Edge, Firefox, Safari) on desktop or mobile works. The tools rely on standard, widely-supported JavaScript APIs like DOMParser and JSON.parse.</p></div></details>
       <details class="faq-item"><summary>Can I use these tools on my phone?</summary><div class="faq-answer"><p>Yes, the site is fully responsive and works on mobile browsers, though a larger screen makes it easier to work with long JSON or XML documents.</p></div></details>
       <details class="faq-item"><summary>What happens if my JSON or XML is invalid?</summary><div class="faq-answer"><p>The tool shows a status badge and an approximate line/column where the problem was found, so you can locate and fix the issue quickly. The JSON Formatter can also auto-correct some common mistakes, like missing quotes.</p></div></details>
-      <details class="faq-item"><summary>Will more tools be added?</summary><div class="faq-answer"><p>Yes. Formix started with a JSON Formatter and now also offers an <a href="/tools/xml-formatter.html">XML Formatter</a>, a <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>, a <a href="/tools/sql-formatter.html">SQL Formatter</a>, a <a href="/tools/code-viewer.html">Code Viewer</a>, and a <a href="/tools/number-reader.html">Number Reader</a>. We plan to keep adding small, genuinely useful browser-based tools over time — see our <a href="/about.html">About</a> page for our guiding principles.</p></div></details>
+      <details class="faq-item"><summary>Will more tools be added?</summary><div class="faq-answer"><p>Yes. Formix started with a JSON Formatter and now also offers an <a href="/tools/xml-formatter.html">XML Formatter</a>, a <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>, a <a href="/tools/sql-formatter.html">SQL Formatter</a>, a <a href="/tools/code-viewer.html">Code Viewer</a>, and a <a href="/tools/number-reader.html">Number Reader</a>, plus two games — a <a href="/games/typing-test.html">Typing Speed Test</a> and a <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>. We plan to keep adding small, genuinely useful browser-based tools and games over time — see our <a href="/about.html">About</a> page for our guiding principles.</p></div></details>
       <details class="faq-item"><summary>How do I report a bug or suggest a feature?</summary><div class="faq-answer"><p>Please reach out through our <a href="/contact.html">Contact page</a>. We read every message.</p></div></details>
     </div>
   </div>
@@ -248,6 +257,8 @@
       <a href="/tools/sql-formatter.html">SQL Formatter</a>
       <a href="/tools/code-viewer.html">Code Viewer</a>
       <a href="/tools/number-reader.html">Number Reader</a>
+      <a href="/games/typing-test.html">Typing Speed Test</a>
+      <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
     </nav>
   </div>

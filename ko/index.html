@@ -71,17 +71,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/" aria-current="page">홈</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           도구 <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
-        <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
-        <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
-        <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
-        <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
-        <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+          <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+          <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+          <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
+          <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
+          <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          게임 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ko/games/typing-test.html">타자 속도 테스트</a></li>
+          <li><a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a></li>
         </ul>
       </li>
       <li><a href="/ko/about.html">사이트 소개</a></li>
@@ -158,6 +167,26 @@
     </div>
   </section>
 
+  <section class="section container">
+    <h2 style="margin-bottom: 4px;">게임</h2>
+    <p style="color: var(--color-text-muted); margin-top: 0 0 20px;">가볍게 즐기는 브라우저 게임들입니다 — 회원가입도, 부담스러운 랭킹도 없습니다(직접 참여를 선택한 경우는 예외입니다).</p>
+    <div class="card-grid" style="margin-top: 20px;">
+      <a class="tool-card" href="/ko/games/typing-test.html">
+        <div class="tool-card-icon">⌨️</div>
+        <h3>타자 속도 테스트</h3>
+        <p>짧은 연습 문장으로 타자 속도(WPM)와 정확도를 측정하고 결과를 공유할 수 있습니다. 모든 채점은 브라우저 안에서만 이뤄집니다.</p>
+        <span class="tag">타자연습 · WPM · 게임</span>
+      </a>
+
+      <a class="tool-card" href="/ko/games/syntax-quiz.html">
+        <div class="tool-card-icon">🧠</div>
+        <h3>코딩 문법 퀴즈</h3>
+        <p>JavaScript, Python, Java, C의 기본 문법을 묻는 객관식 퀴즈입니다. 언어를 선택하고 몇 문제나 맞추는지 확인해보세요.</p>
+        <span class="tag">퀴즈 · 문법 · 게임</span>
+      </a>
+    </div>
+  </section>
+
   <section class="section-tight container prose">
     <h2>왜 Formix인가요?</h2>
     <ul>
@@ -185,6 +214,8 @@
       <a href="/ko/tools/sql-formatter.html">SQL 포매터</a>
       <a href="/ko/tools/code-viewer.html">코드 뷰어</a>
       <a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a>
+      <a href="/ko/games/typing-test.html">타자 속도 테스트</a>
+      <a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>

@@ -80,17 +80,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/">홈</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           도구 <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
-        <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
-        <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
-        <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
-        <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
-        <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+          <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+          <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+          <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
+          <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
+          <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          게임 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ko/games/typing-test.html">타자 속도 테스트</a></li>
+          <li><a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a></li>
         </ul>
       </li>
       <li><a href="/ko/about.html">사이트 소개</a></li>
@@ -130,6 +139,7 @@
       <h2>1. 처리하는 정보 및 처리 방식</h2>
       <p>사이트에서 제공하는 JSON 포매터 등 도구는 입력하신 텍스트를 서버로 전송하지 않고 이용자의 브라우저(자바스크립트) 내에서만 처리합니다. 즉, 입력한 JSON 데이터나 텍스트는 사이트 운영자에게 전달되거나 저장되지 않습니다.</p>
       <p>다만 화면 테마 설정(라이트/다크 모드)과 같은 단순 환경설정 값은 이용자의 브라우저 로컬 스토리지(localStorage)에만 저장되며, 이 정보는 외부로 전송되지 않습니다.</p>
+      <p>타자 속도 테스트는 예외입니다. 이용자가 결과를 공개 랭킹에 직접 제출할 경우, 입력한 닉네임과 WPM·정확도가 서버로 전송되어 저장되며 다른 방문자에게 공개됩니다. 이를 위해 이름, 이메일 등 별도의 신원 정보는 요구하거나 수집하지 않으며, 이용자가 직접 입력한 닉네임만 저장됩니다. IP 주소는 스팸성 반복 제출을 막기 위한 간단한 빈도 제한 목적으로만 해시(hash) 처리되어 순간적으로 사용되며, 이용자를 특정할 수 있는 형태로 저장되지 않습니다. 결과를 제출하지 않으면 테스트와 관련된 어떤 정보도 서버로 전송되지 않습니다.</p>
     </section>
 
     <section>
@@ -188,6 +198,8 @@
       <a href="/ko/tools/sql-formatter.html">SQL 포매터</a>
       <a href="/ko/tools/code-viewer.html">코드 뷰어</a>
       <a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a>
+      <a href="/ko/games/typing-test.html">타자 속도 테스트</a>
+      <a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>

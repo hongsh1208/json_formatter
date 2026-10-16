@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Định dạng / Xem JSON - Kiểm tra và Làm đẹp JSON Trực tuyến | Formix</title>
+<meta name="description" content="Công cụ định dạng JSON trực tuyến. Kiểm tra xem nội dung bạn nhập có phải JSON hợp lệ không và hiển thị dưới dạng cây dễ đọc, có tô màu cú pháp. Hỗ trợ thu/mở rộng và tìm kiếm khóa/giá trị; dữ liệu của bạn chỉ được xử lý trong trình duyệt." />
+<meta name="keywords" content="định dạng json, xem json, kiểm tra json, làm đẹp json, json pretty print, công cụ json trực tuyến" />
+<link rel="canonical" href="https://formix.site/vi/tools/json-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Định dạng / Xem JSON | Formix" />
+<meta property="og:description" content="Công cụ định dạng JSON trực tuyến miễn phí với kiểm tra tính hợp lệ, xem dạng cây dễ đọc, tìm kiếm và thu/mở rộng." />
+<meta property="og:url" content="https://formix.site/vi/tools/json-formatter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-vi.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Định dạng / Xem JSON | Formix" />
+<meta name="twitter:description" content="Công cụ định dạng JSON trực tuyến miễn phí với kiểm tra tính hợp lệ, xem dạng cây dễ đọc, tìm kiếm và thu/mở rộng." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-vi.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/json-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "vi"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Định dạng / Xem JSON",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/vi/tools/json-formatter.html",
+  "description": "Công cụ trực tuyến miễn phí kiểm tra chuỗi JSON và hiển thị dưới dạng cây dễ đọc. Bao gồm tìm kiếm và thu/mở rộng.",
+  "inLanguage": "vi",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/vi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Định dạng / Xem JSON",
+      "item": "https://formix.site/vi/tools/json-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Chuyển đến nội dung</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/vi/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Mở menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/vi/">Trang chủ</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Công cụ <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/vi/tools/json-formatter.html" aria-current="page">Công cụ định dạng JSON</a></li>
+          <li><a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a></li>
+          <li><a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a></li>
+          <li><a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a></li>
+          <li><a href="/vi/tools/code-viewer.html">Xem mã nguồn</a></li>
+          <li><a href="/tools/number-reader.html">Đọc số thành chữ</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Trò chơi <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/vi/games/typing-test.html">Kiểm tra tốc độ đánh máy</a></li>
+          <li><a href="/vi/games/syntax-quiz.html">Đố vui cú pháp lập trình</a></li>
+        </ul>
+      </li>
+      <li><a href="/vi/about.html">Giới thiệu</a></li>
+      <li><a href="/vi/privacy.html">Chính sách bảo mật</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">🇻🇳</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/json-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/json-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/json-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/json-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+          <li><a href="/es/tools/json-formatter.html" data-lang-option="es">🇪🇸 <span>Español</span></a></li>
+          <li><a href="/vi/tools/json-formatter.html" data-lang-option="vi" aria-current="true">🇻🇳 <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/tools/json-formatter.html" data-lang-option="pt">🇧🇷 <span>Português</span></a></li>
+          <li><a href="/id/tools/json-formatter.html" data-lang-option="id">🇮🇩 <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/tools/json-formatter.html" data-lang-option="de">🇩🇪 <span>Deutsch</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Chuyển sang chế độ tối">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
+  <ol class="breadcrumb-list container">
+    <li><a href="/vi/">Trang chủ</a></li>
+    <li><span class="breadcrumb-group">Công cụ</span></li>
+    <li aria-current="page"><span>Công cụ định dạng JSON</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Định dạng / Xem JSON</h1>
+    <p>Nhập một chuỗi JSON để kiểm tra tính hợp lệ và xem nó được trình bày dưới dạng cây có thụt lề, tô màu cú pháp. Nội dung bạn nhập không bao giờ được gửi lên máy chủ — mọi thứ diễn ra trong trình duyệt của bạn.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Định dạng</button>
+      <button class="btn" id="btn-sample" type="button">Tải ví dụ</button>
+      <button class="btn" id="btn-clear" type="button">Xóa</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Kích thước thụt lề</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>Thụt lề 2 khoảng trắng</option>
+        <option value="4">Thụt lề 4 khoảng trắng</option>
+        <option value="tab">Thụt lề Tab</option>
+      </select>
+      
+      <button class="btn btn-sm" id="btn-copy" type="button">Sao chép</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Sao chép rút gọn</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Tải xuống .json</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Chuyển đổi giữa nhập và kết quả">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Nhập
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Kết quả
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Nhập">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="json-status-top" class="status-pill is-idle">Hãy nhập JSON</span>
+          <span id="json-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="json-input-search-mode" class="visually-hidden">Chế độ tìm kiếm</label>
+          <select class="jf-select jf-search-mode" id="json-input-search-mode">
+            <option value="contains" selected>Chứa</option>
+            <option value="exact">Chính xác (dòng)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="json-input-search" class="visually-hidden">Chế độ tìm kiếm</label>
+          <input type="text" id="json-input-search" placeholder="Tìm trong văn bản nhập…" />
+          <span class="jf-search-count" id="json-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Kết quả trước" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Kết quả tiếp theo" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Xóa tìm kiếm" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="json-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="json-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="json-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="json-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Dán chuỗi JSON của bạn vào đây. Dấu ngoặc kép bị thiếu quanh khóa hoặc giá trị vẫn sẽ được nhận diện khi có thể."
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="json-status" class="status-pill is-idle">Hãy nhập JSON</span>
+          <span id="json-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Kết quả" hidden>
+        <div class="jf-panel-head">
+          <span>Kết quả</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Mở rộng tất cả</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Thu gọn tất cả</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="json-search-mode" class="visually-hidden">Chế độ tìm kiếm</label>
+          <select class="jf-select jf-search-mode" id="json-search-mode" disabled>
+            <option value="contains" selected>Chứa</option>
+            <option value="exact">Chính xác</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="json-search" class="visually-hidden">Tìm khóa hoặc giá trị…</label>
+          <input type="text" id="json-search" placeholder="Tìm khóa hoặc giá trị…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Kết quả trước" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Kết quả tiếp theo" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Xóa tìm kiếm" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="json-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="json-output-gutter-inner"></div>
+          </div>
+          <div id="json-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Mẹo. Khi bạn dừng gõ, nội dung nhập sẽ được kiểm tra và nếu hợp lệ, màn hình sẽ tự động chuyển sang tab "Kết quả". Dấu chấm trên tab Kết quả cho biết trạng thái hợp lệ hiện tại. Các nút ▾/▸ để thu/mở rộng đối tượng và mảng nằm cạnh số dòng (lề trái) để dễ nhấp. Hộp tìm kiếm tự động được focus khi tab Kết quả mở, và bạn có thể chọn chế độ tìm kiếm (Chứa/Chính xác/Regex) để tìm khóa và giá trị theo cách bạn muốn. Số dòng ở kết quả được đánh số lại chỉ theo các dòng đang hiển thị, nên bạn vẫn biết vị trí ngay cả khi một phần cấu trúc bị thu gọn. Khung nhập cũng có cùng loại tìm kiếm (Chứa/Chính xác/Regex) để bạn định vị và tô sáng trực tiếp trong nội dung gốc. Nhấn Enter (tiếp theo) / Shift+Enter (trước đó) để di chuyển giữa các kết quả khớp. Dù một số dấu ngoặc kép (") quanh khóa hoặc giá trị chuỗi bị thiếu, chúng tôi vẫn cố gắng nhận diện văn bản đó là JSON.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>Cách sử dụng công cụ này</h2>
+    <ul>
+      <li>Dán một chuỗi JSON vào khung nhập bên trái và nó sẽ được kiểm tra tự động, kết quả hiển thị ngay lập tức.</li>
+      <li>Nếu JSON không hợp lệ, bạn sẽ nhận được dòng/cột gần đúng của vị trí gặp vấn đề.</li>
+      <li>Nhấp "Định dạng" cũng sẽ định dạng lại nội dung trong khung nhập theo kích thước thụt lề đã chọn.</li>
+      <li>Khi kết quả dài, dùng "Thu gọn tất cả" để xem tổng quan cấu trúc trước, sau đó chỉ mở rộng các nút cần thiết bằng nút ▾/▸ cạnh số dòng.</li>
+      <li>Mọi thứ diễn ra trong trình duyệt của bạn — dữ liệu bạn nhập không bao giờ được gửi lên máy chủ.</li>
+      <li>Dù thiếu dấu ngoặc kép quanh một số khóa hoặc giá trị chuỗi, chúng tôi vẫn cố gắng tự sửa và nhận diện. Khi đó huy hiệu trạng thái sẽ hiển thị "Đã sửa", và các dòng được sửa sẽ được tô sáng trong số dòng của khung nhập.</li>
+      <li>Khi nội dung nhập được xác nhận hợp lệ (hoặc đã sửa), màn hình tự động chuyển sang tab "Kết quả" và focus chuyển đến hộp tìm kiếm để bạn có thể gõ ngay.</li>
+      <li>Chọn chế độ tìm kiếm: "Chứa" (khớp một phần), "Chính xác" (khớp hoàn toàn), hoặc "Regex" (biểu thức chính quy).</li>
+      <li>Khung nhập có cùng tính năng tìm kiếm (Chứa/Chính xác/Regex, điều hướng trước/tiếp theo, tô sáng) để bạn tìm trực tiếp trong văn bản gốc.</li>
+    </ul>
+
+    <h2>Mẹo liên quan</h2>
+    <ul>
+      <li>Dùng "Sao chép rút gọn" thay vì "Sao chép" khi cần payload gọn cho yêu cầu API hoặc giá trị cấu hình — không có khoảng trắng hay xuống dòng dư.</li>
+      <li>Chuyển kích thước thụt lề sang Tab nếu quy chuẩn code của dự án bạn yêu cầu dùng tab thay vì khoảng trắng.</li>
+      <li>Chế độ tìm kiếm Regex có thể khớp một mẫu trên toàn bộ khóa hoặc giá trị cùng lúc — tiện để kiểm tra ID, ngày tháng hoặc email trong một tài liệu lớn.</li>
+      <li>Với JSON lồng nhiều cấp, hãy nhấp "Thu gọn tất cả" trước để xem hình dạng tổng thể, rồi chỉ mở rộng nhánh bạn thực sự cần kiểm tra.</li>
+    </ul>
+
+    <h2>Liên quan</h2>
+    <ul>
+      <li><a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a></li>
+      <li><a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a></li>
+      <li><a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a></li>
+      <li><a href="/vi/tools/code-viewer.html">Xem mã nguồn</a></li>
+      <li><a href="/tools/number-reader.html">Đọc số thành chữ</a></li>
+      <li><a href="/vi/faq.html">Câu hỏi thường gặp</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/vi/about.html">Giới thiệu</a>
+      <a href="/vi/faq.html">Câu hỏi thường gặp</a>
+      <a href="/vi/updates.html">Cập nhật mới</a>
+      <a href="/vi/contact.html">Liên hệ</a>
+      <a href="/vi/terms.html">Điều khoản dịch vụ</a>
+      <a href="/vi/privacy.html">Chính sách bảo mật</a>
+      <a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a>
+      <a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a>
+      <a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a>
+      <a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a>
+      <a href="/vi/tools/code-viewer.html">Xem mã nguồn</a>
+      <a href="/tools/number-reader.html">Đọc số thành chữ</a>
+      <a href="/vi/games/typing-test.html">Kiểm tra tốc độ đánh máy</a>
+      <a href="/vi/games/syntax-quiz.html">Đố vui cú pháp lập trình</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Tùy chọn cookie</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/json-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -103,17 +103,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/">Home</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           Tools <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
-        <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
-        <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
-        <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
-        <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
-        <li><a href="/tools/number-reader.html">Number Reader</a></li>
+          <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+          <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+          <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+          <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Games <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/games/typing-test.html">Typing Speed Test</a></li>
+          <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a></li>
         </ul>
       </li>
       <li><a href="/about.html" aria-current="page">About</a></li>
@@ -171,8 +180,10 @@
         <li><a href="/tools/sql-formatter.html">SQL Formatter</a> — Beautifies SQL queries with proper indentation and keyword casing, supporting multiple dialects (MySQL, PostgreSQL, SQL Server, BigQuery, and more).</li>
         <li><a href="/tools/code-viewer.html">Code Viewer</a> — Paste source code and pick a language to view it with syntax highlighting, supporting 20+ languages including Java, C#, Python, and Go.</li>
         <li><a href="/tools/number-reader.html">Number Reader</a> — Converts numbers into words for cardinal, ordinal, phone/account digits, time, date, and currency, with multiple reading styles per language.</li>
+        <li><a href="/games/typing-test.html">Typing Speed Test</a> — Measures your typing speed (WPM) and accuracy on short practice passages and lets you share your score. Scoring runs entirely in your browser.</li>
+        <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a> — A multiple-choice quiz on basic syntax for JavaScript, Python, Java, and C.</li>
       </ul>
-      <p>Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), and the Code Viewer uses <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> (MIT License), both bundled locally so processing still runs entirely in your browser. The Number Reader is implemented with our own code and uses no external library.</p>
+      <p>Suggestions for new features or improvements are always welcome. The SQL Formatter uses the open-source <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> library (MIT License), and the Code Viewer uses <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a> (MIT License), both bundled locally so processing still runs entirely in your browser. The Number Reader and Typing Speed Test are implemented with our own code and use no external library.</p>
     </section>
 
     <section>
@@ -204,6 +215,8 @@
       <a href="/tools/sql-formatter.html">SQL Formatter</a>
       <a href="/tools/code-viewer.html">Code Viewer</a>
       <a href="/tools/number-reader.html">Number Reader</a>
+      <a href="/games/typing-test.html">Typing Speed Test</a>
+      <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
     </nav>
   </div>

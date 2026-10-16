@@ -3,535 +3,1735 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://formix.site/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
   </url>
   <url>
     <loc>https://formix.site/ko/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
   </url>
   <url>
     <loc>https://formix.site/ja/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
   </url>
   <url>
     <loc>https://formix.site/zh/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/" />
   </url>
   <url>
     <loc>https://formix.site/about.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/about.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/about.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/about.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/about.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/about.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/about.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/about.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/about.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/about.html" />
   </url>
   <url>
     <loc>https://formix.site/privacy.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/privacy.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/privacy.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/privacy.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/privacy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/privacy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/privacy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/privacy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/privacy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/privacy.html" />
   </url>
   <url>
     <loc>https://formix.site/faq.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/faq.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/faq.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/faq.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/faq.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/faq.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/faq.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/faq.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/faq.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
   </url>
   <url>
     <loc>https://formix.site/contact.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/contact.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/contact.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/contact.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/contact.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/contact.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/contact.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/contact.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/contact.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/contact.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/contact.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/contact.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/contact.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/contact.html" />
   </url>
   <url>
     <loc>https://formix.site/terms.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/terms.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/terms.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/terms.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/terms.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/terms.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/terms.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/terms.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/terms.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/terms.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/terms.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/terms.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/terms.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/terms.html" />
   </url>
   <url>
     <loc>https://formix.site/updates.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/updates.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/updates.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/updates.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/updates.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/updates.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/updates.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/updates.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/updates.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/updates.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/updates.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/updates.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/updates.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/updates.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/updates.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/updates.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/updates.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/updates.html" />
   </url>
   <url>
     <loc>https://formix.site/tools/json-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/tools/json-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/tools/json-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/tools/json-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/tools/json-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/tools/json-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/tools/json-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/tools/json-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/tools/json-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/tools/xml-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/tools/xml-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/tools/xml-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/tools/xml-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/tools/xml-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/tools/xml-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/tools/xml-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/tools/xml-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/tools/xml-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/tools/json-xml-converter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/tools/json-xml-converter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/tools/json-xml-converter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/tools/json-xml-converter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/tools/json-xml-converter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/tools/json-xml-converter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/tools/json-xml-converter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/tools/json-xml-converter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/tools/json-xml-converter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/json-xml-converter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/json-xml-converter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/json-xml-converter.html" />
   </url>
   <url>
     <loc>https://formix.site/tools/sql-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/tools/sql-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/tools/sql-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/tools/sql-formatter.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/tools/sql-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/tools/sql-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/tools/sql-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/tools/sql-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/tools/sql-formatter.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/sql-formatter.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/sql-formatter.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/sql-formatter.html" />
   </url>
   <url>
     <loc>https://formix.site/tools/code-viewer.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
   </url>
   <url>
     <loc>https://formix.site/ko/tools/code-viewer.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
   </url>
   <url>
     <loc>https://formix.site/ja/tools/code-viewer.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
   </url>
   <url>
     <loc>https://formix.site/zh/tools/code-viewer.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/tools/code-viewer.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/tools/code-viewer.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/tools/code-viewer.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/tools/code-viewer.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/tools/code-viewer.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/tools/code-viewer.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/tools/code-viewer.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/code-viewer.html" />
   </url>
   <url>
     <loc>https://formix.site/tools/number-reader.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/number-reader.html" />
@@ -542,7 +1742,7 @@
   </url>
   <url>
     <loc>https://formix.site/ko/tools/number-reader.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/number-reader.html" />
@@ -553,7 +1753,7 @@
   </url>
   <url>
     <loc>https://formix.site/ja/tools/number-reader.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/number-reader.html" />
@@ -564,7 +1764,7 @@
   </url>
   <url>
     <loc>https://formix.site/zh/tools/number-reader.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/tools/number-reader.html" />
@@ -572,5 +1772,293 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/number-reader.html" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/number-reader.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/tools/number-reader.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/ko/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/ja/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/zh/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/games/typing-test.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/typing-test.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/ko/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/ja/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/zh/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/es/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/vi/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/pt/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/id/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+  </url>
+  <url>
+    <loc>https://formix.site/de/games/syntax-quiz.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://formix.site/es/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://formix.site/vi/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://formix.site/id/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://formix.site/de/games/syntax-quiz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
   </url>
 </urlset>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Định dạng / Xem XML - Kiểm tra và Làm đẹp XML Trực tuyến | Formix</title>
+<meta name="description" content="Công cụ định dạng XML trực tuyến. Kiểm tra xem nội dung bạn nhập có phải XML hợp lệ không và hiển thị dưới dạng cây dễ đọc, có tô màu cú pháp. Hỗ trợ thu/mở rộng và tìm kiếm thẻ/thuộc tính/văn bản, dữ liệu của bạn chỉ được xử lý trong trình duyệt." />
+<meta name="keywords" content="định dạng xml, xem xml, kiểm tra xml, làm đẹp xml, xml pretty print, công cụ xml trực tuyến" />
+<link rel="canonical" href="https://formix.site/vi/tools/xml-formatter.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Định dạng / Xem XML | Formix" />
+<meta property="og:description" content="Công cụ định dạng XML trực tuyến miễn phí với kiểm tra tính hợp lệ, xem dạng cây dễ đọc, tìm kiếm và thu/mở rộng." />
+<meta property="og:url" content="https://formix.site/vi/tools/xml-formatter.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-vi.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Định dạng / Xem XML | Formix" />
+<meta name="twitter:description" content="Công cụ định dạng XML trực tuyến miễn phí với kiểm tra tính hợp lệ, xem dạng cây dễ đọc, tìm kiếm và thu/mở rộng." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-vi.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/tools/xml-formatter.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/tools/xml-formatter.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/xml-formatter.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "vi"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Định dạng / Xem XML",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/vi/tools/xml-formatter.html",
+  "description": "Công cụ trực tuyến miễn phí kiểm tra chuỗi XML và hiển thị dưới dạng cây dễ đọc. Bao gồm tìm kiếm và thu/mở rộng.",
+  "inLanguage": "vi",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/vi/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Định dạng / Xem XML",
+      "item": "https://formix.site/vi/tools/xml-formatter.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Chuyển đến nội dung</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/vi/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Mở menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/vi/">Trang chủ</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Công cụ <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a></li>
+          <li><a href="/vi/tools/xml-formatter.html" aria-current="page">Công cụ định dạng XML</a></li>
+          <li><a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a></li>
+          <li><a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a></li>
+          <li><a href="/vi/tools/code-viewer.html">Xem mã nguồn</a></li>
+          <li><a href="/tools/number-reader.html">Đọc số thành chữ</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Trò chơi <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/vi/games/typing-test.html">Kiểm tra tốc độ đánh máy</a></li>
+          <li><a href="/vi/games/syntax-quiz.html">Đố vui cú pháp lập trình</a></li>
+        </ul>
+      </li>
+      <li><a href="/vi/about.html">Giới thiệu</a></li>
+      <li><a href="/vi/privacy.html">Chính sách bảo mật</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">🇻🇳</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/tools/xml-formatter.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/tools/xml-formatter.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/tools/xml-formatter.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/tools/xml-formatter.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+          <li><a href="/es/tools/xml-formatter.html" data-lang-option="es">🇪🇸 <span>Español</span></a></li>
+          <li><a href="/vi/tools/xml-formatter.html" data-lang-option="vi" aria-current="true">🇻🇳 <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/tools/xml-formatter.html" data-lang-option="pt">🇧🇷 <span>Português</span></a></li>
+          <li><a href="/id/tools/xml-formatter.html" data-lang-option="id">🇮🇩 <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/tools/xml-formatter.html" data-lang-option="de">🇩🇪 <span>Deutsch</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Chuyển sang chế độ tối">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
+  <ol class="breadcrumb-list container">
+    <li><a href="/vi/">Trang chủ</a></li>
+    <li><span class="breadcrumb-group">Công cụ</span></li>
+    <li aria-current="page"><span>Công cụ định dạng XML</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Định dạng / Xem XML</h1>
+    <p>Nhập một chuỗi XML để kiểm tra tính hợp lệ và xem nó được trình bày dưới dạng cây có thụt lề, tô màu cú pháp. Nội dung bạn nhập không bao giờ được gửi lên máy chủ — mọi thứ diễn ra trong trình duyệt của bạn.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="jf-toolbar">
+      <button class="btn btn-primary" id="btn-format" type="button">Định dạng</button>
+      <button class="btn" id="btn-sample" type="button">Tải ví dụ</button>
+      <button class="btn" id="btn-clear" type="button">Xóa</button>
+      <span class="spacer"></span>
+      <label for="indent-select" class="visually-hidden">Kích thước thụt lề</label>
+      <select class="jf-select" id="indent-select">
+        <option value="2" selected>Thụt lề 2 khoảng trắng</option>
+        <option value="4">Thụt lề 4 khoảng trắng</option>
+        <option value="tab">Thụt lề Tab</option>
+      </select>
+      
+      <button class="btn btn-sm" id="btn-copy" type="button">Sao chép</button>
+      <button class="btn btn-sm" id="btn-copy-minify" type="button">Sao chép rút gọn</button>
+      <button class="btn btn-sm" id="btn-download" type="button">Tải xuống .xml</button>
+    </div>
+
+    <div class="jf-tabs" role="tablist" aria-label="Chuyển đổi giữa nhập và kết quả">
+      <button class="jf-tab is-active" id="tab-input" type="button" role="tab" aria-selected="true" aria-controls="panel-input" data-tab="input">
+        Nhập
+      </button>
+      <button class="jf-tab" id="tab-output" type="button" role="tab" aria-selected="false" aria-controls="panel-output" data-tab="output">
+        Kết quả
+        <span id="tab-output-badge" class="jf-tab-badge is-idle" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="jf-tabpanels">
+      <section class="jf-panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input" aria-label="Nhập">
+        <div class="jf-panel-head jf-panel-head-status">
+          <span id="xml-status-top" class="status-pill is-idle">Hãy nhập XML</span>
+          <span id="xml-error-detail-top" class="jf-error-detail"></span>
+        </div>
+        <div class="jf-search">
+          <label for="xml-input-search-mode" class="visually-hidden">Chế độ tìm kiếm</label>
+          <select class="jf-select jf-search-mode" id="xml-input-search-mode">
+            <option value="contains" selected>Chứa</option>
+            <option value="exact">Chính xác (dòng)</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="xml-input-search" class="visually-hidden">Chế độ tìm kiếm</label>
+          <input type="text" id="xml-input-search" placeholder="Tìm trong văn bản nhập…" />
+          <span class="jf-search-count" id="xml-input-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-input-search-prev" type="button" title="Kết quả trước" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-input-search-next" type="button" title="Kết quả tiếp theo" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-input-search-clear" type="button" title="Xóa tìm kiếm" disabled>✕</button>
+        </div>
+        <div class="jf-editor">
+          <div class="jf-gutter" id="xml-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="xml-gutter-inner"></div>
+          </div>
+          <div class="jf-input-wrap">
+            <div class="jf-input-highlight" id="xml-input-highlight" aria-hidden="true"></div>
+            <textarea
+              id="xml-input"
+              spellcheck="false"
+              autocapitalize="off"
+              autocorrect="off"
+              wrap="off"
+              placeholder="Dán chuỗi XML của bạn vào đây."
+            ></textarea>
+          </div>
+        </div>
+        <div class="jf-status-bar">
+          <span id="xml-status" class="status-pill is-idle">Hãy nhập XML</span>
+          <span id="xml-error-detail" class="jf-error-detail"></span>
+        </div>
+      </section>
+
+      <section class="jf-panel" id="panel-output" role="tabpanel" aria-labelledby="tab-output" aria-label="Kết quả" hidden>
+        <div class="jf-panel-head">
+          <span>Kết quả</span>
+          <div class="jf-output-tools">
+            <button class="btn btn-sm" id="btn-expand-all" type="button">▾ Mở rộng tất cả</button>
+            <button class="btn btn-sm" id="btn-collapse-all" type="button">▸ Thu gọn tất cả</button>
+          </div>
+        </div>
+        <div class="jf-search">
+          <label for="xml-search-mode" class="visually-hidden">Chế độ tìm kiếm</label>
+          <select class="jf-select jf-search-mode" id="xml-search-mode" disabled>
+            <option value="contains" selected>Chứa</option>
+            <option value="exact">Chính xác</option>
+            <option value="regex">Regex</option>
+          </select>
+          <label for="xml-search" class="visually-hidden">Tìm thẻ, thuộc tính hoặc văn bản…</label>
+          <input type="text" id="xml-search" placeholder="Tìm thẻ, thuộc tính hoặc văn bản…" disabled />
+          <span class="jf-search-count" id="jf-search-count">0 / 0</span>
+          <button class="jf-icon-btn" id="btn-search-prev" type="button" title="Kết quả trước" disabled>↑</button>
+          <button class="jf-icon-btn" id="btn-search-next" type="button" title="Kết quả tiếp theo" disabled>↓</button>
+          <button class="jf-icon-btn" id="btn-search-clear" type="button" title="Xóa tìm kiếm" disabled>✕</button>
+        </div>
+        <div class="jf-output-body">
+          <div class="jf-gutter jf-gutter-with-toggle" id="xml-output-gutter" aria-hidden="true">
+            <div class="jf-gutter-inner" id="xml-output-gutter-inner"></div>
+          </div>
+          <div id="xml-output" role="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
+
+    <p class="jf-hint">Mẹo. Khi bạn dừng gõ, nội dung nhập sẽ được kiểm tra và nếu hợp lệ, màn hình sẽ tự động chuyển sang tab "Kết quả". Dấu chấm trên tab Kết quả cho biết trạng thái hợp lệ hiện tại. Các nút ▾/▸ để thu/mở rộng phần tử nằm cạnh số dòng (lề trái) để dễ nhấp. Hộp tìm kiếm tự động được focus khi tab Kết quả mở, và bạn có thể chọn chế độ tìm kiếm (Chứa/Chính xác/Regex) để tìm tên thẻ, tên/giá trị thuộc tính và nội dung văn bản. Số dòng ở kết quả được đánh số lại chỉ theo các dòng đang hiển thị, nên bạn vẫn biết vị trí ngay cả khi một phần cấu trúc bị thu gọn. Khung nhập cũng có cùng loại tìm kiếm để định vị và tô sáng trực tiếp trong nội dung gốc. Nhấn Enter (tiếp theo) / Shift+Enter (trước đó) để di chuyển giữa các kết quả khớp.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>Cách sử dụng công cụ này</h2>
+    <ul>
+      <li>Dán một chuỗi XML vào khung nhập bên trái và nó sẽ được kiểm tra tự động, kết quả hiển thị ngay lập tức.</li>
+      <li>Nếu XML không hợp lệ, bạn sẽ nhận được dòng/cột gần đúng của vị trí gặp vấn đề.</li>
+      <li>Nhấp "Định dạng" cũng sẽ định dạng lại nội dung trong khung nhập theo kích thước thụt lề đã chọn.</li>
+      <li>Khi kết quả dài, dùng "Thu gọn tất cả" để xem tổng quan cấu trúc trước, sau đó chỉ mở rộng các phần tử cần thiết bằng nút ▾/▸ cạnh số dòng.</li>
+      <li>Mọi thứ diễn ra trong trình duyệt của bạn — dữ liệu bạn nhập không bao giờ được gửi lên máy chủ.</li>
+      <li>Khi nội dung nhập được xác nhận hợp lệ, màn hình tự động chuyển sang tab "Kết quả" và focus chuyển đến hộp tìm kiếm để bạn có thể gõ ngay.</li>
+      <li>Chọn chế độ tìm kiếm: "Chứa", "Chính xác", hoặc "Regex".</li>
+      <li>Khung nhập có cùng tính năng tìm kiếm để bạn tìm trực tiếp trong văn bản gốc.</li>
+      <li>Phần tử, thuộc tính, nút văn bản, bình luận và các đoạn CDATA đều được nhận diện và hiển thị với màu khác nhau trong chế độ xem dạng cây.</li>
+    </ul>
+
+    <h2>Mẹo liên quan</h2>
+    <ul>
+      <li>Với các tài liệu lồng nhiều cấp như nguồn cấp RSS hoặc phản hồi SOAP, hãy nhấp "Thu gọn tất cả" trước để hiểu cấu trúc tổng thể, rồi chỉ mở rộng nhánh bạn cần xem.</li>
+      <li>Chế độ tìm kiếm Regex có thể khớp giá trị thuộc tính trên nhiều phần tử cùng lúc — tiện để kiểm tra ID, ngày tháng hoặc không gian tên.</li>
+      <li>Nếu XML của bạn bắt đầu bằng khai báo <?xml ...?>, nó sẽ được tự động giữ lại khi định dạng, sao chép hoặc tải xuống.</li>
+      <li>Các đoạn CDATA rất phù hợp để nhúng trực tiếp đánh dấu hoặc ký tự đặc biệt vào văn bản mà không cần thoát ký tự, và công cụ sẽ giữ nguyên chúng.</li>
+    </ul>
+
+    <h2>Liên quan</h2>
+    <ul>
+      <li><a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a></li>
+      <li><a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a></li>
+      <li><a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a></li>
+      <li><a href="/vi/tools/code-viewer.html">Xem mã nguồn</a></li>
+      <li><a href="/tools/number-reader.html">Đọc số thành chữ</a></li>
+      <li><a href="/vi/faq.html">Câu hỏi thường gặp</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/vi/about.html">Giới thiệu</a>
+      <a href="/vi/faq.html">Câu hỏi thường gặp</a>
+      <a href="/vi/updates.html">Cập nhật mới</a>
+      <a href="/vi/contact.html">Liên hệ</a>
+      <a href="/vi/terms.html">Điều khoản dịch vụ</a>
+      <a href="/vi/privacy.html">Chính sách bảo mật</a>
+      <a href="/vi/tools/json-formatter.html">Công cụ định dạng JSON</a>
+      <a href="/vi/tools/xml-formatter.html">Công cụ định dạng XML</a>
+      <a href="/vi/tools/json-xml-converter.html">Chuyển đổi JSON ↔ XML</a>
+      <a href="/vi/tools/sql-formatter.html">Công cụ định dạng SQL</a>
+      <a href="/vi/tools/code-viewer.html">Xem mã nguồn</a>
+      <a href="/tools/number-reader.html">Đọc số thành chữ</a>
+      <a href="/vi/games/typing-test.html">Kiểm tra tốc độ đánh máy</a>
+      <a href="/vi/games/syntax-quiz.html">Đố vui cú pháp lập trình</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Tùy chọn cookie</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/xml-formatter.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

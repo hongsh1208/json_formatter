@@ -80,17 +80,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="메뉴 열기">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ko/">홈</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           도구 <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ko/tools/json-formatter.html">JSON 포매터</a></li>
-        <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
-        <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
-        <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
-        <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
-        <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+          <li><a href="/ko/tools/xml-formatter.html">XML 포매터</a></li>
+          <li><a href="/ko/tools/json-xml-converter.html">JSON ↔ XML 변환기</a></li>
+          <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a></li>
+          <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a></li>
+          <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          게임 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ko/games/typing-test.html">타자 속도 테스트</a></li>
+          <li><a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a></li>
         </ul>
       </li>
       <li><a href="/ko/about.html" aria-current="page">사이트 소개</a></li>
@@ -148,8 +157,10 @@
         <li><a href="/ko/tools/sql-formatter.html">SQL 포매터</a> — SQL 쿼리를 알아보기 쉽게 들여쓰기하고 키워드 대소문자를 정리합니다. MySQL, PostgreSQL, SQL Server, BigQuery 등 여러 방언을 지원합니다.</li>
         <li><a href="/ko/tools/code-viewer.html">코드 뷰어</a> — 소스 코드를 붙여넣고 언어를 선택하면 문법 강조가 적용된 화면으로 보여줍니다. Java, C#, Python, Go 등 20여 개 언어를 지원합니다.</li>
         <li><a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a> — 숫자를 일반(기수), 서수, 전화·계좌번호, 시간, 날짜, 화폐 등으로 변환해 읽는 법을 보여줍니다. 언어별로 여러 표기 방식을 지원합니다.</li>
+        <li><a href="/ko/games/typing-test.html">타자 속도 테스트</a> — 짧은 연습 문장으로 타자 속도(WPM)와 정확도를 측정하고 결과를 공유할 수 있습니다. 채점은 모두 브라우저 안에서 이뤄집니다.</li>
+        <li><a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a> — JavaScript, Python, Java, C의 기본 문법을 묻는 객관식 퀴즈입니다.</li>
       </ul>
-      <p>새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를, 코드 뷰어는 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 라이선스)를 사용하며, 둘 다 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다. 숫자 읽기 변환기는 외부 라이브러리 없이 자체 구현했습니다.</p>
+      <p>새로운 기능 제안이나 개선 의견은 언제든 환영합니다. SQL 포매터는 오픈소스 <a href="https://github.com/sql-formatter-org/sql-formatter" rel="noopener noreferrer" target="_blank">sql-formatter</a> 라이브러리(MIT 라이선스)를, 코드 뷰어는 <a href="https://github.com/PrismJS/prism" rel="noopener noreferrer" target="_blank">Prism.js</a>(MIT 라이선스)를 사용하며, 둘 다 로컬에 내장(vendor)하여 여전히 모든 처리가 브라우저 안에서만 이뤄집니다. 숫자 읽기 변환기와 타자 속도 테스트는 외부 라이브러리 없이 자체 구현했습니다.</p>
     </section>
 
     <section>
@@ -181,6 +192,8 @@
       <a href="/ko/tools/sql-formatter.html">SQL 포매터</a>
       <a href="/ko/tools/code-viewer.html">코드 뷰어</a>
       <a href="/ko/tools/number-reader.html">숫자 읽기 변환기</a>
+      <a href="/ko/games/typing-test.html">타자 속도 테스트</a>
+      <a href="/ko/games/syntax-quiz.html">코딩 문법 퀴즈</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>쿠키 설정</button>
     </nav>
   </div>

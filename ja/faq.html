@@ -105,7 +105,7 @@
       "name": "今後もツールは追加されますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい。FormixはJSONフォーマッターから始まり、現在はXMLフォーマッター、JSON ↔ XML 変換ツール、SQLフォーマッター、コードビューア、数字の読み方変換も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針はサイト紹介ページをご覧ください。"
+        "text": "はい。FormixはJSONフォーマッターから始まり、現在はXMLフォーマッター、JSON ↔ XML 変換ツール、SQLフォーマッター、コードビューア、数字の読み方変換を提供し、ゲームとしてタイピング速度テストとコーディング文法クイズも提供しています。今後も実務に役立つブラウザ完結型のツールやゲームを継続的に追加していく予定です。運営方針はサイト紹介ページをご覧ください。"
       }
     },
     {
@@ -152,17 +152,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/">ホーム</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           ツール <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
-        <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
-        <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
-        <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
-        <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
-        <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+          <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+          <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
+          <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
+          <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
+          <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          ゲーム <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ja/games/typing-test.html">タイピング速度テスト</a></li>
+          <li><a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a></li>
         </ul>
       </li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
@@ -203,7 +212,7 @@
       <details class="faq-item"><summary>対応ブラウザは?</summary><div class="faq-answer"><p>パソコン・モバイルの最新ブラウザ(Chrome、Edge、Firefox、Safari)であれば問題なくご利用いただけます。DOMParserやJSON.parseなど、広くサポートされている標準のJavaScript APIを使用しています。</p></div></details>
       <details class="faq-item"><summary>スマートフォンでも使えますか?</summary><div class="faq-answer"><p>はい、モバイルブラウザでもレスポンシブに動作します。ただし長いJSON・XML文書を扱う場合は、画面の大きい端末の方が作業しやすくなります。</p></div></details>
       <details class="faq-item"><summary>JSONやXMLが無効な場合はどうなりますか?</summary><div class="faq-answer"><p>ステータスバッジとともに、問題が発生したおおよその行/列位置が表示されるため、すぐに確認・修正できます。JSONフォーマッターは引用符の欠落など、よくあるミスを自動修正することもあります。</p></div></details>
-      <details class="faq-item"><summary>今後もツールは追加されますか?</summary><div class="faq-answer"><p>はい。FormixはJSONフォーマッターから始まり、現在は<a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>、<a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a>、<a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a>、<a href="/ja/tools/code-viewer.html">コードビューア</a>、<a href="/ja/tools/number-reader.html">数字の読み方変換</a>も提供しています。今後も実務に役立つブラウザ完結型のツールを継続的に追加していく予定です。運営方針は<a href="/ja/about.html">サイト紹介</a>ページをご覧ください。</p></div></details>
+      <details class="faq-item"><summary>今後もツールは追加されますか?</summary><div class="faq-answer"><p>はい。FormixはJSONフォーマッターから始まり、現在は<a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a>、<a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a>、<a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a>、<a href="/ja/tools/code-viewer.html">コードビューア</a>、<a href="/ja/tools/number-reader.html">数字の読み方変換</a>を提供し、ゲームとして<a href="/ja/games/typing-test.html">タイピング速度テスト</a>と<a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a>も提供しています。今後も実務に役立つブラウザ完結型のツールやゲームを継続的に追加していく予定です。運営方針は<a href="/ja/about.html">サイト紹介</a>ページをご覧ください。</p></div></details>
       <details class="faq-item"><summary>不具合報告や機能提案はどうすればいいですか?</summary><div class="faq-answer"><p><a href="/ja/contact.html">お問い合わせ</a>ページからご連絡ください。いただいたご意見はすべて確認しています。</p></div></details>
     </div>
   </div>
@@ -225,6 +234,8 @@
       <a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a>
       <a href="/ja/tools/code-viewer.html">コードビューア</a>
       <a href="/ja/tools/number-reader.html">数字の読み方変換</a>
+      <a href="/ja/games/typing-test.html">タイピング速度テスト</a>
+      <a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>

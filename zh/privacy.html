@@ -80,17 +80,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="打开菜单">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/zh/">首页</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           工具 <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/zh/tools/json-formatter.html">JSON 格式化</a></li>
-        <li><a href="/zh/tools/xml-formatter.html">XML 格式化</a></li>
-        <li><a href="/zh/tools/json-xml-converter.html">JSON ↔ XML 转换工具</a></li>
-        <li><a href="/zh/tools/sql-formatter.html">SQL 格式化</a></li>
-        <li><a href="/zh/tools/code-viewer.html">代码查看器</a></li>
-        <li><a href="/zh/tools/number-reader.html">数字读法转换</a></li>
+          <li><a href="/zh/tools/xml-formatter.html">XML 格式化</a></li>
+          <li><a href="/zh/tools/json-xml-converter.html">JSON ↔ XML 转换工具</a></li>
+          <li><a href="/zh/tools/sql-formatter.html">SQL 格式化</a></li>
+          <li><a href="/zh/tools/code-viewer.html">代码查看器</a></li>
+          <li><a href="/zh/tools/number-reader.html">数字读法转换</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          游戏 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/zh/games/typing-test.html">打字速度测试</a></li>
+          <li><a href="/zh/games/syntax-quiz.html">编程语法测验</a></li>
         </ul>
       </li>
       <li><a href="/zh/about.html">关于本站</a></li>
@@ -130,6 +139,7 @@
       <h2>1. 处理的信息及处理方式</h2>
       <p>本网站提供的 JSON 格式化等工具，会将您输入的文本完全在您的浏览器(JavaScript)中处理，不会发送到服务器。也就是说，您输入的 JSON 数据或文本不会被传送给网站运营者或被保存。</p>
       <p>仅主题设置(浅色/深色模式)等简单的偏好设置值会保存在您浏览器的本地存储(localStorage)中，该信息不会对外传输。</p>
+      <p>打字速度测试是一个例外。如果您选择将成绩提交到公开排行榜，您输入的昵称以及 WPM、准确率会被发送并保存到服务器，并展示给其他访问者。为此我们不会要求或收集您的姓名、邮箱等身份信息，仅保存您自行输入的昵称。IP 地址仅用于防止垃圾刷分的简单频率限制，会以哈希(hash)形式短暂使用，不会以可识别您身份的形式保存。如果您不提交成绩，测试相关的任何信息都不会发送到服务器。</p>
     </section>
 
     <section>
@@ -188,6 +198,8 @@
       <a href="/zh/tools/sql-formatter.html">SQL 格式化</a>
       <a href="/zh/tools/code-viewer.html">代码查看器</a>
       <a href="/zh/tools/number-reader.html">数字读法转换</a>
+      <a href="/zh/games/typing-test.html">打字速度测试</a>
+      <a href="/zh/games/syntax-quiz.html">编程语法测验</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie 设置</button>
     </nav>
   </div>

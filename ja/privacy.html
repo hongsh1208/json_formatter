@@ -80,17 +80,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/ja/">ホーム</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           ツール <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/ja/tools/json-formatter.html">JSONフォーマッター</a></li>
-        <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
-        <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
-        <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
-        <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
-        <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+          <li><a href="/ja/tools/xml-formatter.html">XMLフォーマッター</a></li>
+          <li><a href="/ja/tools/json-xml-converter.html">JSON ↔ XML 変換ツール</a></li>
+          <li><a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a></li>
+          <li><a href="/ja/tools/code-viewer.html">コードビューア</a></li>
+          <li><a href="/ja/tools/number-reader.html">数字の読み方変換</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          ゲーム <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/ja/games/typing-test.html">タイピング速度テスト</a></li>
+          <li><a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a></li>
         </ul>
       </li>
       <li><a href="/ja/about.html">サイト紹介</a></li>
@@ -130,6 +139,7 @@
       <h2>1. 処理する情報と処理方法</h2>
       <p>本サイトが提供するJSONフォーマッターなどのツールは、入力されたテキストをサーバーに送信せず、利用者のブラウザ(JavaScript)内でのみ処理します。つまり、入力されたJSONデータやテキストがサイト運営者に送信・保存されることはありません。</p>
       <p>画面テーマ設定(ライト/ダークモード)などの単純な環境設定値のみ、利用者のブラウザのローカルストレージ(localStorage)に保存され、この情報が外部に送信されることはありません。</p>
+      <p>タイピング速度テストは例外です。利用者が結果を公開ランキングに送信することを選択した場合、入力したニックネームとWPM・正確率がサーバーに送信・保存され、他の訪問者に公開されます。これに際して氏名やメールアドレスなどの身元情報を要求・収集することはなく、利用者が入力したニックネームのみが保存されます。IPアドレスはスパム的な連続送信を防ぐための簡易的な頻度制限の目的でのみハッシュ化された状態で一時的に使用され、利用者個人を特定できる形では保存されません。結果を送信しない場合、テストに関する情報は一切サーバーに送信されません。</p>
     </section>
 
     <section>
@@ -188,6 +198,8 @@
       <a href="/ja/tools/sql-formatter.html">SQLフォーマッター</a>
       <a href="/ja/tools/code-viewer.html">コードビューア</a>
       <a href="/ja/tools/number-reader.html">数字の読み方変換</a>
+      <a href="/ja/games/typing-test.html">タイピング速度テスト</a>
+      <a href="/ja/games/syntax-quiz.html">コーディング文法クイズ</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie設定</button>
     </nav>
   </div>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Programming Language Syntax Quiz - Free Online Game | Formix</title>
+<meta name="description" content="Free multiple-choice syntax quiz covering JavaScript, Python, Java, and C. Test your knowledge of basic syntax for each language, right in your browser — no sign-up required." />
+<meta name="keywords" content="syntax quiz, programming quiz, javascript quiz, python quiz, java quiz, c programming quiz, coding quiz game, learn programming syntax" />
+<link rel="canonical" href="https://formix.site/games/syntax-quiz.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Programming Language Syntax Quiz | Formix" />
+<meta property="og:description" content="A free multiple-choice quiz testing basic syntax knowledge across JavaScript, Python, Java, and C." />
+<meta property="og:url" content="https://formix.site/games/syntax-quiz.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Programming Language Syntax Quiz | Formix" />
+<meta name="twitter:description" content="A free multiple-choice quiz testing basic syntax knowledge across JavaScript, Python, Java, and C." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/games/syntax-quiz.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/syntax-quiz.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/syntax-quiz.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/syntax-quiz.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/games/syntax-quiz.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/games/syntax-quiz.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("formix-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("formix-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("formix-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Programming Language Syntax Quiz",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/games/syntax-quiz.html",
+  "description": "A free online multiple-choice quiz game that tests basic syntax knowledge for JavaScript, Python, Java, and C, entirely in the browser.",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Coding Syntax Quiz",
+      "item": "https://formix.site/games/syntax-quiz.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Tools <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+          <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+          <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+          <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Games <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/games/typing-test.html">Typing Speed Test</a></li>
+          <li><a href="/games/syntax-quiz.html" aria-current="page">Coding Syntax Quiz</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/games/syntax-quiz.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/games/syntax-quiz.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/games/syntax-quiz.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/games/syntax-quiz.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list container">
+    <li><a href="/">Home</a></li>
+    <li><span class="breadcrumb-group">Games</span></li>
+    <li aria-current="page"><span>Coding Syntax Quiz</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Coding Syntax Quiz</h1>
+    <p>Pick a programming language and answer short multiple-choice questions about its basic syntax. Great for a quick warm-up or for testing what you remember.</p>
+  </div>
+
+  <div class="container section-tight">
+    <div class="gq-panel" id="gq-panel"
+         data-progress-template="Question {current} of {total}" data-score-label="Score"
+         data-correct-label="Correct!" data-incorrect-label="Not quite."
+         data-explain-label="Explanation" data-btn-next="Next question"
+         data-btn-change-lang="Choose a different language" data-finish-title="Quiz complete!"
+         data-finish-summary="You got {score} out of {total} correct." data-btn-retry="Try again">
+
+      <div id="gq-select" class="gq-select">
+        <h2>Choose a language</h2>
+        <div class="gq-lang-grid">
+        <button class="gq-lang-btn" type="button" data-quiz-lang="javascript"><span class="gq-lang-name">JavaScript</span><span class="gq-lang-start">Start quiz</span></button>
+        <button class="gq-lang-btn" type="button" data-quiz-lang="python"><span class="gq-lang-name">Python</span><span class="gq-lang-start">Start quiz</span></button>
+        <button class="gq-lang-btn" type="button" data-quiz-lang="java"><span class="gq-lang-name">Java</span><span class="gq-lang-start">Start quiz</span></button>
+        <button class="gq-lang-btn" type="button" data-quiz-lang="c"><span class="gq-lang-name">C</span><span class="gq-lang-start">Start quiz</span></button>
+        </div>
+      </div>
+
+      <div id="gq-quiz" class="gq-quiz" hidden>
+        <div class="gq-quiz-head">
+          <span id="gq-progress" class="gq-progress"></span>
+          <span id="gq-score" class="gq-score"></span>
+        </div>
+        <p id="gq-stem" class="gq-stem"></p>
+        <div id="gq-choices" class="gq-choices"></div>
+        <div id="gq-feedback" class="gq-feedback" hidden>
+          <p id="gq-feedback-label" class="gq-feedback-label"></p>
+          <p id="gq-explain" class="gq-explain"></p>
+          <button class="btn btn-primary" id="gq-btn-next" type="button"></button>
+        </div>
+      </div>
+
+      <div id="gq-finish" class="gq-finish" hidden>
+        <h2 id="gq-finish-title"></h2>
+        <p id="gq-finish-summary" class="gq-finish-summary"></p>
+        <div class="gq-finish-actions">
+          <button class="btn btn-primary" id="gq-btn-retry" type="button"></button>
+          <button class="btn" id="gq-btn-change-lang" type="button"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>How to use</h2>
+    <ul>
+      <li>Pick one of the programming languages below.</li>
+      <li>Answer each multiple-choice question — you'll see immediately whether you were right, along with a short explanation.</li>
+      <li>After the last question, you'll see your final score and can try again or pick a different language.</li>
+    </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>Questions and their order are shuffled each time you start a quiz, so retrying stays fresh.</li>
+      <li>This quiz focuses on basic syntax, not advanced language features or best practices.</li>
+      <li>Everything runs locally in your browser — your answers are never sent to a server.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/games/typing-test.html">Typing Speed Test</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</main>
+
+<script type="application/json" id="gq-data">{"javascript": [{"stem": "Which keyword declares a constant (a variable that cannot be reassigned) in JavaScript?", "choices": ["var", "let", "const", "static"], "correct": 2, "explain": "\"const\" creates a binding that cannot be reassigned after it is set."}, {"stem": "Which symbol is used to start a multi-line comment in JavaScript?", "choices": ["//", "/*", "#", "<!--"], "correct": 1, "explain": "Multi-line comments start with /* and end with */. // is for single-line comments."}, {"stem": "Which operator checks both value and type equality in JavaScript?", "choices": ["=", "==", "===", "!=="], "correct": 2, "explain": "\"===\" (strict equality) compares value and type without type coercion, unlike \"==\"."}, {"stem": "Which built-in function converts the string \"42\" into the number 42?", "choices": ["parseInt(str)", "Integer.parse(str)", "str.toInt()", "int(str)"], "correct": 0, "explain": "parseInt() parses a string and returns an integer; the other forms don't exist in JavaScript."}, {"stem": "Which syntax correctly embeds a variable named \"name\" inside a string using a template literal?", "choices": ["`Hello, ${name}`", "'Hello, ${name}'", "\"Hello, \" + ${name}", "`Hello, {name}`"], "correct": 0, "explain": "Template literals use backticks with ${expression} to embed values; regular quotes don't interpolate."}, {"stem": "Which array method adds a new element to the end of an array?", "choices": ["push()", "pop()", "shift()", "unshift()"], "correct": 0, "explain": "push() appends one or more elements to the end of an array and returns the new length."}], "python": [{"stem": "Which symbol starts a single-line comment in Python?", "choices": ["#", "//", "/* */", "--"], "correct": 0, "explain": "Python uses # for single-line comments; it has no dedicated multi-line comment syntax."}, {"stem": "Which keyword is used to define a function in Python?", "choices": ["function", "def", "func", "void"], "correct": 1, "explain": "Functions are defined with \"def name():\" followed by an indented block."}, {"stem": "Which keyword is used for an \"else if\" branch in Python?", "choices": ["elseif", "elif", "else if", "elsif"], "correct": 1, "explain": "Python uses \"elif\", a contraction of \"else if\", not \"elseif\" or \"else if\"."}, {"stem": "Which expression creates a list of the squares of 0 through 9?", "choices": ["[x**2 for x in range(10)]", "(x**2 for x in range(10))", "{x**2 for x in range(10)}", "x**2 for x in range(10)"], "correct": 0, "explain": "Square brackets make a list comprehension; parentheses make a generator, and braces make a set."}, {"stem": "Which built-in function returns the number of items in a list?", "choices": ["len(list)", "size(list)", "list.length()", "count(list)"], "correct": 0, "explain": "len() works on lists, strings, tuples, and other sequences to return their length."}, {"stem": "Which statement correctly imports the \"math\" module in Python?", "choices": ["import math", "#include <math>", "using math;", "require('math')"], "correct": 0, "explain": "Python modules are loaded with \"import module_name\"; the other forms belong to other languages."}], "java": [{"stem": "Which keyword declares a constant in Java?", "choices": ["const", "final", "static", "readonly"], "correct": 1, "explain": "\"final\" prevents a variable from being reassigned; \"const\" is reserved but unused in Java."}, {"stem": "What is the correct signature for the main method that starts a Java program?", "choices": ["public static void main(String[] args)", "public void main(String[] args)", "static void Main(String[] args)", "public static main(String[] args)"], "correct": 0, "explain": "The JVM looks for exactly \"public static void main(String[] args)\" as the entry point."}, {"stem": "Which symbol is used for single-line comments in Java?", "choices": ["//", "#", "<!-- -->", "'"], "correct": 0, "explain": "Java uses // for single-line comments and /* */ for multi-line comments, like C and JavaScript."}, {"stem": "Which statement correctly declares an integer array of size 5 in Java?", "choices": ["int[] arr = new int[5];", "int arr[5];", "array<int> arr(5);", "int arr = new int(5);"], "correct": 0, "explain": "Java arrays are declared with a type, brackets, and \"new type[size]\", unlike C or C++ syntax."}, {"stem": "Which keyword is used for a class to inherit from another class in Java?", "choices": ["extends", "implements", "inherits", "super"], "correct": 0, "explain": "\"extends\" is used for class inheritance; \"implements\" is used for interfaces instead."}, {"stem": "Which statement correctly prints text to the console in Java?", "choices": ["System.out.println(\"text\");", "print(\"text\");", "console.log(\"text\");", "printf(\"text\");"], "correct": 0, "explain": "System.out.println() writes to standard output followed by a newline in Java."}], "c": [{"stem": "Which header must be included to use printf() in C?", "choices": ["#include <stdio.h>", "#include <iostream>", "#include <string.h>", "#include <stdlib.h>"], "correct": 0, "explain": "stdio.h declares the standard input/output functions, including printf() and scanf()."}, {"stem": "Which symbol marks the end of a statement in C?", "choices": [";", ":", ".", ","], "correct": 0, "explain": "Every C statement ends with a semicolon; forgetting it is one of the most common syntax errors."}, {"stem": "Which declaration correctly creates a pointer to an integer in C?", "choices": ["int *p;", "int p*;", "pointer int p;", "int &p;"], "correct": 0, "explain": "The asterisk before the variable name declares it as a pointer: \"int *p;\" means p holds an address."}, {"stem": "Which format specifier prints an integer with printf() in C?", "choices": ["%d", "%s", "%f", "%c"], "correct": 0, "explain": "%d (or %i) formats an integer; %s is for strings, %f for floats, and %c for a single character."}, {"stem": "What does the \"sizeof\" operator return in C?", "choices": ["The size in bytes of a type or variable", "The number of elements in an array only", "The memory address of a variable", "The current value stored in a variable"], "correct": 0, "explain": "sizeof returns the size in bytes of any type or variable, which is also how it's commonly used to compute array lengths."}, {"stem": "Which loop structure checks its condition after running the loop body at least once?", "choices": ["do-while", "while", "for", "if"], "correct": 0, "explain": "A do-while loop runs the body first and checks the condition afterward, guaranteeing at least one execution."}]}</script>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>
+      <a href="/tools/sql-formatter.html">SQL Formatter</a>
+      <a href="/tools/code-viewer.html">Code Viewer</a>
+      <a href="/tools/number-reader.html">Number Reader</a>
+      <a href="/games/typing-test.html">Typing Speed Test</a>
+      <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/games/syntax-quiz.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Häufige Fragen | Formix</title>
+<meta name="description" content="Häufig gestellte Fragen zu Formix — Preise, Datenverarbeitung, Browser-Unterstützung und wie die JSON/XML-Formatierungstools funktionieren." />
+<link rel="canonical" href="https://formix.site/de/faq.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Häufige Fragen | Formix" />
+<meta property="og:description" content="Antworten auf häufige Fragen zu Formix und seinen Tools." />
+<meta property="og:url" content="https://formix.site/de/faq.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-de.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Häufige Fragen | Formix" />
+<meta name="twitter:description" content="Antworten auf häufige Fragen zu Formix und seinen Tools." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-de.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/faq.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/faq.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/faq.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/faq.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/faq.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/faq.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/faq.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/faq.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/faq.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/faq.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "de"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist Formix kostenlos nutzbar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Alle Tools sind völlig kostenlos, und es ist keine Registrierung oder Konto erforderlich. Wir zeigen möglicherweise in Zukunft Werbung an, um Hosting-Kosten zu decken, aber die Tools selbst bleiben kostenlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden meine Daten an einen Server gesendet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Tools wie der JSON-Formatierer und der XML-Formatierer verarbeiten alles lokal in Ihrem Browser mit JavaScript. Der Text, den Sie einfügen, wird niemals an unsere Server übermittelt oder dort gespeichert. Details finden Sie in unserer Datenschutzerklärung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich ein Konto erstellen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für kein Tool ist ein Konto oder eine Anmeldung erforderlich. Öffnen Sie einfach die Seite und nutzen Sie es sofort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Browser werden unterstützt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jeder moderne Browser (Chrome, Edge, Firefox, Safari) auf Desktop oder Mobilgerät funktioniert. Die Tools basieren auf weit verbreiteten Standard-JavaScript-APIs wie DOMParser und JSON.parse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich diese Tools auf meinem Smartphone nutzen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, die Website ist vollständig responsiv und funktioniert in mobilen Browsern, wobei ein größerer Bildschirm die Arbeit mit langen JSON- oder XML-Dokumenten erleichtert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert, wenn mein JSON oder XML ungültig ist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Tool zeigt ein Statusabzeichen und eine ungefähre Zeile/Spalte an, an der das Problem gefunden wurde, damit Sie es schnell lokalisieren und beheben können. Der JSON-Formatierer kann auch einige häufige Fehler automatisch korrigieren, wie fehlende Anführungszeichen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden weitere Tools hinzugefügt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Formix begann mit einem JSON-Formatierer und bietet jetzt auch einen XML-Formatierer, einen JSON ↔ XML Konverter, einen SQL-Formatierer und einen Code-Viewer, sowie zwei Spiele — einen Schreibgeschwindigkeitstest und ein Coding-Syntax-Quiz. Wir planen, weiterhin kleine, wirklich nützliche browserbasierte Tools und Spiele hinzuzufügen — die Prinzipien, die uns leiten, finden Sie auf unserer Seite Über uns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie melde ich einen Fehler oder schlage eine Funktion vor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bitte kontaktieren Sie uns über unsere Kontaktseite. Wir lesen jede Nachricht."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Häufige Fragen",
+      "item": "https://formix.site/de/faq.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/de/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/de/">Start</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Werkzeuge <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/de/tools/json-formatter.html">JSON-Formatierer</a></li>
+          <li><a href="/de/tools/xml-formatter.html">XML-Formatierer</a></li>
+          <li><a href="/de/tools/json-xml-converter.html">JSON ↔ XML Konverter</a></li>
+          <li><a href="/de/tools/sql-formatter.html">SQL-Formatierer</a></li>
+          <li><a href="/de/tools/code-viewer.html">Code-Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Zahlen-Vorleser</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Spiele <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/de/games/typing-test.html">Schreibgeschwindigkeitstest</a></li>
+          <li><a href="/de/games/syntax-quiz.html">Coding-Syntax-Quiz</a></li>
+        </ul>
+      </li>
+      <li><a href="/de/about.html">Über uns</a></li>
+      <li><a href="/de/privacy.html">Datenschutzerklärung</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen">🇩🇪</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/faq.html" data-lang-option="en">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/faq.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/faq.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/faq.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+          <li><a href="/es/faq.html" data-lang-option="es">🇪🇸 <span>Español</span></a></li>
+          <li><a href="/vi/faq.html" data-lang-option="vi">🇻🇳 <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/faq.html" data-lang-option="pt">🇧🇷 <span>Português</span></a></li>
+          <li><a href="/id/faq.html" data-lang-option="id">🇮🇩 <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/faq.html" data-lang-option="de" aria-current="true">🇩🇪 <span>Deutsch</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Zum Dunkelmodus wechseln">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb-Navigation">
+  <ol class="breadcrumb-list container">
+    <li><a href="/de/">Start</a></li>
+    <li aria-current="page"><span>Häufige Fragen</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Häufige Fragen</h1>
+    <p>Häufige Fragen zu Formix, wie es mit Ihren Daten umgeht und wie die Tools funktionieren.</p>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <div class="faq-list">
+      <details class="faq-item"><summary>Ist Formix kostenlos nutzbar?</summary><div class="faq-answer"><p>Ja. Alle Tools sind völlig kostenlos, und es ist keine Registrierung oder Konto erforderlich. Wir zeigen möglicherweise in Zukunft Werbung an, um Hosting-Kosten zu decken, aber die Tools selbst bleiben kostenlos.</p></div></details>
+      <details class="faq-item"><summary>Werden meine Daten an einen Server gesendet?</summary><div class="faq-answer"><p>Nein. Tools wie der JSON-Formatierer und der XML-Formatierer verarbeiten alles lokal in Ihrem Browser mit JavaScript. Der Text, den Sie einfügen, wird niemals an unsere Server übermittelt oder dort gespeichert. Details finden Sie in unserer <a href="/de/privacy.html">Datenschutzerklärung</a>.</p></div></details>
+      <details class="faq-item"><summary>Muss ich ein Konto erstellen?</summary><div class="faq-answer"><p>Für kein Tool ist ein Konto oder eine Anmeldung erforderlich. Öffnen Sie einfach die Seite und nutzen Sie es sofort.</p></div></details>
+      <details class="faq-item"><summary>Welche Browser werden unterstützt?</summary><div class="faq-answer"><p>Jeder moderne Browser (Chrome, Edge, Firefox, Safari) auf Desktop oder Mobilgerät funktioniert. Die Tools basieren auf weit verbreiteten Standard-JavaScript-APIs wie DOMParser und JSON.parse.</p></div></details>
+      <details class="faq-item"><summary>Kann ich diese Tools auf meinem Smartphone nutzen?</summary><div class="faq-answer"><p>Ja, die Website ist vollständig responsiv und funktioniert in mobilen Browsern, wobei ein größerer Bildschirm die Arbeit mit langen JSON- oder XML-Dokumenten erleichtert.</p></div></details>
+      <details class="faq-item"><summary>Was passiert, wenn mein JSON oder XML ungültig ist?</summary><div class="faq-answer"><p>Das Tool zeigt ein Statusabzeichen und eine ungefähre Zeile/Spalte an, an der das Problem gefunden wurde, damit Sie es schnell lokalisieren und beheben können. Der JSON-Formatierer kann auch einige häufige Fehler automatisch korrigieren, wie fehlende Anführungszeichen.</p></div></details>
+      <details class="faq-item"><summary>Werden weitere Tools hinzugefügt?</summary><div class="faq-answer"><p>Ja. Formix begann mit einem JSON-Formatierer und bietet jetzt auch einen <a href="/de/tools/xml-formatter.html">XML-Formatierer</a>, einen <a href="/de/tools/json-xml-converter.html">JSON ↔ XML Konverter</a>, einen <a href="/de/tools/sql-formatter.html">SQL-Formatierer</a> und einen <a href="/de/tools/code-viewer.html">Code-Viewer</a>, sowie zwei Spiele — einen <a href="/de/games/typing-test.html">Schreibgeschwindigkeitstest</a> und ein <a href="/de/games/syntax-quiz.html">Coding-Syntax-Quiz</a>. Wir planen, weiterhin kleine, wirklich nützliche browserbasierte Tools und Spiele hinzuzufügen — die Prinzipien, die uns leiten, finden Sie auf unserer Seite <a href="/de/about.html">Über uns</a>.</p></div></details>
+      <details class="faq-item"><summary>Wie melde ich einen Fehler oder schlage eine Funktion vor?</summary><div class="faq-answer"><p>Bitte kontaktieren Sie uns über unsere <a href="/de/contact.html">Kontaktseite</a>. Wir lesen jede Nachricht.</p></div></details>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/de/about.html">Über uns</a>
+      <a href="/de/faq.html">Häufige Fragen</a>
+      <a href="/de/updates.html">Neuigkeiten</a>
+      <a href="/de/contact.html">Kontakt</a>
+      <a href="/de/terms.html">Nutzungsbedingungen</a>
+      <a href="/de/privacy.html">Datenschutzerklärung</a>
+      <a href="/de/tools/json-formatter.html">JSON-Formatierer</a>
+      <a href="/de/tools/xml-formatter.html">XML-Formatierer</a>
+      <a href="/de/tools/json-xml-converter.html">JSON ↔ XML Konverter</a>
+      <a href="/de/tools/sql-formatter.html">SQL-Formatierer</a>
+      <a href="/de/tools/code-viewer.html">Code-Viewer</a>
+      <a href="/tools/number-reader.html">Zahlen-Vorleser</a>
+      <a href="/de/games/typing-test.html">Schreibgeschwindigkeitstest</a>
+      <a href="/de/games/syntax-quiz.html">Coding-Syntax-Quiz</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie-Einstellungen</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

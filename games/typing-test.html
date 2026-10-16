@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Typing Speed Test (WPM) - Free Online Tool | Formix</title>
+<meta name="description" content="Free online typing speed test. Type the given passage to measure your words per minute (WPM) and accuracy, then copy your result to share. Everything runs locally in your browser." />
+<meta name="keywords" content="typing speed test, wpm test, typing test online, free typing test, type racer, keyboard speed test, typing practice" />
+<link rel="canonical" href="https://formix.site/games/typing-test.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="Typing Speed Test (WPM) | Formix" />
+<meta property="og:description" content="Measure your typing speed and accuracy with a free online test, then share your score." />
+<meta property="og:url" content="https://formix.site/games/typing-test.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Typing Speed Test (WPM) | Formix" />
+<meta name="twitter:description" content="Measure your typing speed and accuracy with a free online test, then share your score." />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-en.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/games/typing-test.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/games/typing-test.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/games/typing-test.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/games/typing-test.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/games/typing-test.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/tools/typing-test.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  (function () {
+    try {
+      var SUPPORTED = ['ko', 'ja', 'zh'].slice();
+      var stored = localStorage.getItem("formix-lang");
+      if (stored) {
+        if (stored !== "en" && SUPPORTED.indexOf(stored) !== -1) {
+          location.replace("/" + stored + location.pathname + location.search);
+        }
+        return;
+      }
+      var langs = navigator.languages || [navigator.language || "en"];
+      var match = null;
+      for (var i = 0; i < langs.length; i++) {
+        var code = String(langs[i]).slice(0, 2).toLowerCase();
+        if (SUPPORTED.indexOf(code) !== -1) { match = code; break; }
+      }
+      if (match) {
+        localStorage.setItem("formix-lang", match);
+        location.replace("/" + match + location.pathname + location.search);
+      } else {
+        localStorage.setItem("formix-lang", "en");
+      }
+    } catch (e) {}
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Typing Speed Test",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "url": "https://formix.site/games/typing-test.html",
+  "description": "A free online tool that measures typing speed (WPM) and accuracy from a short practice passage, entirely in the browser.",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Typing Speed Test",
+      "item": "https://formix.site/games/typing-test.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/">Home</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Tools <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
+          <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+          <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+          <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+          <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle is-active" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Games <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/games/typing-test.html" aria-current="page">Typing Speed Test</a></li>
+          <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="Select language">🇺🇸</button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/games/typing-test.html" data-lang-option="en" aria-current="true">🇺🇸 <span>English</span></a></li>
+          <li><a href="/ko/games/typing-test.html" data-lang-option="ko">🇰🇷 <span>한국어</span></a></li>
+          <li><a href="/ja/games/typing-test.html" data-lang-option="ja">🇯🇵 <span>日本語</span></a></li>
+          <li><a href="/zh/games/typing-test.html" data-lang-option="zh">🇨🇳 <span>中文</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list container">
+    <li><a href="/">Home</a></li>
+    <li><span class="breadcrumb-group">Games</span></li>
+    <li aria-current="page"><span>Typing Speed Test</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>Typing Speed Test</h1>
+    <p>Type the passage below as quickly and accurately as you can. The timer starts on your first keystroke and stops when you finish. Nothing you type is ever sent to a server.</p>
+  </div>
+
+  <div class="container section-tight tt-layout">
+    <div class="tt-main">
+      <div class="tt-stats" id="tt-stats">
+        <div class="tt-stat"><span class="tt-stat-label">Time</span><span class="tt-stat-value" id="tt-time">0.0s</span></div>
+        <div class="tt-stat"><span class="tt-stat-label">WPM</span><span class="tt-stat-value" id="tt-wpm">0</span></div>
+        <div class="tt-stat"><span class="tt-stat-label">Accuracy</span><span class="tt-stat-value" id="tt-accuracy">100%</span></div>
+        <div class="tt-stat"><span class="tt-stat-label">Best (this browser)</span><span class="tt-stat-value" id="tt-best">No record yet</span></div>
+      </div>
+
+      <div class="tt-panel" id="tt-panel" data-result-prefix="⌨️ My Formix Typing Test result" data-wpm-label="Speed" data-accuracy-label="Accuracy" data-share-url="https://formix.site/games/typing-test.html" data-status-idle="Start typing to begin" data-status-active="Typing…" data-status-done="Done!" data-best-none="No record yet">
+        <div class="tt-panel-head">
+          <span id="tt-status" class="status-pill is-idle">Start typing to begin</span>
+        </div>
+        <div class="tt-passage" id="tt-passage" aria-hidden="true"></div>
+        <label for="tt-input" class="visually-hidden">Typing input</label>
+        <textarea id="tt-input" class="tt-input" spellcheck="false" autocapitalize="off" autocorrect="off" wrap="off" rows="3"></textarea>
+      </div>
+
+      <div class="tt-toolbar">
+        <button class="btn btn-primary" id="tt-btn-restart" type="button">New passage</button>
+        <button class="btn" id="tt-btn-copy" type="button" disabled>Copy result</button>
+        <span class="tt-copied" id="tt-copied" hidden>Result copied!</span>
+      </div>
+
+      <div class="tt-submit" id="tt-submit" hidden>
+        <label for="tt-nickname" class="visually-hidden">Enter a nickname (optional)</label>
+        <input type="text" id="tt-nickname" class="tt-nickname-input" placeholder="Enter a nickname (optional)" maxlength="20" />
+        <button class="btn btn-primary" id="tt-btn-submit" type="button">Submit to leaderboard</button>
+        <span class="tt-submit-status" id="tt-submit-status" aria-live="polite"></span>
+      </div>
+
+      <p class="jf-hint">Tip: all scoring happens in your browser — nothing you type is saved or sent anywhere. Your best score for this passage length is kept only in this browser (localStorage) and is cleared if you clear site data.</p>
+    </div>
+
+    <div class="tt-side" id="tt-leaderboard-wrap" data-lang="en"
+         data-lb-loading="Loading…" data-lb-empty="No scores yet — be the first!" data-lb-error="Couldn't load the leaderboard right now."
+         data-lb-submitting="Submitting…" data-lb-success="Submitted! You ranked #{rank}." data-lb-error-submit="Couldn't submit your score. Please try again."
+         data-lb-rate-limited="Please wait a bit before submitting again.">
+      <h2>Leaderboard</h2>
+      <p class="tt-leaderboard-lead">See where your score ranks among everyone who has submitted.</p>
+      <div class="tt-leaderboard-table-wrap">
+        <table class="tt-leaderboard-table">
+          <thead>
+            <tr><th>#</th><th>Name</th><th>WPM</th><th>Accuracy</th></tr>
+          </thead>
+          <tbody id="tt-leaderboard-body">
+            <tr><td colspan="4" class="tt-leaderboard-status">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="jf-hint">Submitting a score sends your nickname, WPM, and accuracy to our server so it can be shown here — see our Privacy Policy for details. Submission is optional.</p>
+    </div>
+  </div>
+
+  <div class="container prose section-tight" style="max-width: 760px;">
+    <h2>How to use</h2>
+    <ul>
+      <li>Click into the text box and start typing the passage shown above it.</li>
+      <li>The timer starts automatically on your first keystroke.</li>
+      <li>Correctly typed characters are highlighted; mistakes are marked so you can see them as you go.</li>
+      <li>When you finish the passage, your WPM (words per minute) and accuracy are calculated instantly.</li>
+      <li>Click “New passage” to try again with a different text and beat your best score.</li>
+    </ul>
+
+    <h2>Related tips</h2>
+    <ul>
+      <li>WPM is calculated using the standard convention of 5 characters = 1 "word", based on correctly typed characters.</li>
+      <li>Accuracy counts every keystroke, including corrected mistakes, so backspacing to fix an error still affects your score.</li>
+      <li>Your best score is stored only on this device (browser localStorage) — it is not uploaded or shared with anyone unless you copy and send it yourself.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/updates.html">What's New</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/tools/json-formatter.html">JSON Formatter</a>
+      <a href="/tools/xml-formatter.html">XML Formatter</a>
+      <a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a>
+      <a href="/tools/sql-formatter.html">SQL Formatter</a>
+      <a href="/tools/code-viewer.html">Code Viewer</a>
+      <a href="/tools/number-reader.html">Number Reader</a>
+      <a href="/games/typing-test.html">Typing Speed Test</a>
+      <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/tools/typing-test.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

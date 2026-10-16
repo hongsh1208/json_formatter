@@ -103,17 +103,26 @@
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
     <ul class="nav-links" id="primary-nav" data-nav-links>
       <li><a href="/">Home</a></li>
-      <li class="nav-dropdown" data-tools-dropdown>
-        <button class="nav-dropdown-toggle" type="button" data-tools-toggle aria-haspopup="true" aria-expanded="false">
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
           Tools <span class="nav-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav-dropdown-menu" data-tools-menu hidden>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
           <li><a href="/tools/json-formatter.html">JSON Formatter</a></li>
-        <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
-        <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
-        <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
-        <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
-        <li><a href="/tools/number-reader.html">Number Reader</a></li>
+          <li><a href="/tools/xml-formatter.html">XML Formatter</a></li>
+          <li><a href="/tools/json-xml-converter.html">JSON ↔ XML Converter</a></li>
+          <li><a href="/tools/sql-formatter.html">SQL Formatter</a></li>
+          <li><a href="/tools/code-viewer.html">Code Viewer</a></li>
+          <li><a href="/tools/number-reader.html">Number Reader</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          Games <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/games/typing-test.html">Typing Speed Test</a></li>
+          <li><a href="/games/syntax-quiz.html">Coding Syntax Quiz</a></li>
         </ul>
       </li>
       <li><a href="/about.html">About</a></li>
@@ -153,6 +162,7 @@
       <h2>1. Information processed and how</h2>
       <p>Tools provided on the Site, such as the JSON Formatter, process the text you enter entirely within your browser (JavaScript) and never send it to a server. In other words, the JSON data or text you input is never transmitted to or stored by the Site operator.</p>
       <p>Simple preference settings, such as your theme choice (light/dark mode), are stored only in your browser's local storage (localStorage) and are never transmitted externally.</p>
+      <p>The Typing Speed Test is an exception: if you choose to submit your score to the public leaderboard, the nickname you enter along with your WPM and accuracy are sent to and stored on our server so they can be shown to other visitors. We do not require or collect your name, email, or any other identifying information for this — only the nickname you type. Your IP address is used only momentarily, in hashed form, to apply basic rate-limiting against spam submissions, and is not stored in a form that identifies you. If you do not submit a score, nothing about the test is sent anywhere.</p>
     </section>
 
     <section>
@@ -211,6 +221,8 @@
       <a href="/tools/sql-formatter.html">SQL Formatter</a>
       <a href="/tools/code-viewer.html">Code Viewer</a>
       <a href="/tools/number-reader.html">Number Reader</a>
+      <a href="/games/typing-test.html">Typing Speed Test</a>
+      <a href="/games/syntax-quiz.html">Coding Syntax Quiz</a>
       <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie preferences</button>
     </nav>
   </div>
