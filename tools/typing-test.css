@@ -182,12 +182,13 @@
 .tt-leaderboard-head {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 6px 10px;
+  flex-wrap: nowrap;
+  gap: 8px;
 }
 
 .tt-leaderboard-head h2 {
   margin: 0;
+  flex-shrink: 0;
 }
 
 .tt-leaderboard-reset {
@@ -199,6 +200,10 @@
   border-radius: 999px;
   padding: 3px 10px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .tt-leaderboard-table-wrap {
