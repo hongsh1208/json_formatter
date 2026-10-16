@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>留言板 | Formix</title>
+<meta name="description" content="在 Formix 留言板上留下一句话，也看看其他访客留下了什么。" />
+<link rel="canonical" href="https://formix.site/zh/guestbook.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Formix" />
+<meta property="og:title" content="留言板 | Formix" />
+<meta property="og:description" content="一个任何访客都可以留下简短留言的公开空间。" />
+<meta property="og:url" content="https://formix.site/zh/guestbook.html" />
+<meta property="og:image" content="https://formix.site/assets/img/og-zh.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="留言板 | Formix" />
+<meta name="twitter:description" content="一个任何访客都可以留下简短留言的公开空间。" />
+<meta name="twitter:image" content="https://formix.site/assets/img/og-zh.png" />
+
+<link rel="alternate" hreflang="en" href="https://formix.site/guestbook.html" />
+<link rel="alternate" hreflang="ko" href="https://formix.site/ko/guestbook.html" />
+<link rel="alternate" hreflang="ja" href="https://formix.site/ja/guestbook.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://formix.site/zh/guestbook.html" />
+<link rel="alternate" hreflang="es" href="https://formix.site/es/guestbook.html" />
+<link rel="alternate" hreflang="vi" href="https://formix.site/vi/guestbook.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://formix.site/pt/guestbook.html" />
+<link rel="alternate" hreflang="id" href="https://formix.site/id/guestbook.html" />
+<link rel="alternate" hreflang="de" href="https://formix.site/de/guestbook.html" />
+<link rel="alternate" hreflang="x-default" href="https://formix.site/guestbook.html" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232f6feb%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22white%22>F</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("formix-theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+<script>
+  try { localStorage.setItem("formix-lang", "zh"); } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Formix",
+      "item": "https://formix.site/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "留言板",
+      "item": "https://formix.site/zh/guestbook.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳转到正文</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="/zh/">
+      <span class="nav-brand-mark">F</span>
+      Formix
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="打开菜单">☰</button>
+    <ul class="nav-links" id="primary-nav" data-nav-links>
+      <li><a href="/zh/">首页</a></li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          工具 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/zh/tools/json-formatter.html">JSON 格式化</a></li>
+          <li><a href="/zh/tools/xml-formatter.html">XML 格式化</a></li>
+          <li><a href="/zh/tools/json-xml-converter.html">JSON ↔ XML 转换工具</a></li>
+          <li><a href="/zh/tools/sql-formatter.html">SQL 格式化</a></li>
+          <li><a href="/zh/tools/code-viewer.html">代码查看器</a></li>
+          <li><a href="/zh/tools/number-reader.html">数字读法转换</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown" data-nav-dropdown>
+        <button class="nav-dropdown-toggle" type="button" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+          游戏 <span class="nav-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <li><a href="/zh/games/typing-test.html">打字速度测试</a></li>
+          <li><a href="/zh/games/syntax-quiz.html">编程语法测验</a></li>
+        </ul>
+      </li>
+      <li><a href="/zh/about.html">关于本站</a></li>
+      <li><a href="/zh/privacy.html">隐私政策</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" data-lang-switch>
+        <button class="lang-switch-toggle" type="button" data-lang-toggle aria-haspopup="true" aria-expanded="false" aria-label="选择语言"><img class="flag-icon flag-icon-toggle" src="/assets/img/flags/cn.svg" alt="" loading="lazy" width="20" height="15"></button>
+        <ul class="lang-switch-menu" data-lang-menu hidden>
+          <li><a href="/guestbook.html" data-lang-option="en"><img class="flag-icon" src="/assets/img/flags/us.svg" alt="" loading="lazy" width="20" height="15"> <span>English</span></a></li>
+          <li><a href="/ko/guestbook.html" data-lang-option="ko"><img class="flag-icon" src="/assets/img/flags/kr.svg" alt="" loading="lazy" width="20" height="15"> <span>한국어</span></a></li>
+          <li><a href="/ja/guestbook.html" data-lang-option="ja"><img class="flag-icon" src="/assets/img/flags/jp.svg" alt="" loading="lazy" width="20" height="15"> <span>日本語</span></a></li>
+          <li><a href="/zh/guestbook.html" data-lang-option="zh" aria-current="true"><img class="flag-icon" src="/assets/img/flags/cn.svg" alt="" loading="lazy" width="20" height="15"> <span>中文</span></a></li>
+          <li><a href="/es/guestbook.html" data-lang-option="es"><img class="flag-icon" src="/assets/img/flags/es.svg" alt="" loading="lazy" width="20" height="15"> <span>Español</span></a></li>
+          <li><a href="/vi/guestbook.html" data-lang-option="vi"><img class="flag-icon" src="/assets/img/flags/vn.svg" alt="" loading="lazy" width="20" height="15"> <span>Tiếng Việt</span></a></li>
+          <li><a href="/pt/guestbook.html" data-lang-option="pt"><img class="flag-icon" src="/assets/img/flags/br.svg" alt="" loading="lazy" width="20" height="15"> <span>Português</span></a></li>
+          <li><a href="/id/guestbook.html" data-lang-option="id"><img class="flag-icon" src="/assets/img/flags/id.svg" alt="" loading="lazy" width="20" height="15"> <span>Bahasa Indonesia</span></a></li>
+          <li><a href="/de/guestbook.html" data-lang-option="de"><img class="flag-icon" src="/assets/img/flags/de.svg" alt="" loading="lazy" width="20" height="15"> <span>Deutsch</span></a></li>
+        </ul>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="切换到深色模式">🌙</button>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="面包屑导航">
+  <ol class="breadcrumb-list container">
+    <li><a href="/zh/">首页</a></li>
+    <li aria-current="page"><span>留言板</span></li>
+  </ol>
+</nav>
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>留言板</h1>
+    <p>留下一句简短的话吧 — 内容不限。所有访客都能看到。</p>
+  </div>
+
+  <div class="container section-tight" style="max-width: 640px;">
+    <div class="gb-form" id="gb-form" data-gb-loading="加载中…" data-gb-empty="暂无留言 — 来做第一个打招呼的人吧！" data-gb-error="暂时无法加载留言板。"
+         data-gb-submitting="发布中…" data-gb-success="发布成功！" data-gb-error-submit="发布失败，请重试。"
+         data-gb-rate-limited="请稍后再试。">
+      <label for="gb-nickname" class="visually-hidden">昵称（可选）</label>
+      <input type="text" id="gb-nickname" class="gb-nickname-input" placeholder="昵称（可选）" maxlength="20" />
+      <label for="gb-message" class="visually-hidden">说一句话…</label>
+      <input type="text" id="gb-message" class="gb-message-input" placeholder="说一句话…" maxlength="100" />
+      <button class="btn btn-primary" id="gb-btn-submit" type="button">发布</button>
+      <span class="gb-submit-status" id="gb-submit-status" aria-live="polite"></span>
+    </div>
+
+    <ul class="gb-list" id="gb-list">
+      <li class="gb-status">加载中…</li>
+    </ul>
+
+    <p class="jf-hint">留言会公开展示给所有访客 — 请勿填写个人信息。详情请参阅隐私政策。留言为可选项。</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="footer-year">2026</span> Formix. All rights reserved.</span>
+    <nav class="footer-links">
+      <a href="/zh/about.html">关于本站</a>
+      <a href="/zh/faq.html">常见问题</a>
+      <a href="/zh/updates.html">更新日志</a>
+      <a href="/zh/guestbook.html">留言板</a>
+      <a href="/zh/contact.html">联系我们</a>
+      <a href="/zh/terms.html">使用条款</a>
+      <a href="/zh/privacy.html">隐私政策</a>
+      <a href="/zh/tools/json-formatter.html">JSON 格式化</a>
+      <a href="/zh/tools/xml-formatter.html">XML 格式化</a>
+      <a href="/zh/tools/json-xml-converter.html">JSON ↔ XML 转换工具</a>
+      <a href="/zh/tools/sql-formatter.html">SQL 格式化</a>
+      <a href="/zh/tools/code-viewer.html">代码查看器</a>
+      <a href="/zh/tools/number-reader.html">数字读法转换</a>
+      <a href="/zh/games/typing-test.html">打字速度测试</a>
+      <a href="/zh/games/syntax-quiz.html">编程语法测验</a>
+      <button type="button" class="footer-settings-btn" data-cookie-settings>Cookie 设置</button>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/guestbook.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/consent.js"></script>
+<script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

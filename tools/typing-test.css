@@ -117,8 +117,9 @@
   background: transparent;
   color: var(--color-text);
   font-family: var(--font-mono);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
   padding: 12px 16px 16px;
   resize: none;
   outline: none;
@@ -178,6 +179,17 @@
   margin-top: 4px;
 }
 
+.tt-leaderboard-reset {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 2px 0 10px;
+}
+
 .tt-leaderboard-table-wrap {
   overflow-x: auto;
   border: 1px solid var(--color-border);
@@ -232,7 +244,8 @@
   .tt-stats {
     grid-template-columns: repeat(2, 1fr);
   }
-  .tt-passage {
+  .tt-passage,
+  .tt-input {
     font-size: 15px;
   }
   .tt-nickname-input {

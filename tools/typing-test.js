@@ -405,7 +405,41 @@
     var submitStatus = document.getElementById("tt-submit-status");
     var lbWrap = document.getElementById("tt-leaderboard-wrap");
     var lbBody = document.getElementById("tt-leaderboard-body");
+    var lbReset = document.getElementById("tt-leaderboard-reset");
     if (!panel || !passageEl || !inputEl) return;
+
+    var resetAtMs = null;
+    var resetTimerId = null;
+
+    function renderResetCountdown() {
+      if (!lbReset) return;
+      if (!resetAtMs) {
+        lbReset.hidden = true;
+        return;
+      }
+      var diff = resetAtMs - Date.now();
+      if (diff <= 0) {
+        // 서버 시각 기준 초기화 시점을 지났으면(다음 로드 때 새 기간으로 갱신됨) 숨긴다.
+        lbReset.hidden = true;
+        return;
+      }
+      var totalHours = Math.ceil(diff / (60 * 60 * 1000));
+      var days = Math.floor(totalHours / 24);
+      var hours = totalHours % 24;
+      var tpl = lbWrap.getAttribute("data-lb-reset-tpl") || "";
+      lbReset.textContent = tpl.replace("{days}", days).replace("{hours}", hours);
+      lbReset.hidden = false;
+    }
+
+    function startResetCountdown(resetAtIso) {
+      if (!lbReset || !resetAtIso) return;
+      resetAtMs = Date.parse(resetAtIso);
+      if (!resetAtMs || isNaN(resetAtMs)) return;
+      renderResetCountdown();
+      if (resetTimerId) clearInterval(resetTimerId);
+      // 시간 단위까지만 표시하므로 분 단위로 자주 갱신할 필요는 없다.
+      resetTimerId = setInterval(renderResetCountdown, 60 * 1000);
+    }
 
     var lang = getLang();
     var pool = SAMPLES[lang];
@@ -659,6 +693,7 @@
         })
         .then(function (data) {
           renderLeaderboard(data.entries);
+          startResetCountdown(data.resetAt);
         })
         .catch(function () {
           lbBody.innerHTML = '<tr><td colspan="4" class="tt-leaderboard-status">' + escapeHtml(lbWrap.getAttribute("data-lb-error") || "") + "</td></tr>";

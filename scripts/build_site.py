@@ -93,6 +93,7 @@ def urls_for(lang):
         "contact": p + "/contact.html",
         "terms": p + "/terms.html",
         "updates": p + "/updates.html",
+        "guestbook": p + "/guestbook.html",
         "tool": p + "/tools/json-formatter.html",
         "tool_xml": p + "/tools/xml-formatter.html",
         "tool_converter": p + "/tools/json-xml-converter.html",
@@ -118,8 +119,8 @@ GAME_NAV_ITEMS = [("tool_typing", "tool_typing"), ("game_syntax", "game_syntax")
 
 # 푸터에 노출할 일반 페이지(도구가 아닌 페이지) 목록. 새 페이지를 추가할 때 이 리스트에
 # (urls_for 키, NAV 라벨 키)만 추가하면 푸터/사이트맵이 자동으로 반영된다.
-FOOTER_NAV_ITEMS = [("about", "about"), ("faq", "faq"), ("updates", "updates"), ("contact", "contact"),
-                     ("terms", "terms"), ("privacy", "privacy")]
+FOOTER_NAV_ITEMS = [("about", "about"), ("faq", "faq"), ("updates", "updates"), ("guestbook", "guestbook"),
+                     ("contact", "contact"), ("terms", "terms"), ("privacy", "privacy")]
 
 NAV = {
     "en": {"home": "Home", "tool": "JSON Formatter", "tool_xml": "XML Formatter",
@@ -127,6 +128,7 @@ NAV = {
            "tool_number": "Number Reader", "tool_typing": "Typing Speed Test", "about": "About",
            "privacy": "Privacy Policy", "faq": "FAQ", "contact": "Contact", "related_h2": "Related",
            "cookie_settings": "Cookie preferences", "terms": "Terms of Service", "updates": "What's New",
+           "guestbook": "Guestbook",
            "menu": "Open menu", "dark": "Switch to dark mode", "light": "Switch to light mode",
            "lang": "Select language", "skip": "Skip to content",
            "tools_group": "Tools", "games_group": "Games", "game_syntax": "Coding Syntax Quiz",
@@ -136,6 +138,7 @@ NAV = {
            "tool_number": "숫자 읽기 변환기", "tool_typing": "타자 속도 테스트", "about": "사이트 소개",
            "privacy": "개인정보처리방침", "faq": "자주 묻는 질문", "contact": "문의하기", "related_h2": "관련 링크",
            "cookie_settings": "쿠키 설정", "terms": "이용약관", "updates": "업데이트 소식",
+           "guestbook": "방명록",
            "menu": "메뉴 열기", "dark": "다크 모드로 전환", "light": "라이트 모드로 전환",
            "lang": "언어 선택", "skip": "본문으로 건너뛰기",
            "tools_group": "도구", "games_group": "게임", "game_syntax": "코딩 문법 퀴즈",
@@ -145,6 +148,7 @@ NAV = {
            "tool_number": "数字の読み方変換", "tool_typing": "タイピング速度テスト", "about": "サイト紹介",
            "privacy": "プライバシーポリシー", "faq": "よくある質問", "contact": "お問い合わせ", "related_h2": "関連リンク",
            "cookie_settings": "Cookie設定", "terms": "利用規約", "updates": "更新情報",
+           "guestbook": "ゲストブック",
            "menu": "メニューを開く", "dark": "ダークモードに切り替え", "light": "ライトモードに切り替え",
            "lang": "言語選択", "skip": "本文へスキップ",
            "tools_group": "ツール", "games_group": "ゲーム", "game_syntax": "コーディング文法クイズ",
@@ -154,6 +158,7 @@ NAV = {
            "tool_number": "数字读法转换", "tool_typing": "打字速度测试", "about": "关于本站",
            "privacy": "隐私政策", "faq": "常见问题", "contact": "联系我们", "related_h2": "相关链接",
            "cookie_settings": "Cookie 设置", "terms": "使用条款", "updates": "更新日志",
+           "guestbook": "留言板",
            "menu": "打开菜单", "dark": "切换到深色模式", "light": "切换到浅色模式",
            "lang": "选择语言", "skip": "跳转到正文",
            "tools_group": "工具", "games_group": "游戏", "game_syntax": "编程语法测验",
@@ -163,6 +168,7 @@ NAV = {
            "tool_number": "Lector de números", "tool_typing": "Prueba de velocidad de escritura", "about": "Acerca de",
            "privacy": "Política de privacidad", "faq": "Preguntas frecuentes", "contact": "Contacto", "related_h2": "Relacionado",
            "cookie_settings": "Preferencias de cookies", "terms": "Términos de servicio", "updates": "Novedades",
+           "guestbook": "Libro de visitas",
            "menu": "Abrir menú", "dark": "Cambiar a modo oscuro", "light": "Cambiar a modo claro",
            "lang": "Seleccionar idioma", "skip": "Saltar al contenido",
            "tools_group": "Herramientas", "games_group": "Juegos", "game_syntax": "Quiz de sintaxis de código",
@@ -172,6 +178,7 @@ NAV = {
            "tool_number": "Đọc số thành chữ", "tool_typing": "Kiểm tra tốc độ đánh máy", "about": "Giới thiệu",
            "privacy": "Chính sách bảo mật", "faq": "Câu hỏi thường gặp", "contact": "Liên hệ", "related_h2": "Liên quan",
            "cookie_settings": "Tùy chọn cookie", "terms": "Điều khoản dịch vụ", "updates": "Cập nhật mới",
+           "guestbook": "Sổ lưu bút",
            "menu": "Mở menu", "dark": "Chuyển sang chế độ tối", "light": "Chuyển sang chế độ sáng",
            "lang": "Chọn ngôn ngữ", "skip": "Chuyển đến nội dung",
            "tools_group": "Công cụ", "games_group": "Trò chơi", "game_syntax": "Đố vui cú pháp lập trình",
@@ -181,6 +188,7 @@ NAV = {
            "tool_number": "Leitor de números", "tool_typing": "Teste de velocidade de digitação", "about": "Sobre",
            "privacy": "Política de privacidade", "faq": "Perguntas frequentes", "contact": "Contato", "related_h2": "Relacionados",
            "cookie_settings": "Preferências de cookies", "terms": "Termos de serviço", "updates": "Novidades",
+           "guestbook": "Livro de visitas",
            "menu": "Abrir menu", "dark": "Mudar para modo escuro", "light": "Mudar para modo claro",
            "lang": "Selecionar idioma", "skip": "Ir para o conteúdo",
            "tools_group": "Ferramentas", "games_group": "Jogos", "game_syntax": "Quiz de sintaxe de código",
@@ -190,6 +198,7 @@ NAV = {
            "tool_number": "Pembaca Angka", "tool_typing": "Tes Kecepatan Mengetik", "about": "Tentang",
            "privacy": "Kebijakan Privasi", "faq": "Pertanyaan Umum", "contact": "Kontak", "related_h2": "Terkait",
            "cookie_settings": "Preferensi cookie", "terms": "Ketentuan Layanan", "updates": "Pembaruan",
+           "guestbook": "Buku tamu",
            "menu": "Buka menu", "dark": "Beralih ke mode gelap", "light": "Beralih ke mode terang",
            "lang": "Pilih bahasa", "skip": "Lompat ke konten",
            "tools_group": "Alat", "games_group": "Permainan", "game_syntax": "Kuis Sintaks Koding",
@@ -199,6 +208,7 @@ NAV = {
            "tool_number": "Zahlen-Vorleser", "tool_typing": "Schreibgeschwindigkeitstest", "about": "Über uns",
            "privacy": "Datenschutzerklärung", "faq": "Häufige Fragen", "contact": "Kontakt", "related_h2": "Verwandt",
            "cookie_settings": "Cookie-Einstellungen", "terms": "Nutzungsbedingungen", "updates": "Neuigkeiten",
+           "guestbook": "Gästebuch",
            "menu": "Menü öffnen", "dark": "Zum Dunkelmodus wechseln", "light": "Zum Hellmodus wechseln",
            "lang": "Sprache wählen", "skip": "Zum Inhalt springen",
            "tools_group": "Werkzeuge", "games_group": "Spiele", "game_syntax": "Coding-Syntax-Quiz",
@@ -1926,6 +1936,162 @@ CONTENT["updates"] = {
               "Unsere Datenschutzerklärung und die Seite Über uns wurden veröffentlicht.",
               "Unterstützung für Englisch, Koreanisch, Japanisch und Chinesisch mit automatischer Erkennung der Browsersprache wurde hinzugefügt."]),
         ],
+    ),
+}
+
+CONTENT["guestbook"] = {
+    "en": dict(
+        title="Guestbook | Formix",
+        description="Leave a short, one-line message on the Formix guestbook and see what other visitors have shared.",
+        og_title="Guestbook | Formix",
+        og_description="A public space where visitors can leave a short note.",
+        h1="Guestbook",
+        lead="Leave a short, one-line note — anything's welcome. Every visitor can see it.",
+        nickname_placeholder="Name (optional)",
+        message_placeholder="Say something in one line…",
+        btn_submit="Post",
+        loading="Loading…", empty="No messages yet — be the first to say hello!",
+        error="Couldn't load the guestbook right now.",
+        submitting="Posting…", submit_success="Posted!",
+        submit_error="Couldn't post your message. Please try again.",
+        submit_rate_limited="Please wait a bit before posting again.",
+        note="Messages are public and shown to every visitor — please avoid sharing personal information. See our Privacy Policy for details. Posting is optional.",
+    ),
+    "ko": dict(
+        title="방명록 | Formix",
+        description="Formix 방명록에 한 줄짜리 짧은 메시지를 남기고, 다른 방문자들이 남긴 글도 확인해보세요.",
+        og_title="방명록 | Formix",
+        og_description="방문자 누구나 짧은 글을 남길 수 있는 공간입니다.",
+        h1="방명록",
+        lead="한 줄 정도의 짧은 메시지를 남겨보세요 — 어떤 내용이든 환영합니다. 모든 방문자가 볼 수 있어요.",
+        nickname_placeholder="이름 (선택)",
+        message_placeholder="한 줄로 한마디 남겨주세요…",
+        btn_submit="남기기",
+        loading="불러오는 중…", empty="아직 남겨진 메시지가 없습니다 — 첫 번째로 인사해보세요!",
+        error="지금은 방명록을 불러올 수 없습니다.",
+        submitting="남기는 중…", submit_success="남겼습니다!",
+        submit_error="메시지를 남기지 못했습니다. 다시 시도해주세요.",
+        submit_rate_limited="잠시 후 다시 시도해주세요.",
+        note="남기신 메시지는 모든 방문자에게 공개됩니다 — 개인정보는 적지 말아주세요. 자세한 내용은 개인정보처리방침을 참고해주세요. 작성은 선택 사항입니다.",
+    ),
+    "ja": dict(
+        title="ゲストブック | Formix",
+        description="Formixのゲストブックに一言メッセージを残して、他の訪問者が残したメッセージも見てみましょう。",
+        og_title="ゲストブック | Formix",
+        og_description="訪問者なら誰でも一言メッセージを残せる場所です。",
+        h1="ゲストブック",
+        lead="一行程度の短いメッセージを残してみてください — どんな内容でも歓迎です。すべての訪問者が見ることができます。",
+        nickname_placeholder="お名前（任意）",
+        message_placeholder="一言メッセージをどうぞ…",
+        btn_submit="投稿する",
+        loading="読み込み中…", empty="まだメッセージがありません — 最初の挨拶をしてみましょう!",
+        error="現在ゲストブックを読み込めません。",
+        submitting="投稿中…", submit_success="投稿しました!",
+        submit_error="投稿に失敗しました。もう一度お試しください。",
+        submit_rate_limited="少し時間を置いてから再度お試しください。",
+        note="投稿したメッセージはすべての訪問者に公開されます — 個人情報は記載しないでください。詳しくはプライバシーポリシーをご覧ください。投稿は任意です。",
+    ),
+    "zh": dict(
+        title="留言板 | Formix",
+        description="在 Formix 留言板上留下一句话，也看看其他访客留下了什么。",
+        og_title="留言板 | Formix",
+        og_description="一个任何访客都可以留下简短留言的公开空间。",
+        h1="留言板",
+        lead="留下一句简短的话吧 — 内容不限。所有访客都能看到。",
+        nickname_placeholder="昵称（可选）",
+        message_placeholder="说一句话…",
+        btn_submit="发布",
+        loading="加载中…", empty="暂无留言 — 来做第一个打招呼的人吧！",
+        error="暂时无法加载留言板。",
+        submitting="发布中…", submit_success="发布成功！",
+        submit_error="发布失败，请重试。",
+        submit_rate_limited="请稍后再试。",
+        note="留言会公开展示给所有访客 — 请勿填写个人信息。详情请参阅隐私政策。留言为可选项。",
+    ),
+    "es": dict(
+        title="Libro de visitas | Formix",
+        description="Deja un mensaje breve de una línea en el libro de visitas de Formix y mira lo que otros visitantes han compartido.",
+        og_title="Libro de visitas | Formix",
+        og_description="Un espacio público donde los visitantes pueden dejar una nota breve.",
+        h1="Libro de visitas",
+        lead="Deja una nota breve de una línea — cualquier cosa es bienvenida. Todos los visitantes pueden verla.",
+        nickname_placeholder="Nombre (opcional)",
+        message_placeholder="Di algo en una línea…",
+        btn_submit="Publicar",
+        loading="Cargando…", empty="Aún no hay mensajes — ¡sé el primero en saludar!",
+        error="No se pudo cargar el libro de visitas por ahora.",
+        submitting="Publicando…", submit_success="¡Publicado!",
+        submit_error="No se pudo publicar tu mensaje. Inténtalo de nuevo.",
+        submit_rate_limited="Espera un momento antes de publicar de nuevo.",
+        note="Los mensajes son públicos y se muestran a todos los visitantes — evita compartir información personal. Consulta nuestra Política de privacidad para más detalles. Publicar es opcional.",
+    ),
+    "vi": dict(
+        title="Sổ lưu bút | Formix",
+        description="Để lại một dòng tin nhắn ngắn trên sổ lưu bút của Formix và xem những gì khách khác đã chia sẻ.",
+        og_title="Sổ lưu bút | Formix",
+        og_description="Một không gian công khai nơi khách ghé thăm có thể để lại lời nhắn ngắn.",
+        h1="Sổ lưu bút",
+        lead="Để lại một dòng tin nhắn ngắn — nội dung gì cũng được chào đón. Mọi người ghé thăm đều có thể xem.",
+        nickname_placeholder="Tên (không bắt buộc)",
+        message_placeholder="Nói một câu ngắn…",
+        btn_submit="Đăng",
+        loading="Đang tải…", empty="Chưa có tin nhắn nào — hãy là người đầu tiên chào hỏi!",
+        error="Hiện không thể tải sổ lưu bút.",
+        submitting="Đang đăng…", submit_success="Đã đăng!",
+        submit_error="Không thể đăng tin nhắn của bạn. Vui lòng thử lại.",
+        submit_rate_limited="Vui lòng chờ một chút rồi thử lại.",
+        note="Tin nhắn sẽ được công khai cho mọi khách ghé thăm — vui lòng không chia sẻ thông tin cá nhân. Xem Chính sách bảo mật để biết chi tiết. Việc đăng là tùy chọn.",
+    ),
+    "pt": dict(
+        title="Livro de visitas | Formix",
+        description="Deixe uma mensagem curta de uma linha no livro de visitas do Formix e veja o que outros visitantes compartilharam.",
+        og_title="Livro de visitas | Formix",
+        og_description="Um espaço público onde os visitantes podem deixar uma nota curta.",
+        h1="Livro de visitas",
+        lead="Deixe uma nota curta de uma linha — qualquer coisa é bem-vinda. Todo visitante pode ver.",
+        nickname_placeholder="Nome (opcional)",
+        message_placeholder="Diga algo em uma linha…",
+        btn_submit="Publicar",
+        loading="Carregando…", empty="Ainda não há mensagens — seja o primeiro a dizer olá!",
+        error="Não foi possível carregar o livro de visitas no momento.",
+        submitting="Publicando…", submit_success="Publicado!",
+        submit_error="Não foi possível publicar sua mensagem. Tente novamente.",
+        submit_rate_limited="Aguarde um pouco antes de publicar novamente.",
+        note="As mensagens são públicas e exibidas para todos os visitantes — evite compartilhar informações pessoais. Veja nossa Política de privacidade para detalhes. Publicar é opcional.",
+    ),
+    "id": dict(
+        title="Buku tamu | Formix",
+        description="Tinggalkan pesan singkat satu baris di buku tamu Formix dan lihat apa yang dibagikan pengunjung lain.",
+        og_title="Buku tamu | Formix",
+        og_description="Ruang publik tempat pengunjung dapat meninggalkan catatan singkat.",
+        h1="Buku tamu",
+        lead="Tinggalkan catatan singkat satu baris — apa pun boleh. Semua pengunjung dapat melihatnya.",
+        nickname_placeholder="Nama (opsional)",
+        message_placeholder="Tulis sesuatu dalam satu baris…",
+        btn_submit="Kirim",
+        loading="Memuat…", empty="Belum ada pesan — jadilah yang pertama menyapa!",
+        error="Tidak dapat memuat buku tamu saat ini.",
+        submitting="Mengirim…", submit_success="Terkirim!",
+        submit_error="Gagal mengirim pesan Anda. Silakan coba lagi.",
+        submit_rate_limited="Harap tunggu sebentar sebelum mengirim lagi.",
+        note="Pesan bersifat publik dan ditampilkan ke semua pengunjung — harap hindari membagikan informasi pribadi. Lihat Kebijakan Privasi kami untuk detailnya. Mengirim pesan bersifat opsional.",
+    ),
+    "de": dict(
+        title="Gästebuch | Formix",
+        description="Hinterlassen Sie eine kurze, einzeilige Nachricht im Formix-Gästebuch und sehen Sie, was andere Besucher geteilt haben.",
+        og_title="Gästebuch | Formix",
+        og_description="Ein öffentlicher Bereich, in dem Besucher eine kurze Notiz hinterlassen können.",
+        h1="Gästebuch",
+        lead="Hinterlassen Sie eine kurze, einzeilige Notiz — alles ist willkommen. Jeder Besucher kann sie sehen.",
+        nickname_placeholder="Name (optional)",
+        message_placeholder="Sagen Sie etwas in einer Zeile…",
+        btn_submit="Veröffentlichen",
+        loading="Lädt…", empty="Noch keine Nachrichten — seien Sie der Erste, der Hallo sagt!",
+        error="Das Gästebuch kann derzeit nicht geladen werden.",
+        submitting="Wird veröffentlicht…", submit_success="Veröffentlicht!",
+        submit_error="Ihre Nachricht konnte nicht veröffentlicht werden. Bitte versuchen Sie es erneut.",
+        submit_rate_limited="Bitte warten Sie kurz, bevor Sie erneut posten.",
+        note="Nachrichten sind öffentlich und werden allen Besuchern angezeigt — bitte geben Sie keine persönlichen Informationen an. Details finden Sie in unserer Datenschutzerklärung. Das Posten ist optional.",
     ),
 }
 
@@ -4135,6 +4301,7 @@ CONTENT["tool_typing"] = {
             "Your best score is stored only on this device (browser localStorage) — it is not uploaded or shared with anyone unless you copy and send it yourself.",
         ],
         leaderboard_h2="Leaderboard", leaderboard_lead="See where your score ranks among everyone who has submitted.",
+        leaderboard_reset_tpl="Monthly ranking · resets in {days}d {hours}h",
         leaderboard_loading="Loading…", leaderboard_empty="No scores yet — be the first!",
         leaderboard_error="Couldn't load the leaderboard right now.",
         col_rank="#", col_name="Name", col_wpm="WPM", col_accuracy="Accuracy",
@@ -4177,6 +4344,7 @@ CONTENT["tool_typing"] = {
             "최고 기록은 이 기기(브라우저 localStorage)에만 저장되며, 직접 복사해 보내지 않는 한 어디로도 전송되지 않습니다.",
         ],
         leaderboard_h2="랭킹", leaderboard_lead="지금까지 제출된 기록 중 내 순위를 확인해보세요.",
+        leaderboard_reset_tpl="월간 랭킹 · D-{days} ({hours}시간 후 초기화)",
         leaderboard_loading="불러오는 중…", leaderboard_empty="아직 등록된 기록이 없습니다 — 첫 번째 주인공이 되어보세요!",
         leaderboard_error="지금은 랭킹을 불러올 수 없습니다.",
         col_rank="순위", col_name="닉네임", col_wpm="WPM", col_accuracy="정확도",
@@ -4219,6 +4387,7 @@ CONTENT["tool_typing"] = {
             "自己ベストはこの端末(ブラウザのlocalStorage)にのみ保存され、自分でコピーして送らない限りどこにも送信されません。",
         ],
         leaderboard_h2="ランキング", leaderboard_lead="これまでに提出された記録の中で自分の順位を確認できます。",
+        leaderboard_reset_tpl="月間ランキング · あと{days}日{hours}時間でリセット",
         leaderboard_loading="読み込み中…", leaderboard_empty="まだ記録がありません — 最初の記録を作ってみましょう!",
         leaderboard_error="現在ランキングを読み込めません。",
         col_rank="順位", col_name="ニックネーム", col_wpm="WPM", col_accuracy="正確率",
@@ -4261,6 +4430,7 @@ CONTENT["tool_typing"] = {
             "最佳成绩仅保存在本设备（浏览器 localStorage）中，除非你自己复制发送，否则不会上传或分享给任何人。",
         ],
         leaderboard_h2="排行榜", leaderboard_lead="查看你的成绩在所有已提交记录中的排名。",
+        leaderboard_reset_tpl="月度排行榜 · {days}天{hours}小时后重置",
         leaderboard_loading="加载中…", leaderboard_empty="暂无记录 — 来成为第一名吧！",
         leaderboard_error="暂时无法加载排行榜。",
         col_rank="排名", col_name="昵称", col_wpm="WPM", col_accuracy="准确率",
@@ -4303,6 +4473,7 @@ CONTENT["tool_typing"] = {
             "Tu mejor marca se guarda solo en este dispositivo (localStorage del navegador) y nunca se sube ni se comparte con nadie a menos que la copies y la envíes tú mismo.",
         ],
         leaderboard_h2="Tabla de clasificación", leaderboard_lead="Mira cómo se compara tu puntuación con todos los resultados enviados.",
+        leaderboard_reset_tpl="Ranking mensual · se reinicia en {days}d {hours}h",
         leaderboard_loading="Cargando…", leaderboard_empty="Aún no hay registros — ¡sé el primero!",
         leaderboard_error="No se pudo cargar la tabla de clasificación por ahora.",
         col_rank="Puesto", col_name="Apodo", col_wpm="PPM", col_accuracy="Precisión",
@@ -4345,6 +4516,7 @@ CONTENT["tool_typing"] = {
             "Kỷ lục tốt nhất của bạn chỉ được lưu trên thiết bị này (localStorage của trình duyệt) và không bao giờ được tải lên hay chia sẻ với ai trừ khi bạn tự sao chép và gửi nó.",
         ],
         leaderboard_h2="Bảng xếp hạng", leaderboard_lead="Xem điểm số của bạn so với tất cả các kết quả đã gửi.",
+        leaderboard_reset_tpl="Xếp hạng theo tháng · làm mới sau {days} ngày {hours} giờ",
         leaderboard_loading="Đang tải…", leaderboard_empty="Chưa có kỷ lục nào — hãy là người đầu tiên!",
         leaderboard_error="Hiện không thể tải bảng xếp hạng.",
         col_rank="Hạng", col_name="Biệt danh", col_wpm="WPM", col_accuracy="Độ chính xác",
@@ -4387,6 +4559,7 @@ CONTENT["tool_typing"] = {
             "Sua melhor marca é salva apenas neste dispositivo (localStorage do navegador) e nunca é enviada ou compartilhada com ninguém, a menos que você mesmo a copie e envie.",
         ],
         leaderboard_h2="Ranking", leaderboard_lead="Veja como sua pontuação se compara a todos os resultados enviados.",
+        leaderboard_reset_tpl="Ranking mensal · reinicia em {days}d {hours}h",
         leaderboard_loading="Carregando…", leaderboard_empty="Ainda sem registros — seja o primeiro!",
         leaderboard_error="Não foi possível carregar o ranking no momento.",
         col_rank="Posição", col_name="Apelido", col_wpm="PPM", col_accuracy="Precisão",
@@ -4429,6 +4602,7 @@ CONTENT["tool_typing"] = {
             "Rekor terbaik Anda hanya disimpan di perangkat ini (localStorage browser) dan tidak pernah diunggah atau dibagikan kepada siapa pun kecuali Anda sendiri yang menyalin dan mengirimkannya.",
         ],
         leaderboard_h2="Papan peringkat", leaderboard_lead="Lihat bagaimana skor Anda dibandingkan dengan semua hasil yang telah dikirim.",
+        leaderboard_reset_tpl="Peringkat bulanan · reset dalam {days} hari {hours} jam",
         leaderboard_loading="Memuat…", leaderboard_empty="Belum ada rekor — jadilah yang pertama!",
         leaderboard_error="Tidak dapat memuat papan peringkat saat ini.",
         col_rank="Peringkat", col_name="Nama panggilan", col_wpm="WPM", col_accuracy="Akurasi",
@@ -4471,6 +4645,7 @@ CONTENT["tool_typing"] = {
             "Ihre Bestleistung wird nur auf diesem Gerät (Browser-localStorage) gespeichert und niemals hochgeladen oder mit jemandem geteilt, außer Sie kopieren und senden sie selbst.",
         ],
         leaderboard_h2="Rangliste", leaderboard_lead="Sehen Sie, wie sich Ihr Ergebnis mit allen eingereichten Ergebnissen vergleicht.",
+        leaderboard_reset_tpl="Monatliche Rangliste · Zurücksetzung in {days}T {hours}Std",
         leaderboard_loading="Lädt…", leaderboard_empty="Noch keine Einträge — seien Sie der Erste!",
         leaderboard_error="Die Rangliste kann derzeit nicht geladen werden.",
         col_rank="Rang", col_name="Spitzname", col_wpm="WPM", col_accuracy="Genauigkeit",
@@ -6143,6 +6318,48 @@ def render_updates(lang):
     return page_wrap(lang, head, body)
 
 
+def render_guestbook(lang):
+    """한 줄짜리 공개 메시지를 남기는 방명록 페이지. 언어별로 분리하지 않고 전체 언어
+    방문자가 같은 메시지 목록을 공유한다(/api/guestbook, D1 guestbook 테이블).
+    인터랙션은 assets/js/guestbook.js, 스타일은 assets/css/style.css의 .gb-* 규칙."""
+    c = CONTENT["guestbook"][lang]
+    urls = urls_for(lang)
+    head = head_block(lang, "guestbook", c["title"], c["description"], og_title=c["og_title"], og_description=c["og_description"],
+                       extra=breadcrumb_jsonld(lang, "guestbook", c["h1"]))
+    body = header_nav(lang, "guestbook") + '''
+
+<main id="main-content">
+  <div class="page-header container">
+    <h1>%(h1)s</h1>
+    <p>%(lead)s</p>
+  </div>
+
+  <div class="container section-tight" style="max-width: 640px;">
+    <div class="gb-form" id="gb-form" data-gb-loading="%(loading)s" data-gb-empty="%(empty)s" data-gb-error="%(error)s"
+         data-gb-submitting="%(submitting)s" data-gb-success="%(submit_success)s" data-gb-error-submit="%(submit_error)s"
+         data-gb-rate-limited="%(submit_rate_limited)s">
+      <label for="gb-nickname" class="visually-hidden">%(nickname_placeholder)s</label>
+      <input type="text" id="gb-nickname" class="gb-nickname-input" placeholder="%(nickname_placeholder)s" maxlength="20" />
+      <label for="gb-message" class="visually-hidden">%(message_placeholder)s</label>
+      <input type="text" id="gb-message" class="gb-message-input" placeholder="%(message_placeholder)s" maxlength="100" />
+      <button class="btn btn-primary" id="gb-btn-submit" type="button">%(btn_submit)s</button>
+      <span class="gb-submit-status" id="gb-submit-status" aria-live="polite"></span>
+    </div>
+
+    <ul class="gb-list" id="gb-list">
+      <li class="gb-status">%(loading)s</li>
+    </ul>
+
+    <p class="jf-hint">%(note)s</p>
+  </div>
+</main>
+
+''' % c + footer_block(lang)
+    body = body.replace('<script src="/assets/js/main.js"></script>\n<script src="/assets/js/i18n.js"></script>',
+                         '<script src="/assets/js/main.js"></script>\n<script src="/assets/js/guestbook.js"></script>\n<script src="/assets/js/i18n.js"></script>')
+    return page_wrap(lang, head, body)
+
+
 def render_notfound(lang):
     c = CONTENT["notfound"][lang]
     urls = urls_for(lang)
@@ -6517,9 +6734,10 @@ def render_tool_typing(lang):
     <div class="tt-side" id="tt-leaderboard-wrap" data-lang="%(lb_lang)s"
          data-lb-loading="%(leaderboard_loading)s" data-lb-empty="%(leaderboard_empty)s" data-lb-error="%(leaderboard_error)s"
          data-lb-submitting="%(submitting)s" data-lb-success="%(submit_success)s" data-lb-error-submit="%(submit_error)s"
-         data-lb-rate-limited="%(submit_rate_limited)s">
+         data-lb-rate-limited="%(submit_rate_limited)s" data-lb-reset-tpl="%(leaderboard_reset_tpl)s">
       <h2>%(leaderboard_h2)s</h2>
       <p class="tt-leaderboard-lead">%(leaderboard_lead)s</p>
+      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>
@@ -6693,6 +6911,7 @@ def build():
         written.append(write_file(prefix + "/contact.html", render_contact(lang)))
         written.append(write_file(prefix + "/terms.html", render_terms(lang)))
         written.append(write_file(prefix + "/updates.html", render_updates(lang)))
+        written.append(write_file(prefix + "/guestbook.html", render_guestbook(lang)))
         written.append(write_file(prefix + "/404.html", render_notfound(lang)))
         written.append(write_file(prefix + "/tools/json-formatter.html", render_tool(lang)))
         written.append(write_file(prefix + "/tools/xml-formatter.html", render_tool_xml(lang)))
@@ -6708,15 +6927,15 @@ def build():
     import datetime
     today = datetime.date.today().isoformat()
     priority_map = {"home": "1.0", "about": "0.6", "privacy": "0.3", "faq": "0.5", "contact": "0.4",
-                     "terms": "0.3", "updates": "0.5", "tool": "0.9", "tool_xml": "0.9", "tool_converter": "0.9",
+                     "terms": "0.3", "updates": "0.5", "guestbook": "0.5", "tool": "0.9", "tool_xml": "0.9", "tool_converter": "0.9",
                      "tool_sql": "0.9", "tool_code": "0.9", "tool_number": "0.9", "tool_typing": "0.9",
                      "game_syntax": "0.9"}
     changefreq_map = {"home": "weekly", "about": "monthly", "privacy": "yearly", "faq": "monthly", "contact": "yearly",
-                       "terms": "yearly", "updates": "weekly", "tool": "weekly", "tool_xml": "weekly", "tool_converter": "weekly",
+                       "terms": "yearly", "updates": "weekly", "guestbook": "daily", "tool": "weekly", "tool_xml": "weekly", "tool_converter": "weekly",
                        "tool_sql": "weekly", "tool_code": "weekly", "tool_number": "weekly", "tool_typing": "weekly",
                        "game_syntax": "weekly"}
     url_entries = []
-    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "tool", "tool_xml", "tool_converter", "tool_sql", "tool_code", "tool_number", "tool_typing", "game_syntax"]:
+    for page_key in ["home", "about", "privacy", "faq", "contact", "terms", "updates", "guestbook", "tool", "tool_xml", "tool_converter", "tool_sql", "tool_code", "tool_number", "tool_typing", "game_syntax"]:
         page_langs = langs_for_page(page_key)
         for lang in page_langs:
             loc = SITE_DOMAIN + urls_for(lang)[page_key]

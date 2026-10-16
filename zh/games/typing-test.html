@@ -200,9 +200,10 @@
     <div class="tt-side" id="tt-leaderboard-wrap" data-lang="zh"
          data-lb-loading="加载中…" data-lb-empty="暂无记录 — 来成为第一名吧！" data-lb-error="暂时无法加载排行榜。"
          data-lb-submitting="提交中…" data-lb-success="提交成功！你排名第 {rank} 位。" data-lb-error-submit="提交失败，请重试。"
-         data-lb-rate-limited="请稍后再试。">
+         data-lb-rate-limited="请稍后再试。" data-lb-reset-tpl="月度排行榜 · {days}天{hours}小时后重置">
       <h2>排行榜</h2>
       <p class="tt-leaderboard-lead">查看你的成绩在所有已提交记录中的排名。</p>
+      <p class="tt-leaderboard-reset" id="tt-leaderboard-reset" aria-live="polite" hidden></p>
       <div class="tt-leaderboard-table-wrap">
         <table class="tt-leaderboard-table">
           <thead>
@@ -249,6 +250,7 @@
       <a href="/zh/about.html">关于本站</a>
       <a href="/zh/faq.html">常见问题</a>
       <a href="/zh/updates.html">更新日志</a>
+      <a href="/zh/guestbook.html">留言板</a>
       <a href="/zh/contact.html">联系我们</a>
       <a href="/zh/terms.html">使用条款</a>
       <a href="/zh/privacy.html">隐私政策</a>
