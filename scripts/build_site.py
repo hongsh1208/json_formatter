@@ -6712,7 +6712,7 @@ def render_tool_typing(lang):
         </div>
         <div class="tt-passage" id="tt-passage" aria-hidden="true"></div>
         <label for="tt-input" class="visually-hidden">%(input_aria)s</label>
-        <textarea id="tt-input" class="tt-input" spellcheck="false" autocapitalize="off" autocorrect="off" wrap="off" rows="3"></textarea>
+        <textarea id="tt-input" class="tt-input" spellcheck="false" autocapitalize="off" autocorrect="off" wrap="soft" rows="3"></textarea>
       </div>
 
       <div class="tt-toolbar">

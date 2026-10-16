@@ -478,6 +478,15 @@
       passageEl.innerHTML = html;
     }
 
+    // 입력창(textarea)이 고정 줄 수(rows)만 보여주면, 영어처럼 글자 수가 많은
+    // 문장이 3줄을 넘길 때 입력한 내용이 안 보이는 부분까지 스크롤되어 "짤리는"
+    // 것처럼 보인다. 내용 높이(scrollHeight)에 맞춰 textarea 자체를 늘려서
+    // 항상 전체 문장이 다 보이게 한다.
+    function autoGrowInput() {
+      inputEl.style.height = "auto";
+      inputEl.style.height = inputEl.scrollHeight + "px";
+    }
+
     function updatePassageHighlight(value) {
       var spans = passageEl.children;
       for (var i = 0; i < spans.length; i++) {
@@ -567,6 +576,7 @@
       passage = pickPassage();
       renderPassage(passage);
       inputEl.value = "";
+      inputEl.style.height = "auto";
       inputEl.disabled = false;
       copyBtn.disabled = true;
       copiedMsg.hidden = true;
@@ -626,6 +636,7 @@
         inputEl.value = value;
       }
       updatePassageHighlight(value);
+      autoGrowInput();
       tick();
       if (value === passage) {
         finish();
